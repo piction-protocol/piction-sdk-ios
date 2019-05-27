@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Junghoon Seo" => "jh.seo@battleent.com" }
   s.platform     = :ios, "8.1"
-  s.source       = { :git => 'https://github.com/piction-protocol/picion-sdk-ios.git', :tag => "#{s.version}" }
+  s.source       = { :git => 'https://github.com/piction-protocol/piction-sdk-ios.git', :tag => "#{s.version}" }
   s.source_files = "Sources/**/*.swift"
   s.dependency "Moya-ModelMapper", "~> 8.0.0"
   s.dependency "KeychainAccess", "~> 3.1.0"

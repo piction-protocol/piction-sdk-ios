@@ -21,6 +21,39 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		43FC82EE229BC9E80074C3D6 /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82DA229BC9A50074C3D6 /* ServerInfo.swift */; };
+		43FC82EF229BC9E80074C3D6 /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82D7229BC9A50074C3D6 /* MoyaResponseExtension.swift */; };
+		43FC82F0229BC9E80074C3D6 /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82D8229BC9A50074C3D6 /* TargetTypeExtension.swift */; };
+		43FC82F1229BC9E80074C3D6 /* PictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82DC229BC9A50074C3D6 /* PictionManager.swift */; };
+		43FC82F2229BC9E80074C3D6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82DD229BC9A50074C3D6 /* Response.swift */; };
+		43FC82F3229BC9E80074C3D6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82DE229BC9A50074C3D6 /* Request.swift */; };
+		43FC82F4229BC9E80074C3D6 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82DF229BC9A50074C3D6 /* ErrorType.swift */; };
+		43FC82F5229BC9E80074C3D6 /* CurrentUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82E2229BC9A50074C3D6 /* CurrentUserResponse.swift */; };
+		43FC82F6229BC9E80074C3D6 /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82E3229BC9A50074C3D6 /* AuthenticationResponse.swift */; };
+		43FC82F7229BC9E80074C3D6 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82E5229BC9A50074C3D6 /* WalletModel.swift */; };
+		43FC82F8229BC9E80074C3D6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82E6229BC9A50074C3D6 /* UserModel.swift */; };
+		43FC82F9229BC9E80074C3D6 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82E7229BC9A50074C3D6 /* ErrorModel.swift */; };
+		43FC82FA229BC9E80074C3D6 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82E9229BC9A50074C3D6 /* Users.swift */; };
+		43FC82FB229BC9E80074C3D6 /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82EA229BC9A50074C3D6 /* Sessions.swift */; };
+		43FC82FC229BC9E80074C3D6 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82EC229BC9A50074C3D6 /* UsersAPI.swift */; };
+		43FC82FD229BC9E80074C3D6 /* SessionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82ED229BC9A50074C3D6 /* SessionsAPI.swift */; };
+		43FC82FE229BC9E80074C3D6 /* PictionSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* PictionSDK.swift */; };
+		43FC82FF229BCA850074C3D6 /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82DA229BC9A50074C3D6 /* ServerInfo.swift */; };
+		43FC8300229BCA850074C3D6 /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82D7229BC9A50074C3D6 /* MoyaResponseExtension.swift */; };
+		43FC8301229BCA850074C3D6 /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82D8229BC9A50074C3D6 /* TargetTypeExtension.swift */; };
+		43FC8302229BCA850074C3D6 /* PictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82DC229BC9A50074C3D6 /* PictionManager.swift */; };
+		43FC8303229BCA850074C3D6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82DD229BC9A50074C3D6 /* Response.swift */; };
+		43FC8304229BCA850074C3D6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82DE229BC9A50074C3D6 /* Request.swift */; };
+		43FC8305229BCA850074C3D6 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82DF229BC9A50074C3D6 /* ErrorType.swift */; };
+		43FC8306229BCA850074C3D6 /* CurrentUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82E2229BC9A50074C3D6 /* CurrentUserResponse.swift */; };
+		43FC8307229BCA850074C3D6 /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82E3229BC9A50074C3D6 /* AuthenticationResponse.swift */; };
+		43FC8308229BCA850074C3D6 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82E5229BC9A50074C3D6 /* WalletModel.swift */; };
+		43FC8309229BCA850074C3D6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82E6229BC9A50074C3D6 /* UserModel.swift */; };
+		43FC830A229BCA850074C3D6 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82E7229BC9A50074C3D6 /* ErrorModel.swift */; };
+		43FC830B229BCA850074C3D6 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82E9229BC9A50074C3D6 /* Users.swift */; };
+		43FC830C229BCA850074C3D6 /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82EA229BC9A50074C3D6 /* Sessions.swift */; };
+		43FC830D229BCA860074C3D6 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82EC229BC9A50074C3D6 /* UsersAPI.swift */; };
+		43FC830E229BCA860074C3D6 /* SessionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82ED229BC9A50074C3D6 /* SessionsAPI.swift */; };
 		OBJ_133 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* AFError.swift */; };
 		OBJ_134 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* Alamofire.swift */; };
 		OBJ_135 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* DispatchQueue+Alamofire.swift */; };
@@ -86,22 +119,6 @@
 		OBJ_238 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
 		OBJ_248 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Package.swift */; };
 		OBJ_254 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* Package.swift */; };
-		OBJ_260 /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ServerInfo.swift */; };
-		OBJ_261 /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* MoyaResponseExtension.swift */; };
-		OBJ_262 /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* TargetTypeExtension.swift */; };
-		OBJ_263 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* ErrorType.swift */; };
-		OBJ_264 /* PictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* PictionManager.swift */; };
-		OBJ_265 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Request.swift */; };
-		OBJ_266 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Response.swift */; };
-		OBJ_267 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* ErrorModel.swift */; };
-		OBJ_268 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* UserModel.swift */; };
-		OBJ_269 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* WalletModel.swift */; };
-		OBJ_270 /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Sessions.swift */; };
-		OBJ_271 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Users.swift */; };
-		OBJ_272 /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* AuthenticationResponse.swift */; };
-		OBJ_273 /* CurrentUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* CurrentUserResponse.swift */; };
-		OBJ_274 /* SessionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* SessionsAPI.swift */; };
-		OBJ_275 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* UsersAPI.swift */; };
 		OBJ_276 /* PictionSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* PictionSDK.swift */; };
 		OBJ_278 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "KeychainAccess::KeychainAccess::Product" /* KeychainAccess.framework */; };
 		OBJ_279 /* Moya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya-ModelMapper::Moya-ModelMapper::Product" /* Moya_ModelMapper.framework */; };
@@ -270,12 +287,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43FC82D7229BC9A50074C3D6 /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
+		43FC82D8229BC9A50074C3D6 /* TargetTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetTypeExtension.swift; sourceTree = "<group>"; };
+		43FC82DA229BC9A50074C3D6 /* ServerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfo.swift; sourceTree = "<group>"; };
+		43FC82DC229BC9A50074C3D6 /* PictionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionManager.swift; sourceTree = "<group>"; };
+		43FC82DD229BC9A50074C3D6 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		43FC82DE229BC9A50074C3D6 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		43FC82DF229BC9A50074C3D6 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		43FC82E2229BC9A50074C3D6 /* CurrentUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserResponse.swift; sourceTree = "<group>"; };
+		43FC82E3229BC9A50074C3D6 /* AuthenticationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationResponse.swift; sourceTree = "<group>"; };
+		43FC82E5229BC9A50074C3D6 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+		43FC82E6229BC9A50074C3D6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		43FC82E7229BC9A50074C3D6 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		43FC82E9229BC9A50074C3D6 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		43FC82EA229BC9A50074C3D6 /* Sessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sessions.swift; sourceTree = "<group>"; };
+		43FC82EC229BC9A50074C3D6 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
+		43FC82ED229BC9A50074C3D6 /* SessionsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsAPI.swift; sourceTree = "<group>"; };
 		"Alamofire::Alamofire::Product" /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"KeychainAccess::KeychainAccess::Product" /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Mapper::Mapper::Product" /* Mapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Mapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Moya-ModelMapper::Moya-ModelMapper::Product" /* Moya_ModelMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya_ModelMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Moya::Moya::Product" /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_10 /* ServerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfo.swift; sourceTree = "<group>"; };
 		OBJ_100 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/jhseo/Workspace/Git/iOS/picion-sdk-ios/.build/checkouts/Alamofire/Package.swift"; sourceTree = "<group>"; };
 		OBJ_101 /* AFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
 		OBJ_102 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
@@ -294,22 +326,7 @@
 		OBJ_115 /* TaskDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
 		OBJ_116 /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		OBJ_117 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		OBJ_12 /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
 		OBJ_127 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		OBJ_13 /* TargetTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetTypeExtension.swift; sourceTree = "<group>"; };
-		OBJ_15 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
-		OBJ_16 /* PictionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionManager.swift; sourceTree = "<group>"; };
-		OBJ_17 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		OBJ_18 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		OBJ_21 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
-		OBJ_22 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		OBJ_23 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
-		OBJ_25 /* Sessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sessions.swift; sourceTree = "<group>"; };
-		OBJ_26 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
-		OBJ_28 /* AuthenticationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationResponse.swift; sourceTree = "<group>"; };
-		OBJ_29 /* CurrentUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserResponse.swift; sourceTree = "<group>"; };
-		OBJ_31 /* SessionsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsAPI.swift; sourceTree = "<group>"; };
-		OBJ_32 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
 		OBJ_33 /* PictionSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionSDK.swift; sourceTree = "<group>"; };
 		OBJ_36 /* PictionSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionSDKTests.swift; sourceTree = "<group>"; };
 		OBJ_37 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
@@ -444,13 +461,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_11 /* Extension */ = {
+		43FC82D6229BC9A50074C3D6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* MoyaResponseExtension.swift */,
-				OBJ_13 /* TargetTypeExtension.swift */,
+				43FC82D7229BC9A50074C3D6 /* MoyaResponseExtension.swift */,
+				43FC82D8229BC9A50074C3D6 /* TargetTypeExtension.swift */,
 			);
-			path = Extension;
+			name = Extension;
+			path = Sources/Extension;
+			sourceTree = "<group>";
+		};
+		43FC82D9229BC9A50074C3D6 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				43FC82DA229BC9A50074C3D6 /* ServerInfo.swift */,
+			);
+			name = Config;
+			path = Sources/Config;
+			sourceTree = "<group>";
+		};
+		43FC82DB229BC9A50074C3D6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				43FC82DC229BC9A50074C3D6 /* PictionManager.swift */,
+				43FC82DD229BC9A50074C3D6 /* Response.swift */,
+				43FC82DE229BC9A50074C3D6 /* Request.swift */,
+				43FC82DF229BC9A50074C3D6 /* ErrorType.swift */,
+			);
+			name = Helper;
+			path = Sources/Helper;
+			sourceTree = "<group>";
+		};
+		43FC82E0229BC9A50074C3D6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				43FC82E1229BC9A50074C3D6 /* Response */,
+				43FC82E4229BC9A50074C3D6 /* Model */,
+				43FC82E8229BC9A50074C3D6 /* Request */,
+				43FC82EB229BC9A50074C3D6 /* TargetType */,
+			);
+			name = Network;
+			path = Sources/Network;
+			sourceTree = "<group>";
+		};
+		43FC82E1229BC9A50074C3D6 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				43FC82E2229BC9A50074C3D6 /* CurrentUserResponse.swift */,
+				43FC82E3229BC9A50074C3D6 /* AuthenticationResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		43FC82E4229BC9A50074C3D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43FC82E5229BC9A50074C3D6 /* WalletModel.swift */,
+				43FC82E6229BC9A50074C3D6 /* UserModel.swift */,
+				43FC82E7229BC9A50074C3D6 /* ErrorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		43FC82E8229BC9A50074C3D6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				43FC82E9229BC9A50074C3D6 /* Users.swift */,
+				43FC82EA229BC9A50074C3D6 /* Sessions.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		43FC82EB229BC9A50074C3D6 /* TargetType */ = {
+			isa = PBXGroup;
+			children = (
+				43FC82EC229BC9A50074C3D6 /* UsersAPI.swift */,
+				43FC82ED229BC9A50074C3D6 /* SessionsAPI.swift */,
+			);
+			path = TargetType;
 			sourceTree = "<group>";
 		};
 		OBJ_118 /* Products */ = {
@@ -467,65 +555,6 @@
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		OBJ_14 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_15 /* ErrorType.swift */,
-				OBJ_16 /* PictionManager.swift */,
-				OBJ_17 /* Request.swift */,
-				OBJ_18 /* Response.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		OBJ_19 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_20 /* Model */,
-				OBJ_24 /* Request */,
-				OBJ_27 /* Response */,
-				OBJ_30 /* TargetType */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		OBJ_20 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_21 /* ErrorModel.swift */,
-				OBJ_22 /* UserModel.swift */,
-				OBJ_23 /* WalletModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		OBJ_24 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_25 /* Sessions.swift */,
-				OBJ_26 /* Users.swift */,
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
-		OBJ_27 /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_28 /* AuthenticationResponse.swift */,
-				OBJ_29 /* CurrentUserResponse.swift */,
-			);
-			path = Response;
-			sourceTree = "<group>";
-		};
-		OBJ_30 /* TargetType */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_31 /* SessionsAPI.swift */,
-				OBJ_32 /* UsersAPI.swift */,
-			);
-			path = TargetType;
-			sourceTree = "<group>";
 		};
 		OBJ_34 /* Tests */ = {
 			isa = PBXGroup;
@@ -614,7 +643,7 @@
 			path = ".build/checkouts/Moya-ModelMapper/Sources/RxMoya-ModelMapper";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -624,7 +653,6 @@
 				OBJ_118 /* Products */,
 				OBJ_127 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_51 /* Mapper 9.0.1 */ = {
@@ -688,7 +716,11 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* PictionSDK */,
+				43FC82D9229BC9A50074C3D6 /* Config */,
+				43FC82D6229BC9A50074C3D6 /* Extension */,
+				43FC82DB229BC9A50074C3D6 /* Helper */,
+				43FC82E0229BC9A50074C3D6 /* Network */,
+				OBJ_33 /* PictionSDK.swift */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -704,19 +736,6 @@
 			path = Plugins;
 			sourceTree = "<group>";
 		};
-		OBJ_8 /* PictionSDK */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_9 /* Config */,
-				OBJ_11 /* Extension */,
-				OBJ_14 /* Helper */,
-				OBJ_19 /* Network */,
-				OBJ_33 /* PictionSDK.swift */,
-			);
-			name = PictionSDK;
-			path = Sources/PictionSDK;
-			sourceTree = SOURCE_ROOT;
-		};
 		OBJ_89 /* ReactiveMoya */ = {
 			isa = PBXGroup;
 			children = (
@@ -724,14 +743,6 @@
 			name = ReactiveMoya;
 			path = .build/checkouts/Moya/Sources/ReactiveMoya;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_9 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_10 /* ServerInfo.swift */,
-			);
-			path = Config;
-			sourceTree = "<group>";
 		};
 		OBJ_90 /* RxMoya */ = {
 			isa = PBXGroup;
@@ -1053,7 +1064,7 @@
 				English,
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_118 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1212,22 +1223,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_260 /* ServerInfo.swift in Sources */,
-				OBJ_261 /* MoyaResponseExtension.swift in Sources */,
-				OBJ_262 /* TargetTypeExtension.swift in Sources */,
-				OBJ_263 /* ErrorType.swift in Sources */,
-				OBJ_264 /* PictionManager.swift in Sources */,
-				OBJ_265 /* Request.swift in Sources */,
-				OBJ_266 /* Response.swift in Sources */,
-				OBJ_267 /* ErrorModel.swift in Sources */,
-				OBJ_268 /* UserModel.swift in Sources */,
-				OBJ_269 /* WalletModel.swift in Sources */,
-				OBJ_270 /* Sessions.swift in Sources */,
-				OBJ_271 /* Users.swift in Sources */,
-				OBJ_272 /* AuthenticationResponse.swift in Sources */,
-				OBJ_273 /* CurrentUserResponse.swift in Sources */,
-				OBJ_274 /* SessionsAPI.swift in Sources */,
-				OBJ_275 /* UsersAPI.swift in Sources */,
+				43FC82FF229BCA850074C3D6 /* ServerInfo.swift in Sources */,
+				43FC8300229BCA850074C3D6 /* MoyaResponseExtension.swift in Sources */,
+				43FC8301229BCA850074C3D6 /* TargetTypeExtension.swift in Sources */,
+				43FC8302229BCA850074C3D6 /* PictionManager.swift in Sources */,
+				43FC8303229BCA850074C3D6 /* Response.swift in Sources */,
+				43FC8304229BCA850074C3D6 /* Request.swift in Sources */,
+				43FC8305229BCA850074C3D6 /* ErrorType.swift in Sources */,
+				43FC8306229BCA850074C3D6 /* CurrentUserResponse.swift in Sources */,
+				43FC8307229BCA850074C3D6 /* AuthenticationResponse.swift in Sources */,
+				43FC8308229BCA850074C3D6 /* WalletModel.swift in Sources */,
+				43FC8309229BCA850074C3D6 /* UserModel.swift in Sources */,
+				43FC830A229BCA850074C3D6 /* ErrorModel.swift in Sources */,
+				43FC830B229BCA850074C3D6 /* Users.swift in Sources */,
+				43FC830C229BCA850074C3D6 /* Sessions.swift in Sources */,
+				43FC830D229BCA860074C3D6 /* UsersAPI.swift in Sources */,
+				43FC830E229BCA860074C3D6 /* SessionsAPI.swift in Sources */,
 				OBJ_276 /* PictionSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1236,6 +1247,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				43FC82EE229BC9E80074C3D6 /* ServerInfo.swift in Sources */,
+				43FC82EF229BC9E80074C3D6 /* MoyaResponseExtension.swift in Sources */,
+				43FC82F0229BC9E80074C3D6 /* TargetTypeExtension.swift in Sources */,
+				43FC82F1229BC9E80074C3D6 /* PictionManager.swift in Sources */,
+				43FC82F2229BC9E80074C3D6 /* Response.swift in Sources */,
+				43FC82F3229BC9E80074C3D6 /* Request.swift in Sources */,
+				43FC82F4229BC9E80074C3D6 /* ErrorType.swift in Sources */,
+				43FC82F5229BC9E80074C3D6 /* CurrentUserResponse.swift in Sources */,
+				43FC82F6229BC9E80074C3D6 /* AuthenticationResponse.swift in Sources */,
+				43FC82F7229BC9E80074C3D6 /* WalletModel.swift in Sources */,
+				43FC82F8229BC9E80074C3D6 /* UserModel.swift in Sources */,
+				43FC82F9229BC9E80074C3D6 /* ErrorModel.swift in Sources */,
+				43FC82FA229BC9E80074C3D6 /* Users.swift in Sources */,
+				43FC82FB229BC9E80074C3D6 /* Sessions.swift in Sources */,
+				43FC82FC229BC9E80074C3D6 /* UsersAPI.swift in Sources */,
+				43FC82FD229BC9E80074C3D6 /* SessionsAPI.swift in Sources */,
+				43FC82FE229BC9E80074C3D6 /* PictionSDK.swift in Sources */,
 				OBJ_295 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

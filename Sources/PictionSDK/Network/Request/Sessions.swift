@@ -12,8 +12,8 @@ public final class Sessions {
     static let shared = Sessions()
     private init() {}
 
-    public func create(username: String, password: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        request(SessionsAPI.create(username: username, password: password),
+    public func create(email: String, password: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        request(SessionsAPI.create(email: email, password: password),
             success: { (response: AuthenticationResponse) in
                 PictionManager.setToken(response.accessToken ?? "")
                 successCompletion?(response)

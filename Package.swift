@@ -22,7 +22,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "PictionSDK",
-            dependencies: ["Moya-ModelMapper", "KeychainAccess"]),
+            dependencies: ["Moya-ModelMapper", "KeychainAccess"],
+            path: "Sources"),
         .testTarget(
             name: "PictionSDKTests",
             dependencies: ["PictionSDK"]),

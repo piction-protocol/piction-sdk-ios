@@ -37,7 +37,6 @@
 		43FC82FB229BC9E80074C3D6 /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82EA229BC9A50074C3D6 /* Sessions.swift */; };
 		43FC82FC229BC9E80074C3D6 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82EC229BC9A50074C3D6 /* UsersAPI.swift */; };
 		43FC82FD229BC9E80074C3D6 /* SessionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82ED229BC9A50074C3D6 /* SessionsAPI.swift */; };
-		43FC82FE229BC9E80074C3D6 /* PictionSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* PictionSDK.swift */; };
 		43FC82FF229BCA850074C3D6 /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82DA229BC9A50074C3D6 /* ServerInfo.swift */; };
 		43FC8300229BCA850074C3D6 /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82D7229BC9A50074C3D6 /* MoyaResponseExtension.swift */; };
 		43FC8301229BCA850074C3D6 /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82D8229BC9A50074C3D6 /* TargetTypeExtension.swift */; };
@@ -54,6 +53,7 @@
 		43FC830C229BCA850074C3D6 /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82EA229BC9A50074C3D6 /* Sessions.swift */; };
 		43FC830D229BCA860074C3D6 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82EC229BC9A50074C3D6 /* UsersAPI.swift */; };
 		43FC830E229BCA860074C3D6 /* SessionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC82ED229BC9A50074C3D6 /* SessionsAPI.swift */; };
+		43FC83D4229CE73D0074C3D6 /* PictionSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC83D1229CE7380074C3D6 /* PictionSDK.swift */; };
 		OBJ_133 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* AFError.swift */; };
 		OBJ_134 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* Alamofire.swift */; };
 		OBJ_135 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* DispatchQueue+Alamofire.swift */; };
@@ -119,7 +119,6 @@
 		OBJ_238 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
 		OBJ_248 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Package.swift */; };
 		OBJ_254 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* Package.swift */; };
-		OBJ_276 /* PictionSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* PictionSDK.swift */; };
 		OBJ_278 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "KeychainAccess::KeychainAccess::Product" /* KeychainAccess.framework */; };
 		OBJ_279 /* Moya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya-ModelMapper::Moya-ModelMapper::Product" /* Moya_ModelMapper.framework */; };
 		OBJ_280 /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Mapper::Mapper::Product" /* Mapper.framework */; };
@@ -303,6 +302,7 @@
 		43FC82EA229BC9A50074C3D6 /* Sessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sessions.swift; sourceTree = "<group>"; };
 		43FC82EC229BC9A50074C3D6 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
 		43FC82ED229BC9A50074C3D6 /* SessionsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsAPI.swift; sourceTree = "<group>"; };
+		43FC83D1229CE7380074C3D6 /* PictionSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PictionSDK.swift; path = Sources/PictionSDK.swift; sourceTree = "<group>"; };
 		"Alamofire::Alamofire::Product" /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"KeychainAccess::KeychainAccess::Product" /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Mapper::Mapper::Product" /* Mapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Mapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,7 +327,6 @@
 		OBJ_116 /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		OBJ_117 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		OBJ_127 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		OBJ_33 /* PictionSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionSDK.swift; sourceTree = "<group>"; };
 		OBJ_36 /* PictionSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionSDKTests.swift; sourceTree = "<group>"; };
 		OBJ_37 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_41 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
@@ -720,7 +719,7 @@
 				43FC82D6229BC9A50074C3D6 /* Extension */,
 				43FC82DB229BC9A50074C3D6 /* Helper */,
 				43FC82E0229BC9A50074C3D6 /* Network */,
-				OBJ_33 /* PictionSDK.swift */,
+				43FC83D1229CE7380074C3D6 /* PictionSDK.swift */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -1239,7 +1238,6 @@
 				43FC830C229BCA850074C3D6 /* Sessions.swift in Sources */,
 				43FC830D229BCA860074C3D6 /* UsersAPI.swift in Sources */,
 				43FC830E229BCA860074C3D6 /* SessionsAPI.swift in Sources */,
-				OBJ_276 /* PictionSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1256,6 +1254,7 @@
 				43FC82F4229BC9E80074C3D6 /* ErrorType.swift in Sources */,
 				43FC82F5229BC9E80074C3D6 /* CurrentUserResponse.swift in Sources */,
 				43FC82F6229BC9E80074C3D6 /* AuthenticationResponse.swift in Sources */,
+				43FC83D4229CE73D0074C3D6 /* PictionSDK.swift in Sources */,
 				43FC82F7229BC9E80074C3D6 /* WalletModel.swift in Sources */,
 				43FC82F8229BC9E80074C3D6 /* UserModel.swift in Sources */,
 				43FC82F9229BC9E80074C3D6 /* ErrorModel.swift in Sources */,
@@ -1263,7 +1262,6 @@
 				43FC82FB229BC9E80074C3D6 /* Sessions.swift in Sources */,
 				43FC82FC229BC9E80074C3D6 /* UsersAPI.swift in Sources */,
 				43FC82FD229BC9E80074C3D6 /* SessionsAPI.swift in Sources */,
-				43FC82FE229BC9E80074C3D6 /* PictionSDK.swift in Sources */,
 				OBJ_295 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

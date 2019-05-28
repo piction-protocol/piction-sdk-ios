@@ -5,3 +5,4 @@ project.xcworkspace
 xcshareddata
 *.plist
 !PictionSDK_Info.plist
+/Carthage

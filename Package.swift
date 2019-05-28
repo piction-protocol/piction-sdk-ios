@@ -23,7 +23,7 @@ let package = Package(
         .target(
             name: "PictionSDK",
             dependencies: ["Moya-ModelMapper", "KeychainAccess"],
-            path: "."),
+            path: "Sources"),
         .testTarget(
             name: "PictionSDKTests",
             dependencies: ["PictionSDK"]),

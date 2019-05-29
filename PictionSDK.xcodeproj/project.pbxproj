@@ -21,71 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_137 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* AFError.swift */; };
-		OBJ_138 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* Alamofire.swift */; };
-		OBJ_139 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* DispatchQueue+Alamofire.swift */; };
-		OBJ_140 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* MultipartFormData.swift */; };
-		OBJ_141 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_104 /* NetworkReachabilityManager.swift */; };
-		OBJ_142 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* Notifications.swift */; };
-		OBJ_143 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* ParameterEncoding.swift */; };
-		OBJ_144 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* Request.swift */; };
-		OBJ_145 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* Response.swift */; };
-		OBJ_146 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* ResponseSerialization.swift */; };
-		OBJ_147 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* Result.swift */; };
-		OBJ_148 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* ServerTrustPolicy.swift */; };
-		OBJ_149 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* SessionDelegate.swift */; };
-		OBJ_150 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* SessionManager.swift */; };
-		OBJ_151 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* TaskDelegate.swift */; };
-		OBJ_152 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* Timeline.swift */; };
-		OBJ_153 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* Validation.swift */; };
-		OBJ_160 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* Package.swift */; };
-		OBJ_166 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Keychain.swift */; };
-		OBJ_173 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Package.swift */; };
-		OBJ_179 /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Convertible.swift */; };
-		OBJ_180 /* DefaultConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* DefaultConvertible.swift */; };
-		OBJ_181 /* Defaults+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Defaults+Convertible.swift */; };
-		OBJ_182 /* Float+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Float+Convertible.swift */; };
-		OBJ_183 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Mappable.swift */; };
-		OBJ_184 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* Mapper.swift */; };
-		OBJ_185 /* MapperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* MapperError.swift */; };
-		OBJ_186 /* NSDictionary+Safety.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* NSDictionary+Safety.swift */; };
-		OBJ_187 /* Transform+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Transform+Dictionary.swift */; };
-		OBJ_188 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Transform.swift */; };
-		OBJ_189 /* URL+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* URL+Convertible.swift */; };
-		OBJ_196 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Package.swift */; };
-		OBJ_202 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* AnyEncodable.swift */; };
-		OBJ_203 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* Cancellable.swift */; };
-		OBJ_204 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* Endpoint.swift */; };
-		OBJ_205 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* Image.swift */; };
-		OBJ_206 /* Moya+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* Moya+Alamofire.swift */; };
-		OBJ_207 /* MoyaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* MoyaError.swift */; };
-		OBJ_208 /* MoyaProvider+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* MoyaProvider+Defaults.swift */; };
-		OBJ_209 /* MoyaProvider+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* MoyaProvider+Internal.swift */; };
-		OBJ_210 /* MoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* MoyaProvider.swift */; };
-		OBJ_211 /* MultiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* MultiTarget.swift */; };
-		OBJ_212 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* MultipartFormData.swift */; };
-		OBJ_213 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* Plugin.swift */; };
-		OBJ_214 /* AccessTokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* AccessTokenPlugin.swift */; };
-		OBJ_215 /* CredentialsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* CredentialsPlugin.swift */; };
-		OBJ_216 /* NetworkActivityPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* NetworkActivityPlugin.swift */; };
-		OBJ_217 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* NetworkLoggerPlugin.swift */; };
-		OBJ_218 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* Response.swift */; };
-		OBJ_219 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* TargetType.swift */; };
-		OBJ_220 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Task.swift */; };
-		OBJ_221 /* URL+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* URL+Moya.swift */; };
-		OBJ_222 /* URLRequest+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* URLRequest+Encoding.swift */; };
-		OBJ_223 /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* ValidationType.swift */; };
-		OBJ_225 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
-		OBJ_226 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
-		OBJ_235 /* Array+Shims.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Array+Shims.swift */; };
-		OBJ_236 /* Response+ModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Response+ModelMapper.swift */; };
-		OBJ_237 /* ResponseAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ResponseAvailability.swift */; };
-		OBJ_239 /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Mapper::Mapper::Product" /* Mapper.framework */; };
-		OBJ_240 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya::Moya::Product" /* Moya.framework */; };
-		OBJ_241 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
-		OBJ_242 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
-		OBJ_252 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Package.swift */; };
-		OBJ_258 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* Package.swift */; };
 		OBJ_264 /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ServerInfo.swift */; };
 		OBJ_265 /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* MoyaResponseExtension.swift */; };
 		OBJ_266 /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* TargetTypeExtension.swift */; };
@@ -103,162 +38,19 @@
 		OBJ_278 /* SessionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* SessionsAPI.swift */; };
 		OBJ_279 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* UsersAPI.swift */; };
 		OBJ_280 /* PictionSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* PictionSDK.swift */; };
-		OBJ_282 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "KeychainAccess::KeychainAccess::Product" /* KeychainAccess.framework */; };
-		OBJ_283 /* Moya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya-ModelMapper::Moya-ModelMapper::Product" /* Moya_ModelMapper.framework */; };
-		OBJ_284 /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Mapper::Mapper::Product" /* Mapper.framework */; };
-		OBJ_285 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya::Moya::Product" /* Moya.framework */; };
-		OBJ_286 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
-		OBJ_287 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
 		OBJ_299 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_310 /* PictionSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* PictionSDKTests.swift */; };
 		OBJ_311 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* XCTestManifests.swift */; };
 		OBJ_313 /* PictionSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PictionSDK::PictionSDK::Product" /* PictionSDK.framework */; };
-		OBJ_314 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "KeychainAccess::KeychainAccess::Product" /* KeychainAccess.framework */; };
-		OBJ_315 /* Moya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya-ModelMapper::Moya-ModelMapper::Product" /* Moya_ModelMapper.framework */; };
-		OBJ_316 /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Mapper::Mapper::Product" /* Mapper.framework */; };
-		OBJ_317 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya::Moya::Product" /* Moya.framework */; };
-		OBJ_318 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
-		OBJ_319 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
-		OBJ_331 /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* AnyError.swift */; };
-		OBJ_332 /* NoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* NoError.swift */; };
-		OBJ_333 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* Result.swift */; };
-		OBJ_334 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* ResultProtocol.swift */; };
-		OBJ_341 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		43FC88E2229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "KeychainAccess::KeychainAccess";
-			remoteInfo = KeychainAccess;
-		};
-		43FC88E3229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Moya-ModelMapper::Moya-ModelMapper";
-			remoteInfo = "Moya-ModelMapper";
-		};
-		43FC88E4229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Mapper::Mapper";
-			remoteInfo = Mapper;
-		};
-		43FC88E5229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Moya::Moya";
-			remoteInfo = Moya;
-		};
-		43FC88E6229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Result::Result";
-			remoteInfo = Result;
-		};
-		43FC88E7229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Alamofire::Alamofire";
-			remoteInfo = Alamofire;
-		};
-		43FC88E8229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Result::Result";
-			remoteInfo = Result;
-		};
-		43FC88E9229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Alamofire::Alamofire";
-			remoteInfo = Alamofire;
-		};
-		43FC88EA229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Mapper::Mapper";
-			remoteInfo = Mapper;
-		};
-		43FC88EB229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Moya::Moya";
-			remoteInfo = Moya;
-		};
-		43FC88EC229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Result::Result";
-			remoteInfo = Result;
-		};
-		43FC88ED229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Alamofire::Alamofire";
-			remoteInfo = Alamofire;
-		};
 		43FC88EE229D3A370074C3D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PictionSDK::PictionSDK";
 			remoteInfo = PictionSDK;
-		};
-		43FC88EF229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "KeychainAccess::KeychainAccess";
-			remoteInfo = KeychainAccess;
-		};
-		43FC88F0229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Moya-ModelMapper::Moya-ModelMapper";
-			remoteInfo = "Moya-ModelMapper";
-		};
-		43FC88F1229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Mapper::Mapper";
-			remoteInfo = Mapper;
-		};
-		43FC88F2229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Moya::Moya";
-			remoteInfo = Moya;
-		};
-		43FC88F3229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Result::Result";
-			remoteInfo = Result;
-		};
-		43FC88F4229D3A370074C3D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Alamofire::Alamofire";
-			remoteInfo = Alamofire;
 		};
 		43FC88F5229D3A3A0074C3D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -270,36 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		"Alamofire::Alamofire::Product" /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"KeychainAccess::KeychainAccess::Product" /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Mapper::Mapper::Product" /* Mapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Moya-ModelMapper::Moya-ModelMapper::Product" /* Moya_ModelMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Moya_ModelMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Moya::Moya::Product" /* Moya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_100 /* AFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
-		OBJ_101 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
-		OBJ_102 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		OBJ_103 /* MultipartFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
-		OBJ_104 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		OBJ_105 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		OBJ_106 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
-		OBJ_107 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		OBJ_108 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		OBJ_109 /* ResponseSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
 		OBJ_11 /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
-		OBJ_110 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		OBJ_111 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		OBJ_112 /* SessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
-		OBJ_113 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		OBJ_114 /* TaskDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
-		OBJ_115 /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
-		OBJ_116 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		OBJ_12 /* TargetTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetTypeExtension.swift; sourceTree = "<group>"; };
-		OBJ_126 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = SOURCE_ROOT; };
-		OBJ_127 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
-		OBJ_128 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		OBJ_129 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		OBJ_130 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		OBJ_131 /* PictionSDK.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PictionSDK.podspec; sourceTree = "<group>"; };
 		OBJ_14 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		OBJ_15 /* PictionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionManager.swift; sourceTree = "<group>"; };
 		OBJ_16 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -316,112 +80,17 @@
 		OBJ_32 /* PictionSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionSDK.swift; sourceTree = "<group>"; };
 		OBJ_35 /* PictionSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionSDKTests.swift; sourceTree = "<group>"; };
 		OBJ_36 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_40 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
-		OBJ_41 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/jhseo/Workspace/Git/iOS/piction-sdk-ios/.build/checkouts/KeychainAccess/Package.swift"; sourceTree = "<group>"; };
-		OBJ_44 /* Array+Shims.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Shims.swift"; sourceTree = "<group>"; };
-		OBJ_45 /* Response+ModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+ModelMapper.swift"; sourceTree = "<group>"; };
-		OBJ_46 /* ResponseAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseAvailability.swift; sourceTree = "<group>"; };
-		OBJ_49 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/jhseo/Workspace/Git/iOS/piction-sdk-ios/.build/checkouts/Moya-ModelMapper/Package.swift"; sourceTree = "<group>"; };
-		OBJ_51 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/jhseo/Workspace/Git/iOS/piction-sdk-ios/.build/checkouts/mapper/Package.swift"; sourceTree = "<group>"; };
-		OBJ_52 /* Convertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
-		OBJ_53 /* DefaultConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultConvertible.swift; sourceTree = "<group>"; };
-		OBJ_54 /* Defaults+Convertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Convertible.swift"; sourceTree = "<group>"; };
-		OBJ_55 /* Float+Convertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Convertible.swift"; sourceTree = "<group>"; };
-		OBJ_56 /* Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
-		OBJ_57 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
-		OBJ_58 /* MapperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperError.swift; sourceTree = "<group>"; };
-		OBJ_59 /* NSDictionary+Safety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDictionary+Safety.swift"; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_60 /* Transform+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transform+Dictionary.swift"; sourceTree = "<group>"; };
-		OBJ_61 /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
-		OBJ_62 /* URL+Convertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Convertible.swift"; sourceTree = "<group>"; };
-		OBJ_65 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
-		OBJ_66 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
-		OBJ_67 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		OBJ_68 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		OBJ_69 /* Moya+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+Alamofire.swift"; sourceTree = "<group>"; };
-		OBJ_70 /* MoyaError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaError.swift; sourceTree = "<group>"; };
-		OBJ_71 /* MoyaProvider+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Defaults.swift"; sourceTree = "<group>"; };
-		OBJ_72 /* MoyaProvider+Internal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Internal.swift"; sourceTree = "<group>"; };
-		OBJ_73 /* MoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaProvider.swift; sourceTree = "<group>"; };
-		OBJ_74 /* MultiTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiTarget.swift; sourceTree = "<group>"; };
-		OBJ_75 /* MultipartFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
-		OBJ_76 /* Plugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
-		OBJ_78 /* AccessTokenPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenPlugin.swift; sourceTree = "<group>"; };
-		OBJ_79 /* CredentialsPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsPlugin.swift; sourceTree = "<group>"; };
-		OBJ_80 /* NetworkActivityPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkActivityPlugin.swift; sourceTree = "<group>"; };
-		OBJ_81 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
-		OBJ_82 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		OBJ_83 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
-		OBJ_84 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		OBJ_85 /* URL+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Moya.swift"; sourceTree = "<group>"; };
-		OBJ_86 /* URLRequest+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Encoding.swift"; sourceTree = "<group>"; };
-		OBJ_87 /* ValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
 		OBJ_9 /* ServerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfo.swift; sourceTree = "<group>"; };
-		OBJ_90 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/jhseo/Workspace/Git/iOS/piction-sdk-ios/.build/checkouts/Moya/Package.swift"; sourceTree = "<group>"; };
-		OBJ_93 /* AnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyError.swift; sourceTree = "<group>"; };
-		OBJ_94 /* NoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoError.swift; sourceTree = "<group>"; };
-		OBJ_95 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		OBJ_96 /* ResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
-		OBJ_97 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/jhseo/Workspace/Git/iOS/piction-sdk-ios/.build/checkouts/Result/Package.swift"; sourceTree = "<group>"; };
-		OBJ_99 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/jhseo/Workspace/Git/iOS/piction-sdk-ios/.build/checkouts/Alamofire/Package.swift"; sourceTree = "<group>"; };
 		"PictionSDK::PictionSDK::Product" /* PictionSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PictionSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"PictionSDK::PictionSDKTests::Product" /* PictionSDKTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = PictionSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Result::Result::Product" /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PictionSDK::PictionSDKTests::Product" /* PictionSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = PictionSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_154 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_167 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_190 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_224 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_225 /* Result.framework in Frameworks */,
-				OBJ_226 /* Alamofire.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_238 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_239 /* Mapper.framework in Frameworks */,
-				OBJ_240 /* Moya.framework in Frameworks */,
-				OBJ_241 /* Result.framework in Frameworks */,
-				OBJ_242 /* Alamofire.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		OBJ_281 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_282 /* KeychainAccess.framework in Frameworks */,
-				OBJ_283 /* Moya_ModelMapper.framework in Frameworks */,
-				OBJ_284 /* Mapper.framework in Frameworks */,
-				OBJ_285 /* Moya.framework in Frameworks */,
-				OBJ_286 /* Result.framework in Frameworks */,
-				OBJ_287 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,19 +99,6 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_313 /* PictionSDK.framework in Frameworks */,
-				OBJ_314 /* KeychainAccess.framework in Frameworks */,
-				OBJ_315 /* Moya_ModelMapper.framework in Frameworks */,
-				OBJ_316 /* Mapper.framework in Frameworks */,
-				OBJ_317 /* Moya.framework in Frameworks */,
-				OBJ_318 /* Result.framework in Frameworks */,
-				OBJ_319 /* Alamofire.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_335 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,13 +117,7 @@
 		OBJ_117 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"Moya-ModelMapper::Moya-ModelMapper::Product" /* Moya_ModelMapper.framework */,
-				"KeychainAccess::KeychainAccess::Product" /* KeychainAccess.framework */,
-				"Result::Result::Product" /* Result.framework */,
-				"Mapper::Mapper::Product" /* Mapper.framework */,
 				"PictionSDK::PictionSDK::Product" /* PictionSDK.framework */,
-				"Moya::Moya::Product" /* Moya.framework */,
-				"Alamofire::Alamofire::Product" /* Alamofire.framework */,
 				"PictionSDK::PictionSDKTests::Product" /* PictionSDKTests.xctest */,
 			);
 			name = Products;
@@ -550,150 +200,15 @@
 			path = Tests/PictionSDKTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_37 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_38 /* KeychainAccess 3.2.0 */,
-				OBJ_42 /* Moya-ModelMapper 9.0.0 */,
-				OBJ_50 /* Mapper 10.0.0 */,
-				OBJ_63 /* Moya 13.0.1 */,
-				OBJ_91 /* Result 4.1.0 */,
-				OBJ_98 /* Alamofire 4.8.2 */,
-			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		OBJ_38 /* KeychainAccess 3.2.0 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_39 /* KeychainAccess */,
-				OBJ_41 /* Package.swift */,
-			);
-			name = "KeychainAccess 3.2.0";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_39 /* KeychainAccess */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_40 /* Keychain.swift */,
-			);
-			name = KeychainAccess;
-			path = .build/checkouts/KeychainAccess/Lib/KeychainAccess;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_42 /* Moya-ModelMapper 9.0.0 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_43 /* Moya-ModelMapper */,
-				OBJ_47 /* ReactiveMoya-ModelMapper */,
-				OBJ_48 /* RxMoya-ModelMapper */,
-				OBJ_49 /* Package.swift */,
-			);
-			name = "Moya-ModelMapper 9.0.0";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_43 /* Moya-ModelMapper */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_44 /* Array+Shims.swift */,
-				OBJ_45 /* Response+ModelMapper.swift */,
-				OBJ_46 /* ResponseAvailability.swift */,
-			);
-			name = "Moya-ModelMapper";
-			path = ".build/checkouts/Moya-ModelMapper/Sources/Moya-ModelMapper";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_47 /* ReactiveMoya-ModelMapper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "ReactiveMoya-ModelMapper";
-			path = ".build/checkouts/Moya-ModelMapper/Sources/ReactiveMoya-ModelMapper";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_48 /* RxMoya-ModelMapper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "RxMoya-ModelMapper";
-			path = ".build/checkouts/Moya-ModelMapper/Sources/RxMoya-ModelMapper";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_33 /* Tests */,
-				OBJ_37 /* Dependencies */,
 				OBJ_117 /* Products */,
-				OBJ_126 /* Carthage */,
-				OBJ_127 /* Cartfile.resolved */,
-				OBJ_128 /* LICENSE */,
-				OBJ_129 /* Cartfile */,
-				OBJ_130 /* README.md */,
-				OBJ_131 /* PictionSDK.podspec */,
 			);
-			name = "";
 			sourceTree = "<group>";
-		};
-		OBJ_50 /* Mapper 10.0.0 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_51 /* Package.swift */,
-				OBJ_52 /* Convertible.swift */,
-				OBJ_53 /* DefaultConvertible.swift */,
-				OBJ_54 /* Defaults+Convertible.swift */,
-				OBJ_55 /* Float+Convertible.swift */,
-				OBJ_56 /* Mappable.swift */,
-				OBJ_57 /* Mapper.swift */,
-				OBJ_58 /* MapperError.swift */,
-				OBJ_59 /* NSDictionary+Safety.swift */,
-				OBJ_60 /* Transform+Dictionary.swift */,
-				OBJ_61 /* Transform.swift */,
-				OBJ_62 /* URL+Convertible.swift */,
-			);
-			name = "Mapper 10.0.0";
-			path = .build/checkouts/mapper/Sources;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_63 /* Moya 13.0.1 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_64 /* Moya */,
-				OBJ_88 /* ReactiveMoya */,
-				OBJ_89 /* RxMoya */,
-				OBJ_90 /* Package.swift */,
-			);
-			name = "Moya 13.0.1";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_64 /* Moya */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_65 /* AnyEncodable.swift */,
-				OBJ_66 /* Cancellable.swift */,
-				OBJ_67 /* Endpoint.swift */,
-				OBJ_68 /* Image.swift */,
-				OBJ_69 /* Moya+Alamofire.swift */,
-				OBJ_70 /* MoyaError.swift */,
-				OBJ_71 /* MoyaProvider+Defaults.swift */,
-				OBJ_72 /* MoyaProvider+Internal.swift */,
-				OBJ_73 /* MoyaProvider.swift */,
-				OBJ_74 /* MultiTarget.swift */,
-				OBJ_75 /* MultipartFormData.swift */,
-				OBJ_76 /* Plugin.swift */,
-				OBJ_77 /* Plugins */,
-				OBJ_82 /* Response.swift */,
-				OBJ_83 /* TargetType.swift */,
-				OBJ_84 /* Task.swift */,
-				OBJ_85 /* URL+Moya.swift */,
-				OBJ_86 /* URLRequest+Encoding.swift */,
-				OBJ_87 /* ValidationType.swift */,
-			);
-			name = Moya;
-			path = .build/checkouts/Moya/Sources/Moya;
-			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
@@ -707,17 +222,6 @@
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_77 /* Plugins */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_78 /* AccessTokenPlugin.swift */,
-				OBJ_79 /* CredentialsPlugin.swift */,
-				OBJ_80 /* NetworkActivityPlugin.swift */,
-				OBJ_81 /* NetworkLoggerPlugin.swift */,
-			);
-			path = Plugins;
-			sourceTree = "<group>";
-		};
 		OBJ_8 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -726,228 +230,9 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		OBJ_88 /* ReactiveMoya */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ReactiveMoya;
-			path = .build/checkouts/Moya/Sources/ReactiveMoya;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_89 /* RxMoya */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = RxMoya;
-			path = .build/checkouts/Moya/Sources/RxMoya;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_91 /* Result 4.1.0 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_92 /* Result */,
-				OBJ_97 /* Package.swift */,
-			);
-			name = "Result 4.1.0";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_92 /* Result */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_93 /* AnyError.swift */,
-				OBJ_94 /* NoError.swift */,
-				OBJ_95 /* Result.swift */,
-				OBJ_96 /* ResultProtocol.swift */,
-			);
-			name = Result;
-			path = .build/checkouts/Result/Result;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_98 /* Alamofire 4.8.2 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_99 /* Package.swift */,
-				OBJ_100 /* AFError.swift */,
-				OBJ_101 /* Alamofire.swift */,
-				OBJ_102 /* DispatchQueue+Alamofire.swift */,
-				OBJ_103 /* MultipartFormData.swift */,
-				OBJ_104 /* NetworkReachabilityManager.swift */,
-				OBJ_105 /* Notifications.swift */,
-				OBJ_106 /* ParameterEncoding.swift */,
-				OBJ_107 /* Request.swift */,
-				OBJ_108 /* Response.swift */,
-				OBJ_109 /* ResponseSerialization.swift */,
-				OBJ_110 /* Result.swift */,
-				OBJ_111 /* ServerTrustPolicy.swift */,
-				OBJ_112 /* SessionDelegate.swift */,
-				OBJ_113 /* SessionManager.swift */,
-				OBJ_114 /* TaskDelegate.swift */,
-				OBJ_115 /* Timeline.swift */,
-				OBJ_116 /* Validation.swift */,
-			);
-			name = "Alamofire 4.8.2";
-			path = .build/checkouts/Alamofire/Source;
-			sourceTree = SOURCE_ROOT;
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		"Alamofire::Alamofire" /* Alamofire */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_133 /* Build configuration list for PBXNativeTarget "Alamofire" */;
-			buildPhases = (
-				OBJ_136 /* Sources */,
-				OBJ_154 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Alamofire;
-			productName = Alamofire;
-			productReference = "Alamofire::Alamofire::Product" /* Alamofire.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"Alamofire::SwiftPMPackageDescription" /* AlamofirePackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_156 /* Build configuration list for PBXNativeTarget "AlamofirePackageDescription" */;
-			buildPhases = (
-				OBJ_159 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AlamofirePackageDescription;
-			productName = AlamofirePackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"KeychainAccess::KeychainAccess" /* KeychainAccess */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_162 /* Build configuration list for PBXNativeTarget "KeychainAccess" */;
-			buildPhases = (
-				OBJ_165 /* Sources */,
-				OBJ_167 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = KeychainAccess;
-			productName = KeychainAccess;
-			productReference = "KeychainAccess::KeychainAccess::Product" /* KeychainAccess.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"KeychainAccess::SwiftPMPackageDescription" /* KeychainAccessPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_169 /* Build configuration list for PBXNativeTarget "KeychainAccessPackageDescription" */;
-			buildPhases = (
-				OBJ_172 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = KeychainAccessPackageDescription;
-			productName = KeychainAccessPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"Mapper::Mapper" /* Mapper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_175 /* Build configuration list for PBXNativeTarget "Mapper" */;
-			buildPhases = (
-				OBJ_178 /* Sources */,
-				OBJ_190 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Mapper;
-			productName = Mapper;
-			productReference = "Mapper::Mapper::Product" /* Mapper.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"Mapper::SwiftPMPackageDescription" /* MapperPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_192 /* Build configuration list for PBXNativeTarget "MapperPackageDescription" */;
-			buildPhases = (
-				OBJ_195 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MapperPackageDescription;
-			productName = MapperPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"Moya-ModelMapper::Moya-ModelMapper" /* Moya-ModelMapper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_231 /* Build configuration list for PBXNativeTarget "Moya-ModelMapper" */;
-			buildPhases = (
-				OBJ_234 /* Sources */,
-				OBJ_238 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_243 /* PBXTargetDependency */,
-				OBJ_244 /* PBXTargetDependency */,
-				OBJ_245 /* PBXTargetDependency */,
-				OBJ_246 /* PBXTargetDependency */,
-			);
-			name = "Moya-ModelMapper";
-			productName = Moya_ModelMapper;
-			productReference = "Moya-ModelMapper::Moya-ModelMapper::Product" /* Moya_ModelMapper.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"Moya-ModelMapper::SwiftPMPackageDescription" /* Moya-ModelMapperPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_248 /* Build configuration list for PBXNativeTarget "Moya-ModelMapperPackageDescription" */;
-			buildPhases = (
-				OBJ_251 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Moya-ModelMapperPackageDescription";
-			productName = "Moya-ModelMapperPackageDescription";
-			productType = "com.apple.product-type.framework";
-		};
-		"Moya::Moya" /* Moya */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_198 /* Build configuration list for PBXNativeTarget "Moya" */;
-			buildPhases = (
-				OBJ_201 /* Sources */,
-				OBJ_224 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_227 /* PBXTargetDependency */,
-				OBJ_229 /* PBXTargetDependency */,
-			);
-			name = Moya;
-			productName = Moya;
-			productReference = "Moya::Moya::Product" /* Moya.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"Moya::SwiftPMPackageDescription" /* MoyaPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_254 /* Build configuration list for PBXNativeTarget "MoyaPackageDescription" */;
-			buildPhases = (
-				OBJ_257 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MoyaPackageDescription;
-			productName = MoyaPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
 		"PictionSDK::PictionSDK" /* PictionSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_260 /* Build configuration list for PBXNativeTarget "PictionSDK" */;
@@ -958,12 +243,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_288 /* PBXTargetDependency */,
-				OBJ_289 /* PBXTargetDependency */,
-				OBJ_290 /* PBXTargetDependency */,
-				OBJ_291 /* PBXTargetDependency */,
-				OBJ_292 /* PBXTargetDependency */,
-				OBJ_293 /* PBXTargetDependency */,
 			);
 			name = PictionSDK;
 			productName = PictionSDK;
@@ -981,12 +260,6 @@
 			);
 			dependencies = (
 				OBJ_320 /* PBXTargetDependency */,
-				OBJ_321 /* PBXTargetDependency */,
-				OBJ_322 /* PBXTargetDependency */,
-				OBJ_323 /* PBXTargetDependency */,
-				OBJ_324 /* PBXTargetDependency */,
-				OBJ_325 /* PBXTargetDependency */,
-				OBJ_326 /* PBXTargetDependency */,
 			);
 			name = PictionSDKTests;
 			productName = PictionSDKTests;
@@ -1007,36 +280,6 @@
 			productName = PictionSDKPackageDescription;
 			productType = "com.apple.product-type.framework";
 		};
-		"Result::Result" /* Result */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_327 /* Build configuration list for PBXNativeTarget "Result" */;
-			buildPhases = (
-				OBJ_330 /* Sources */,
-				OBJ_335 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Result;
-			productName = Result;
-			productReference = "Result::Result::Product" /* Result.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"Result::SwiftPMPackageDescription" /* ResultPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_337 /* Build configuration list for PBXNativeTarget "ResultPackageDescription" */;
-			buildPhases = (
-				OBJ_340 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ResultPackageDescription;
-			productName = ResultPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1054,161 +297,20 @@
 				English,
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_117 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"Alamofire::Alamofire" /* Alamofire */,
-				"Alamofire::SwiftPMPackageDescription" /* AlamofirePackageDescription */,
-				"KeychainAccess::KeychainAccess" /* KeychainAccess */,
-				"KeychainAccess::SwiftPMPackageDescription" /* KeychainAccessPackageDescription */,
-				"Mapper::Mapper" /* Mapper */,
-				"Mapper::SwiftPMPackageDescription" /* MapperPackageDescription */,
-				"Moya::Moya" /* Moya */,
-				"Moya-ModelMapper::Moya-ModelMapper" /* Moya-ModelMapper */,
-				"Moya-ModelMapper::SwiftPMPackageDescription" /* Moya-ModelMapperPackageDescription */,
-				"Moya::SwiftPMPackageDescription" /* MoyaPackageDescription */,
 				"PictionSDK::PictionSDK" /* PictionSDK */,
 				"PictionSDK::SwiftPMPackageDescription" /* PictionSDKPackageDescription */,
 				"PictionSDK::PictionSDKPackageTests::ProductTarget" /* PictionSDKPackageTests */,
 				"PictionSDK::PictionSDKTests" /* PictionSDKTests */,
-				"Result::Result" /* Result */,
-				"Result::SwiftPMPackageDescription" /* ResultPackageDescription */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_136 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_137 /* AFError.swift in Sources */,
-				OBJ_138 /* Alamofire.swift in Sources */,
-				OBJ_139 /* DispatchQueue+Alamofire.swift in Sources */,
-				OBJ_140 /* MultipartFormData.swift in Sources */,
-				OBJ_141 /* NetworkReachabilityManager.swift in Sources */,
-				OBJ_142 /* Notifications.swift in Sources */,
-				OBJ_143 /* ParameterEncoding.swift in Sources */,
-				OBJ_144 /* Request.swift in Sources */,
-				OBJ_145 /* Response.swift in Sources */,
-				OBJ_146 /* ResponseSerialization.swift in Sources */,
-				OBJ_147 /* Result.swift in Sources */,
-				OBJ_148 /* ServerTrustPolicy.swift in Sources */,
-				OBJ_149 /* SessionDelegate.swift in Sources */,
-				OBJ_150 /* SessionManager.swift in Sources */,
-				OBJ_151 /* TaskDelegate.swift in Sources */,
-				OBJ_152 /* Timeline.swift in Sources */,
-				OBJ_153 /* Validation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_159 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_160 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_165 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_166 /* Keychain.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_172 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_173 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_178 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_179 /* Convertible.swift in Sources */,
-				OBJ_180 /* DefaultConvertible.swift in Sources */,
-				OBJ_181 /* Defaults+Convertible.swift in Sources */,
-				OBJ_182 /* Float+Convertible.swift in Sources */,
-				OBJ_183 /* Mappable.swift in Sources */,
-				OBJ_184 /* Mapper.swift in Sources */,
-				OBJ_185 /* MapperError.swift in Sources */,
-				OBJ_186 /* NSDictionary+Safety.swift in Sources */,
-				OBJ_187 /* Transform+Dictionary.swift in Sources */,
-				OBJ_188 /* Transform.swift in Sources */,
-				OBJ_189 /* URL+Convertible.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_195 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_196 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_201 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_202 /* AnyEncodable.swift in Sources */,
-				OBJ_203 /* Cancellable.swift in Sources */,
-				OBJ_204 /* Endpoint.swift in Sources */,
-				OBJ_205 /* Image.swift in Sources */,
-				OBJ_206 /* Moya+Alamofire.swift in Sources */,
-				OBJ_207 /* MoyaError.swift in Sources */,
-				OBJ_208 /* MoyaProvider+Defaults.swift in Sources */,
-				OBJ_209 /* MoyaProvider+Internal.swift in Sources */,
-				OBJ_210 /* MoyaProvider.swift in Sources */,
-				OBJ_211 /* MultiTarget.swift in Sources */,
-				OBJ_212 /* MultipartFormData.swift in Sources */,
-				OBJ_213 /* Plugin.swift in Sources */,
-				OBJ_214 /* AccessTokenPlugin.swift in Sources */,
-				OBJ_215 /* CredentialsPlugin.swift in Sources */,
-				OBJ_216 /* NetworkActivityPlugin.swift in Sources */,
-				OBJ_217 /* NetworkLoggerPlugin.swift in Sources */,
-				OBJ_218 /* Response.swift in Sources */,
-				OBJ_219 /* TargetType.swift in Sources */,
-				OBJ_220 /* Task.swift in Sources */,
-				OBJ_221 /* URL+Moya.swift in Sources */,
-				OBJ_222 /* URLRequest+Encoding.swift in Sources */,
-				OBJ_223 /* ValidationType.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_234 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_235 /* Array+Shims.swift in Sources */,
-				OBJ_236 /* Response+ModelMapper.swift in Sources */,
-				OBJ_237 /* ResponseAvailability.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_251 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_252 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_257 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_258 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		OBJ_263 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -1250,88 +352,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_330 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_331 /* AnyError.swift in Sources */,
-				OBJ_332 /* NoError.swift in Sources */,
-				OBJ_333 /* Result.swift in Sources */,
-				OBJ_334 /* ResultProtocol.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_340 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_341 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_227 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Result::Result" /* Result */;
-			targetProxy = 43FC88E6229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_229 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Alamofire::Alamofire" /* Alamofire */;
-			targetProxy = 43FC88E7229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_243 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Mapper::Mapper" /* Mapper */;
-			targetProxy = 43FC88E4229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_244 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Moya::Moya" /* Moya */;
-			targetProxy = 43FC88E5229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_245 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Result::Result" /* Result */;
-			targetProxy = 43FC88E8229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_246 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Alamofire::Alamofire" /* Alamofire */;
-			targetProxy = 43FC88E9229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_288 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "KeychainAccess::KeychainAccess" /* KeychainAccess */;
-			targetProxy = 43FC88E2229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_289 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Moya-ModelMapper::Moya-ModelMapper" /* Moya-ModelMapper */;
-			targetProxy = 43FC88E3229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_290 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Mapper::Mapper" /* Mapper */;
-			targetProxy = 43FC88EA229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_291 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Moya::Moya" /* Moya */;
-			targetProxy = 43FC88EB229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_292 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Result::Result" /* Result */;
-			targetProxy = 43FC88EC229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_293 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Alamofire::Alamofire" /* Alamofire */;
-			targetProxy = 43FC88ED229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
 		OBJ_304 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PictionSDK::PictionSDKTests" /* PictionSDKTests */;
@@ -1342,393 +365,9 @@
 			target = "PictionSDK::PictionSDK" /* PictionSDK */;
 			targetProxy = 43FC88EE229D3A370074C3D6 /* PBXContainerItemProxy */;
 		};
-		OBJ_321 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "KeychainAccess::KeychainAccess" /* KeychainAccess */;
-			targetProxy = 43FC88EF229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_322 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Moya-ModelMapper::Moya-ModelMapper" /* Moya-ModelMapper */;
-			targetProxy = 43FC88F0229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_323 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Mapper::Mapper" /* Mapper */;
-			targetProxy = 43FC88F1229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_324 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Moya::Moya" /* Moya */;
-			targetProxy = 43FC88F2229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_325 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Result::Result" /* Result */;
-			targetProxy = 43FC88F3229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
-		OBJ_326 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Alamofire::Alamofire" /* Alamofire */;
-			targetProxy = 43FC88F4229D3A370074C3D6 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_134 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PictionSDK.xcodeproj/Alamofire_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Alamofire;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Alamofire;
-			};
-			name = Debug;
-		};
-		OBJ_135 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PictionSDK.xcodeproj/Alamofire_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Alamofire;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Alamofire;
-			};
-			name = Release;
-		};
-		OBJ_157 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		OBJ_158 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		OBJ_163 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PictionSDK.xcodeproj/KeychainAccess_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = KeychainAccess;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = KeychainAccess;
-			};
-			name = Debug;
-		};
-		OBJ_164 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PictionSDK.xcodeproj/KeychainAccess_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = KeychainAccess;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = KeychainAccess;
-			};
-			name = Release;
-		};
-		OBJ_170 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		OBJ_171 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		OBJ_176 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PictionSDK.xcodeproj/Mapper_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Mapper;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Mapper;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_177 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PictionSDK.xcodeproj/Mapper_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Mapper;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Mapper;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_193 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_194 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		OBJ_199 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PictionSDK.xcodeproj/Moya_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = "";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Moya;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Moya;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_200 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PictionSDK.xcodeproj/Moya_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = "";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Moya;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Moya;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_232 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PictionSDK.xcodeproj/Moya_ModelMapper_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = "";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "Moya-ModelMapper";
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = "Moya-ModelMapper";
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_233 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PictionSDK.xcodeproj/Moya_ModelMapper_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = "";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "Moya-ModelMapper";
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = "Moya-ModelMapper";
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_249 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_250 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		OBJ_255 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_256 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		OBJ_261 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1892,80 +531,6 @@
 			};
 			name = Release;
 		};
-		OBJ_328 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PictionSDK.xcodeproj/Result_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Result;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Result;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_329 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PictionSDK.xcodeproj/Result_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Result;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Result;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_338 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_339 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1993,101 +558,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_133 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_134 /* Debug */,
-				OBJ_135 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_156 /* Build configuration list for PBXNativeTarget "AlamofirePackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_157 /* Debug */,
-				OBJ_158 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_162 /* Build configuration list for PBXNativeTarget "KeychainAccess" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_163 /* Debug */,
-				OBJ_164 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_169 /* Build configuration list for PBXNativeTarget "KeychainAccessPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_170 /* Debug */,
-				OBJ_171 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_175 /* Build configuration list for PBXNativeTarget "Mapper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_176 /* Debug */,
-				OBJ_177 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_192 /* Build configuration list for PBXNativeTarget "MapperPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_193 /* Debug */,
-				OBJ_194 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_198 /* Build configuration list for PBXNativeTarget "Moya" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_199 /* Debug */,
-				OBJ_200 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		OBJ_2 /* Build configuration list for PBXProject "PictionSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_3 /* Debug */,
 				OBJ_4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_231 /* Build configuration list for PBXNativeTarget "Moya-ModelMapper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_232 /* Debug */,
-				OBJ_233 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_248 /* Build configuration list for PBXNativeTarget "Moya-ModelMapperPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_249 /* Debug */,
-				OBJ_250 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_254 /* Build configuration list for PBXNativeTarget "MoyaPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_255 /* Debug */,
-				OBJ_256 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2124,24 +599,6 @@
 			buildConfigurations = (
 				OBJ_307 /* Debug */,
 				OBJ_308 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_327 /* Build configuration list for PBXNativeTarget "Result" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_328 /* Debug */,
-				OBJ_329 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_337 /* Build configuration list for PBXNativeTarget "ResultPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_338 /* Debug */,
-				OBJ_339 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

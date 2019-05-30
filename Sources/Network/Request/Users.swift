@@ -31,4 +31,24 @@ public final class Users {
                 failureCompletion?(error)
             })
     }
+
+    public func update(email: String, username: String, password: String, picture: String, success successCompletion: ((CurrentUserResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        request(UsersAPI.update(email: email, username: username, password: password, picture: picture),
+            success: { (response: CurrentUserResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func updatePassword(password: String, newPassword: String, confirmPassword: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        request(UsersAPI.updatePassword(password: password, newPassword: newPassword, confirmPassword: confirmPassword),
+            success: { (response: AuthenticationResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
 }

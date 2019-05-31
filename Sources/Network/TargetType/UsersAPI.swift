@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 public enum UsersAPI {
-    case signup(email: String, username: String, password: String, confirmPassword: String)
+    case signup(email: String, username: String, password: String)
     case me
     case update(email: String, username: String, password: String, picture: String)
     case updatePassword(password: String, newPassword: String, confirmPassword: String)
@@ -54,12 +54,11 @@ extension UsersAPI: TargetType {
     }
     public var task: Task {
         switch self {
-        case .signup(let email, let username, let password, let confirmPassword):
+        case .signup(let email, let username, let password):
             let param = [
                 "email": email,
                 "username": username,
-                "password": password,
-                "confirmPassword": confirmPassword
+                "password": password
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .me:

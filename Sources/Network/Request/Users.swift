@@ -12,8 +12,8 @@ public final class Users {
     static let shared = Users()
     private init() {}
 
-    public func signup(email: String, username: String, password: String, confirmPassword: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        request(UsersAPI.signup(email: email, username: username, password: password, confirmPassword: confirmPassword),
+    public func signup(email: String, username: String, password: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        request(UsersAPI.signup(email: email, username: username, password: password),
             success: { (response: AuthenticationResponse) in
                 successCompletion?(response)
             },

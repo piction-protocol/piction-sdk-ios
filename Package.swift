@@ -7,21 +7,17 @@ let package = Package(
     name: "PictionSDK",
     platforms: [.iOS(.v8)],
     products: [
-        .library(
-            name: "PictionSDK",
-            targets: ["PictionSDK"]),
+        .library(name: "PictionSDK", targets: ["PictionSDK"]),
+        .library(name: "RxPictionSDK", targets: ["RxPictionSDK"]),
     ],
     dependencies: [
         .package(url: "https://github.com/sunshinejr/Moya-ModelMapper.git", .upToNextMajor(from: "9.0.0")),
-        .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", .upToNextMajor(from: "3.2.0"))
+        .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", .upToNextMajor(from: "3.2.0")),
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "4.0.0"))
     ],
     targets: [
-        .target(
-            name: "PictionSDK",
-            dependencies: ["Moya-ModelMapper", "KeychainAccess"],
-            path: "Sources"),
-        .testTarget(
-            name: "PictionSDKTests",
-            dependencies: ["PictionSDK"]),
+        .target(name: "PictionSDK", dependencies: ["Moya-ModelMapper", "KeychainAccess"]),
+        .target(name: "RxPictionSDK", dependencies: ["PictionSDK", "RxMoya-ModelMapper", "RxSwift"]),
+        .testTarget(name: "PictionSDKTests", dependencies: ["PictionSDK"]),
     ]
 )

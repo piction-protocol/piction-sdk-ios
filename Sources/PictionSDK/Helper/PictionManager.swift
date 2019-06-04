@@ -34,8 +34,6 @@ public class PictionManager {
         let keychain = Keychain(service: ServerInfo.apiUrl)
         var uuid: String? = keychain["UUID"]
 
-        print("uuid: \(uuid ?? "none")")
-
         if uuid == nil || uuid == "" {
             let uuidRef: CFUUID = CFUUIDCreate(nil)
             let uuidStringRef: CFString = CFUUIDCreateString(nil, uuidRef)
@@ -43,7 +41,6 @@ public class PictionManager {
             uuid = NSString(string: uuidStringRef) as String
 
             keychain["UUID"] = uuid ?? ""
-            print("uuid: \(uuid ?? "none")")
         }
         return uuid!
     }

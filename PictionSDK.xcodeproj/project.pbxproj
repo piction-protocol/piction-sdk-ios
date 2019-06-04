@@ -21,29 +21,39 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */; };
+		43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */; };
+		43CA1C0622A4EF2300CEF20A /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */; };
+		43CA1C0722A4EF2300CEF20A /* CurrentUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BED22A4EF2200CEF20A /* CurrentUserResponse.swift */; };
+		43CA1C0822A4EF2300CEF20A /* FileUploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEE22A4EF2200CEF20A /* FileUploadResponse.swift */; };
+		43CA1C0922A4EF2300CEF20A /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEF22A4EF2200CEF20A /* AuthenticationResponse.swift */; };
+		43CA1C0A22A4EF2300CEF20A /* ProjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF022A4EF2200CEF20A /* ProjectResponse.swift */; };
+		43CA1C0B22A4EF2300CEF20A /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF222A4EF2200CEF20A /* WalletModel.swift */; };
+		43CA1C0C22A4EF2300CEF20A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF322A4EF2200CEF20A /* UserModel.swift */; };
+		43CA1C0D22A4EF2300CEF20A /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF422A4EF2200CEF20A /* ErrorModel.swift */; };
+		43CA1C0E22A4EF2300CEF20A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF622A4EF2200CEF20A /* Users.swift */; };
+		43CA1C0F22A4EF2300CEF20A /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF722A4EF2200CEF20A /* Sessions.swift */; };
+		43CA1C1022A4EF2300CEF20A /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF822A4EF2200CEF20A /* Projects.swift */; };
+		43CA1C1122A4EF2300CEF20A /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFA22A4EF2200CEF20A /* UsersAPI.swift */; };
+		43CA1C1222A4EF2300CEF20A /* ProjectsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */; };
+		43CA1C1322A4EF2300CEF20A /* SessionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFC22A4EF2200CEF20A /* SessionsAPI.swift */; };
+		43CA1C1422A4EF2300CEF20A /* PictionSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFD22A4EF2200CEF20A /* PictionSDK.swift */; };
+		43CA1C1522A4EF2300CEF20A /* PictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFF22A4EF2200CEF20A /* PictionManager.swift */; };
+		43CA1C1622A4EF2300CEF20A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1C0022A4EF2200CEF20A /* Response.swift */; };
+		43CA1C1722A4EF2300CEF20A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1C0122A4EF2200CEF20A /* Request.swift */; };
+		43CA1C1822A4EF2300CEF20A /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1C0222A4EF2200CEF20A /* ErrorType.swift */; };
+		43CA1CC522A4F6F900CEF20A /* PictionSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1CC322A4F6F900CEF20A /* PictionSDK+Rx.swift */; };
+		43CA1CD322A5061D00CEF20A /* PictionSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PictionSDK::PictionSDK::Product" /* PictionSDK.framework */; };
+		43CA1CD522A5070D00CEF20A /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8937229E60BA0074C3D6 /* Mapper.framework */; };
+		43CA1CD822A5071D00CEF20A /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CD622A5071D00CEF20A /* RxMoya.framework */; };
+		43CA1CD922A5071D00CEF20A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CD722A5071D00CEF20A /* RxSwift.framework */; };
+		43CA1CDB22A50A3400CEF20A /* RxMoya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CDA22A50A3400CEF20A /* RxMoya_ModelMapper.framework */; };
+		43CA1CDF22A51ADB00CEF20A /* Users+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1CDE22A51ADB00CEF20A /* Users+Rx.swift */; };
 		43FC8938229E60BA0074C3D6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8932229E60BA0074C3D6 /* Alamofire.framework */; };
 		43FC8939229E60BA0074C3D6 /* Moya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8933229E60BA0074C3D6 /* Moya_ModelMapper.framework */; };
 		43FC893A229E60BA0074C3D6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8934229E60BA0074C3D6 /* Result.framework */; };
 		43FC893B229E60BA0074C3D6 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8935229E60BA0074C3D6 /* KeychainAccess.framework */; };
 		43FC893C229E60BA0074C3D6 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8936229E60BA0074C3D6 /* Moya.framework */; };
-		43FC893D229E60BA0074C3D6 /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8937229E60BA0074C3D6 /* Mapper.framework */; };
-		OBJ_264 /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ServerInfo.swift */; };
-		OBJ_265 /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* MoyaResponseExtension.swift */; };
-		OBJ_266 /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* TargetTypeExtension.swift */; };
-		OBJ_267 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* ErrorType.swift */; };
-		OBJ_268 /* PictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* PictionManager.swift */; };
-		OBJ_269 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Request.swift */; };
-		OBJ_270 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Response.swift */; };
-		OBJ_271 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ErrorModel.swift */; };
-		OBJ_272 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* UserModel.swift */; };
-		OBJ_273 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* WalletModel.swift */; };
-		OBJ_274 /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Sessions.swift */; };
-		OBJ_275 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Users.swift */; };
-		OBJ_276 /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* AuthenticationResponse.swift */; };
-		OBJ_277 /* CurrentUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* CurrentUserResponse.swift */; };
-		OBJ_278 /* SessionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* SessionsAPI.swift */; };
-		OBJ_279 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* UsersAPI.swift */; };
-		OBJ_280 /* PictionSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* PictionSDK.swift */; };
 		OBJ_299 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_310 /* PictionSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* PictionSDKTests.swift */; };
 		OBJ_311 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* XCTestManifests.swift */; };
@@ -68,37 +78,58 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
+		43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTypeExtension.swift; sourceTree = "<group>"; };
+		43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfo.swift; sourceTree = "<group>"; };
+		43CA1BED22A4EF2200CEF20A /* CurrentUserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserResponse.swift; sourceTree = "<group>"; };
+		43CA1BEE22A4EF2200CEF20A /* FileUploadResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUploadResponse.swift; sourceTree = "<group>"; };
+		43CA1BEF22A4EF2200CEF20A /* AuthenticationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationResponse.swift; sourceTree = "<group>"; };
+		43CA1BF022A4EF2200CEF20A /* ProjectResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectResponse.swift; sourceTree = "<group>"; };
+		43CA1BF222A4EF2200CEF20A /* WalletModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+		43CA1BF322A4EF2200CEF20A /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		43CA1BF422A4EF2200CEF20A /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		43CA1BF622A4EF2200CEF20A /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		43CA1BF722A4EF2200CEF20A /* Sessions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sessions.swift; sourceTree = "<group>"; };
+		43CA1BF822A4EF2200CEF20A /* Projects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
+		43CA1BFA22A4EF2200CEF20A /* UsersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
+		43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsAPI.swift; sourceTree = "<group>"; };
+		43CA1BFC22A4EF2200CEF20A /* SessionsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsAPI.swift; sourceTree = "<group>"; };
+		43CA1BFD22A4EF2200CEF20A /* PictionSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictionSDK.swift; sourceTree = "<group>"; };
+		43CA1BFF22A4EF2200CEF20A /* PictionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictionManager.swift; sourceTree = "<group>"; };
+		43CA1C0022A4EF2200CEF20A /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		43CA1C0122A4EF2200CEF20A /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		43CA1C0222A4EF2200CEF20A /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		43CA1CC022A4F6BF00CEF20A /* RxPictionSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxPictionSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43CA1CC322A4F6F900CEF20A /* PictionSDK+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PictionSDK+Rx.swift"; sourceTree = "<group>"; };
+		43CA1CD622A5071D00CEF20A /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		43CA1CD722A5071D00CEF20A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		43CA1CDA22A50A3400CEF20A /* RxMoya_ModelMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya_ModelMapper.framework; path = Carthage/Build/iOS/RxMoya_ModelMapper.framework; sourceTree = "<group>"; };
+		43CA1CDE22A51ADB00CEF20A /* Users+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+Rx.swift"; sourceTree = "<group>"; };
 		43FC8932229E60BA0074C3D6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		43FC8933229E60BA0074C3D6 /* Moya_ModelMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya_ModelMapper.framework; path = Carthage/Build/iOS/Moya_ModelMapper.framework; sourceTree = "<group>"; };
 		43FC8934229E60BA0074C3D6 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		43FC8935229E60BA0074C3D6 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		43FC8936229E60BA0074C3D6 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		43FC8937229E60BA0074C3D6 /* Mapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapper.framework; path = Carthage/Build/iOS/Mapper.framework; sourceTree = "<group>"; };
-		OBJ_11 /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
-		OBJ_12 /* TargetTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetTypeExtension.swift; sourceTree = "<group>"; };
-		OBJ_14 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
-		OBJ_15 /* PictionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionManager.swift; sourceTree = "<group>"; };
-		OBJ_16 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		OBJ_17 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		OBJ_20 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
-		OBJ_21 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		OBJ_22 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
-		OBJ_24 /* Sessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sessions.swift; sourceTree = "<group>"; };
-		OBJ_25 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
-		OBJ_27 /* AuthenticationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationResponse.swift; sourceTree = "<group>"; };
-		OBJ_28 /* CurrentUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserResponse.swift; sourceTree = "<group>"; };
-		OBJ_30 /* SessionsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsAPI.swift; sourceTree = "<group>"; };
-		OBJ_31 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
-		OBJ_32 /* PictionSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionSDK.swift; sourceTree = "<group>"; };
 		OBJ_35 /* PictionSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionSDKTests.swift; sourceTree = "<group>"; };
 		OBJ_36 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* ServerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfo.swift; sourceTree = "<group>"; };
 		"PictionSDK::PictionSDK::Product" /* PictionSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PictionSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PictionSDK::PictionSDKTests::Product" /* PictionSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = PictionSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		43CA1CB422A4F6BF00CEF20A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				43CA1CD322A5061D00CEF20A /* PictionSDK.framework in Frameworks */,
+				43CA1CD822A5071D00CEF20A /* RxMoya.framework in Frameworks */,
+				43CA1CD922A5071D00CEF20A /* RxSwift.framework in Frameworks */,
+				43CA1CDB22A50A3400CEF20A /* RxMoya_ModelMapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_281 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
@@ -108,7 +139,7 @@
 				43FC893A229E60BA0074C3D6 /* Result.framework in Frameworks */,
 				43FC893B229E60BA0074C3D6 /* KeychainAccess.framework in Frameworks */,
 				43FC893C229E60BA0074C3D6 /* Moya.framework in Frameworks */,
-				43FC893D229E60BA0074C3D6 /* Mapper.framework in Frameworks */,
+				43CA1CD522A5070D00CEF20A /* Mapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,9 +154,129 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43CA1BE522A4EF2200CEF20A /* PictionSDK */ = {
+			isa = PBXGroup;
+			children = (
+				43CA1BFD22A4EF2200CEF20A /* PictionSDK.swift */,
+				43CA1BE622A4EF2200CEF20A /* Extension */,
+				43CA1BE922A4EF2200CEF20A /* Config */,
+				43CA1BEB22A4EF2200CEF20A /* Network */,
+				43CA1BFE22A4EF2200CEF20A /* Helper */,
+			);
+			path = PictionSDK;
+			sourceTree = "<group>";
+		};
+		43CA1BE622A4EF2200CEF20A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */,
+				43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		43CA1BE922A4EF2200CEF20A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		43CA1BEB22A4EF2200CEF20A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				43CA1BEC22A4EF2200CEF20A /* Response */,
+				43CA1BF122A4EF2200CEF20A /* Model */,
+				43CA1BF522A4EF2200CEF20A /* Request */,
+				43CA1BF922A4EF2200CEF20A /* TargetType */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		43CA1BEC22A4EF2200CEF20A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				43CA1BED22A4EF2200CEF20A /* CurrentUserResponse.swift */,
+				43CA1BEE22A4EF2200CEF20A /* FileUploadResponse.swift */,
+				43CA1BEF22A4EF2200CEF20A /* AuthenticationResponse.swift */,
+				43CA1BF022A4EF2200CEF20A /* ProjectResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		43CA1BF122A4EF2200CEF20A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43CA1BF222A4EF2200CEF20A /* WalletModel.swift */,
+				43CA1BF322A4EF2200CEF20A /* UserModel.swift */,
+				43CA1BF422A4EF2200CEF20A /* ErrorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		43CA1BF522A4EF2200CEF20A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				43CA1BF622A4EF2200CEF20A /* Users.swift */,
+				43CA1BF722A4EF2200CEF20A /* Sessions.swift */,
+				43CA1BF822A4EF2200CEF20A /* Projects.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		43CA1BF922A4EF2200CEF20A /* TargetType */ = {
+			isa = PBXGroup;
+			children = (
+				43CA1BFA22A4EF2200CEF20A /* UsersAPI.swift */,
+				43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */,
+				43CA1BFC22A4EF2200CEF20A /* SessionsAPI.swift */,
+			);
+			path = TargetType;
+			sourceTree = "<group>";
+		};
+		43CA1BFE22A4EF2200CEF20A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				43CA1BFF22A4EF2200CEF20A /* PictionManager.swift */,
+				43CA1C0022A4EF2200CEF20A /* Response.swift */,
+				43CA1C0122A4EF2200CEF20A /* Request.swift */,
+				43CA1C0222A4EF2200CEF20A /* ErrorType.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		43CA1C0322A4EF2300CEF20A /* RxPictionSDK */ = {
+			isa = PBXGroup;
+			children = (
+				43CA1CDC22A51AC700CEF20A /* Network */,
+				43CA1CC322A4F6F900CEF20A /* PictionSDK+Rx.swift */,
+			);
+			path = RxPictionSDK;
+			sourceTree = "<group>";
+		};
+		43CA1CDC22A51AC700CEF20A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				43CA1CDD22A51AD100CEF20A /* Request */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		43CA1CDD22A51AD100CEF20A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				43CA1CDE22A51ADB00CEF20A /* Users+Rx.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		43FC8931229E60B90074C3D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43CA1CDA22A50A3400CEF20A /* RxMoya_ModelMapper.framework */,
+				43CA1CD622A5071D00CEF20A /* RxMoya.framework */,
+				43CA1CD722A5071D00CEF20A /* RxSwift.framework */,
 				43FC8932229E60BA0074C3D6 /* Alamofire.framework */,
 				43FC8935229E60BA0074C3D6 /* KeychainAccess.framework */,
 				43FC8937229E60BA0074C3D6 /* Mapper.framework */,
@@ -136,82 +287,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		OBJ_10 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_11 /* MoyaResponseExtension.swift */,
-				OBJ_12 /* TargetTypeExtension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		OBJ_117 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"PictionSDK::PictionSDK::Product" /* PictionSDK.framework */,
 				"PictionSDK::PictionSDKTests::Product" /* PictionSDKTests.xctest */,
+				43CA1CC022A4F6BF00CEF20A /* RxPictionSDK.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		OBJ_13 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_14 /* ErrorType.swift */,
-				OBJ_15 /* PictionManager.swift */,
-				OBJ_16 /* Request.swift */,
-				OBJ_17 /* Response.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		OBJ_18 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_19 /* Model */,
-				OBJ_23 /* Request */,
-				OBJ_26 /* Response */,
-				OBJ_29 /* TargetType */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		OBJ_19 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_20 /* ErrorModel.swift */,
-				OBJ_21 /* UserModel.swift */,
-				OBJ_22 /* WalletModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		OBJ_23 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_24 /* Sessions.swift */,
-				OBJ_25 /* Users.swift */,
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
-		OBJ_26 /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_27 /* AuthenticationResponse.swift */,
-				OBJ_28 /* CurrentUserResponse.swift */,
-			);
-			path = Response;
-			sourceTree = "<group>";
-		};
-		OBJ_29 /* TargetType */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_30 /* SessionsAPI.swift */,
-				OBJ_31 /* UsersAPI.swift */,
-			);
-			path = TargetType;
-			sourceTree = "<group>";
 		};
 		OBJ_33 /* Tests */ = {
 			isa = PBXGroup;
@@ -245,33 +329,41 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* Config */,
-				OBJ_10 /* Extension */,
-				OBJ_13 /* Helper */,
-				OBJ_18 /* Network */,
-				OBJ_32 /* PictionSDK.swift */,
+				43CA1BE522A4EF2200CEF20A /* PictionSDK */,
+				43CA1C0322A4EF2300CEF20A /* RxPictionSDK */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_8 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_9 /* ServerInfo.swift */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		43CA1C9D22A4F6BF00CEF20A /* RxPictionSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43CA1CBD22A4F6BF00CEF20A /* Build configuration list for PBXNativeTarget "RxPictionSDK" */;
+			buildPhases = (
+				43CA1C9E22A4F6BF00CEF20A /* Sources */,
+				43CA1CB422A4F6BF00CEF20A /* Frameworks */,
+				43CA1CD422A5066A00CEF20A /* ShellScript */,
+				43CA1CBC22A4F6BF00CEF20A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxPictionSDK;
+			productName = PictionSDK;
+			productReference = 43CA1CC022A4F6BF00CEF20A /* RxPictionSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		"PictionSDK::PictionSDK" /* PictionSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_260 /* Build configuration list for PBXNativeTarget "PictionSDK" */;
 			buildPhases = (
 				OBJ_263 /* Sources */,
 				OBJ_281 /* Frameworks */,
-				43FC8930229E59170074C3D6 /* ShellScript */,
+				43FC8930229E59170074C3D6 /* Run Script */,
+				43CA1BC022A117F200CEF20A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -336,6 +428,7 @@
 			projectRoot = "";
 			targets = (
 				"PictionSDK::PictionSDK" /* PictionSDK */,
+				43CA1C9D22A4F6BF00CEF20A /* RxPictionSDK */,
 				"PictionSDK::SwiftPMPackageDescription" /* PictionSDKPackageDescription */,
 				"PictionSDK::PictionSDKPackageTests::ProductTarget" /* PictionSDKPackageTests */,
 				"PictionSDK::PictionSDKTests" /* PictionSDKTests */,
@@ -344,7 +437,61 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		43FC8930229E59170074C3D6 /* ShellScript */ = {
+		43CA1BC022A117F200CEF20A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -R ${BUILT_PRODUCTS_DIR}/${TARGET_NAME}.framework ~/Workspace/Git/iOS/Piction-SDK-iOS-Example/Piction-SDK-iOS-Example/Frameworks/\n";
+		};
+		43CA1CBC22A4F6BF00CEF20A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -R ${BUILT_PRODUCTS_DIR}/${TARGET_NAME}.framework ~/Workspace/Git/iOS/Piction-SDK-iOS-Example/Piction-SDK-iOS-Example/Frameworks/\n";
+		};
+		43CA1CD422A5066A00CEF20A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxMoya_ModelMapper.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		43FC8930229E59170074C3D6 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -356,9 +503,10 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Moya_ModelMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -370,27 +518,40 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		43CA1C9E22A4F6BF00CEF20A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				43CA1CC522A4F6F900CEF20A /* PictionSDK+Rx.swift in Sources */,
+				43CA1CDF22A51ADB00CEF20A /* Users+Rx.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_263 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_264 /* ServerInfo.swift in Sources */,
-				OBJ_265 /* MoyaResponseExtension.swift in Sources */,
-				OBJ_266 /* TargetTypeExtension.swift in Sources */,
-				OBJ_267 /* ErrorType.swift in Sources */,
-				OBJ_268 /* PictionManager.swift in Sources */,
-				OBJ_269 /* Request.swift in Sources */,
-				OBJ_270 /* Response.swift in Sources */,
-				OBJ_271 /* ErrorModel.swift in Sources */,
-				OBJ_272 /* UserModel.swift in Sources */,
-				OBJ_273 /* WalletModel.swift in Sources */,
-				OBJ_274 /* Sessions.swift in Sources */,
-				OBJ_275 /* Users.swift in Sources */,
-				OBJ_276 /* AuthenticationResponse.swift in Sources */,
-				OBJ_277 /* CurrentUserResponse.swift in Sources */,
-				OBJ_278 /* SessionsAPI.swift in Sources */,
-				OBJ_279 /* UsersAPI.swift in Sources */,
-				OBJ_280 /* PictionSDK.swift in Sources */,
+				43CA1C1522A4EF2300CEF20A /* PictionManager.swift in Sources */,
+				43CA1C1722A4EF2300CEF20A /* Request.swift in Sources */,
+				43CA1C0822A4EF2300CEF20A /* FileUploadResponse.swift in Sources */,
+				43CA1C0922A4EF2300CEF20A /* AuthenticationResponse.swift in Sources */,
+				43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */,
+				43CA1C0722A4EF2300CEF20A /* CurrentUserResponse.swift in Sources */,
+				43CA1C0F22A4EF2300CEF20A /* Sessions.swift in Sources */,
+				43CA1C1322A4EF2300CEF20A /* SessionsAPI.swift in Sources */,
+				43CA1C1422A4EF2300CEF20A /* PictionSDK.swift in Sources */,
+				43CA1C0B22A4EF2300CEF20A /* WalletModel.swift in Sources */,
+				43CA1C1822A4EF2300CEF20A /* ErrorType.swift in Sources */,
+				43CA1C0622A4EF2300CEF20A /* ServerInfo.swift in Sources */,
+				43CA1C1622A4EF2300CEF20A /* Response.swift in Sources */,
+				43CA1C0E22A4EF2300CEF20A /* Users.swift in Sources */,
+				43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */,
+				43CA1C1122A4EF2300CEF20A /* UsersAPI.swift in Sources */,
+				43CA1C1222A4EF2300CEF20A /* ProjectsAPI.swift in Sources */,
+				43CA1C0D22A4EF2300CEF20A /* ErrorModel.swift in Sources */,
+				43CA1C0A22A4EF2300CEF20A /* ProjectResponse.swift in Sources */,
+				43CA1C0C22A4EF2300CEF20A /* UserModel.swift in Sources */,
+				43CA1C1022A4EF2300CEF20A /* Projects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +588,68 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		43CA1CBE22A4F6BF00CEF20A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(SRCROOT)/Carthage/Build/iOS/",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PictionSDK.xcodeproj/RxPictionSDK_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks @executable_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = RxPictionSDK;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = RxPictionSDK;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		43CA1CBF22A4F6BF00CEF20A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(SRCROOT)/Carthage/Build/iOS/",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PictionSDK.xcodeproj/RxPictionSDK_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks @executable_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = RxPictionSDK;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = RxPictionSDK;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		OBJ_261 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -623,6 +846,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		43CA1CBD22A4F6BF00CEF20A /* Build configuration list for PBXNativeTarget "RxPictionSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43CA1CBE22A4F6BF00CEF20A /* Debug */,
+				43CA1CBF22A4F6BF00CEF20A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "PictionSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -29,3 +29,15 @@ extension ErrorModel {
         ]
     }
 }
+
+//public enum SignupErrors {
+//    case E_4000
+//    case E_4001
+//    case E_4002
+//    case E_4003
+//    case E_4004
+//    case E_4005
+//    case E_4006
+//
+//    public var
+//}

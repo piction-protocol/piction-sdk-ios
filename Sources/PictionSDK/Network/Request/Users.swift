@@ -13,7 +13,7 @@ public final class Users {
     private init() {}
 
     public func signup(email: String, username: String, password: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        request(UsersAPI.signup(email: email, username: username, password: password),
+        PictionProvider.request(UsersAPI.signup(email: email, username: username, password: password),
             success: { (response: AuthenticationResponse) in
                 successCompletion?(response)
             },
@@ -23,7 +23,7 @@ public final class Users {
     }
 
     public func me(success successCompletion: ((CurrentUserResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        request(UsersAPI.me,
+        PictionProvider.request(UsersAPI.me,
             success: { (response: CurrentUserResponse) in
                 successCompletion?(response)
             },
@@ -33,7 +33,7 @@ public final class Users {
     }
 
     public func update(email: String, username: String, password: String, picture: String, success successCompletion: ((CurrentUserResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        request(UsersAPI.update(email: email, username: username, password: password, picture: picture),
+        PictionProvider.request(UsersAPI.update(email: email, username: username, password: password, picture: picture),
             success: { (response: CurrentUserResponse) in
                 successCompletion?(response)
             },
@@ -43,7 +43,7 @@ public final class Users {
     }
 
     public func updatePassword(password: String, newPassword: String, confirmPassword: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        request(UsersAPI.updatePassword(password: password, newPassword: newPassword, confirmPassword: confirmPassword),
+        PictionProvider.request(UsersAPI.updatePassword(password: password, newPassword: newPassword, confirmPassword: confirmPassword),
             success: { (response: AuthenticationResponse) in
                 successCompletion?(response)
             },

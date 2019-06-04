@@ -13,7 +13,7 @@ public final class Sessions {
     private init() {}
 
     public func create(email: String, password: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        request(SessionsAPI.create(email: email, password: password),
+        PictionProvider.request(SessionsAPI.create(email: email, password: password),
             success: { (response: AuthenticationResponse) in
                 PictionManager.setToken(response.accessToken ?? "")
                 successCompletion?(response)

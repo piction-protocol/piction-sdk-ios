@@ -8,6 +8,9 @@
 
 import Foundation
 import RxSwift
+#if !COCOAPODS
+    import PictionSDK
+#endif
 
 extension Users: ReactiveCompatible {}
 

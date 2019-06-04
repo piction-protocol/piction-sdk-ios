@@ -10,7 +10,9 @@ import Foundation
 import Moya
 import Mapper
 import RxSwift
-import PictionSDK
+#if !COCOAPODS
+    import PictionSDK
+#endif
 
 extension PictionSDK: ReactiveCompatible {}
 

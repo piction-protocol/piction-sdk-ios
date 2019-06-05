@@ -49,6 +49,38 @@
 		43CA1CD922A5071D00CEF20A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CD722A5071D00CEF20A /* RxSwift.framework */; };
 		43CA1CDB22A50A3400CEF20A /* RxMoya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CDA22A50A3400CEF20A /* RxMoya_ModelMapper.framework */; };
 		43CA1CDF22A51ADB00CEF20A /* Users+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1CDE22A51ADB00CEF20A /* Users+Rx.swift */; };
+		43CA1CFA22A759DC00CEF20A /* PictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFF22A4EF2200CEF20A /* PictionManager.swift */; };
+		43CA1CFB22A759DC00CEF20A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1C0122A4EF2200CEF20A /* Request.swift */; };
+		43CA1CFC22A759DC00CEF20A /* FileUploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEE22A4EF2200CEF20A /* FileUploadResponse.swift */; };
+		43CA1CFD22A759DC00CEF20A /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEF22A4EF2200CEF20A /* AuthenticationResponse.swift */; };
+		43CA1CFE22A759DC00CEF20A /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */; };
+		43CA1CFF22A759DC00CEF20A /* CurrentUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BED22A4EF2200CEF20A /* CurrentUserResponse.swift */; };
+		43CA1D0022A759DC00CEF20A /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF722A4EF2200CEF20A /* Sessions.swift */; };
+		43CA1D0122A759DC00CEF20A /* SessionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFC22A4EF2200CEF20A /* SessionsAPI.swift */; };
+		43CA1D0222A759DC00CEF20A /* PictionSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFD22A4EF2200CEF20A /* PictionSDK.swift */; };
+		43CA1D0322A759DC00CEF20A /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF222A4EF2200CEF20A /* WalletModel.swift */; };
+		43CA1D0422A759DC00CEF20A /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1C0222A4EF2200CEF20A /* ErrorType.swift */; };
+		43CA1D0522A759DC00CEF20A /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */; };
+		43CA1D0622A759DC00CEF20A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1C0022A4EF2200CEF20A /* Response.swift */; };
+		43CA1D0722A759DC00CEF20A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF622A4EF2200CEF20A /* Users.swift */; };
+		43CA1D0822A759DC00CEF20A /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */; };
+		43CA1D0922A759DC00CEF20A /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFA22A4EF2200CEF20A /* UsersAPI.swift */; };
+		43CA1D0A22A759DC00CEF20A /* ProjectsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */; };
+		43CA1D0B22A759DC00CEF20A /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF422A4EF2200CEF20A /* ErrorModel.swift */; };
+		43CA1D0C22A759DC00CEF20A /* ProjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF022A4EF2200CEF20A /* ProjectResponse.swift */; };
+		43CA1D0D22A759DC00CEF20A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF322A4EF2200CEF20A /* UserModel.swift */; };
+		43CA1D0E22A759DC00CEF20A /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF822A4EF2200CEF20A /* Projects.swift */; };
+		43CA1D1022A759DC00CEF20A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8932229E60BA0074C3D6 /* Alamofire.framework */; };
+		43CA1D1122A759DC00CEF20A /* Moya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8933229E60BA0074C3D6 /* Moya_ModelMapper.framework */; };
+		43CA1D1222A759DC00CEF20A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8934229E60BA0074C3D6 /* Result.framework */; };
+		43CA1D1322A759DC00CEF20A /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8935229E60BA0074C3D6 /* KeychainAccess.framework */; };
+		43CA1D1422A759DC00CEF20A /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8936229E60BA0074C3D6 /* Moya.framework */; };
+		43CA1D1522A759DC00CEF20A /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8937229E60BA0074C3D6 /* Mapper.framework */; };
+		43CA1D1E22A75A2200CEF20A /* Users+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1CDE22A51ADB00CEF20A /* Users+Rx.swift */; };
+		43CA1D1F22A75A2200CEF20A /* PictionSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1CC322A4F6F900CEF20A /* PictionSDK+Rx.swift */; };
+		43CA1D2022A75A4700CEF20A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CD722A5071D00CEF20A /* RxSwift.framework */; };
+		43CA1D2122A75A6000CEF20A /* RxMoya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CDA22A50A3400CEF20A /* RxMoya_ModelMapper.framework */; };
+		43CA1D2222A75A6400CEF20A /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CD622A5071D00CEF20A /* RxMoya.framework */; };
 		43FC8938229E60BA0074C3D6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8932229E60BA0074C3D6 /* Alamofire.framework */; };
 		43FC8939229E60BA0074C3D6 /* Moya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8933229E60BA0074C3D6 /* Moya_ModelMapper.framework */; };
 		43FC893A229E60BA0074C3D6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8934229E60BA0074C3D6 /* Result.framework */; };
@@ -105,6 +137,7 @@
 		43CA1CD722A5071D00CEF20A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		43CA1CDA22A50A3400CEF20A /* RxMoya_ModelMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya_ModelMapper.framework; path = Carthage/Build/iOS/RxMoya_ModelMapper.framework; sourceTree = "<group>"; };
 		43CA1CDE22A51ADB00CEF20A /* Users+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+Rx.swift"; sourceTree = "<group>"; };
+		43CA1D1B22A759DC00CEF20A /* PictionSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PictionSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FC8932229E60BA0074C3D6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		43FC8933229E60BA0074C3D6 /* Moya_ModelMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya_ModelMapper.framework; path = Carthage/Build/iOS/Moya_ModelMapper.framework; sourceTree = "<group>"; };
 		43FC8934229E60BA0074C3D6 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -127,6 +160,22 @@
 				43CA1CD822A5071D00CEF20A /* RxMoya.framework in Frameworks */,
 				43CA1CD922A5071D00CEF20A /* RxSwift.framework in Frameworks */,
 				43CA1CDB22A50A3400CEF20A /* RxMoya_ModelMapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43CA1D0F22A759DC00CEF20A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				43CA1D1022A759DC00CEF20A /* Alamofire.framework in Frameworks */,
+				43CA1D2022A75A4700CEF20A /* RxSwift.framework in Frameworks */,
+				43CA1D1122A759DC00CEF20A /* Moya_ModelMapper.framework in Frameworks */,
+				43CA1D1222A759DC00CEF20A /* Result.framework in Frameworks */,
+				43CA1D1322A759DC00CEF20A /* KeychainAccess.framework in Frameworks */,
+				43CA1D2122A75A6000CEF20A /* RxMoya_ModelMapper.framework in Frameworks */,
+				43CA1D2222A75A6400CEF20A /* RxMoya.framework in Frameworks */,
+				43CA1D1422A759DC00CEF20A /* Moya.framework in Frameworks */,
+				43CA1D1522A759DC00CEF20A /* Mapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +342,7 @@
 				"PictionSDK::PictionSDK::Product" /* PictionSDK.framework */,
 				"PictionSDK::PictionSDKTests::Product" /* PictionSDKTests.xctest */,
 				43CA1CC022A4F6BF00CEF20A /* RxPictionSDK.framework */,
+				43CA1D1B22A759DC00CEF20A /* PictionSDK.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -344,8 +394,6 @@
 			buildPhases = (
 				43CA1C9E22A4F6BF00CEF20A /* Sources */,
 				43CA1CB422A4F6BF00CEF20A /* Frameworks */,
-				43CA1CD422A5066A00CEF20A /* ShellScript */,
-				43CA1CBC22A4F6BF00CEF20A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -356,14 +404,28 @@
 			productReference = 43CA1CC022A4F6BF00CEF20A /* RxPictionSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		43CA1CF822A759DC00CEF20A /* PictionSDKLocal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43CA1D1822A759DC00CEF20A /* Build configuration list for PBXNativeTarget "PictionSDKLocal" */;
+			buildPhases = (
+				43CA1CF922A759DC00CEF20A /* Sources */,
+				43CA1D0F22A759DC00CEF20A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PictionSDKLocal;
+			productName = PictionSDK;
+			productReference = 43CA1D1B22A759DC00CEF20A /* PictionSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		"PictionSDK::PictionSDK" /* PictionSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_260 /* Build configuration list for PBXNativeTarget "PictionSDK" */;
 			buildPhases = (
 				OBJ_263 /* Sources */,
 				OBJ_281 /* Frameworks */,
-				43FC8930229E59170074C3D6 /* Run Script */,
-				43CA1BC022A117F200CEF20A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -429,93 +491,13 @@
 			targets = (
 				"PictionSDK::PictionSDK" /* PictionSDK */,
 				43CA1C9D22A4F6BF00CEF20A /* RxPictionSDK */,
+				43CA1CF822A759DC00CEF20A /* PictionSDKLocal */,
 				"PictionSDK::SwiftPMPackageDescription" /* PictionSDKPackageDescription */,
 				"PictionSDK::PictionSDKPackageTests::ProductTarget" /* PictionSDKPackageTests */,
 				"PictionSDK::PictionSDKTests" /* PictionSDKTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		43CA1BC022A117F200CEF20A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cp -R ${BUILT_PRODUCTS_DIR}/${TARGET_NAME}.framework ~/Workspace/Git/iOS/Piction-SDK-iOS-Example/Piction-SDK-iOS-Example/Frameworks/\n";
-		};
-		43CA1CBC22A4F6BF00CEF20A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cp -R ${BUILT_PRODUCTS_DIR}/${TARGET_NAME}.framework ~/Workspace/Git/iOS/Piction-SDK-iOS-Example/Piction-SDK-iOS-Example/Frameworks/\n";
-		};
-		43CA1CD422A5066A00CEF20A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxMoya_ModelMapper.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		43FC8930229E59170074C3D6 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Mapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Moya_ModelMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-			);
-			name = "Run Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43CA1C9E22A4F6BF00CEF20A /* Sources */ = {
@@ -524,6 +506,36 @@
 			files = (
 				43CA1CC522A4F6F900CEF20A /* PictionSDK+Rx.swift in Sources */,
 				43CA1CDF22A51ADB00CEF20A /* Users+Rx.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43CA1CF922A759DC00CEF20A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				43CA1D1E22A75A2200CEF20A /* Users+Rx.swift in Sources */,
+				43CA1D1F22A75A2200CEF20A /* PictionSDK+Rx.swift in Sources */,
+				43CA1CFA22A759DC00CEF20A /* PictionManager.swift in Sources */,
+				43CA1CFB22A759DC00CEF20A /* Request.swift in Sources */,
+				43CA1CFC22A759DC00CEF20A /* FileUploadResponse.swift in Sources */,
+				43CA1CFD22A759DC00CEF20A /* AuthenticationResponse.swift in Sources */,
+				43CA1CFE22A759DC00CEF20A /* MoyaResponseExtension.swift in Sources */,
+				43CA1CFF22A759DC00CEF20A /* CurrentUserResponse.swift in Sources */,
+				43CA1D0022A759DC00CEF20A /* Sessions.swift in Sources */,
+				43CA1D0122A759DC00CEF20A /* SessionsAPI.swift in Sources */,
+				43CA1D0222A759DC00CEF20A /* PictionSDK.swift in Sources */,
+				43CA1D0322A759DC00CEF20A /* WalletModel.swift in Sources */,
+				43CA1D0422A759DC00CEF20A /* ErrorType.swift in Sources */,
+				43CA1D0522A759DC00CEF20A /* ServerInfo.swift in Sources */,
+				43CA1D0622A759DC00CEF20A /* Response.swift in Sources */,
+				43CA1D0722A759DC00CEF20A /* Users.swift in Sources */,
+				43CA1D0822A759DC00CEF20A /* TargetTypeExtension.swift in Sources */,
+				43CA1D0922A759DC00CEF20A /* UsersAPI.swift in Sources */,
+				43CA1D0A22A759DC00CEF20A /* ProjectsAPI.swift in Sources */,
+				43CA1D0B22A759DC00CEF20A /* ErrorModel.swift in Sources */,
+				43CA1D0C22A759DC00CEF20A /* ProjectResponse.swift in Sources */,
+				43CA1D0D22A759DC00CEF20A /* UserModel.swift in Sources */,
+				43CA1D0E22A759DC00CEF20A /* Projects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +657,68 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = RxPictionSDK;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		43CA1D1922A759DC00CEF20A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(SRCROOT)/Carthage/Build/iOS/",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PictionSDK.xcodeproj/PictionSDKLocal_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks @executable_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PictionSDK;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = PictionSDK;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		43CA1D1A22A759DC00CEF20A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(SRCROOT)/Carthage/Build/iOS/",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PictionSDK.xcodeproj/PictionSDKLocal_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks @executable_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PictionSDK;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = PictionSDK;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -851,6 +925,15 @@
 			buildConfigurations = (
 				43CA1CBE22A4F6BF00CEF20A /* Debug */,
 				43CA1CBF22A4F6BF00CEF20A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43CA1D1822A759DC00CEF20A /* Build configuration list for PBXNativeTarget "PictionSDKLocal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43CA1D1922A759DC00CEF20A /* Debug */,
+				43CA1D1A22A759DC00CEF20A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

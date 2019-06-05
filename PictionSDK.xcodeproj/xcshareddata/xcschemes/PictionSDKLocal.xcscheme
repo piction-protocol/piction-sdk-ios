@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "43CA1C9D22A4F6BF00CEF20A"
-               BuildableName = "RxPictionSDK.framework"
-               BlueprintName = "RxPictionSDK"
+               BlueprintIdentifier = "43CA1CF822A759DC00CEF20A"
+               BuildableName = "PictionSDK.framework"
+               BlueprintName = "PictionSDKLocal"
                ReferencedContainer = "container:PictionSDK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "43CA1C9D22A4F6BF00CEF20A"
-            BuildableName = "RxPictionSDK.framework"
-            BlueprintName = "RxPictionSDK"
+            BlueprintIdentifier = "43CA1CF822A759DC00CEF20A"
+            BuildableName = "PictionSDK.framework"
+            BlueprintName = "PictionSDKLocal"
             ReferencedContainer = "container:PictionSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "43CA1C9D22A4F6BF00CEF20A"
-            BuildableName = "RxPictionSDK.framework"
-            BlueprintName = "RxPictionSDK"
+            BlueprintIdentifier = "43CA1CF822A759DC00CEF20A"
+            BuildableName = "PictionSDK.framework"
+            BlueprintName = "PictionSDKLocal"
             ReferencedContainer = "container:PictionSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

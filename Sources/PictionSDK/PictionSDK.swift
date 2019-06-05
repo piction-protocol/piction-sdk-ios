@@ -15,9 +15,7 @@ public final class PictionSDK {
     public static let sessions: Sessions = Sessions.shared
     public static let projects: Projects = Projects.shared
 
-    public init() {}
-
-    public class func requestAPI<M: Mappable, T: TargetType>(_ target: T, success successCompletion: ((M) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public static func requestAPI<M: Mappable, T: TargetType>(_ target: T, success successCompletion: ((M) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(target,
             success: { (response: M) in
                 if T.self == SessionsAPI.self {
@@ -31,23 +29,3 @@ public final class PictionSDK {
             })
     }
 }
-//
-//import RxSwift
-//
-//extension PictionSDK: ReactiveCompatible {}
-//
-//public extension Reactive where Base: PictionSDK {
-//    func requestAPI<M: Mappable, T: TargetType>(_ target: T) -> Observable<M> {
-//        return Observable<M>.create({ observer -> Disposable in
-//            PictionSDK.requestAPI(target,
-//                                  success: { (response: M) in
-//                                    observer.onNext(response)
-//                                    observer.onCompleted()
-//            },
-//                                  failure: { error in
-//                                    observer.onError(error)
-//            })
-//            return Disposables.create()
-//        })
-//    }
-//}

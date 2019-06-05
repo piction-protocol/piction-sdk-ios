@@ -17,7 +17,7 @@ import RxSwift
 extension PictionSDK: ReactiveCompatible {}
 
 public extension Reactive where Base: PictionSDK {
-    func requestAPI<M: Mappable, T: TargetType>(_ target: T) -> Observable<M> {
+    static func requestAPI<M: Mappable, T: TargetType>(_ target: T) -> Observable<M> {
         return Observable<M>.create({ observer -> Disposable in
             PictionSDK.requestAPI(target,
                 success: { (response: M) in

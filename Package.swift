@@ -16,8 +16,8 @@ let package = Package(
         .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "4.0.0"))
     ],
     targets: [
-        .target(name: "PictionSDK", dependencies: ["Moya-ModelMapper", "KeychainAccess"]),
-        .target(name: "RxPictionSDK", dependencies: ["PictionSDK", "RxMoya-ModelMapper", "RxSwift"]),
-        .testTarget(name: "PictionSDKTests", dependencies: ["PictionSDK"]),
+        .target(name: "PictionSDK", dependencies: ["Moya-ModelMapper", "KeychainAccess"], exclude: ["Demo"]),
+        .target(name: "RxPictionSDK", dependencies: ["PictionSDK", "RxMoya-ModelMapper", "RxSwift"], exclude: ["Demo"]),
+        .testTarget(name: "PictionSDKTests", dependencies: ["PictionSDK"], exclude: ["Demo"]),
     ]
 )

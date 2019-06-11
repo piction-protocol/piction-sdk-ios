@@ -1,0 +1,8 @@
+.DS_Store
+/.build
+/Packages
+project.xcworkspace
+*.plist
+!Info.plist
+/Carthage
+Frameworks

@@ -410,6 +410,7 @@
 			buildPhases = (
 				43CA1CF922A759DC00CEF20A /* Sources */,
 				43CA1D0F22A759DC00CEF20A /* Frameworks */,
+				43CA1D3E22A76F3B00CEF20A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -498,6 +499,26 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43CA1D3E22A76F3B00CEF20A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -R ${BUILT_PRODUCTS_DIR}/${TARGET_NAME}.framework ${SRCROOT}/Demo/Piction-SDK-iOS-Example/Frameworks/\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43CA1C9E22A4F6BF00CEF20A /* Sources */ = {

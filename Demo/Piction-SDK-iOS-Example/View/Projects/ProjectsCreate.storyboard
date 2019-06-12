@@ -166,6 +166,9 @@
                                     <action selector="executeBtnPressed:" destination="2D9-1U-UKE" eventType="touchUpInside" id="cDJ-qX-zNl"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yIc-Fe-b4o">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -180,6 +183,8 @@
                             <constraint firstItem="Aey-GG-MZv" firstAttribute="trailing" secondItem="rCB-3d-wmo" secondAttribute="trailing" constant="50" id="UKP-FS-Gws"/>
                             <constraint firstItem="Aey-GG-MZv" firstAttribute="trailing" secondItem="jOL-Gs-eEP" secondAttribute="trailing" constant="30" id="XXG-it-5iv"/>
                             <constraint firstItem="d73-XP-UpH" firstAttribute="leading" secondItem="Aey-GG-MZv" secondAttribute="leading" constant="30" id="bNc-Pq-8Rz"/>
+                            <constraint firstItem="yIc-Fe-b4o" firstAttribute="centerX" secondItem="VNQ-qH-EVq" secondAttribute="centerX" id="cc8-7F-zub"/>
+                            <constraint firstItem="yIc-Fe-b4o" firstAttribute="centerY" secondItem="VNQ-qH-EVq" secondAttribute="centerY" id="fm4-JB-s5g"/>
                             <constraint firstItem="9oF-DL-b7I" firstAttribute="top" secondItem="rCB-3d-wmo" secondAttribute="bottom" constant="50" id="klp-XW-5Wy"/>
                             <constraint firstItem="Aey-GG-MZv" firstAttribute="trailing" secondItem="d73-XP-UpH" secondAttribute="trailing" constant="30" id="o1H-eC-jzw"/>
                             <constraint firstItem="Aey-GG-MZv" firstAttribute="bottom" secondItem="d73-XP-UpH" secondAttribute="bottom" constant="30" id="uX2-ZM-ExI"/>
@@ -191,6 +196,8 @@
                     <navigationItem key="navigationItem" title="Projects create" id="xdL-vK-8by"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="yIc-Fe-b4o" id="RoU-yB-0lW"/>
+                        <outlet property="executeButton" destination="rCB-3d-wmo" id="1Sm-BO-nEE"/>
                         <outlet property="idTextField" destination="b7e-rU-5Lo" id="B76-N3-LnI"/>
                         <outlet property="responseTextView" destination="d73-XP-UpH" id="cx7-3a-Vqa"/>
                         <outlet property="synopsisTextField" destination="2tg-eK-zvw" id="Gij-OP-dio"/>

@@ -33,9 +33,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tGh-gk-nEf">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="None" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tGh-gk-nEf">
                                                 <rect key="frame" x="165" y="0.0" width="189" height="30"/>
                                                 <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -77,15 +78,20 @@
                                     <action selector="executeBtnPressed:" destination="jkW-MV-KqF" eventType="touchUpInside" id="RRw-8G-hn6"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="b6y-Mc-XBK">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="b6y-Mc-XBK" firstAttribute="centerY" secondItem="H5Y-eM-CkD" secondAttribute="centerY" id="2UI-Gg-Ju7"/>
                             <constraint firstItem="OuC-GH-28i" firstAttribute="leading" secondItem="Lur-RG-jeO" secondAttribute="leading" constant="30" id="2YC-pn-LP8"/>
                             <constraint firstItem="Lur-RG-jeO" firstAttribute="trailing" secondItem="cQG-bX-Ga9" secondAttribute="trailing" constant="25" id="4GT-5V-n2w"/>
                             <constraint firstItem="Lur-RG-jeO" firstAttribute="trailing" secondItem="uP4-eG-RSF" secondAttribute="trailing" constant="50" id="86T-Jb-L48"/>
                             <constraint firstItem="cQG-bX-Ga9" firstAttribute="leading" secondItem="Lur-RG-jeO" secondAttribute="leading" constant="25" id="G0c-hy-XgN"/>
                             <constraint firstItem="Lur-RG-jeO" firstAttribute="trailing" secondItem="OuC-GH-28i" secondAttribute="trailing" constant="30" id="Gg6-HO-bMl"/>
                             <constraint firstItem="uP4-eG-RSF" firstAttribute="leading" secondItem="Lur-RG-jeO" secondAttribute="leading" constant="50" id="NyQ-rI-Fm0"/>
+                            <constraint firstItem="b6y-Mc-XBK" firstAttribute="centerX" secondItem="H5Y-eM-CkD" secondAttribute="centerX" id="Om8-eT-kPh"/>
                             <constraint firstItem="ZmY-EC-Que" firstAttribute="leading" secondItem="Lur-RG-jeO" secondAttribute="leading" constant="25" id="QQo-kG-jHZ"/>
                             <constraint firstItem="Lur-RG-jeO" firstAttribute="bottom" secondItem="OuC-GH-28i" secondAttribute="bottom" constant="30" id="Qdi-FQ-Iuo"/>
                             <constraint firstItem="Lur-RG-jeO" firstAttribute="trailing" secondItem="Pka-fa-5HX" secondAttribute="trailing" constant="30" id="TqN-fI-T6I"/>
@@ -102,7 +108,9 @@
                     <navigationItem key="navigationItem" title="Users me" id="rHb-uN-3TJ"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="b6y-Mc-XBK" id="Igr-54-E6S"/>
                         <outlet property="currentTokenTextField" destination="tGh-gk-nEf" id="JVj-8V-6uZ"/>
+                        <outlet property="executeButton" destination="uP4-eG-RSF" id="n0I-Yt-h0f"/>
                         <outlet property="responseTextView" destination="OuC-GH-28i" id="GRE-hf-RyD"/>
                     </connections>
                 </viewController>

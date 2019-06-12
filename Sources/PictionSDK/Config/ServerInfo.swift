@@ -27,4 +27,17 @@ final class ServerInfo {
             "Content-Type": "application/json"
         ]
     }
+
+    static func getMultipartFormDataHeader() -> [String: String] {
+        let appVersion = Bundle.main.infoDictionary?["CFBundleVersion"]
+
+        return [
+            "X-Auth-Token": PictionManager.getToken,
+            "X-App-Version": (appVersion as AnyObject).description,
+            "X-Device-Udid": PictionManager.getDeviceUUID,
+            "X-Device-Platform": "ios",
+            "Accept": "*/*",
+            "Content-Type": "multipart/form-data"
+        ]
+    }
 }

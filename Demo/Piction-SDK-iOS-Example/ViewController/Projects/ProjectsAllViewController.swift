@@ -1,20 +1,15 @@
 //
-//  ProjectsCreateViewController.swift
+//  ProjectsAllViewController.swift
 //  Piction-SDK-iOS-Example
 //
-//  Created by jhseo on 30/05/2019.
+//  Created by jhseo on 12/06/2019.
 //  Copyright © 2019 Piction Network. All rights reserved.
 //
 
 import UIKit
 import PictionSDK
 
-class ProjectsCreateViewController: UIViewController {
-    @IBOutlet weak var uriTextField: UITextField!
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var synopsisTextField: UITextField!
-    @IBOutlet weak var thumbnailTextField: UITextField!
-    @IBOutlet weak var wideThumbnailTextField: UITextField!
+class ProjectsAllController: UIViewController {
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
 
@@ -30,8 +25,8 @@ class ProjectsCreateViewController: UIViewController {
     @IBAction func executeBtnPressed(_ sender: Any) {
         self.responseTextView.text = ""
         self.isLoading = true
-        
-        PictionSDK.projects.create(uri: uriTextField.text ?? "", title: titleTextField.text ?? "", synopsis: synopsisTextField.text ?? "", thumbnail: thumbnailTextField.text ?? "", wideThumbnail: wideThumbnailTextField.text ?? "",
+
+        PictionSDK.projects.all(
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false

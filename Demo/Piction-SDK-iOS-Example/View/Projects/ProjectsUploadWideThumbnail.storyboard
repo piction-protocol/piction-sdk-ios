@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mqa-GS-2cs">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Projects uploadWideThumbnail-->
+        <scene sceneID="OZ2-1M-0Im">
+            <objects>
+                <viewController id="Mqa-GS-2cs" userLabel="Projects uploadWideThumbnail" customClass="ProjectsUploadWideThumbnailViewController" customModule="Piction_SDK_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aFB-pO-W4d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="goD-fI-JvN">
+                                <rect key="frame" x="30" y="163" width="354" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-1N-W2A">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuj-x6-amn">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="lhX-85-Bjl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ax-GO-BXA">
+                                                <rect key="frame" x="165" y="0.0" width="189" height="100"/>
+                                                <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" causesPageTurn="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="JcG-cO-tRF"/>
+                                                </constraints>
+                                                <state key="normal" title="Select Image"/>
+                                                <connections>
+                                                    <action selector="selectedImageBtnPressed:" destination="Mqa-GS-2cs" eventType="touchUpInside" id="H7d-LW-8za"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UOM-1N-W2A" firstAttribute="leading" secondItem="goD-fI-JvN" secondAttribute="leading" id="7p0-qp-uHI"/>
+                                    <constraint firstAttribute="trailing" secondItem="UOM-1N-W2A" secondAttribute="trailing" id="s1B-5T-jdv"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LLc-BY-Oil">
+                                <rect key="frame" x="30" y="418" width="354" height="414"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request Parameters" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QL-Bo-Zmp">
+                                <rect key="frame" x="25" y="118" width="364" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHT-q9-jTW">
+                                <rect key="frame" x="25" y="373" width="364" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qP-VV-kX1">
+                                <rect key="frame" x="50" y="283" width="314" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Pp9-3p-K3D"/>
+                                </constraints>
+                                <state key="normal" title="Execute">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="executeBtnPressed:" destination="Mqa-GS-2cs" eventType="touchUpInside" id="Z1m-SP-pY4"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0bH-U7-AJr">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LLc-BY-Oil" firstAttribute="top" secondItem="JHT-q9-jTW" secondAttribute="bottom" constant="15" id="0Hx-f4-8Wy"/>
+                            <constraint firstItem="0bH-U7-AJr" firstAttribute="centerY" secondItem="aFB-pO-W4d" secondAttribute="centerY" id="A3u-fo-u37"/>
+                            <constraint firstItem="aNK-E8-iee" firstAttribute="trailing" secondItem="8qP-VV-kX1" secondAttribute="trailing" constant="50" id="Bek-QX-pbq"/>
+                            <constraint firstItem="8qP-VV-kX1" firstAttribute="top" secondItem="goD-fI-JvN" secondAttribute="bottom" constant="20" id="Gcv-zH-VEW"/>
+                            <constraint firstItem="aNK-E8-iee" firstAttribute="trailing" secondItem="1QL-Bo-Zmp" secondAttribute="trailing" constant="25" id="Hbb-Ce-5x8"/>
+                            <constraint firstItem="aNK-E8-iee" firstAttribute="bottom" secondItem="LLc-BY-Oil" secondAttribute="bottom" constant="30" id="O5v-Pj-NAm"/>
+                            <constraint firstItem="1QL-Bo-Zmp" firstAttribute="leading" secondItem="aNK-E8-iee" secondAttribute="leading" constant="25" id="RXJ-Pf-aBm"/>
+                            <constraint firstItem="8qP-VV-kX1" firstAttribute="leading" secondItem="aNK-E8-iee" secondAttribute="leading" constant="50" id="U5u-Vn-lgC"/>
+                            <constraint firstItem="aNK-E8-iee" firstAttribute="trailing" secondItem="LLc-BY-Oil" secondAttribute="trailing" constant="30" id="Vvj-mw-lBr"/>
+                            <constraint firstItem="goD-fI-JvN" firstAttribute="top" secondItem="1QL-Bo-Zmp" secondAttribute="bottom" constant="15" id="buK-oX-3Vb"/>
+                            <constraint firstItem="goD-fI-JvN" firstAttribute="leading" secondItem="aNK-E8-iee" secondAttribute="leading" constant="30" id="fAk-X1-hsI"/>
+                            <constraint firstItem="LLc-BY-Oil" firstAttribute="leading" secondItem="aNK-E8-iee" secondAttribute="leading" constant="30" id="hM1-FQ-mQj"/>
+                            <constraint firstItem="1QL-Bo-Zmp" firstAttribute="top" secondItem="aNK-E8-iee" secondAttribute="top" constant="30" id="hyh-IG-GKx"/>
+                            <constraint firstItem="aNK-E8-iee" firstAttribute="trailing" secondItem="JHT-q9-jTW" secondAttribute="trailing" constant="25" id="jvS-bi-dNY"/>
+                            <constraint firstItem="aNK-E8-iee" firstAttribute="trailing" secondItem="goD-fI-JvN" secondAttribute="trailing" constant="30" id="qim-yI-4ae"/>
+                            <constraint firstItem="JHT-q9-jTW" firstAttribute="top" secondItem="8qP-VV-kX1" secondAttribute="bottom" constant="50" id="t40-8h-OnO"/>
+                            <constraint firstItem="0bH-U7-AJr" firstAttribute="centerX" secondItem="aFB-pO-W4d" secondAttribute="centerX" id="tlg-PZ-BCY"/>
+                            <constraint firstItem="JHT-q9-jTW" firstAttribute="leading" secondItem="aNK-E8-iee" secondAttribute="leading" constant="25" id="zsN-UD-6dp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aNK-E8-iee"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Projects uploadWideThumbnail" id="sIo-pS-PYU"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="0bH-U7-AJr" id="Q5k-bt-5ss"/>
+                        <outlet property="executeButton" destination="8qP-VV-kX1" id="2Ah-U9-xae"/>
+                        <outlet property="responseTextView" destination="LLc-BY-Oil" id="YTg-9R-8DY"/>
+                        <outlet property="selectImageButton" destination="0Ax-GO-BXA" id="zL2-Qx-Bbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3P-pC-glf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881.15942028985512" y="63.616071428571423"/>
+        </scene>
+    </scenes>
+</document>

@@ -77,7 +77,7 @@
                                                 <rect key="frame" x="165" y="0.0" width="189" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -97,7 +97,7 @@
                                                 <rect key="frame" x="165" y="0.0" width="189" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -117,7 +117,7 @@
                                                 <rect key="frame" x="165" y="0.0" width="189" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -198,7 +198,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="gFZ-qV-79E" id="b6I-0H-RUl"/>
                         <outlet property="executeButton" destination="kEu-BT-xCm" id="Ei9-KX-4fc"/>
-                        <outlet property="idTextField" destination="uzF-SV-qjI" id="PHK-8U-JX6"/>
+                        <outlet property="idTextField" destination="uzF-SV-qjI" id="KP5-v6-O2q"/>
                         <outlet property="responseTextView" destination="ZXd-cL-uYt" id="gfL-7W-WnA"/>
                         <outlet property="synopsisTextField" destination="hLs-1U-tYy" id="lGe-mg-Mda"/>
                         <outlet property="thumbnailTextField" destination="G5h-au-ThV" id="h0Y-WX-6DQ"/>

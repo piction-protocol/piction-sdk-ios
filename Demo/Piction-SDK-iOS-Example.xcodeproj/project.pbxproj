@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4329EB8422B0F83600D01916 /* ProjectsAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB8322B0F83600D01916 /* ProjectsAllViewController.swift */; };
+		4329EB8622B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB8522B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift */; };
+		4329EB8822B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB8722B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift */; };
+		4329EB8A22B0F86100D01916 /* ProjectsAll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4329EB8922B0F86100D01916 /* ProjectsAll.storyboard */; };
+		4329EB8C22B0F87000D01916 /* ProjectsUploadThumbnail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4329EB8B22B0F87000D01916 /* ProjectsUploadThumbnail.storyboard */; };
+		4329EB8E22B0F87D00D01916 /* ProjectsUploadWideThumbnail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4329EB8D22B0F87D00D01916 /* ProjectsUploadWideThumbnail.storyboard */; };
 		43C3142E228AA198007E9EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142D228AA198007E9EAF /* AppDelegate.swift */; };
 		43C31430228AA198007E9EAF /* UsersSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */; };
 		43C31433228AA198007E9EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C31431228AA198007E9EAF /* Main.storyboard */; };
@@ -72,6 +78,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4329EB8322B0F83600D01916 /* ProjectsAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsAllViewController.swift; sourceTree = "<group>"; };
+		4329EB8522B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsUploadThumbnailViewController.swift; sourceTree = "<group>"; };
+		4329EB8722B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsUploadWideThumbnailViewController.swift; sourceTree = "<group>"; };
+		4329EB8922B0F86100D01916 /* ProjectsAll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsAll.storyboard; sourceTree = "<group>"; };
+		4329EB8B22B0F87000D01916 /* ProjectsUploadThumbnail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsUploadThumbnail.storyboard; sourceTree = "<group>"; };
+		4329EB8D22B0F87D00D01916 /* ProjectsUploadWideThumbnail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsUploadWideThumbnail.storyboard; sourceTree = "<group>"; };
 		43C3142A228AA198007E9EAF /* Piction-SDK-iOS-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piction-SDK-iOS-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C3142D228AA198007E9EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSignupViewController.swift; sourceTree = "<group>"; };
@@ -260,9 +272,12 @@
 		43CA1BB0229FAD1800CEF20A /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				4329EB8922B0F86100D01916 /* ProjectsAll.storyboard */,
 				43CA1BB1229FAD3900CEF20A /* ProjectsCreate.storyboard */,
 				43CA1BB3229FAD4C00CEF20A /* ProjectsGet.storyboard */,
 				43CA1BB5229FAD5900CEF20A /* ProjectsUpdate.storyboard */,
+				4329EB8B22B0F87000D01916 /* ProjectsUploadThumbnail.storyboard */,
+				4329EB8D22B0F87D00D01916 /* ProjectsUploadWideThumbnail.storyboard */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -270,9 +285,12 @@
 		43CA1BB7229FAD6800CEF20A /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				4329EB8322B0F83600D01916 /* ProjectsAllViewController.swift */,
 				43CA1BB8229FAD7E00CEF20A /* ProjectsCreateViewController.swift */,
 				43CA1BBE229FB26500CEF20A /* ProjectsGetViewController.swift */,
 				43CA1BBC229FAD9400CEF20A /* ProjectsUpdateViewController.swift */,
+				4329EB8522B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift */,
+				4329EB8722B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -349,7 +367,10 @@
 				43CA1BB4229FAD4C00CEF20A /* ProjectsGet.storyboard in Resources */,
 				43C3167222927728007E9EAF /* UsersSignup.storyboard in Resources */,
 				43CA222A22B0EA6F00CEF20A /* UsersTransactions.storyboard in Resources */,
+				4329EB8A22B0F86100D01916 /* ProjectsAll.storyboard in Resources */,
+				4329EB8C22B0F87000D01916 /* ProjectsUploadThumbnail.storyboard in Resources */,
 				43CA1BB2229FAD3900CEF20A /* ProjectsCreate.storyboard in Resources */,
+				4329EB8E22B0F87D00D01916 /* ProjectsUploadWideThumbnail.storyboard in Resources */,
 				43C31438228AA199007E9EAF /* Assets.xcassets in Resources */,
 				43CA1BAB229FA23D00CEF20A /* UsersUpdatePassword.storyboard in Resources */,
 				43CA1BB6229FAD5900CEF20A /* ProjectsUpdate.storyboard in Resources */,
@@ -370,12 +391,15 @@
 				43C3167622927777007E9EAF /* UsersMeViewController.swift in Sources */,
 				43C3168222928BAA007E9EAF /* SessionsCreateViewController.swift in Sources */,
 				43CA1BBF229FB26500CEF20A /* ProjectsGetViewController.swift in Sources */,
+				4329EB8822B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift in Sources */,
 				43CA221A22B0A70100CEF20A /* UsersUploadPictureViewController.swift in Sources */,
 				43C316842292A67E007E9EAF /* MainViewController.swift in Sources */,
 				43CA1BA5229FA1F000CEF20A /* UsersUpdateViewController.swift in Sources */,
 				43C31430228AA198007E9EAF /* UsersSignupViewController.swift in Sources */,
 				43C3142E228AA198007E9EAF /* AppDelegate.swift in Sources */,
 				43CA1BB9229FAD7E00CEF20A /* ProjectsCreateViewController.swift in Sources */,
+				4329EB8622B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift in Sources */,
+				4329EB8422B0F83600D01916 /* ProjectsAllViewController.swift in Sources */,
 				43CA222822B0EA5500CEF20A /* UsersTransactionsViewController.swift in Sources */,
 				43CA1BBD229FAD9400CEF20A /* ProjectsUpdateViewController.swift in Sources */,
 			);

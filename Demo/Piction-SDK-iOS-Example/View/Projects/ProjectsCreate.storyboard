@@ -24,7 +24,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FiH-Gg-kFA">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4E-Ve-WQA">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4E-Ve-WQA">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="dI1-Mh-iX9"/>
@@ -77,7 +77,7 @@
                                                 <rect key="frame" x="165" y="0.0" width="189" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -97,7 +97,7 @@
                                                 <rect key="frame" x="165" y="0.0" width="189" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -117,7 +117,7 @@
                                                 <rect key="frame" x="165" y="0.0" width="189" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -198,11 +198,11 @@
                     <connections>
                         <outlet property="activityIndicator" destination="yIc-Fe-b4o" id="RoU-yB-0lW"/>
                         <outlet property="executeButton" destination="rCB-3d-wmo" id="1Sm-BO-nEE"/>
-                        <outlet property="idTextField" destination="b7e-rU-5Lo" id="B76-N3-LnI"/>
                         <outlet property="responseTextView" destination="d73-XP-UpH" id="cx7-3a-Vqa"/>
                         <outlet property="synopsisTextField" destination="2tg-eK-zvw" id="Gij-OP-dio"/>
                         <outlet property="thumbnailTextField" destination="sfb-vh-yvM" id="kli-XU-V4G"/>
                         <outlet property="titleTextField" destination="qai-pC-SS3" id="VIW-Jh-5Ms"/>
+                        <outlet property="uriTextField" destination="b7e-rU-5Lo" id="F9s-Yg-J8G"/>
                         <outlet property="wideThumbnailTextField" destination="yyT-Hy-GbO" id="3fn-oe-Xi4"/>
                     </connections>
                 </viewController>

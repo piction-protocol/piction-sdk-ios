@@ -1,19 +1,18 @@
 //
-//  UserModel.swift
+//  UserViewResponse.swift
 //  PictionSDK
 //
-//  Created by jhseo on 17/05/2019.
+//  Created by jhseo on 20/05/2019.
 //  Copyright © 2019 Piction Network. All rights reserved.
 //
 
 import Mapper
 
-public struct UserModel: Mappable {
+public struct UserViewResponse: Mappable {
     public let created_at: String?
     public let email: String?
     public let name: String?
     public let picture: String?
-
 
     public init(map: Mapper) throws {
         created_at = map.optionalFrom("created_at")
@@ -23,7 +22,7 @@ public struct UserModel: Mappable {
     }
 }
 
-extension UserModel {
+extension UserViewResponse {
     static func sampleData() -> [String: Any] {
         return [
             "created_at": "2019-05-30T03:22:18.480Z",

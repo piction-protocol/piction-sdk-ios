@@ -40,7 +40,7 @@ extension ProjectsAPI: TargetType {
         switch self {
         case .create(_),
              .update(_):
-            return jsonSerializedUTF8(json: AuthenticationResponse.sampleData())
+            return jsonSerializedUTF8(json: AuthenticationViewResponse.sampleData())
         case .get(_):
             return jsonSerializedUTF8(json: ProjectResponse.sampleData())
         }

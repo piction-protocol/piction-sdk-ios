@@ -7,14 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 public final class Users {
     static let shared = Users()
     private init() {}
 
-    public func signup(email: String, username: String, password: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func signup(email: String, username: String, password: String, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(UsersAPI.signup(email: email, username: username, password: password),
-            success: { (response: AuthenticationResponse) in
+            success: { (response: AuthenticationViewResponse) in
                 successCompletion?(response)
             },
             failure: { error in
@@ -22,9 +23,9 @@ public final class Users {
             })
     }
 
-    public func me(success successCompletion: ((CurrentUserResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func me(success successCompletion: ((UserViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(UsersAPI.me,
-            success: { (response: CurrentUserResponse) in
+            success: { (response: UserViewResponse) in
                 successCompletion?(response)
             },
             failure: { error in
@@ -32,9 +33,9 @@ public final class Users {
             })
     }
 
-    public func update(email: String, username: String, password: String, picture: String, success successCompletion: ((CurrentUserResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func update(email: String, username: String, password: String, picture: String?, success successCompletion: ((UserViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(UsersAPI.update(email: email, username: username, password: password, picture: picture),
-            success: { (response: CurrentUserResponse) in
+            success: { (response: UserViewResponse) in
                 successCompletion?(response)
             },
             failure: { error in
@@ -42,9 +43,29 @@ public final class Users {
             })
     }
 
-    public func updatePassword(password: String, newPassword: String, confirmPassword: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(UsersAPI.updatePassword(password: password, newPassword: newPassword, confirmPassword: confirmPassword),
-            success: { (response: AuthenticationResponse) in
+    public func updatePassword(password: String, newPassword: String, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(UsersAPI.updatePassword(password: password, newPassword: newPassword),
+            success: { (response: AuthenticationViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func uploadPicture(image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(UsersAPI.uploadPicture(image: image),
+            success: { (response: StorageAttachmentViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func transactions(page: Int, size: Int, success successCompletion: ((TransactionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(UsersAPI.transactions(page: page, size: size),
+            success: { (response: TransactionViewResponse) in
                 successCompletion?(response)
             },
             failure: { error in

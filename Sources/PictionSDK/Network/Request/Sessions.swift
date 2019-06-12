@@ -12,9 +12,9 @@ public final class Sessions {
     static let shared = Sessions()
     private init() {}
 
-    public func create(email: String, password: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func create(email: String, password: String, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(SessionsAPI.create(email: email, password: password),
-            success: { (response: AuthenticationResponse) in
+            success: { (response: AuthenticationViewResponse) in
                 PictionManager.setToken(response.accessToken ?? "")
                 successCompletion?(response)
             },

@@ -30,7 +30,7 @@ extension SessionsAPI: TargetType {
     public var sampleData: Data {
         switch self {
         case .create(_):
-            return jsonSerializedUTF8(json: AuthenticationResponse.sampleData())
+            return jsonSerializedUTF8(json: AuthenticationViewResponse.sampleData())
         }
     }
     public var task: Task {

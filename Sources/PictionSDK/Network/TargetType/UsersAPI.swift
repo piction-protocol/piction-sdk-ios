@@ -45,11 +45,11 @@ extension UsersAPI: TargetType {
         switch self {
         case .signup(_),
              .updatePassword(_):
-            return jsonSerializedUTF8(json: AuthenticationResponse.sampleData())
+            return jsonSerializedUTF8(json: AuthenticationViewResponse.sampleData())
         case .me:
-            return jsonSerializedUTF8(json: CurrentUserResponse.sampleData())
+            return jsonSerializedUTF8(json: UserViewResponse.sampleData())
         case .update(_):
-            return jsonSerializedUTF8(json: CurrentUserResponse.sampleData())
+            return jsonSerializedUTF8(json: UserViewResponse.sampleData())
         }
     }
     public var task: Task {

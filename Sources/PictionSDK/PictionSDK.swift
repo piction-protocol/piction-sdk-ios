@@ -19,7 +19,7 @@ public final class PictionSDK {
         PictionProvider.request(target,
             success: { (response: M) in
                 if T.self == SessionsAPI.self {
-                    let token = response as? AuthenticationResponse
+                    let token = response as? AuthenticationViewResponse
                     PictionManager.setToken(token?.accessToken ?? "")
                 }
                 successCompletion?(response)

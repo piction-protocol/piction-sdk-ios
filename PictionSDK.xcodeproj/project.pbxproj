@@ -24,12 +24,11 @@
 		43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */; };
 		43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */; };
 		43CA1C0622A4EF2300CEF20A /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */; };
-		43CA1C0722A4EF2300CEF20A /* CurrentUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BED22A4EF2200CEF20A /* CurrentUserResponse.swift */; };
-		43CA1C0822A4EF2300CEF20A /* FileUploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEE22A4EF2200CEF20A /* FileUploadResponse.swift */; };
-		43CA1C0922A4EF2300CEF20A /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEF22A4EF2200CEF20A /* AuthenticationResponse.swift */; };
+		43CA1C0722A4EF2300CEF20A /* UserViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BED22A4EF2200CEF20A /* UserViewResponse.swift */; };
+		43CA1C0822A4EF2300CEF20A /* StorageAttachmentViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEE22A4EF2200CEF20A /* StorageAttachmentViewResponse.swift */; };
+		43CA1C0922A4EF2300CEF20A /* AuthenticationViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEF22A4EF2200CEF20A /* AuthenticationViewResponse.swift */; };
 		43CA1C0A22A4EF2300CEF20A /* ProjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF022A4EF2200CEF20A /* ProjectResponse.swift */; };
 		43CA1C0B22A4EF2300CEF20A /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF222A4EF2200CEF20A /* WalletModel.swift */; };
-		43CA1C0C22A4EF2300CEF20A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF322A4EF2200CEF20A /* UserModel.swift */; };
 		43CA1C0D22A4EF2300CEF20A /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF422A4EF2200CEF20A /* ErrorModel.swift */; };
 		43CA1C0E22A4EF2300CEF20A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF622A4EF2200CEF20A /* Users.swift */; };
 		43CA1C0F22A4EF2300CEF20A /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF722A4EF2200CEF20A /* Sessions.swift */; };
@@ -48,13 +47,12 @@
 		43CA1CD822A5071D00CEF20A /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CD622A5071D00CEF20A /* RxMoya.framework */; };
 		43CA1CD922A5071D00CEF20A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CD722A5071D00CEF20A /* RxSwift.framework */; };
 		43CA1CDB22A50A3400CEF20A /* RxMoya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CDA22A50A3400CEF20A /* RxMoya_ModelMapper.framework */; };
-		43CA1CDF22A51ADB00CEF20A /* Users+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1CDE22A51ADB00CEF20A /* Users+Rx.swift */; };
 		43CA1CFA22A759DC00CEF20A /* PictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFF22A4EF2200CEF20A /* PictionManager.swift */; };
 		43CA1CFB22A759DC00CEF20A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1C0122A4EF2200CEF20A /* Request.swift */; };
-		43CA1CFC22A759DC00CEF20A /* FileUploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEE22A4EF2200CEF20A /* FileUploadResponse.swift */; };
-		43CA1CFD22A759DC00CEF20A /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEF22A4EF2200CEF20A /* AuthenticationResponse.swift */; };
+		43CA1CFC22A759DC00CEF20A /* StorageAttachmentViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEE22A4EF2200CEF20A /* StorageAttachmentViewResponse.swift */; };
+		43CA1CFD22A759DC00CEF20A /* AuthenticationViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEF22A4EF2200CEF20A /* AuthenticationViewResponse.swift */; };
 		43CA1CFE22A759DC00CEF20A /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */; };
-		43CA1CFF22A759DC00CEF20A /* CurrentUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BED22A4EF2200CEF20A /* CurrentUserResponse.swift */; };
+		43CA1CFF22A759DC00CEF20A /* UserViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BED22A4EF2200CEF20A /* UserViewResponse.swift */; };
 		43CA1D0022A759DC00CEF20A /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF722A4EF2200CEF20A /* Sessions.swift */; };
 		43CA1D0122A759DC00CEF20A /* SessionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFC22A4EF2200CEF20A /* SessionsAPI.swift */; };
 		43CA1D0222A759DC00CEF20A /* PictionSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFD22A4EF2200CEF20A /* PictionSDK.swift */; };
@@ -68,7 +66,6 @@
 		43CA1D0A22A759DC00CEF20A /* ProjectsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */; };
 		43CA1D0B22A759DC00CEF20A /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF422A4EF2200CEF20A /* ErrorModel.swift */; };
 		43CA1D0C22A759DC00CEF20A /* ProjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF022A4EF2200CEF20A /* ProjectResponse.swift */; };
-		43CA1D0D22A759DC00CEF20A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF322A4EF2200CEF20A /* UserModel.swift */; };
 		43CA1D0E22A759DC00CEF20A /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF822A4EF2200CEF20A /* Projects.swift */; };
 		43CA1D1022A759DC00CEF20A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8932229E60BA0074C3D6 /* Alamofire.framework */; };
 		43CA1D1122A759DC00CEF20A /* Moya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8933229E60BA0074C3D6 /* Moya_ModelMapper.framework */; };
@@ -76,11 +73,12 @@
 		43CA1D1322A759DC00CEF20A /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8935229E60BA0074C3D6 /* KeychainAccess.framework */; };
 		43CA1D1422A759DC00CEF20A /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8936229E60BA0074C3D6 /* Moya.framework */; };
 		43CA1D1522A759DC00CEF20A /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8937229E60BA0074C3D6 /* Mapper.framework */; };
-		43CA1D1E22A75A2200CEF20A /* Users+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1CDE22A51ADB00CEF20A /* Users+Rx.swift */; };
 		43CA1D1F22A75A2200CEF20A /* PictionSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1CC322A4F6F900CEF20A /* PictionSDK+Rx.swift */; };
 		43CA1D2022A75A4700CEF20A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CD722A5071D00CEF20A /* RxSwift.framework */; };
 		43CA1D2122A75A6000CEF20A /* RxMoya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CDA22A50A3400CEF20A /* RxMoya_ModelMapper.framework */; };
 		43CA1D2222A75A6400CEF20A /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CD622A5071D00CEF20A /* RxMoya.framework */; };
+		43CA221722B0A11F00CEF20A /* TransactionViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA221622B0A11F00CEF20A /* TransactionViewResponse.swift */; };
+		43CA221822B0A37600CEF20A /* TransactionViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA221622B0A11F00CEF20A /* TransactionViewResponse.swift */; };
 		43FC8938229E60BA0074C3D6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8932229E60BA0074C3D6 /* Alamofire.framework */; };
 		43FC8939229E60BA0074C3D6 /* Moya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8933229E60BA0074C3D6 /* Moya_ModelMapper.framework */; };
 		43FC893A229E60BA0074C3D6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8934229E60BA0074C3D6 /* Result.framework */; };
@@ -113,12 +111,11 @@
 		43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
 		43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTypeExtension.swift; sourceTree = "<group>"; };
 		43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfo.swift; sourceTree = "<group>"; };
-		43CA1BED22A4EF2200CEF20A /* CurrentUserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserResponse.swift; sourceTree = "<group>"; };
-		43CA1BEE22A4EF2200CEF20A /* FileUploadResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUploadResponse.swift; sourceTree = "<group>"; };
-		43CA1BEF22A4EF2200CEF20A /* AuthenticationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationResponse.swift; sourceTree = "<group>"; };
+		43CA1BED22A4EF2200CEF20A /* UserViewResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewResponse.swift; sourceTree = "<group>"; };
+		43CA1BEE22A4EF2200CEF20A /* StorageAttachmentViewResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageAttachmentViewResponse.swift; sourceTree = "<group>"; };
+		43CA1BEF22A4EF2200CEF20A /* AuthenticationViewResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewResponse.swift; sourceTree = "<group>"; };
 		43CA1BF022A4EF2200CEF20A /* ProjectResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectResponse.swift; sourceTree = "<group>"; };
 		43CA1BF222A4EF2200CEF20A /* WalletModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
-		43CA1BF322A4EF2200CEF20A /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		43CA1BF422A4EF2200CEF20A /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		43CA1BF622A4EF2200CEF20A /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		43CA1BF722A4EF2200CEF20A /* Sessions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sessions.swift; sourceTree = "<group>"; };
@@ -136,8 +133,8 @@
 		43CA1CD622A5071D00CEF20A /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		43CA1CD722A5071D00CEF20A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		43CA1CDA22A50A3400CEF20A /* RxMoya_ModelMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya_ModelMapper.framework; path = Carthage/Build/iOS/RxMoya_ModelMapper.framework; sourceTree = "<group>"; };
-		43CA1CDE22A51ADB00CEF20A /* Users+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+Rx.swift"; sourceTree = "<group>"; };
 		43CA1D1B22A759DC00CEF20A /* PictionSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PictionSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43CA221622B0A11F00CEF20A /* TransactionViewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewResponse.swift; sourceTree = "<group>"; };
 		43FC8932229E60BA0074C3D6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		43FC8933229E60BA0074C3D6 /* Moya_ModelMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya_ModelMapper.framework; path = Carthage/Build/iOS/Moya_ModelMapper.framework; sourceTree = "<group>"; };
 		43FC8934229E60BA0074C3D6 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -246,10 +243,11 @@
 		43CA1BEC22A4EF2200CEF20A /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				43CA1BED22A4EF2200CEF20A /* CurrentUserResponse.swift */,
-				43CA1BEE22A4EF2200CEF20A /* FileUploadResponse.swift */,
-				43CA1BEF22A4EF2200CEF20A /* AuthenticationResponse.swift */,
+				43CA1BEF22A4EF2200CEF20A /* AuthenticationViewResponse.swift */,
+				43CA1BED22A4EF2200CEF20A /* UserViewResponse.swift */,
+				43CA1BEE22A4EF2200CEF20A /* StorageAttachmentViewResponse.swift */,
 				43CA1BF022A4EF2200CEF20A /* ProjectResponse.swift */,
+				43CA221622B0A11F00CEF20A /* TransactionViewResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -258,7 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				43CA1BF222A4EF2200CEF20A /* WalletModel.swift */,
-				43CA1BF322A4EF2200CEF20A /* UserModel.swift */,
 				43CA1BF422A4EF2200CEF20A /* ErrorModel.swift */,
 			);
 			path = Model;
@@ -278,8 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				43CA1BFA22A4EF2200CEF20A /* UsersAPI.swift */,
-				43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */,
 				43CA1BFC22A4EF2200CEF20A /* SessionsAPI.swift */,
+				43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */,
 			);
 			path = TargetType;
 			sourceTree = "<group>";
@@ -298,26 +295,9 @@
 		43CA1C0322A4EF2300CEF20A /* RxPictionSDK */ = {
 			isa = PBXGroup;
 			children = (
-				43CA1CDC22A51AC700CEF20A /* Network */,
 				43CA1CC322A4F6F900CEF20A /* PictionSDK+Rx.swift */,
 			);
 			path = RxPictionSDK;
-			sourceTree = "<group>";
-		};
-		43CA1CDC22A51AC700CEF20A /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				43CA1CDD22A51AD100CEF20A /* Request */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		43CA1CDD22A51AD100CEF20A /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				43CA1CDE22A51ADB00CEF20A /* Users+Rx.swift */,
-			);
-			path = Request;
 			sourceTree = "<group>";
 		};
 		43FC8931229E60B90074C3D6 /* Frameworks */ = {
@@ -526,7 +506,6 @@
 			buildActionMask = 0;
 			files = (
 				43CA1CC522A4F6F900CEF20A /* PictionSDK+Rx.swift in Sources */,
-				43CA1CDF22A51ADB00CEF20A /* Users+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,14 +513,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				43CA1D1E22A75A2200CEF20A /* Users+Rx.swift in Sources */,
 				43CA1D1F22A75A2200CEF20A /* PictionSDK+Rx.swift in Sources */,
 				43CA1CFA22A759DC00CEF20A /* PictionManager.swift in Sources */,
+				43CA221822B0A37600CEF20A /* TransactionViewResponse.swift in Sources */,
 				43CA1CFB22A759DC00CEF20A /* Request.swift in Sources */,
-				43CA1CFC22A759DC00CEF20A /* FileUploadResponse.swift in Sources */,
-				43CA1CFD22A759DC00CEF20A /* AuthenticationResponse.swift in Sources */,
+				43CA1CFC22A759DC00CEF20A /* StorageAttachmentViewResponse.swift in Sources */,
+				43CA1CFD22A759DC00CEF20A /* AuthenticationViewResponse.swift in Sources */,
 				43CA1CFE22A759DC00CEF20A /* MoyaResponseExtension.swift in Sources */,
-				43CA1CFF22A759DC00CEF20A /* CurrentUserResponse.swift in Sources */,
+				43CA1CFF22A759DC00CEF20A /* UserViewResponse.swift in Sources */,
 				43CA1D0022A759DC00CEF20A /* Sessions.swift in Sources */,
 				43CA1D0122A759DC00CEF20A /* SessionsAPI.swift in Sources */,
 				43CA1D0222A759DC00CEF20A /* PictionSDK.swift in Sources */,
@@ -555,7 +534,6 @@
 				43CA1D0A22A759DC00CEF20A /* ProjectsAPI.swift in Sources */,
 				43CA1D0B22A759DC00CEF20A /* ErrorModel.swift in Sources */,
 				43CA1D0C22A759DC00CEF20A /* ProjectResponse.swift in Sources */,
-				43CA1D0D22A759DC00CEF20A /* UserModel.swift in Sources */,
 				43CA1D0E22A759DC00CEF20A /* Projects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,10 +544,10 @@
 			files = (
 				43CA1C1522A4EF2300CEF20A /* PictionManager.swift in Sources */,
 				43CA1C1722A4EF2300CEF20A /* Request.swift in Sources */,
-				43CA1C0822A4EF2300CEF20A /* FileUploadResponse.swift in Sources */,
-				43CA1C0922A4EF2300CEF20A /* AuthenticationResponse.swift in Sources */,
+				43CA1C0822A4EF2300CEF20A /* StorageAttachmentViewResponse.swift in Sources */,
+				43CA1C0922A4EF2300CEF20A /* AuthenticationViewResponse.swift in Sources */,
 				43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */,
-				43CA1C0722A4EF2300CEF20A /* CurrentUserResponse.swift in Sources */,
+				43CA1C0722A4EF2300CEF20A /* UserViewResponse.swift in Sources */,
 				43CA1C0F22A4EF2300CEF20A /* Sessions.swift in Sources */,
 				43CA1C1322A4EF2300CEF20A /* SessionsAPI.swift in Sources */,
 				43CA1C1422A4EF2300CEF20A /* PictionSDK.swift in Sources */,
@@ -577,13 +555,13 @@
 				43CA1C1822A4EF2300CEF20A /* ErrorType.swift in Sources */,
 				43CA1C0622A4EF2300CEF20A /* ServerInfo.swift in Sources */,
 				43CA1C1622A4EF2300CEF20A /* Response.swift in Sources */,
+				43CA221722B0A11F00CEF20A /* TransactionViewResponse.swift in Sources */,
 				43CA1C0E22A4EF2300CEF20A /* Users.swift in Sources */,
 				43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */,
 				43CA1C1122A4EF2300CEF20A /* UsersAPI.swift in Sources */,
 				43CA1C1222A4EF2300CEF20A /* ProjectsAPI.swift in Sources */,
 				43CA1C0D22A4EF2300CEF20A /* ErrorModel.swift in Sources */,
 				43CA1C0A22A4EF2300CEF20A /* ProjectResponse.swift in Sources */,
-				43CA1C0C22A4EF2300CEF20A /* UserModel.swift in Sources */,
 				43CA1C1022A4EF2300CEF20A /* Projects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

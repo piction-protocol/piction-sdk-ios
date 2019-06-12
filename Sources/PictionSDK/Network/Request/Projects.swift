@@ -12,9 +12,9 @@ public final class Projects {
     static let shared = Projects()
     private init() {}
 
-    public func create(id: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func create(id: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.create(id: id, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail),
-            success: { (response: AuthenticationResponse) in
+            success: { (response: AuthenticationViewResponse) in
                 successCompletion?(response)
             },
             failure: { error in
@@ -32,9 +32,9 @@ public final class Projects {
             })
     }
 
-    public func update(id: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, success successCompletion: ((AuthenticationResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func update(id: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.update(id: id, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail),
-            success: { (response: AuthenticationResponse) in
+            success: { (response: AuthenticationViewResponse) in
                 successCompletion?(response)
             },
             failure: { error in

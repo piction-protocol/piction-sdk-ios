@@ -92,8 +92,10 @@ extension UsersAPI: TargetType {
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .uploadPicture(let image):
-            let imageData = image.jpegData(compressionQuality: 1.0)
-            let formData: [Moya.MultipartFormData] = [Moya.MultipartFormData(provider: .data(imageData!), name: "user_img", fileName: "user.jpeg", mimeType: "image/jpeg")]
+            guard let imageData = image.jpegData(compressionQuality: 1.0) else {
+                return .requestPlain
+            }
+            let formData: [Moya.MultipartFormData] = [Moya.MultipartFormData(provider: .data(imageData), name: "file", fileName: "user.jpeg", mimeType: "image/jpeg")]
             return .uploadMultipart(formData)
         }
     }

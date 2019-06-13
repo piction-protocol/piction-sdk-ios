@@ -62,7 +62,7 @@ extension UsersAPI: TargetType {
         case .uploadPicture(_):
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
         case .transactions(_):
-            return jsonSerializedUTF8(json: TransactionViewResponse.sampleData())
+            return jsonSerializedUTF8(json: PageViewResponse<TransactionModel>.sampleData())
         }
     }
     public var task: Task {

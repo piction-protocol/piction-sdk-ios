@@ -21,6 +21,14 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4329EB9022B1D76B00D01916 /* PostsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB8F22B1D76B00D01916 /* PostsAPI.swift */; };
+		4329EB9122B1D76B00D01916 /* PostsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB8F22B1D76B00D01916 /* PostsAPI.swift */; };
+		4329EB9322B1D83B00D01916 /* PostViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB9222B1D83B00D01916 /* PostViewResponse.swift */; };
+		4329EB9422B1D83B00D01916 /* PostViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB9222B1D83B00D01916 /* PostViewResponse.swift */; };
+		4329EB9622B1DBF800D01916 /* PageViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB9522B1DBF800D01916 /* PageViewResponse.swift */; };
+		4329EB9722B1DBF800D01916 /* PageViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB9522B1DBF800D01916 /* PageViewResponse.swift */; };
+		4329EBB522B1E3A900D01916 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EBB422B1E3A900D01916 /* Posts.swift */; };
+		4329EBB622B1E3A900D01916 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EBB422B1E3A900D01916 /* Posts.swift */; };
 		43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */; };
 		43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */; };
 		43CA1C0622A4EF2300CEF20A /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */; };
@@ -108,6 +116,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4329EB8F22B1D76B00D01916 /* PostsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPI.swift; sourceTree = "<group>"; };
+		4329EB9222B1D83B00D01916 /* PostViewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewResponse.swift; sourceTree = "<group>"; };
+		4329EB9522B1DBF800D01916 /* PageViewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewResponse.swift; sourceTree = "<group>"; };
+		4329EBB422B1E3A900D01916 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
 		43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTypeExtension.swift; sourceTree = "<group>"; };
 		43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfo.swift; sourceTree = "<group>"; };
@@ -248,6 +260,8 @@
 				43CA1BEE22A4EF2200CEF20A /* StorageAttachmentViewResponse.swift */,
 				43CA1BF022A4EF2200CEF20A /* ProjectViewResponse.swift */,
 				43CA221622B0A11F00CEF20A /* TransactionViewResponse.swift */,
+				4329EB9222B1D83B00D01916 /* PostViewResponse.swift */,
+				4329EB9522B1DBF800D01916 /* PageViewResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -267,6 +281,7 @@
 				43CA1BF622A4EF2200CEF20A /* Users.swift */,
 				43CA1BF722A4EF2200CEF20A /* Sessions.swift */,
 				43CA1BF822A4EF2200CEF20A /* Projects.swift */,
+				4329EBB422B1E3A900D01916 /* Posts.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -277,6 +292,7 @@
 				43CA1BFA22A4EF2200CEF20A /* UsersAPI.swift */,
 				43CA1BFC22A4EF2200CEF20A /* SessionsAPI.swift */,
 				43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */,
+				4329EB8F22B1D76B00D01916 /* PostsAPI.swift */,
 			);
 			path = TargetType;
 			sourceTree = "<group>";
@@ -514,9 +530,11 @@
 			buildActionMask = 0;
 			files = (
 				43CA1D1F22A75A2200CEF20A /* PictionSDK+Rx.swift in Sources */,
+				4329EB9422B1D83B00D01916 /* PostViewResponse.swift in Sources */,
 				43CA1CFA22A759DC00CEF20A /* PictionManager.swift in Sources */,
 				43CA221822B0A37600CEF20A /* TransactionViewResponse.swift in Sources */,
 				43CA1CFB22A759DC00CEF20A /* Request.swift in Sources */,
+				4329EBB622B1E3A900D01916 /* Posts.swift in Sources */,
 				43CA1CFC22A759DC00CEF20A /* StorageAttachmentViewResponse.swift in Sources */,
 				43CA1CFD22A759DC00CEF20A /* AuthenticationViewResponse.swift in Sources */,
 				43CA1CFE22A759DC00CEF20A /* MoyaResponseExtension.swift in Sources */,
@@ -526,6 +544,7 @@
 				43CA1D0222A759DC00CEF20A /* PictionSDK.swift in Sources */,
 				43CA1D0322A759DC00CEF20A /* WalletModel.swift in Sources */,
 				43CA1D0422A759DC00CEF20A /* ErrorType.swift in Sources */,
+				4329EB9122B1D76B00D01916 /* PostsAPI.swift in Sources */,
 				43CA1D0522A759DC00CEF20A /* ServerInfo.swift in Sources */,
 				43CA1D0622A759DC00CEF20A /* Response.swift in Sources */,
 				43CA1D0722A759DC00CEF20A /* Users.swift in Sources */,
@@ -533,6 +552,7 @@
 				43CA1D0922A759DC00CEF20A /* UsersAPI.swift in Sources */,
 				43CA1D0A22A759DC00CEF20A /* ProjectsAPI.swift in Sources */,
 				43CA1D0B22A759DC00CEF20A /* ErrorModel.swift in Sources */,
+				4329EB9722B1DBF800D01916 /* PageViewResponse.swift in Sources */,
 				43CA1D0C22A759DC00CEF20A /* ProjectViewResponse.swift in Sources */,
 				43CA1D0E22A759DC00CEF20A /* Projects.swift in Sources */,
 			);
@@ -546,8 +566,10 @@
 				43CA1C1722A4EF2300CEF20A /* Request.swift in Sources */,
 				43CA1C0822A4EF2300CEF20A /* StorageAttachmentViewResponse.swift in Sources */,
 				43CA1C0922A4EF2300CEF20A /* AuthenticationViewResponse.swift in Sources */,
+				4329EB9322B1D83B00D01916 /* PostViewResponse.swift in Sources */,
 				43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */,
 				43CA1C0722A4EF2300CEF20A /* UserViewResponse.swift in Sources */,
+				4329EBB522B1E3A900D01916 /* Posts.swift in Sources */,
 				43CA1C0F22A4EF2300CEF20A /* Sessions.swift in Sources */,
 				43CA1C1322A4EF2300CEF20A /* SessionsAPI.swift in Sources */,
 				43CA1C1422A4EF2300CEF20A /* PictionSDK.swift in Sources */,
@@ -556,6 +578,8 @@
 				43CA1C0622A4EF2300CEF20A /* ServerInfo.swift in Sources */,
 				43CA1C1622A4EF2300CEF20A /* Response.swift in Sources */,
 				43CA221722B0A11F00CEF20A /* TransactionViewResponse.swift in Sources */,
+				4329EB9022B1D76B00D01916 /* PostsAPI.swift in Sources */,
+				4329EB9622B1DBF800D01916 /* PageViewResponse.swift in Sources */,
 				43CA1C0E22A4EF2300CEF20A /* Users.swift in Sources */,
 				43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */,
 				43CA1C1122A4EF2300CEF20A /* UsersAPI.swift in Sources */,

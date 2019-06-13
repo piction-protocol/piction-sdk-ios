@@ -24,28 +24,28 @@ extension ProjectsAPI: TargetType {
     public var path: String {
         switch self {
         case .all,
-             .create(_):
+             .create:
             return "/projects"
         case .get(let id),
              .update(let id, _, _, _, _):
             return "/projects/\(id)"
-        case .uploadThumbnail(_):
+        case .uploadThumbnail:
             return "/projects/thumbnail"
-        case .uploadWideThumbnail(_):
+        case .uploadWideThumbnail:
             return "/projects/wide-thumbnail"
         }
     }
     public var method: Moya.Method {
         switch self {
         case .all,
-             .get(_):
+             .get:
             return .get
-        case .create(_):
+        case .create:
             return .post
-        case .update(_):
+        case .update:
             return .put
-        case .uploadThumbnail(_),
-             .uploadWideThumbnail(_):
+        case .uploadThumbnail,
+             .uploadWideThumbnail:
             return .patch
         }
     }
@@ -53,12 +53,12 @@ extension ProjectsAPI: TargetType {
         switch self {
         case .all:
             return jsonSerializedUTF8(json: [ProjectViewResponse.sampleData()])
-        case .create(_),
-             .get(_),
-             .update(_):
+        case .create,
+             .get,
+             .update:
             return jsonSerializedUTF8(json: ProjectViewResponse.sampleData())
-        case .uploadThumbnail(_),
-             .uploadWideThumbnail(_):
+        case .uploadThumbnail,
+             .uploadWideThumbnail:
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
         }
     }
@@ -74,7 +74,7 @@ extension ProjectsAPI: TargetType {
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .all,
-             .get(_):
+             .get:
             return .requestPlain
         case .update(_, let title, let synopsis, let thumbnail, let wideThumbnail):
             let param = [

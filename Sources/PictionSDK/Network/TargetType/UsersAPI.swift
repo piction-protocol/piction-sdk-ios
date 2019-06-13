@@ -23,14 +23,14 @@ extension UsersAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
-        case .signup(_):
+        case .signup:
             return "/users"
         case .me,
-             .update(_):
+             .update:
             return "/users/me"
         case .updatePassword:
             return "/users/me/password"
-        case .uploadPicture(_):
+        case .uploadPicture:
             return "/users/me/picture"
         case .transactions:
             return "/users/me/transactions"
@@ -38,30 +38,30 @@ extension UsersAPI: TargetType {
     }
     public var method: Moya.Method {
         switch self {
-        case .signup(_):
+        case .signup:
             return .post
         case .me,
-             .transactions(_):
+             .transactions:
             return .get
-        case .update(_):
+        case .update:
             return .put
         case .updatePassword,
-             .uploadPicture(_):
+             .uploadPicture:
             return .patch
         }
     }
     public var sampleData: Data {
         switch self {
-        case .signup(_),
-             .updatePassword(_):
+        case .signup,
+             .updatePassword:
             return jsonSerializedUTF8(json: AuthenticationViewResponse.sampleData())
         case .me:
             return jsonSerializedUTF8(json: UserViewResponse.sampleData())
-        case .update(_):
+        case .update:
             return jsonSerializedUTF8(json: UserViewResponse.sampleData())
-        case .uploadPicture(_):
+        case .uploadPicture:
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
-        case .transactions(_):
+        case .transactions:
             return jsonSerializedUTF8(json: PageViewResponse<TransactionModel>.sampleData())
         }
     }
@@ -106,7 +106,7 @@ extension UsersAPI: TargetType {
     }
     public var headers: [String: String]? {
         switch self {
-        case .uploadPicture(_):
+        case .uploadPicture:
             return ServerInfo.getMultipartFormDataHeader()
         default:
             return ServerInfo.getCustomHeader()

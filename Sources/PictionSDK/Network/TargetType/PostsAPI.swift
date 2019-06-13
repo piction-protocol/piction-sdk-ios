@@ -53,12 +53,12 @@ extension PostsAPI: TargetType {
         switch self {
         case .all:
             return jsonSerializedUTF8(json: PageViewResponse<PostModel>.sampleData())
-        case .create(_),
-             .get(_),
-             .update(_):
+        case .create,
+             .get,
+             .update:
             return jsonSerializedUTF8(json: PostViewResponse.sampleData())
-        case .uploadContentImage(_),
-             .uploadCoverImage(_):
+        case .uploadContentImage,
+             .uploadCoverImage:
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
         }
     }

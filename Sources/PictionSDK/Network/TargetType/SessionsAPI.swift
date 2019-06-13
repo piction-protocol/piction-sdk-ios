@@ -17,19 +17,19 @@ extension SessionsAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
-        case .create(_):
+        case .create:
             return "/sessions"
         }
     }
     public var method: Moya.Method {
         switch self {
-        case .create(_):
+        case .create:
             return .post
         }
     }
     public var sampleData: Data {
         switch self {
-        case .create(_):
+        case .create:
             return jsonSerializedUTF8(json: AuthenticationViewResponse.sampleData())
         }
     }

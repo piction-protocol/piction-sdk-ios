@@ -14,6 +14,7 @@ public enum ErrorType: Error {
     case unauthorized(_ error: ErrorModel)
     case forbidden(_ error: ErrorModel)
     case notFound(_ error: ErrorModel)
+    case internalServerError(_ error: ErrorModel)
     case gatewayTimeout(_ error: Moya.Response)
     case unknown(_ error: Moya.Response)
 }

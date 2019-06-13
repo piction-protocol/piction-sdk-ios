@@ -12,8 +12,7 @@ import Moya
 import Moya_ModelMapper
 
 extension Moya.Response {
-    func filterStatusCode<M: Mappable>() throws -> M {
-
+    func filterStatusCode() throws  {
         guard 200 ... 399 ~= self.statusCode else {
             let errorItem = try self.map(to: ErrorModel.self)
 
@@ -26,35 +25,13 @@ extension Moya.Response {
                 throw ErrorType.forbidden(errorItem)
             case 404:
                 throw ErrorType.notFound(errorItem)
+            case 500:
+                throw ErrorType.internalServerError(errorItem)
             case 504:
                 throw ErrorType.gatewayTimeout(self)
             default:
                 throw ErrorType.unknown(self)
             }
         }
-        return try self.map(to: M.self)
-    }
-
-    func filterStatusCode<M: Mappable>() throws -> [M] {
-
-        guard 200 ... 399 ~= self.statusCode else {
-            let errorItem = try self.map(to: ErrorModel.self)
-
-            switch self.statusCode {
-            case 400:
-                throw ErrorType.badRequest(errorItem)
-            case 401:
-                throw ErrorType.unauthorized(errorItem)
-            case 403:
-                throw ErrorType.forbidden(errorItem)
-            case 404:
-                throw ErrorType.notFound(errorItem)
-            case 504:
-                throw ErrorType.gatewayTimeout(self)
-            default:
-                throw ErrorType.unknown(self)
-            }
-        }
-        return try self.map(to: [M].self)
     }
 }

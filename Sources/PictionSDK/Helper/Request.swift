@@ -18,7 +18,8 @@ public final class PictionProvider {
             switch result {
             case let .success(response):
                 do {
-                    let item: M = try response.filterStatusCode()
+                    try response.filterStatusCode()
+                    let item: M = try response.map(to: M.self)
                     successCompletion(item)
                 } catch {
                     if let error = error as? ErrorType {
@@ -38,7 +39,8 @@ public final class PictionProvider {
             switch result {
             case let .success(response):
                 do {
-                    let item: [M] = try response.filterStatusCode()
+                    try response.filterStatusCode()
+                    let item: [M] = try response.map(to: [M].self)
                     successCompletion(item)
                 } catch {
                     if let error = error as? ErrorType {

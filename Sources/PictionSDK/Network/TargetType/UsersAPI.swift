@@ -32,8 +32,8 @@ extension UsersAPI: TargetType {
             return "/users/me/password"
         case .uploadPicture(_):
             return "/users/me/picture"
-        case .transactions(let page, let size):
-            return "/users/me/transactions?page=\(page)&size=\(size)"
+        case .transactions:
+            return "/users/me/transactions"
         }
     }
     public var method: Moya.Method {
@@ -74,8 +74,7 @@ extension UsersAPI: TargetType {
                 "password": password
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
-        case .me,
-             .transactions(_):
+        case .me:
             return .requestPlain
         case .update(let email, let username, let password, let picture):
             let param = [
@@ -97,6 +96,12 @@ extension UsersAPI: TargetType {
             }
             let formData: [Moya.MultipartFormData] = [Moya.MultipartFormData(provider: .data(imageData), name: "file", fileName: "user.jpeg", mimeType: "image/jpeg")]
             return .uploadMultipart(formData)
+        case .transactions(let page, let size):
+            let param = [
+                "page": page,
+                "size": size
+            ]
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }
     }
     public var headers: [String: String]? {

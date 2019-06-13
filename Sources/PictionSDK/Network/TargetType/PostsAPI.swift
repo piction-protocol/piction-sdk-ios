@@ -69,7 +69,7 @@ extension PostsAPI: TargetType {
                 "page": page,
                 "size": size
             ]
-            return .requestParameters(parameters: param, encoding: JSONEncoding.default)
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .create(_, let title, let content, let cover, let status, let membership, let seriesId),
              .update(_, _, let title, let content, let cover, let status, let membership, let seriesId):
             let param = [

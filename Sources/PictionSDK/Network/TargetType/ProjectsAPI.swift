@@ -94,6 +94,12 @@ extension ProjectsAPI: TargetType {
         }
     }
     public var headers: [String: String]? {
-        return ServerInfo.getCustomHeader()
+        switch self {
+        case .uploadThumbnail,
+             .uploadWideThumbnail:
+            return ServerInfo.getMultipartFormDataHeader()
+        default:
+            return ServerInfo.getCustomHeader()
+        }
     }
 }

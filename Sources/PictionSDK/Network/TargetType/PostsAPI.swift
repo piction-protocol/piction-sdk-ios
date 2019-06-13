@@ -93,7 +93,13 @@ extension PostsAPI: TargetType {
         }
     }
     public var headers: [String: String]? {
-        return ServerInfo.getCustomHeader()
+        switch self {
+        case .uploadContentImage,
+             .uploadCoverImage:
+            return ServerInfo.getMultipartFormDataHeader()
+        default:
+            return ServerInfo.getCustomHeader()
+        }
     }
 }
 

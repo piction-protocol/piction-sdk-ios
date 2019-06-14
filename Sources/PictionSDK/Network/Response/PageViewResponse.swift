@@ -9,7 +9,7 @@
 import Mapper
 
 public struct PageViewResponse<T: Mappable>: Mappable {
-    public let content: T?
+    public let content: [T]?
     public let empty: Bool?
     public let first: Bool?
     public let last: Bool?
@@ -39,12 +39,17 @@ public struct PageViewResponse<T: Mappable>: Mappable {
 extension PageViewResponse {
     static func sampleData() -> [String: Any] {
         return [
-            "created_at": "created_at",
-            "id": "id",
-            "raw": "raw",
-            "synopsis": "synopsis",
-            "title": "title",
-            "updated_at": "updated_at",
+            "content": [],
+            "empty": "empty",
+            "first": "first",
+            "last": "last",
+            "number": "number",
+            "numberOfElements": "numberOfElements",
+            "pageable": PageableModel.sampleData(),
+            "size": "size",
+            "sort": SortModel.sampleData(),
+            "totalElements": "totalElements",
+            "totalPages": "totalPages"
         ]
     }
 }
@@ -67,6 +72,19 @@ public struct PageableModel: Mappable {
     }
 }
 
+extension PageableModel {
+    static func sampleData() -> [String: Any] {
+        return [
+            "offset": 0,
+            "pageNumber": 0,
+            "pageSize": 10,
+            "paged": true,
+            "sort": SortModel.sampleData(),
+            "unpaged": false
+        ]
+    }
+}
+
 public struct SortModel: Mappable {
     public let empty: Bool?
     public let sorted: Bool?
@@ -76,5 +94,15 @@ public struct SortModel: Mappable {
         empty = map.optionalFrom("empty")
         sorted = map.optionalFrom("sorted")
         unsorted = map.optionalFrom("unsorted")
+    }
+}
+
+extension SortModel {
+    static func sampleData() -> [String: Any] {
+        return [
+            "empty": true,
+            "sorted": false,
+            "unsorted": true
+        ]
     }
 }

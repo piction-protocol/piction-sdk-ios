@@ -33,8 +33,8 @@ public final class Series {
             })
     }
 
-    public func updatePriority(projectId: String, name: String, success successCompletion: (([SeriesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SeriesAPI.create(projectId: projectId, name: name),
+    public func updatePriority(projectId: String, seriesIdList: [Int], success successCompletion: (([SeriesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.updatePriority(projectId: projectId, seriesIdList: seriesIdList),
             success: { (response: [SeriesViewResponse]) in
                 successCompletion?(response)
             },
@@ -63,10 +63,9 @@ public final class Series {
             })
     }
 
-    // TODO: response?
-    public func delete(projectId: String, seriesId: Int, success successCompletion: ((SeriesViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func delete(projectId: String, seriesId: Int, success successCompletion: ((DefaultResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(SeriesAPI.delete(projectId: projectId, seriesId: seriesId),
-            success: { (response: SeriesViewResponse) in
+            success: { (response: DefaultResponse) in
                 successCompletion?(response)
             },
             failure: { error in
@@ -74,13 +73,13 @@ public final class Series {
             })
     }
 
-    public func allSeriesPosts(projectId: String, seriesId: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func allSeriesPosts(projectId: String, seriesId: Int, success successCompletion: (([PostViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(SeriesAPI.allSeriesPosts(projectId: projectId, seriesId: seriesId),
-            success: { (response: PageViewResponse<PostModel>) in
+            success: { (response: [PostViewResponse]) in
                 successCompletion?(response)
             },
-                failure: { error in
-                    failureCompletion?(error)
+            failure: { error in
+                failureCompletion?(error)
             })
     }
 }

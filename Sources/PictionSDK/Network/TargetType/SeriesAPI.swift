@@ -61,9 +61,9 @@ extension SeriesAPI: TargetType {
              .update:
             return jsonSerializedUTF8(json: SeriesViewResponse.sampleData())
         case .delete:
-            return jsonSerializedUTF8(json: [])
+            return jsonSerializedUTF8(json: DefaultResponse.sampleData())
         case .allSeriesPosts:
-            return jsonSerializedUTF8(json: PageViewResponse<PostModel>.sampleData())
+            return jsonSerializedUTF8(json: [PostViewResponse.sampleData()])
         }
     }
     public var task: Task {

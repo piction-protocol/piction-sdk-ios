@@ -19,7 +19,13 @@ public final class PictionProvider {
             case let .success(response):
                 do {
                     try response.filterStatusCode()
-                    let item: M = try response.map(to: M.self)
+
+                    var item: M
+                    if response.data.count == 0 {
+                        item = M.from([:])!
+                    } else {
+                        item = try response.map(to: M.self)
+                    }
                     successCompletion(item)
                 } catch {
                     if let error = error as? ErrorType {
@@ -40,7 +46,13 @@ public final class PictionProvider {
             case let .success(response):
                 do {
                     try response.filterStatusCode()
-                    let item: [M] = try response.map(to: [M].self)
+
+                    var item: [M]
+                    if response.data.count == 0 {
+                        item = [M.from([:])!]
+                    } else {
+                        item = try response.map(to: [M].self)
+                    }
                     successCompletion(item)
                 } catch {
                     if let error = error as? ErrorType {

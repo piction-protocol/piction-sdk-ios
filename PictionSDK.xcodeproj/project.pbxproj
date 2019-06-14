@@ -39,6 +39,8 @@
 		432CAC2822B33F380007EE03 /* SeriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2622B33F380007EE03 /* SeriesAPI.swift */; };
 		432CAC2A22B33FBE0007EE03 /* SeriesViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2922B33FBE0007EE03 /* SeriesViewResponse.swift */; };
 		432CAC2B22B33FBE0007EE03 /* SeriesViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2922B33FBE0007EE03 /* SeriesViewResponse.swift */; };
+		432CAC4C22B37B730007EE03 /* DefaultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4B22B37B730007EE03 /* DefaultResponse.swift */; };
+		432CAC4D22B37B730007EE03 /* DefaultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4B22B37B730007EE03 /* DefaultResponse.swift */; };
 		43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */; };
 		43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */; };
 		43CA1C0622A4EF2300CEF20A /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */; };
@@ -135,6 +137,7 @@
 		432CAC2322B33F2D0007EE03 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		432CAC2622B33F380007EE03 /* SeriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesAPI.swift; sourceTree = "<group>"; };
 		432CAC2922B33FBE0007EE03 /* SeriesViewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewResponse.swift; sourceTree = "<group>"; };
+		432CAC4B22B37B730007EE03 /* DefaultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponse.swift; sourceTree = "<group>"; };
 		43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
 		43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTypeExtension.swift; sourceTree = "<group>"; };
 		43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfo.swift; sourceTree = "<group>"; };
@@ -270,6 +273,7 @@
 		43CA1BEC22A4EF2200CEF20A /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				432CAC4B22B37B730007EE03 /* DefaultResponse.swift */,
 				43CA1BEF22A4EF2200CEF20A /* AuthenticationViewResponse.swift */,
 				43CA1BED22A4EF2200CEF20A /* UserViewResponse.swift */,
 				43CA1BEE22A4EF2200CEF20A /* StorageAttachmentViewResponse.swift */,
@@ -561,6 +565,7 @@
 				43CA1CFC22A759DC00CEF20A /* StorageAttachmentViewResponse.swift in Sources */,
 				43CA1CFD22A759DC00CEF20A /* AuthenticationViewResponse.swift in Sources */,
 				43CA1CFE22A759DC00CEF20A /* MoyaResponseExtension.swift in Sources */,
+				432CAC4D22B37B730007EE03 /* DefaultResponse.swift in Sources */,
 				43CA1CFF22A759DC00CEF20A /* UserViewResponse.swift in Sources */,
 				43CA1D0022A759DC00CEF20A /* Sessions.swift in Sources */,
 				43CA1D0122A759DC00CEF20A /* SessionsAPI.swift in Sources */,
@@ -591,6 +596,7 @@
 				43CA1C1722A4EF2300CEF20A /* Request.swift in Sources */,
 				43CA1C0822A4EF2300CEF20A /* StorageAttachmentViewResponse.swift in Sources */,
 				43CA1C0922A4EF2300CEF20A /* AuthenticationViewResponse.swift in Sources */,
+				432CAC4C22B37B730007EE03 /* DefaultResponse.swift in Sources */,
 				4329EB9322B1D83B00D01916 /* PostViewResponse.swift in Sources */,
 				43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */,
 				43CA1C0722A4EF2300CEF20A /* UserViewResponse.swift in Sources */,

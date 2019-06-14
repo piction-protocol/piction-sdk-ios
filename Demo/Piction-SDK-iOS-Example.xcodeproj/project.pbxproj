@@ -25,6 +25,12 @@
 		4329EBAF22B1E07600D01916 /* PostsUpdate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4329EBAE22B1E07600D01916 /* PostsUpdate.storyboard */; };
 		4329EBB122B1E08700D01916 /* PostsUploadContentImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4329EBB022B1E08700D01916 /* PostsUploadContentImage.storyboard */; };
 		4329EBB322B1E09300D01916 /* PostsUploadCoverImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4329EBB222B1E09300D01916 /* PostsUploadCoverImage.storyboard */; };
+		432CAC1322B32CD70007EE03 /* MyProjects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC1222B32CD70007EE03 /* MyProjects.storyboard */; };
+		432CAC1622B32CF30007EE03 /* MyTransactions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC1522B32CF30007EE03 /* MyTransactions.storyboard */; };
+		432CAC1822B32CFE0007EE03 /* MyWallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC1722B32CFE0007EE03 /* MyWallet.storyboard */; };
+		432CAC1C22B32D190007EE03 /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC1B22B32D190007EE03 /* MyProjectsViewController.swift */; };
+		432CAC1E22B32D230007EE03 /* MyTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC1D22B32D230007EE03 /* MyTransactionsViewController.swift */; };
+		432CAC2022B32D2F0007EE03 /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC1F22B32D2F0007EE03 /* MyWalletViewController.swift */; };
 		43C3142E228AA198007E9EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142D228AA198007E9EAF /* AppDelegate.swift */; };
 		43C31430228AA198007E9EAF /* UsersSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */; };
 		43C31433228AA198007E9EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C31431228AA198007E9EAF /* Main.storyboard */; };
@@ -60,8 +66,6 @@
 		43CA218F22AE3C0000CEF20A /* RxMoya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA218D22AE3BF500CEF20A /* RxMoya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43CA221A22B0A70100CEF20A /* UsersUploadPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA221922B0A70000CEF20A /* UsersUploadPictureViewController.swift */; };
 		43CA221C22B0A76C00CEF20A /* UsersUploadPicture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43CA221B22B0A76C00CEF20A /* UsersUploadPicture.storyboard */; };
-		43CA222822B0EA5500CEF20A /* UsersTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA222722B0EA5500CEF20A /* UsersTransactionsViewController.swift */; };
-		43CA222A22B0EA6F00CEF20A /* UsersTransactions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43CA222922B0EA6F00CEF20A /* UsersTransactions.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,6 +112,12 @@
 		4329EBAE22B1E07600D01916 /* PostsUpdate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostsUpdate.storyboard; sourceTree = "<group>"; };
 		4329EBB022B1E08700D01916 /* PostsUploadContentImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostsUploadContentImage.storyboard; sourceTree = "<group>"; };
 		4329EBB222B1E09300D01916 /* PostsUploadCoverImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostsUploadCoverImage.storyboard; sourceTree = "<group>"; };
+		432CAC1222B32CD70007EE03 /* MyProjects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyProjects.storyboard; sourceTree = "<group>"; };
+		432CAC1522B32CF30007EE03 /* MyTransactions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyTransactions.storyboard; sourceTree = "<group>"; };
+		432CAC1722B32CFE0007EE03 /* MyWallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyWallet.storyboard; sourceTree = "<group>"; };
+		432CAC1B22B32D190007EE03 /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
+		432CAC1D22B32D230007EE03 /* MyTransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTransactionsViewController.swift; sourceTree = "<group>"; };
+		432CAC1F22B32D2F0007EE03 /* MyWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewController.swift; sourceTree = "<group>"; };
 		43C3142A228AA198007E9EAF /* Piction-SDK-iOS-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piction-SDK-iOS-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C3142D228AA198007E9EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSignupViewController.swift; sourceTree = "<group>"; };
@@ -146,8 +156,6 @@
 		43CA218D22AE3BF500CEF20A /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = "Piction-SDK-iOS-Example/Frameworks/RxMoya.framework"; sourceTree = "<group>"; };
 		43CA221922B0A70000CEF20A /* UsersUploadPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersUploadPictureViewController.swift; sourceTree = "<group>"; };
 		43CA221B22B0A76C00CEF20A /* UsersUploadPicture.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersUploadPicture.storyboard; sourceTree = "<group>"; };
-		43CA222722B0EA5500CEF20A /* UsersTransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTransactionsViewController.swift; sourceTree = "<group>"; };
-		43CA222922B0EA6F00CEF20A /* UsersTransactions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersTransactions.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +193,26 @@
 				4329EBA422B1E02700D01916 /* PostsUploadCoverImageViewController.swift */,
 			);
 			path = Posts;
+			sourceTree = "<group>";
+		};
+		432CAC1022B32CBC0007EE03 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				432CAC1B22B32D190007EE03 /* MyProjectsViewController.swift */,
+				432CAC1D22B32D230007EE03 /* MyTransactionsViewController.swift */,
+				432CAC1F22B32D2F0007EE03 /* MyWalletViewController.swift */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		432CAC1122B32CC50007EE03 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				432CAC1222B32CD70007EE03 /* MyProjects.storyboard */,
+				432CAC1522B32CF30007EE03 /* MyTransactions.storyboard */,
+				432CAC1722B32CFE0007EE03 /* MyWallet.storyboard */,
+			);
+			path = My;
 			sourceTree = "<group>";
 		};
 		43C31421228AA198007E9EAF = {
@@ -247,6 +275,7 @@
 				43C3167B22928B17007E9EAF /* Sessions */,
 				43CA1BB0229FAD1800CEF20A /* Projects */,
 				4329EB9822B1DFBC00D01916 /* Posts */,
+				432CAC1122B32CC50007EE03 /* My */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,6 +288,7 @@
 				43C3167C22928B1D007E9EAF /* Sessions */,
 				43CA1BB7229FAD6800CEF20A /* Projects */,
 				4329EB9922B1DFCC00D01916 /* Posts */,
+				432CAC1022B32CBC0007EE03 /* My */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -271,7 +301,6 @@
 				43CA1BA6229FA20800CEF20A /* UsersUpdate.storyboard */,
 				43CA1BAA229FA23D00CEF20A /* UsersUpdatePassword.storyboard */,
 				43CA221B22B0A76C00CEF20A /* UsersUploadPicture.storyboard */,
-				43CA222922B0EA6F00CEF20A /* UsersTransactions.storyboard */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -300,7 +329,6 @@
 				43CA1BA4229FA1F000CEF20A /* UsersUpdateViewController.swift */,
 				43CA1BA8229FA22800CEF20A /* UsersUpdatePasswordViewController.swift */,
 				43CA221922B0A70000CEF20A /* UsersUploadPictureViewController.swift */,
-				43CA222722B0EA5500CEF20A /* UsersTransactionsViewController.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -416,15 +444,17 @@
 				43CA1BA7229FA20800CEF20A /* UsersUpdate.storyboard in Resources */,
 				4329EBAF22B1E07600D01916 /* PostsUpdate.storyboard in Resources */,
 				43C3143B228AA199007E9EAF /* LaunchScreen.storyboard in Resources */,
+				432CAC1622B32CF30007EE03 /* MyTransactions.storyboard in Resources */,
 				4329EBAD22B1E06C00D01916 /* PostsGet.storyboard in Resources */,
 				43C316742292773A007E9EAF /* UsersMe.storyboard in Resources */,
 				4329EBB122B1E08700D01916 /* PostsUploadContentImage.storyboard in Resources */,
 				43CA1BB4229FAD4C00CEF20A /* ProjectsGet.storyboard in Resources */,
 				4329EBA922B1E04B00D01916 /* PostsCreate.storyboard in Resources */,
+				432CAC1822B32CFE0007EE03 /* MyWallet.storyboard in Resources */,
 				43C3167222927728007E9EAF /* UsersSignup.storyboard in Resources */,
-				43CA222A22B0EA6F00CEF20A /* UsersTransactions.storyboard in Resources */,
 				4329EB8A22B0F86100D01916 /* ProjectsAll.storyboard in Resources */,
 				4329EB8C22B0F87000D01916 /* ProjectsUploadThumbnail.storyboard in Resources */,
+				432CAC1322B32CD70007EE03 /* MyProjects.storyboard in Resources */,
 				43CA1BB2229FAD3900CEF20A /* ProjectsCreate.storyboard in Resources */,
 				4329EB8E22B0F87D00D01916 /* ProjectsUploadWideThumbnail.storyboard in Resources */,
 				43C31438228AA199007E9EAF /* Assets.xcassets in Resources */,
@@ -452,6 +482,7 @@
 				43CA1BBF229FB26500CEF20A /* ProjectsGetViewController.swift in Sources */,
 				4329EB8822B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift in Sources */,
 				4329EBA322B1E01800D01916 /* PostsUploadContentImageViewController.swift in Sources */,
+				432CAC2022B32D2F0007EE03 /* MyWalletViewController.swift in Sources */,
 				43CA221A22B0A70100CEF20A /* UsersUploadPictureViewController.swift in Sources */,
 				43C316842292A67E007E9EAF /* MainViewController.swift in Sources */,
 				43CA1BA5229FA1F000CEF20A /* UsersUpdateViewController.swift in Sources */,
@@ -462,9 +493,10 @@
 				4329EB9F22B1DFF200D01916 /* PostsGetViewController.swift in Sources */,
 				43CA1BB9229FAD7E00CEF20A /* ProjectsCreateViewController.swift in Sources */,
 				4329EB9D22B1DFE600D01916 /* PostsCreateViewController.swift in Sources */,
+				432CAC1C22B32D190007EE03 /* MyProjectsViewController.swift in Sources */,
 				4329EB8622B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift in Sources */,
 				4329EB8422B0F83600D01916 /* ProjectsAllViewController.swift in Sources */,
-				43CA222822B0EA5500CEF20A /* UsersTransactionsViewController.swift in Sources */,
+				432CAC1E22B32D230007EE03 /* MyTransactionsViewController.swift in Sources */,
 				43CA1BBD229FAD9400CEF20A /* ProjectsUpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

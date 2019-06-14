@@ -17,11 +17,11 @@ class MainViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return PictionManager.isLogin ? 4 : 3
+        return PictionManager.isLogin ? 6 : 5
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 3 {
+        if indexPath.section == 5 {
             PictionManager.logout()
             tableView.reloadData()
         }

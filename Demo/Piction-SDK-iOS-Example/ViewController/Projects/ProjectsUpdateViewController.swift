@@ -10,7 +10,7 @@ import UIKit
 import PictionSDK
 
 class ProjectsUpdateViewController: UIViewController {
-    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var projectIdTextField: UITextField!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var synopsisTextField: UITextField!
     @IBOutlet weak var thumbnailTextField: UITextField!
@@ -32,7 +32,7 @@ class ProjectsUpdateViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.projects.update(id: idTextField.text ?? "", title: titleTextField.text ?? "", synopsis: synopsisTextField.text ?? "", thumbnail: thumbnailTextField.text ?? "", wideThumbnail: wideThumbnailTextField.text ?? "",
+        PictionSDK.projects.update(projectId: projectIdTextField.text ?? "", title: titleTextField.text ?? "", synopsis: synopsisTextField.text ?? "", thumbnail: thumbnailTextField.text ?? "", wideThumbnail: wideThumbnailTextField.text ?? "",
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false
@@ -64,7 +64,7 @@ class ProjectsUpdateViewController: UIViewController {
             PictionSDK.projects.all(
                 success: { response in
                     let currentProject = response.filter { $0.id == inputId }.first
-                    self.idTextField.text = inputId
+                    self.projectIdTextField.text = inputId
                     self.titleTextField.text = currentProject?.title
                     self.synopsisTextField.text = currentProject?.synopsis
                     self.responseTextView.text = String(describing: currentProject)

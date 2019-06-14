@@ -49,6 +49,12 @@
 		432CAC5122B380CA0007EE03 /* PostsLikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC5022B380CA0007EE03 /* PostsLikeViewController.swift */; };
 		432CAC5322B3821D0007EE03 /* SessionsDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC5222B3821D0007EE03 /* SessionsDeleteViewController.swift */; };
 		432CAC5522B3824E0007EE03 /* SessionsDelete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC5422B3824E0007EE03 /* SessionsDelete.storyboard */; };
+		432CAC5722B385A70007EE03 /* ProjectsRecommendedAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC5622B385A70007EE03 /* ProjectsRecommendedAllViewController.swift */; };
+		432CAC5922B385B70007EE03 /* ProjectsRecommendedAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC5822B385B70007EE03 /* ProjectsRecommendedAddViewController.swift */; };
+		432CAC5B22B385C40007EE03 /* ProjectsRecommendedDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC5A22B385C40007EE03 /* ProjectsRecommendedDeleteViewController.swift */; };
+		432CAC5D22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC5C22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard */; };
+		432CAC5F22B386750007EE03 /* ProjectsRecommendedAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC5E22B386750007EE03 /* ProjectsRecommendedAdd.storyboard */; };
+		432CAC6122B386830007EE03 /* ProjectsRecommendedDelete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC6022B386830007EE03 /* ProjectsRecommendedDelete.storyboard */; };
 		43C3142E228AA198007E9EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142D228AA198007E9EAF /* AppDelegate.swift */; };
 		43C31430228AA198007E9EAF /* UsersSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */; };
 		43C31433228AA198007E9EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C31431228AA198007E9EAF /* Main.storyboard */; };
@@ -154,6 +160,12 @@
 		432CAC5022B380CA0007EE03 /* PostsLikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsLikeViewController.swift; sourceTree = "<group>"; };
 		432CAC5222B3821D0007EE03 /* SessionsDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsDeleteViewController.swift; sourceTree = "<group>"; };
 		432CAC5422B3824E0007EE03 /* SessionsDelete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SessionsDelete.storyboard; sourceTree = "<group>"; };
+		432CAC5622B385A70007EE03 /* ProjectsRecommendedAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsRecommendedAllViewController.swift; sourceTree = "<group>"; };
+		432CAC5822B385B70007EE03 /* ProjectsRecommendedAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsRecommendedAddViewController.swift; sourceTree = "<group>"; };
+		432CAC5A22B385C40007EE03 /* ProjectsRecommendedDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsRecommendedDeleteViewController.swift; sourceTree = "<group>"; };
+		432CAC5C22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsRecommendedAll.storyboard; sourceTree = "<group>"; };
+		432CAC5E22B386750007EE03 /* ProjectsRecommendedAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsRecommendedAdd.storyboard; sourceTree = "<group>"; };
+		432CAC6022B386830007EE03 /* ProjectsRecommendedDelete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsRecommendedDelete.storyboard; sourceTree = "<group>"; };
 		43C3142A228AA198007E9EAF /* Piction-SDK-iOS-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piction-SDK-iOS-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C3142D228AA198007E9EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSignupViewController.swift; sourceTree = "<group>"; };
@@ -428,6 +440,9 @@
 				43CA1BB5229FAD5900CEF20A /* ProjectsUpdate.storyboard */,
 				4329EB8B22B0F87000D01916 /* ProjectsUploadThumbnail.storyboard */,
 				4329EB8D22B0F87D00D01916 /* ProjectsUploadWideThumbnail.storyboard */,
+				432CAC5C22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard */,
+				432CAC5E22B386750007EE03 /* ProjectsRecommendedAdd.storyboard */,
+				432CAC6022B386830007EE03 /* ProjectsRecommendedDelete.storyboard */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -441,6 +456,9 @@
 				43CA1BBC229FAD9400CEF20A /* ProjectsUpdateViewController.swift */,
 				4329EB8522B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift */,
 				4329EB8722B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift */,
+				432CAC5622B385A70007EE03 /* ProjectsRecommendedAllViewController.swift */,
+				432CAC5822B385B70007EE03 /* ProjectsRecommendedAddViewController.swift */,
+				432CAC5A22B385C40007EE03 /* ProjectsRecommendedDeleteViewController.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -530,6 +548,7 @@
 				4329EB8C22B0F87000D01916 /* ProjectsUploadThumbnail.storyboard in Resources */,
 				432CAC1322B32CD70007EE03 /* MyProjects.storyboard in Resources */,
 				43CA1BB2229FAD3900CEF20A /* ProjectsCreate.storyboard in Resources */,
+				432CAC6122B386830007EE03 /* ProjectsRecommendedDelete.storyboard in Resources */,
 				4329EB8E22B0F87D00D01916 /* ProjectsUploadWideThumbnail.storyboard in Resources */,
 				432CAC3922B34CFF0007EE03 /* SeriesDelete.storyboard in Resources */,
 				43C31438228AA199007E9EAF /* Assets.xcassets in Resources */,
@@ -538,11 +557,13 @@
 				4329EBB322B1E09300D01916 /* PostsUploadCoverImage.storyboard in Resources */,
 				43CA1BB6229FAD5900CEF20A /* ProjectsUpdate.storyboard in Resources */,
 				432CAC3522B34CED0007EE03 /* SeriesGet.storyboard in Resources */,
+				432CAC5F22B386750007EE03 /* ProjectsRecommendedAdd.storyboard in Resources */,
 				432CAC3C22B34D0F0007EE03 /* SeriesAllSeriesPosts.storyboard in Resources */,
 				43C31433228AA198007E9EAF /* Main.storyboard in Resources */,
 				43C3168022928B4B007E9EAF /* SessionsCreate.storyboard in Resources */,
 				43CA221C22B0A76C00CEF20A /* UsersUploadPicture.storyboard in Resources */,
 				432CAC2F22B34CCA0007EE03 /* SeriesAll.storyboard in Resources */,
+				432CAC5D22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard in Resources */,
 				4329EBA722B1E03C00D01916 /* PostsAll.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,7 +605,10 @@
 				4329EB8622B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift in Sources */,
 				4329EB8422B0F83600D01916 /* ProjectsAllViewController.swift in Sources */,
 				432CAC1E22B32D230007EE03 /* MyTransactionsViewController.swift in Sources */,
+				432CAC5722B385A70007EE03 /* ProjectsRecommendedAllViewController.swift in Sources */,
 				432CAC5322B3821D0007EE03 /* SessionsDeleteViewController.swift in Sources */,
+				432CAC5B22B385C40007EE03 /* ProjectsRecommendedDeleteViewController.swift in Sources */,
+				432CAC5922B385B70007EE03 /* ProjectsRecommendedAddViewController.swift in Sources */,
 				43CA1BBD229FAD9400CEF20A /* ProjectsUpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

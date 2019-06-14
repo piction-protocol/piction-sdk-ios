@@ -24,7 +24,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="I0g-yR-LCz">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0j0-a3-IlR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="projectId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0j0-a3-IlR">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="WxP-a9-6rb"/>
@@ -204,7 +204,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="gFZ-qV-79E" id="b6I-0H-RUl"/>
                         <outlet property="executeButton" destination="kEu-BT-xCm" id="Ei9-KX-4fc"/>
-                        <outlet property="idTextField" destination="uzF-SV-qjI" id="KP5-v6-O2q"/>
+                        <outlet property="projectIdTextField" destination="uzF-SV-qjI" id="Dfq-O6-pv0"/>
                         <outlet property="responseTextView" destination="ZXd-cL-uYt" id="gfL-7W-WnA"/>
                         <outlet property="synopsisTextField" destination="hLs-1U-tYy" id="lGe-mg-Mda"/>
                         <outlet property="thumbnailTextField" destination="G5h-au-ThV" id="h0Y-WX-6DQ"/>

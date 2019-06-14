@@ -45,6 +45,8 @@
 		432CAC4622B34D4C0007EE03 /* SeriesUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4522B34D4C0007EE03 /* SeriesUpdateViewController.swift */; };
 		432CAC4822B34D5D0007EE03 /* SeriesDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4722B34D5D0007EE03 /* SeriesDeleteViewController.swift */; };
 		432CAC4A22B34D6B0007EE03 /* SeriesAllSeriesPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4922B34D6B0007EE03 /* SeriesAllSeriesPostsViewController.swift */; };
+		432CAC4F22B380930007EE03 /* PostsLike.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC4E22B380930007EE03 /* PostsLike.storyboard */; };
+		432CAC5122B380CA0007EE03 /* PostsLikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC5022B380CA0007EE03 /* PostsLikeViewController.swift */; };
 		432CAC5322B3821D0007EE03 /* SessionsDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC5222B3821D0007EE03 /* SessionsDeleteViewController.swift */; };
 		432CAC5522B3824E0007EE03 /* SessionsDelete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC5422B3824E0007EE03 /* SessionsDelete.storyboard */; };
 		43C3142E228AA198007E9EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142D228AA198007E9EAF /* AppDelegate.swift */; };
@@ -148,6 +150,8 @@
 		432CAC4522B34D4C0007EE03 /* SeriesUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesUpdateViewController.swift; sourceTree = "<group>"; };
 		432CAC4722B34D5D0007EE03 /* SeriesDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDeleteViewController.swift; sourceTree = "<group>"; };
 		432CAC4922B34D6B0007EE03 /* SeriesAllSeriesPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesAllSeriesPostsViewController.swift; sourceTree = "<group>"; };
+		432CAC4E22B380930007EE03 /* PostsLike.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostsLike.storyboard; sourceTree = "<group>"; };
+		432CAC5022B380CA0007EE03 /* PostsLikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsLikeViewController.swift; sourceTree = "<group>"; };
 		432CAC5222B3821D0007EE03 /* SessionsDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsDeleteViewController.swift; sourceTree = "<group>"; };
 		432CAC5422B3824E0007EE03 /* SessionsDelete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SessionsDelete.storyboard; sourceTree = "<group>"; };
 		43C3142A228AA198007E9EAF /* Piction-SDK-iOS-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piction-SDK-iOS-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +212,7 @@
 				4329EBA822B1E04B00D01916 /* PostsCreate.storyboard */,
 				4329EBAC22B1E06C00D01916 /* PostsGet.storyboard */,
 				4329EBAE22B1E07600D01916 /* PostsUpdate.storyboard */,
+				432CAC4E22B380930007EE03 /* PostsLike.storyboard */,
 				4329EBB022B1E08700D01916 /* PostsUploadContentImage.storyboard */,
 				4329EBB222B1E09300D01916 /* PostsUploadCoverImage.storyboard */,
 			);
@@ -221,6 +226,7 @@
 				4329EB9C22B1DFE600D01916 /* PostsCreateViewController.swift */,
 				4329EB9E22B1DFF200D01916 /* PostsGetViewController.swift */,
 				4329EBA022B1DFFD00D01916 /* PostsUpdateViewController.swift */,
+				432CAC5022B380CA0007EE03 /* PostsLikeViewController.swift */,
 				4329EBA222B1E01800D01916 /* PostsUploadContentImageViewController.swift */,
 				4329EBA422B1E02700D01916 /* PostsUploadCoverImageViewController.swift */,
 			);
@@ -515,6 +521,7 @@
 				432CAC3322B34CE40007EE03 /* SeriesUpdatePriority.storyboard in Resources */,
 				4329EBB122B1E08700D01916 /* PostsUploadContentImage.storyboard in Resources */,
 				43CA1BB4229FAD4C00CEF20A /* ProjectsGet.storyboard in Resources */,
+				432CAC4F22B380930007EE03 /* PostsLike.storyboard in Resources */,
 				4329EBA922B1E04B00D01916 /* PostsCreate.storyboard in Resources */,
 				432CAC1822B32CFE0007EE03 /* MyWallet.storyboard in Resources */,
 				43C3167222927728007E9EAF /* UsersSignup.storyboard in Resources */,
@@ -549,6 +556,7 @@
 			files = (
 				4329EBA522B1E02700D01916 /* PostsUploadCoverImageViewController.swift in Sources */,
 				43CA1BA9229FA22800CEF20A /* UsersUpdatePasswordViewController.swift in Sources */,
+				432CAC5122B380CA0007EE03 /* PostsLikeViewController.swift in Sources */,
 				43C3167622927777007E9EAF /* UsersMeViewController.swift in Sources */,
 				43C3168222928BAA007E9EAF /* SessionsCreateViewController.swift in Sources */,
 				43CA1BBF229FB26500CEF20A /* ProjectsGetViewController.swift in Sources */,

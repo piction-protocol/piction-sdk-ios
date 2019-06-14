@@ -11,53 +11,47 @@ import Moya
 import UIKit
 
 public enum MyAPI {
-    case getProjects
-    case getProject(projectId: String)
-    case getPosts(projectId: String, page: Int, size: Int)
-    case getPost(projectId: String, postId: String)
+    case projects
+    case transactions(page: Int, size: Int)
+    case wallet
 }
 
 extension MyAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
-        case .getProjects:
-            return "/my/projects"
-        case .getProject(let projectId):
-            return "/my/projects/\(projectId)"
-        case .getPosts(let projectId, _, _):
-            return "/my/projects/\(projectId)/posts"
-        case .getPost(let projectId, let postId):
-            return "/my/projects/\(projectId)/posts/\(postId)"
+        case .projects:
+            return "/my-projects"
+        case .transactions:
+            return "/my-transactions"
+        case .wallet:
+            return "/my-wallet"
         }
     }
     public var method: Moya.Method {
         switch self {
-        case .getProjects,
-             .getProject,
-             .getPosts,
-             .getPost:
+        case .projects,
+             .transactions,
+             .wallet:
             return .get
         }
     }
     public var sampleData: Data {
         switch self {
-        case .getProjects,
-             .getProject:
-            return jsonSerializedUTF8(json: ProjectViewResponse.sampleData())
-        case .getPosts:
-            return jsonSerializedUTF8(json: PageViewResponse<PostModel>.sampleData())
-        case .getPost:
-            return jsonSerializedUTF8(json: PostViewResponse.sampleData())
+        case .projects:
+            return jsonSerializedUTF8(json: [ProjectViewResponse.sampleData()])
+        case .transactions:
+            return jsonSerializedUTF8(json: PageViewResponse<TransactionModel>.sampleData())
+        case .wallet:
+            return jsonSerializedUTF8(json: WalletViewResponse.sampleData())
         }
     }
     public var task: Task {
         switch self {
-        case .getProjects,
-             .getProject,
-             .getPost:
+        case .projects,
+             .wallet:
             return .requestPlain
-        case .getPosts(_, let page, let size):
+        case .transactions(let page, let size):
             let param = [
                 "page": page,
                 "size": size

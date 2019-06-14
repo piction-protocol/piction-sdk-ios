@@ -16,7 +16,6 @@ public enum UsersAPI {
     case update(email: String, username: String, password: String, picture: String?)
     case updatePassword(password: String, newPassword: String)
     case uploadPicture(image: UIImage)
-    case transactions(page: Int, size: Int)
 }
 
 extension UsersAPI: TargetType {
@@ -32,16 +31,13 @@ extension UsersAPI: TargetType {
             return "/users/me/password"
         case .uploadPicture:
             return "/users/me/picture"
-        case .transactions:
-            return "/users/me/transactions"
         }
     }
     public var method: Moya.Method {
         switch self {
         case .signup:
             return .post
-        case .me,
-             .transactions:
+        case .me:
             return .get
         case .update:
             return .put
@@ -61,8 +57,6 @@ extension UsersAPI: TargetType {
             return jsonSerializedUTF8(json: UserViewResponse.sampleData())
         case .uploadPicture:
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
-        case .transactions:
-            return jsonSerializedUTF8(json: PageViewResponse<TransactionModel>.sampleData())
         }
     }
     public var task: Task {
@@ -96,12 +90,6 @@ extension UsersAPI: TargetType {
             }
             let formData: [Moya.MultipartFormData] = [Moya.MultipartFormData(provider: .data(imageData), name: "file", fileName: "user.jpeg", mimeType: "image/jpeg")]
             return .uploadMultipart(formData)
-        case .transactions(let page, let size):
-            let param = [
-                "page": page,
-                "size": size
-            ]
-            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }
     }
     public var headers: [String: String]? {

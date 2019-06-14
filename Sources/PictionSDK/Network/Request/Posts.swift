@@ -3,6 +3,7 @@
 //  PictionSDK
 //
 //  Created by jhseo on 13/06/2019.
+//  Copyright © 2019 Piction Network. All rights reserved.
 //
 
 import Foundation

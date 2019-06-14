@@ -62,14 +62,4 @@ public final class Users {
                 failureCompletion?(error)
             })
     }
-
-    public func transactions(page: Int, size: Int, success successCompletion: ((PageViewResponse<TransactionModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(UsersAPI.transactions(page: page, size: size),
-            success: { (response: PageViewResponse<TransactionModel>) in
-                successCompletion?(response)
-            },
-            failure: { error in
-                failureCompletion?(error)
-            })
-    }
 }

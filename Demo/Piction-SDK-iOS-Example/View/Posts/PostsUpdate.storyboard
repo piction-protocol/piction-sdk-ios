@@ -198,7 +198,7 @@
                                                 <rect key="frame" x="165" y="0.0" width="189" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -293,16 +293,16 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="activityIndicator" destination="l49-vU-iLE" id="FnD-yp-cRQ"/>
-                        <outlet property="contentTextView" destination="hfG-A7-ajA" id="B8A-rT-aPR"/>
-                        <outlet property="coverTextView" destination="fpg-6o-a0w" id="Opb-Ex-cdk"/>
+                        <outlet property="contentTextField" destination="hfG-A7-ajA" id="Vo8-U6-PvJ"/>
+                        <outlet property="coverTextField" destination="fpg-6o-a0w" id="p6f-ty-FFY"/>
                         <outlet property="executeButton" destination="Mrt-SJ-PUP" id="rRj-rQ-lQH"/>
-                        <outlet property="membershipTextView" destination="1yG-ST-Gsj" id="bK2-05-6EP"/>
-                        <outlet property="postIdTextView" destination="XVp-EG-x02" id="DC6-Nz-z4c"/>
-                        <outlet property="projectIdTextView" destination="oqq-BE-cMv" id="cnS-Ro-eZN"/>
+                        <outlet property="membershipTextField" destination="1yG-ST-Gsj" id="v56-Qo-rPM"/>
+                        <outlet property="postIdTextField" destination="XVp-EG-x02" id="O3j-DN-0mu"/>
+                        <outlet property="projectIdTextField" destination="oqq-BE-cMv" id="fXO-4v-1ot"/>
                         <outlet property="responseTextView" destination="qMd-QA-hza" id="Q0r-W9-1Zf"/>
-                        <outlet property="seriesIdTextView" destination="N46-el-m07" id="9NP-6p-FXB"/>
-                        <outlet property="statusTextView" destination="ckn-jI-4AY" id="oDw-Fb-LzH"/>
-                        <outlet property="titleTextView" destination="Jy1-F0-N55" id="CVb-d6-Fed"/>
+                        <outlet property="seriesIdTextField" destination="N46-el-m07" id="3w0-Cd-ZRT"/>
+                        <outlet property="statusTextField" destination="ckn-jI-4AY" id="tHN-iV-GWQ"/>
+                        <outlet property="titleTextField" destination="Jy1-F0-N55" id="cK4-SM-J2a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSH-wc-Qk7" userLabel="First Responder" sceneMemberID="firstResponder"/>

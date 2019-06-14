@@ -10,13 +10,13 @@ import UIKit
 import PictionSDK
 
 class PostsCreateViewController: UIViewController {
-    @IBOutlet weak var projectIdTextView: UITextField!
-    @IBOutlet weak var titleTextView: UITextField!
-    @IBOutlet weak var contentTextView: UITextField!
-    @IBOutlet weak var coverTextView: UITextField!
-    @IBOutlet weak var statusTextView: UITextField!
-    @IBOutlet weak var membershipTextView: UITextField!
-    @IBOutlet weak var seriesIdTextView: UITextField!
+    @IBOutlet weak var projectIdTextField: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var contentTextField: UITextField!
+    @IBOutlet weak var coverTextField: UITextField!
+    @IBOutlet weak var statusTextField: UITextField!
+    @IBOutlet weak var membershipTextField: UITextField!
+    @IBOutlet weak var seriesIdTextField: UITextField!
 
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
@@ -34,7 +34,7 @@ class PostsCreateViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.posts.create(projectId: projectIdTextView.text ?? "", title: titleTextView.text ?? "", content: contentTextView.text ?? "", cover: coverTextView.text ?? "", status: statusTextView.text ?? "", membership: membershipTextView.text ?? "", seriesId: seriesIdTextView.text ?? "",
+        PictionSDK.posts.create(projectId: projectIdTextField.text ?? "", title: titleTextField.text ?? "", content: contentTextField.text ?? "", cover: coverTextField.text ?? "", status: statusTextField.text ?? "", membership: membershipTextField.text ?? "", seriesId: seriesIdTextField.text ?? "",
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false

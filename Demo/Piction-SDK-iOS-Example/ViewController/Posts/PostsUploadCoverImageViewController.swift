@@ -10,7 +10,7 @@ import UIKit
 import PictionSDK
 
 class PostsUploadCoverImageViewController: UIViewController {
-    @IBOutlet weak var projectIdTextView: UITextField!
+    @IBOutlet weak var projectIdTextField: UITextField!
     @IBOutlet weak var selectImageButton: UIButton!
 
     @IBOutlet weak var responseTextView: UITextView!
@@ -41,7 +41,7 @@ class PostsUploadCoverImageViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.posts.uploadCoverImage(projectId: projectIdTextView.text ?? "", image: self.selectImageButton.backgroundImage(for: .normal) ?? UIImage(),
+        PictionSDK.posts.uploadCoverImage(projectId: projectIdTextField.text ?? "", image: self.selectImageButton.backgroundImage(for: .normal) ?? UIImage(),
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false

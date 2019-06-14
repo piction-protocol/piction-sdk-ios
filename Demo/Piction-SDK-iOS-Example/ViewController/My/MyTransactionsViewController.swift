@@ -10,8 +10,8 @@ import UIKit
 import PictionSDK
 
 class MyTransactionsViewController: UIViewController {
-    @IBOutlet weak var pageTextView: UITextField!
-    @IBOutlet weak var sizeTextView: UITextField!
+    @IBOutlet weak var pageTextField: UITextField!
+    @IBOutlet weak var sizeTextField: UITextField!
 
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
@@ -29,7 +29,7 @@ class MyTransactionsViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.my.transactions(page: Int(pageTextView.text ?? "0") ?? 0, size: Int(sizeTextView.text ?? "0") ?? 0,
+        PictionSDK.my.transactions(page: Int(pageTextField.text ?? "0") ?? 0, size: Int(sizeTextField.text ?? "0") ?? 0,
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false

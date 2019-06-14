@@ -138,9 +138,9 @@
                     <connections>
                         <outlet property="activityIndicator" destination="blB-i4-jBS" id="0o3-KN-ks6"/>
                         <outlet property="executeButton" destination="lBM-FJ-Ayd" id="3mo-qW-EM0"/>
-                        <outlet property="pageTextView" destination="6Kr-zE-sfk" id="EFS-Op-te0"/>
+                        <outlet property="pageTextField" destination="6Kr-zE-sfk" id="3hp-6K-12P"/>
                         <outlet property="responseTextView" destination="aSc-x0-JGR" id="KyC-h4-zUr"/>
-                        <outlet property="sizeTextView" destination="LVt-RB-iYn" id="Wll-Wd-GEL"/>
+                        <outlet property="sizeTextField" destination="LVt-RB-iYn" id="kf2-Pm-geo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zw-8V-RVA" userLabel="First Responder" sceneMemberID="firstResponder"/>

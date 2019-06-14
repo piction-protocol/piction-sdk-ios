@@ -175,7 +175,7 @@
                                                 <rect key="frame" x="165" y="0.0" width="189" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -262,15 +262,15 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="activityIndicator" destination="quC-hv-JNu" id="5X0-8i-CCP"/>
-                        <outlet property="contentTextView" destination="fTT-Ji-zbN" id="cEV-d0-eF9"/>
-                        <outlet property="coverTextView" destination="Mtv-QR-AQL" id="SCd-w2-KZC"/>
+                        <outlet property="contentTextField" destination="fTT-Ji-zbN" id="Tje-O6-YqU"/>
+                        <outlet property="coverTextField" destination="Mtv-QR-AQL" id="h0u-mN-bWG"/>
                         <outlet property="executeButton" destination="RgS-Dn-Bsg" id="3EP-RO-Ava"/>
-                        <outlet property="membershipTextView" destination="sOn-T4-tR3" id="Sb8-UT-yag"/>
-                        <outlet property="projectIdTextView" destination="CQv-ub-lVs" id="kYa-En-bDT"/>
+                        <outlet property="membershipTextField" destination="sOn-T4-tR3" id="KnI-BN-G3J"/>
+                        <outlet property="projectIdTextField" destination="CQv-ub-lVs" id="cV5-Pw-Twi"/>
                         <outlet property="responseTextView" destination="DEs-6F-vwo" id="yHU-5e-PYX"/>
-                        <outlet property="seriesIdTextView" destination="hSb-BI-zdU" id="BqF-A2-yG4"/>
-                        <outlet property="statusTextView" destination="FWG-Rz-dGw" id="X3s-Bu-pQZ"/>
-                        <outlet property="titleTextView" destination="msV-rH-qVA" id="hXb-Nh-A7m"/>
+                        <outlet property="seriesIdTextField" destination="hSb-BI-zdU" id="hX5-Nh-xE0"/>
+                        <outlet property="statusTextField" destination="FWG-Rz-dGw" id="HVh-Pf-rbx"/>
+                        <outlet property="titleTextField" destination="msV-rH-qVA" id="Jj3-Uf-Alm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iet-FS-Tcd" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -138,8 +138,8 @@
                     <connections>
                         <outlet property="activityIndicator" destination="7rA-lv-aYM" id="gep-5j-bbx"/>
                         <outlet property="executeButton" destination="rdE-DV-wyq" id="oXx-TJ-vdX"/>
-                        <outlet property="postIdTextView" destination="1wi-cF-gbx" id="1Gi-sM-XcZ"/>
-                        <outlet property="projectIdTextView" destination="ztj-aw-vK4" id="VPj-Qz-bRX"/>
+                        <outlet property="postIdTextField" destination="1wi-cF-gbx" id="wnn-bx-0hr"/>
+                        <outlet property="projectIdTextField" destination="ztj-aw-vK4" id="VTa-uI-v69"/>
                         <outlet property="responseTextView" destination="a80-Ml-Vcx" id="9PZ-D1-dzZ"/>
                     </connections>
                 </viewController>

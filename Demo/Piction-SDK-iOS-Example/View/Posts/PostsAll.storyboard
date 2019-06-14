@@ -163,10 +163,10 @@
                     <connections>
                         <outlet property="activityIndicator" destination="SM0-cM-ZSH" id="iEz-90-3Px"/>
                         <outlet property="executeButton" destination="XcF-0Y-F4G" id="ppI-z3-nDJ"/>
-                        <outlet property="pageTextView" destination="uP3-jw-H3v" id="3nR-Kr-Xkz"/>
-                        <outlet property="projectIdTextView" destination="lOX-ht-mt7" id="7m4-fh-31v"/>
+                        <outlet property="pageTextField" destination="uP3-jw-H3v" id="2Za-pR-lq6"/>
+                        <outlet property="projectIdTextField" destination="lOX-ht-mt7" id="3XT-vC-yse"/>
                         <outlet property="responseTextView" destination="aQv-L2-PBR" id="iux-nN-TPn"/>
-                        <outlet property="sizeTextView" destination="DjK-Vt-IbJ" id="gZN-jW-2fZ"/>
+                        <outlet property="sizeTextField" destination="DjK-Vt-IbJ" id="UvF-9k-wiZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Qk-Qv-Gsp" userLabel="First Responder" sceneMemberID="firstResponder"/>

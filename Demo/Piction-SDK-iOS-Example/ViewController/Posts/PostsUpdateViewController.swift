@@ -10,14 +10,14 @@ import UIKit
 import PictionSDK
 
 class PostsUpdateViewController: UIViewController {
-    @IBOutlet weak var projectIdTextView: UITextField!
-    @IBOutlet weak var postIdTextView: UITextField!
-    @IBOutlet weak var titleTextView: UITextField!
-    @IBOutlet weak var contentTextView: UITextField!
-    @IBOutlet weak var coverTextView: UITextField!
-    @IBOutlet weak var statusTextView: UITextField!
-    @IBOutlet weak var membershipTextView: UITextField!
-    @IBOutlet weak var seriesIdTextView: UITextField!
+    @IBOutlet weak var projectIdTextField: UITextField!
+    @IBOutlet weak var postIdTextField: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var contentTextField: UITextField!
+    @IBOutlet weak var coverTextField: UITextField!
+    @IBOutlet weak var statusTextField: UITextField!
+    @IBOutlet weak var membershipTextField: UITextField!
+    @IBOutlet weak var seriesIdTextField: UITextField!
 
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
@@ -35,7 +35,7 @@ class PostsUpdateViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.posts.update(projectId: projectIdTextView.text ?? "", postId: postIdTextView.text ?? "", title: titleTextView.text ?? "", content: contentTextView.text ?? "", cover: coverTextView.text ?? "", status: statusTextView.text ?? "", membership: membershipTextView.text ?? "", seriesId: seriesIdTextView.text ?? "",
+        PictionSDK.posts.update(projectId: projectIdTextField.text ?? "", postId: postIdTextField.text ?? "", title: titleTextField.text ?? "", content: contentTextField.text ?? "", cover: coverTextField.text ?? "", status: statusTextField.text ?? "", membership: membershipTextField.text ?? "", seriesId: seriesIdTextField.text ?? "",
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false
@@ -67,11 +67,12 @@ class PostsUpdateViewController: UIViewController {
             self.isLoading = true
             PictionSDK.posts.get(projectId: inputProjectId, postId: inputPostId,
                 success: { response in
-                    self.projectIdTextView.text = inputProjectId
-                    self.postIdTextView.text = inputPostId
-                    self.titleTextView.text = response.title
-                    self.contentTextView.text = response.content
-                    self.statusTextView.text = response.status
+                    self.projectIdTextField.text = inputProjectId
+                    self.postIdTextField.text = inputPostId
+                    self.titleTextField.text = response.title
+                    self.contentTextField.text = response.content
+                    self.statusTextField.text = response.status
+                    self.seriesIdTextField.text = String(response.series?.id ?? 0)
                     self.responseTextView.text = String(describing: response)
                     self.isLoading = false
             },

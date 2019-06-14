@@ -143,7 +143,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="l7s-Ja-Myk" id="kPz-fu-SOH"/>
                         <outlet property="executeButton" destination="BdP-Sy-xYs" id="Kl5-qW-7hB"/>
-                        <outlet property="projectIdTextView" destination="S8i-K7-x1d" id="jzE-81-fXL"/>
+                        <outlet property="projectIdTextField" destination="S8i-K7-x1d" id="FZ1-jk-2Ae"/>
                         <outlet property="responseTextView" destination="vfz-FW-67V" id="Aa7-SS-cy2"/>
                         <outlet property="selectImageButton" destination="RcL-fj-gbe" id="KKI-EW-wPn"/>
                     </connections>

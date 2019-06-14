@@ -31,6 +31,20 @@
 		432CAC1C22B32D190007EE03 /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC1B22B32D190007EE03 /* MyProjectsViewController.swift */; };
 		432CAC1E22B32D230007EE03 /* MyTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC1D22B32D230007EE03 /* MyTransactionsViewController.swift */; };
 		432CAC2022B32D2F0007EE03 /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC1F22B32D2F0007EE03 /* MyWalletViewController.swift */; };
+		432CAC2F22B34CCA0007EE03 /* SeriesAll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC2E22B34CCA0007EE03 /* SeriesAll.storyboard */; };
+		432CAC3122B34CD80007EE03 /* SeriesCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3022B34CD80007EE03 /* SeriesCreate.storyboard */; };
+		432CAC3322B34CE40007EE03 /* SeriesUpdatePriority.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3222B34CE40007EE03 /* SeriesUpdatePriority.storyboard */; };
+		432CAC3522B34CED0007EE03 /* SeriesGet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3422B34CED0007EE03 /* SeriesGet.storyboard */; };
+		432CAC3722B34CF60007EE03 /* SeriesUpdate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3622B34CF60007EE03 /* SeriesUpdate.storyboard */; };
+		432CAC3922B34CFF0007EE03 /* SeriesDelete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3822B34CFF0007EE03 /* SeriesDelete.storyboard */; };
+		432CAC3C22B34D0F0007EE03 /* SeriesAllSeriesPosts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3B22B34D0F0007EE03 /* SeriesAllSeriesPosts.storyboard */; };
+		432CAC3E22B34D1E0007EE03 /* SeriesAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC3D22B34D1E0007EE03 /* SeriesAllViewController.swift */; };
+		432CAC4022B34D2C0007EE03 /* SeriesCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC3F22B34D2C0007EE03 /* SeriesCreateViewController.swift */; };
+		432CAC4222B34D370007EE03 /* SeriesUpdatePriorityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4122B34D370007EE03 /* SeriesUpdatePriorityViewController.swift */; };
+		432CAC4422B34D420007EE03 /* SeriesGetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4322B34D420007EE03 /* SeriesGetViewController.swift */; };
+		432CAC4622B34D4C0007EE03 /* SeriesUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4522B34D4C0007EE03 /* SeriesUpdateViewController.swift */; };
+		432CAC4822B34D5D0007EE03 /* SeriesDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4722B34D5D0007EE03 /* SeriesDeleteViewController.swift */; };
+		432CAC4A22B34D6B0007EE03 /* SeriesAllSeriesPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4922B34D6B0007EE03 /* SeriesAllSeriesPostsViewController.swift */; };
 		43C3142E228AA198007E9EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142D228AA198007E9EAF /* AppDelegate.swift */; };
 		43C31430228AA198007E9EAF /* UsersSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */; };
 		43C31433228AA198007E9EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C31431228AA198007E9EAF /* Main.storyboard */; };
@@ -118,6 +132,20 @@
 		432CAC1B22B32D190007EE03 /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
 		432CAC1D22B32D230007EE03 /* MyTransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTransactionsViewController.swift; sourceTree = "<group>"; };
 		432CAC1F22B32D2F0007EE03 /* MyWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewController.swift; sourceTree = "<group>"; };
+		432CAC2E22B34CCA0007EE03 /* SeriesAll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesAll.storyboard; sourceTree = "<group>"; };
+		432CAC3022B34CD80007EE03 /* SeriesCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesCreate.storyboard; sourceTree = "<group>"; };
+		432CAC3222B34CE40007EE03 /* SeriesUpdatePriority.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesUpdatePriority.storyboard; sourceTree = "<group>"; };
+		432CAC3422B34CED0007EE03 /* SeriesGet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesGet.storyboard; sourceTree = "<group>"; };
+		432CAC3622B34CF60007EE03 /* SeriesUpdate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesUpdate.storyboard; sourceTree = "<group>"; };
+		432CAC3822B34CFF0007EE03 /* SeriesDelete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesDelete.storyboard; sourceTree = "<group>"; };
+		432CAC3B22B34D0F0007EE03 /* SeriesAllSeriesPosts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesAllSeriesPosts.storyboard; sourceTree = "<group>"; };
+		432CAC3D22B34D1E0007EE03 /* SeriesAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesAllViewController.swift; sourceTree = "<group>"; };
+		432CAC3F22B34D2C0007EE03 /* SeriesCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCreateViewController.swift; sourceTree = "<group>"; };
+		432CAC4122B34D370007EE03 /* SeriesUpdatePriorityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesUpdatePriorityViewController.swift; sourceTree = "<group>"; };
+		432CAC4322B34D420007EE03 /* SeriesGetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesGetViewController.swift; sourceTree = "<group>"; };
+		432CAC4522B34D4C0007EE03 /* SeriesUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesUpdateViewController.swift; sourceTree = "<group>"; };
+		432CAC4722B34D5D0007EE03 /* SeriesDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDeleteViewController.swift; sourceTree = "<group>"; };
+		432CAC4922B34D6B0007EE03 /* SeriesAllSeriesPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesAllSeriesPostsViewController.swift; sourceTree = "<group>"; };
 		43C3142A228AA198007E9EAF /* Piction-SDK-iOS-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piction-SDK-iOS-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C3142D228AA198007E9EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSignupViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +243,34 @@
 			path = My;
 			sourceTree = "<group>";
 		};
+		432CAC2C22B34CA70007EE03 /* Series */ = {
+			isa = PBXGroup;
+			children = (
+				432CAC3D22B34D1E0007EE03 /* SeriesAllViewController.swift */,
+				432CAC3F22B34D2C0007EE03 /* SeriesCreateViewController.swift */,
+				432CAC4122B34D370007EE03 /* SeriesUpdatePriorityViewController.swift */,
+				432CAC4322B34D420007EE03 /* SeriesGetViewController.swift */,
+				432CAC4522B34D4C0007EE03 /* SeriesUpdateViewController.swift */,
+				432CAC4722B34D5D0007EE03 /* SeriesDeleteViewController.swift */,
+				432CAC4922B34D6B0007EE03 /* SeriesAllSeriesPostsViewController.swift */,
+			);
+			path = Series;
+			sourceTree = "<group>";
+		};
+		432CAC2D22B34CB20007EE03 /* Series */ = {
+			isa = PBXGroup;
+			children = (
+				432CAC2E22B34CCA0007EE03 /* SeriesAll.storyboard */,
+				432CAC3022B34CD80007EE03 /* SeriesCreate.storyboard */,
+				432CAC3222B34CE40007EE03 /* SeriesUpdatePriority.storyboard */,
+				432CAC3422B34CED0007EE03 /* SeriesGet.storyboard */,
+				432CAC3622B34CF60007EE03 /* SeriesUpdate.storyboard */,
+				432CAC3822B34CFF0007EE03 /* SeriesDelete.storyboard */,
+				432CAC3B22B34D0F0007EE03 /* SeriesAllSeriesPosts.storyboard */,
+			);
+			path = Series;
+			sourceTree = "<group>";
+		};
 		43C31421228AA198007E9EAF = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +332,7 @@
 				43CA1BB0229FAD1800CEF20A /* Projects */,
 				4329EB9822B1DFBC00D01916 /* Posts */,
 				432CAC1122B32CC50007EE03 /* My */,
+				432CAC2D22B34CB20007EE03 /* Series */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +346,7 @@
 				43CA1BB7229FAD6800CEF20A /* Projects */,
 				4329EB9922B1DFCC00D01916 /* Posts */,
 				432CAC1022B32CBC0007EE03 /* My */,
+				432CAC2C22B34CA70007EE03 /* Series */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -447,23 +505,30 @@
 				432CAC1622B32CF30007EE03 /* MyTransactions.storyboard in Resources */,
 				4329EBAD22B1E06C00D01916 /* PostsGet.storyboard in Resources */,
 				43C316742292773A007E9EAF /* UsersMe.storyboard in Resources */,
+				432CAC3322B34CE40007EE03 /* SeriesUpdatePriority.storyboard in Resources */,
 				4329EBB122B1E08700D01916 /* PostsUploadContentImage.storyboard in Resources */,
 				43CA1BB4229FAD4C00CEF20A /* ProjectsGet.storyboard in Resources */,
 				4329EBA922B1E04B00D01916 /* PostsCreate.storyboard in Resources */,
 				432CAC1822B32CFE0007EE03 /* MyWallet.storyboard in Resources */,
 				43C3167222927728007E9EAF /* UsersSignup.storyboard in Resources */,
+				432CAC3722B34CF60007EE03 /* SeriesUpdate.storyboard in Resources */,
 				4329EB8A22B0F86100D01916 /* ProjectsAll.storyboard in Resources */,
 				4329EB8C22B0F87000D01916 /* ProjectsUploadThumbnail.storyboard in Resources */,
 				432CAC1322B32CD70007EE03 /* MyProjects.storyboard in Resources */,
 				43CA1BB2229FAD3900CEF20A /* ProjectsCreate.storyboard in Resources */,
 				4329EB8E22B0F87D00D01916 /* ProjectsUploadWideThumbnail.storyboard in Resources */,
+				432CAC3922B34CFF0007EE03 /* SeriesDelete.storyboard in Resources */,
 				43C31438228AA199007E9EAF /* Assets.xcassets in Resources */,
+				432CAC3122B34CD80007EE03 /* SeriesCreate.storyboard in Resources */,
 				43CA1BAB229FA23D00CEF20A /* UsersUpdatePassword.storyboard in Resources */,
 				4329EBB322B1E09300D01916 /* PostsUploadCoverImage.storyboard in Resources */,
 				43CA1BB6229FAD5900CEF20A /* ProjectsUpdate.storyboard in Resources */,
+				432CAC3522B34CED0007EE03 /* SeriesGet.storyboard in Resources */,
+				432CAC3C22B34D0F0007EE03 /* SeriesAllSeriesPosts.storyboard in Resources */,
 				43C31433228AA198007E9EAF /* Main.storyboard in Resources */,
 				43C3168022928B4B007E9EAF /* SessionsCreate.storyboard in Resources */,
 				43CA221C22B0A76C00CEF20A /* UsersUploadPicture.storyboard in Resources */,
+				432CAC2F22B34CCA0007EE03 /* SeriesAll.storyboard in Resources */,
 				4329EBA722B1E03C00D01916 /* PostsAll.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,16 +548,23 @@
 				4329EB8822B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift in Sources */,
 				4329EBA322B1E01800D01916 /* PostsUploadContentImageViewController.swift in Sources */,
 				432CAC2022B32D2F0007EE03 /* MyWalletViewController.swift in Sources */,
+				432CAC4622B34D4C0007EE03 /* SeriesUpdateViewController.swift in Sources */,
 				43CA221A22B0A70100CEF20A /* UsersUploadPictureViewController.swift in Sources */,
 				43C316842292A67E007E9EAF /* MainViewController.swift in Sources */,
 				43CA1BA5229FA1F000CEF20A /* UsersUpdateViewController.swift in Sources */,
+				432CAC3E22B34D1E0007EE03 /* SeriesAllViewController.swift in Sources */,
+				432CAC4022B34D2C0007EE03 /* SeriesCreateViewController.swift in Sources */,
 				4329EB9B22B1DFDC00D01916 /* PostsAllViewController.swift in Sources */,
 				4329EBA122B1DFFD00D01916 /* PostsUpdateViewController.swift in Sources */,
+				432CAC4A22B34D6B0007EE03 /* SeriesAllSeriesPostsViewController.swift in Sources */,
 				43C31430228AA198007E9EAF /* UsersSignupViewController.swift in Sources */,
 				43C3142E228AA198007E9EAF /* AppDelegate.swift in Sources */,
 				4329EB9F22B1DFF200D01916 /* PostsGetViewController.swift in Sources */,
 				43CA1BB9229FAD7E00CEF20A /* ProjectsCreateViewController.swift in Sources */,
 				4329EB9D22B1DFE600D01916 /* PostsCreateViewController.swift in Sources */,
+				432CAC4422B34D420007EE03 /* SeriesGetViewController.swift in Sources */,
+				432CAC4222B34D370007EE03 /* SeriesUpdatePriorityViewController.swift in Sources */,
+				432CAC4822B34D5D0007EE03 /* SeriesDeleteViewController.swift in Sources */,
 				432CAC1C22B32D190007EE03 /* MyProjectsViewController.swift in Sources */,
 				4329EB8622B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift in Sources */,
 				4329EB8422B0F83600D01916 /* ProjectsAllViewController.swift in Sources */,

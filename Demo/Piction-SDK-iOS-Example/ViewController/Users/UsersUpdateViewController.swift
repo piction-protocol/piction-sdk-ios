@@ -41,4 +41,29 @@ class UsersUpdateViewController: UIViewController {
                 self.isLoading = false
             })
     }
+
+    @IBAction func loadBtnPressed(_ sender: Any) {
+        guard PictionManager.isLogin else {
+            let alert = UIAlertController(title: nil, message: "Require log in", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .destructive, handler: nil)
+            alert.addAction(defaultAction)
+
+            present(alert, animated: false, completion: nil)
+            return
+        }
+
+        self.responseTextView.text = ""
+        self.isLoading = true
+        PictionSDK.users.me(
+            success: { response in
+                self.emailTextField.text = response.email
+                self.usernameTextField.text = response.name
+                self.responseTextView.text = String(describing: response)
+                self.isLoading = false
+            },
+            failure: { error in
+                self.responseTextView.text = String(describing: error)
+                self.isLoading = false
+            })
+    }
 }

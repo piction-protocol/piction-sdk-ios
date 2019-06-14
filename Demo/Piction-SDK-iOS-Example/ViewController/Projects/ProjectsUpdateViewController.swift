@@ -42,4 +42,55 @@ class ProjectsUpdateViewController: UIViewController {
                 self.isLoading = false
             })
     }
+
+    @IBAction func loadBtnPressed(_ sender: Any) {
+        guard PictionManager.isLogin else {
+            let alert = UIAlertController(title: nil, message: "Require log in", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .destructive, handler: nil)
+            alert.addAction(defaultAction)
+
+            present(alert, animated: false, completion: nil)
+            return
+        }
+
+        let alert = UIAlertController(title: nil, message: "Input ProjectId", preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { action in
+
+            let inputId = alert.textFields?.first?.text ?? ""
+
+            self.responseTextView.text = ""
+            self.isLoading = true
+            PictionSDK.projects.all(
+                success: { response in
+                    let currentProject = response.filter { $0.id == inputId }.first
+                    self.idTextField.text = inputId
+                    self.titleTextField.text = currentProject?.title
+                    self.synopsisTextField.text = currentProject?.synopsis
+                    self.responseTextView.text = String(describing: currentProject)
+                    self.isLoading = false
+            },
+                failure: { error in
+                    self.responseTextView.text = String(describing: error)
+                    self.isLoading = false
+            })
+
+        })
+        alert.addAction(okAction)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler : nil)
+        alert.addAction(cancelAction)
+
+        alert.addTextField(configurationHandler: configurationTextField)
+
+
+        present(alert, animated: false, completion: nil)
+
+        self.isLoading = true
+
+    }
+
+    private func configurationTextField(textField: UITextField!){
+        textField.placeholder = "Project ID"
+    }
 }

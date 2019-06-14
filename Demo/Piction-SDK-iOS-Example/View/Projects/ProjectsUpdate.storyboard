@@ -193,7 +193,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gxr-Z2-YAw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Projects update" id="E5A-03-G5q"/>
+                    <navigationItem key="navigationItem" title="Projects update" id="E5A-03-G5q">
+                        <barButtonItem key="rightBarButtonItem" title="load" id="7hs-Iz-K0n">
+                            <connections>
+                                <action selector="loadBtnPressed:" destination="deV-4U-yxM" id="2gq-YP-n2w"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="activityIndicator" destination="gFZ-qV-79E" id="b6I-0H-RUl"/>

@@ -1,17 +1,18 @@
 //
-//  ProjectsUploadThumbnailViewController.swift
+//  PostsUploadContentImageViewController.swift
 //  Piction-SDK-iOS-Example
 //
-//  Created by jhseo on 12/06/2019.
+//  Created by jhseo on 13/06/2019.
 //  Copyright © 2019 Piction Network. All rights reserved.
 //
 
 import UIKit
 import PictionSDK
 
-class ProjectsUploadThumbnailViewController: UIViewController {
+class PostsUploadContentImageViewController: UIViewController {
+    @IBOutlet weak var projectIdTextView: UITextField!
     @IBOutlet weak var selectImageButton: UIButton!
-    
+
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
 
@@ -40,7 +41,7 @@ class ProjectsUploadThumbnailViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.users.uploadPicture(image: self.selectImageButton.backgroundImage(for: .normal) ?? UIImage(),
+        PictionSDK.posts.uploadContentImage(projectId: projectIdTextView.text ?? "", image: self.selectImageButton.backgroundImage(for: .normal) ?? UIImage(),
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false
@@ -52,7 +53,7 @@ class ProjectsUploadThumbnailViewController: UIViewController {
     }
 }
 
-extension ProjectsUploadThumbnailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension PostsUploadContentImageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }

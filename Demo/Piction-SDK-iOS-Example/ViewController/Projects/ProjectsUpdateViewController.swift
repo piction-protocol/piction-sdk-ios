@@ -15,6 +15,7 @@ class ProjectsUpdateViewController: UIViewController {
     @IBOutlet weak var synopsisTextField: UITextField!
     @IBOutlet weak var thumbnailTextField: UITextField!
     @IBOutlet weak var wideThumbnailTextField: UITextField!
+    
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
 

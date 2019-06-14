@@ -1,21 +1,19 @@
 //
-//  ProjectsCreateViewController.swift
+//  PostsAllViewController.swift
 //  Piction-SDK-iOS-Example
 //
-//  Created by jhseo on 30/05/2019.
+//  Created by jhseo on 13/06/2019.
 //  Copyright © 2019 Piction Network. All rights reserved.
 //
 
 import UIKit
 import PictionSDK
 
-class ProjectsCreateViewController: UIViewController {
-    @IBOutlet weak var uriTextField: UITextField!
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var synopsisTextField: UITextField!
-    @IBOutlet weak var thumbnailTextField: UITextField!
-    @IBOutlet weak var wideThumbnailTextField: UITextField!
-    
+class PostsAllController: UIViewController {
+    @IBOutlet weak var projectIdTextView: UITextField!
+    @IBOutlet weak var pageTextView: UITextField!
+    @IBOutlet weak var sizeTextView: UITextField!
+
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
 
@@ -31,15 +29,15 @@ class ProjectsCreateViewController: UIViewController {
     @IBAction func executeBtnPressed(_ sender: Any) {
         self.responseTextView.text = ""
         self.isLoading = true
-        
-        PictionSDK.projects.create(uri: uriTextField.text ?? "", title: titleTextField.text ?? "", synopsis: synopsisTextField.text ?? "", thumbnail: thumbnailTextField.text ?? "", wideThumbnail: wideThumbnailTextField.text ?? "",
+
+        PictionSDK.posts.all(projectId: projectIdTextView.text ?? "", page: Int(pageTextView.text ?? "0") ?? 0, size: Int(sizeTextView.text ?? "0") ?? 0,
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false
-            },
+        },
             failure: { error in
                 self.responseTextView.text = String(describing: error)
                 self.isLoading = false
-            })
+        })
     }
 }

@@ -14,6 +14,7 @@ class UsersUpdateViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var pictureTextField: UITextField!
+    
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
 
@@ -34,10 +35,10 @@ class UsersUpdateViewController: UIViewController {
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false
-        },
+            },
             failure: { error in
                 self.responseTextView.text = String(describing: error)
                 self.isLoading = false
-        })
+            })
     }
 }

@@ -1,17 +1,18 @@
 //
-//  UsersTransactionsViewController.swift
+//  PostsGetViewController.swift
 //  Piction-SDK-iOS-Example
 //
-//  Created by jhseo on 12/06/2019.
+//  Created by jhseo on 13/06/2019.
 //  Copyright © 2019 Piction Network. All rights reserved.
 //
 
 import UIKit
 import PictionSDK
 
-class UsersTransactionsViewController: UIViewController {
-    @IBOutlet weak var pageTextField: UITextField!
-    @IBOutlet weak var sizeTextField: UITextField!
+class PostsGetViewController: UIViewController {
+    @IBOutlet weak var projectIdTextView: UITextField!
+    @IBOutlet weak var postIdTextView: UITextField!
+
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
 
@@ -28,7 +29,7 @@ class UsersTransactionsViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.users.transactions(page: Int(pageTextField.text ?? "0") ?? 0, size: Int(sizeTextField.text ?? "0") ?? 0,
+        PictionSDK.posts.get(projectId: projectIdTextView.text ?? "", postId: postIdTextView.text ?? "",
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false
@@ -39,4 +40,3 @@ class UsersTransactionsViewController: UIViewController {
             })
     }
 }
-

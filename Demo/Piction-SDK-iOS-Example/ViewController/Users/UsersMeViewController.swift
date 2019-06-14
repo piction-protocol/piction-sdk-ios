@@ -15,6 +15,7 @@ class UsersMeViewController: UIViewController {
             currentTokenTextField.text = PictionManager.getToken
         }
     }
+    
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
 

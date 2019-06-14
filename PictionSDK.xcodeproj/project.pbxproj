@@ -40,7 +40,7 @@
 		43CA1C0822A4EF2300CEF20A /* StorageAttachmentViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEE22A4EF2200CEF20A /* StorageAttachmentViewResponse.swift */; };
 		43CA1C0922A4EF2300CEF20A /* AuthenticationViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEF22A4EF2200CEF20A /* AuthenticationViewResponse.swift */; };
 		43CA1C0A22A4EF2300CEF20A /* ProjectViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF022A4EF2200CEF20A /* ProjectViewResponse.swift */; };
-		43CA1C0B22A4EF2300CEF20A /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF222A4EF2200CEF20A /* WalletModel.swift */; };
+		43CA1C0B22A4EF2300CEF20A /* WalletViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF222A4EF2200CEF20A /* WalletViewResponse.swift */; };
 		43CA1C0D22A4EF2300CEF20A /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF422A4EF2200CEF20A /* ErrorModel.swift */; };
 		43CA1C0E22A4EF2300CEF20A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF622A4EF2200CEF20A /* Users.swift */; };
 		43CA1C0F22A4EF2300CEF20A /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF722A4EF2200CEF20A /* Sessions.swift */; };
@@ -68,7 +68,7 @@
 		43CA1D0022A759DC00CEF20A /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF722A4EF2200CEF20A /* Sessions.swift */; };
 		43CA1D0122A759DC00CEF20A /* SessionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFC22A4EF2200CEF20A /* SessionsAPI.swift */; };
 		43CA1D0222A759DC00CEF20A /* PictionSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFD22A4EF2200CEF20A /* PictionSDK.swift */; };
-		43CA1D0322A759DC00CEF20A /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF222A4EF2200CEF20A /* WalletModel.swift */; };
+		43CA1D0322A759DC00CEF20A /* WalletViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF222A4EF2200CEF20A /* WalletViewResponse.swift */; };
 		43CA1D0422A759DC00CEF20A /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1C0222A4EF2200CEF20A /* ErrorType.swift */; };
 		43CA1D0522A759DC00CEF20A /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */; };
 		43CA1D0622A759DC00CEF20A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1C0022A4EF2200CEF20A /* Response.swift */; };
@@ -133,7 +133,7 @@
 		43CA1BEE22A4EF2200CEF20A /* StorageAttachmentViewResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageAttachmentViewResponse.swift; sourceTree = "<group>"; };
 		43CA1BEF22A4EF2200CEF20A /* AuthenticationViewResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewResponse.swift; sourceTree = "<group>"; };
 		43CA1BF022A4EF2200CEF20A /* ProjectViewResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewResponse.swift; sourceTree = "<group>"; };
-		43CA1BF222A4EF2200CEF20A /* WalletModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+		43CA1BF222A4EF2200CEF20A /* WalletViewResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewResponse.swift; sourceTree = "<group>"; };
 		43CA1BF422A4EF2200CEF20A /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		43CA1BF622A4EF2200CEF20A /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		43CA1BF722A4EF2200CEF20A /* Sessions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sessions.swift; sourceTree = "<group>"; };
@@ -268,6 +268,7 @@
 				43CA221622B0A11F00CEF20A /* TransactionViewResponse.swift */,
 				4329EB9222B1D83B00D01916 /* PostViewResponse.swift */,
 				4329EB9522B1DBF800D01916 /* PageViewResponse.swift */,
+				43CA1BF222A4EF2200CEF20A /* WalletViewResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -275,7 +276,6 @@
 		43CA1BF122A4EF2200CEF20A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				43CA1BF222A4EF2200CEF20A /* WalletModel.swift */,
 				43CA1BF422A4EF2200CEF20A /* ErrorModel.swift */,
 			);
 			path = Model;
@@ -551,7 +551,7 @@
 				43CA1D0022A759DC00CEF20A /* Sessions.swift in Sources */,
 				43CA1D0122A759DC00CEF20A /* SessionsAPI.swift in Sources */,
 				43CA1D0222A759DC00CEF20A /* PictionSDK.swift in Sources */,
-				43CA1D0322A759DC00CEF20A /* WalletModel.swift in Sources */,
+				43CA1D0322A759DC00CEF20A /* WalletViewResponse.swift in Sources */,
 				43CA1D0422A759DC00CEF20A /* ErrorType.swift in Sources */,
 				4329EB9122B1D76B00D01916 /* PostsAPI.swift in Sources */,
 				43CA1D0522A759DC00CEF20A /* ServerInfo.swift in Sources */,
@@ -583,7 +583,7 @@
 				43CA1C0F22A4EF2300CEF20A /* Sessions.swift in Sources */,
 				43CA1C1322A4EF2300CEF20A /* SessionsAPI.swift in Sources */,
 				43CA1C1422A4EF2300CEF20A /* PictionSDK.swift in Sources */,
-				43CA1C0B22A4EF2300CEF20A /* WalletModel.swift in Sources */,
+				43CA1C0B22A4EF2300CEF20A /* WalletViewResponse.swift in Sources */,
 				43CA1C1822A4EF2300CEF20A /* ErrorType.swift in Sources */,
 				43CA1C0622A4EF2300CEF20A /* ServerInfo.swift in Sources */,
 				43CA1C1622A4EF2300CEF20A /* Response.swift in Sources */,

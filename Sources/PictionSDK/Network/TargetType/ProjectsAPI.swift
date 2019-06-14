@@ -13,10 +13,13 @@ import UIKit
 public enum ProjectsAPI {
     case all
     case create(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
-    case get(id: String)
-    case update(id: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
+    case get(projectId: String)
+    case update(projectId: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
     case uploadThumbnail(image: UIImage)
     case uploadWideThumbnail(image: UIImage)
+    case recommendedAll
+    case recommendedAdd(projectId: String)
+    case recommendedDelete(projectId: String)
 }
 
 extension ProjectsAPI: TargetType {
@@ -26,32 +29,42 @@ extension ProjectsAPI: TargetType {
         case .all,
              .create:
             return "/projects"
-        case .get(let id),
-             .update(let id, _, _, _, _):
-            return "/projects/\(id)"
+        case .get(let projectId),
+             .update(let projectId, _, _, _, _):
+            return "/projects/\(projectId)"
         case .uploadThumbnail:
             return "/projects/thumbnail"
         case .uploadWideThumbnail:
             return "/projects/wide-thumbnail"
+        case .recommendedAll:
+            return "/recommended-projects"
+        case .recommendedAdd(let projectId),
+             .recommendedDelete(let projectId):
+            return "/recommended-projects/\(projectId)"
         }
     }
     public var method: Moya.Method {
         switch self {
         case .all,
-             .get:
+             .get,
+             .recommendedAll:
             return .get
-        case .create:
+        case .create,
+            .recommendedAdd:
             return .post
         case .update:
             return .put
         case .uploadThumbnail,
              .uploadWideThumbnail:
             return .patch
+        case .recommendedDelete:
+            return .delete
         }
     }
     public var sampleData: Data {
         switch self {
-        case .all:
+        case .all,
+             .recommendedAll:
             return jsonSerializedUTF8(json: [ProjectViewResponse.sampleData()])
         case .create,
              .get,
@@ -60,6 +73,9 @@ extension ProjectsAPI: TargetType {
         case .uploadThumbnail,
              .uploadWideThumbnail:
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
+        case .recommendedAdd,
+             .recommendedDelete:
+            return jsonSerializedUTF8(json: DefaultResponse.sampleData())
         }
     }
     public var task: Task {
@@ -74,7 +90,10 @@ extension ProjectsAPI: TargetType {
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .all,
-             .get:
+             .get,
+             .recommendedAll,
+             .recommendedAdd,
+             .recommendedDelete:
             return .requestPlain
         case .update(_, let title, let synopsis, let thumbnail, let wideThumbnail):
             let param = [

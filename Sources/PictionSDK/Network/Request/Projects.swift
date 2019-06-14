@@ -33,8 +33,8 @@ public final class Projects {
             })
     }
 
-    public func get(id: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.get(id: id),
+    public func get(projectId: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.get(projectId: projectId),
             success: { (response: ProjectViewResponse) in
                 successCompletion?(response)
             },
@@ -43,8 +43,8 @@ public final class Projects {
             })
     }
 
-    public func update(id: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.update(id: id, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail),
+    public func update(projectId: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.update(projectId: projectId, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail),
             success: { (response: ProjectViewResponse) in
                 successCompletion?(response)
             },
@@ -70,6 +70,36 @@ public final class Projects {
             },
                 failure: { error in
                     failureCompletion?(error)
+            })
+    }
+
+    public func recommendedAll(success successCompletion: (([ProjectViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.recommendedAll,
+            success: { (response: [ProjectViewResponse]) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func recommendedAdd(projectId: String, success successCompletion: ((DefaultResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.recommendedAdd(projectId: projectId),
+            success: { (response: DefaultResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func recommendedDelete(projectId: String, success successCompletion: ((DefaultResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.recommendedDelete(projectId: projectId),
+            success: { (response: DefaultResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
             })
     }
 }

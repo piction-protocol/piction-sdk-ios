@@ -15,6 +15,7 @@ public struct PostViewResponse: Mappable {
     public let cover: String?
     public let createdAt: String?
     public let id: String?
+    public let likeCount: Int?
     public let series: String?
     public let status: String?
     public let title: String?
@@ -24,6 +25,7 @@ public struct PostViewResponse: Mappable {
         cover = map.optionalFrom("cover")
         createdAt = map.optionalFrom("createdAt")
         id = map.optionalFrom("id")
+        likeCount = map.optionalFrom("likeCount")
         series = map.optionalFrom("series")
         status = map.optionalFrom("status")
         title = map.optionalFrom("title")
@@ -37,6 +39,7 @@ extension PostViewResponse {
             "cover": "string",
             "createdAt": "2019-06-13T01:23:04.413Z",
             "id": "id",
+            "likeCount": 0,
             "series": "series",
             "status": "status",
             "title": "title"

@@ -53,6 +53,16 @@ public final class Posts {
             })
     }
 
+    public func like(projectId: String, postId: String, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.like(projectId: projectId, postId: postId),
+            success: { (response: PostViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
     public func uploadContentImage(projectId: String, image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(PostsAPI.uploadContentImage(projectId: projectId, image: image),
             success: { (response: StorageAttachmentViewResponse) in

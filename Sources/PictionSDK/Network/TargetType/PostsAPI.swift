@@ -15,6 +15,7 @@ public enum PostsAPI {
     case create(projectId: String, title: String, content: String, cover: String, status: String, membership: String, seriesId: String)
     case get(projectId: String, postId: String)
     case update(projectId: String, postId: String, title: String, content: String, cover: String, status: String, membership: String, seriesId: String)
+    case like(projectId: String, postId: String)
     case uploadContentImage(projectId: String, image: UIImage)
     case uploadCoverImage(projectId: String, image: UIImage)
 }
@@ -33,6 +34,8 @@ extension PostsAPI: TargetType {
             return "/projects/\(projectId)/posts/content"
         case .uploadCoverImage(let projectId, _):
             return "/projects/\(projectId)/posts/cover"
+        case .like(let projectId, let postId):
+            return "/projects/\(projectId)/posts/\(postId)/like"
         }
     }
     public var method: Moya.Method {
@@ -40,7 +43,8 @@ extension PostsAPI: TargetType {
         case .all,
              .get:
             return .get
-        case .create:
+        case .create,
+             .like:
             return .post
         case .update:
             return .put
@@ -55,7 +59,8 @@ extension PostsAPI: TargetType {
             return jsonSerializedUTF8(json: PageViewResponse<PostModel>.sampleData())
         case .create,
              .get,
-             .update:
+             .update,
+             .like:
             return jsonSerializedUTF8(json: PostViewResponse.sampleData())
         case .uploadContentImage,
              .uploadCoverImage:
@@ -81,7 +86,8 @@ extension PostsAPI: TargetType {
                 "seriesId": seriesId
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
-        case .get:
+        case .get,
+             .like:
             return .requestPlain
         case .uploadContentImage(_, let image),
              .uploadCoverImage(_, let image):

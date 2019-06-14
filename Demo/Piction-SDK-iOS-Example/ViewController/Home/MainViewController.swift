@@ -7,23 +7,6 @@
 //
 
 import UIKit
-import PictionSDK
 
 class MainViewController: UITableViewController {
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        tableView.reloadData()
-    }
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return PictionManager.isLogin ? 6 : 5
-    }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 5 {
-            PictionManager.logout()
-            tableView.reloadData()
-        }
-    }
 }

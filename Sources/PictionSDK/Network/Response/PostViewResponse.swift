@@ -16,7 +16,7 @@ public struct PostViewResponse: Mappable {
     public let createdAt: String?
     public let id: String?
     public let likeCount: Int?
-    public let series: String?
+    public let series: SeriesModel?
     public let status: String?
     public let title: String?
 
@@ -40,7 +40,7 @@ extension PostViewResponse {
             "createdAt": "2019-06-13T01:23:04.413Z",
             "id": "id",
             "likeCount": 0,
-            "series": "series",
+            "series": SeriesModel.sampleData(),
             "status": "status",
             "title": "title"
         ]

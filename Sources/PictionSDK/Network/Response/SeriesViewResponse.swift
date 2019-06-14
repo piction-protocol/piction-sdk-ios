@@ -8,6 +8,8 @@
 
 import Mapper
 
+public typealias SeriesModel = SeriesViewResponse
+
 public struct SeriesViewResponse: Mappable {
     public let createdAt: String?
     public let id: Int?

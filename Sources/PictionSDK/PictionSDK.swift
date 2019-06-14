@@ -11,10 +11,11 @@ import Moya
 import Mapper
 
 public final class PictionSDK {
-    public static let users: Users = Users.shared
-    public static let sessions: Sessions = Sessions.shared
-    public static let projects: Projects = Projects.shared
-    public static let posts: Posts = Posts.shared
+    public static let users = Users.shared
+    public static let sessions = Sessions.shared
+    public static let projects = Projects.shared
+    public static let posts = Posts.shared
+    public static let my = My.shared
 
     public static func requestAPI<M: Mappable, T: TargetType>(_ target: T, success successCompletion: ((M) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(target,

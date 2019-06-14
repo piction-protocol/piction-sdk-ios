@@ -22,4 +22,15 @@ public final class Sessions {
                 failureCompletion?(error)
             })
     }
+
+    public func delete(success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SessionsAPI.delete,
+            success: { (response: AuthenticationViewResponse) in
+                PictionManager.setToken(response.accessToken ?? "")
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
 }

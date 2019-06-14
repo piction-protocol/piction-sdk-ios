@@ -11,13 +11,15 @@ import Moya
 
 public enum SessionsAPI {
     case create(email: String, password: String)
+    case delete
 }
 
 extension SessionsAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
-        case .create:
+        case .create,
+             .delete:
             return "/sessions"
         }
     }
@@ -25,11 +27,14 @@ extension SessionsAPI: TargetType {
         switch self {
         case .create:
             return .post
+        case .delete:
+            return .delete
         }
     }
     public var sampleData: Data {
         switch self {
-        case .create:
+        case .create,
+             .delete:
             return jsonSerializedUTF8(json: AuthenticationViewResponse.sampleData())
         }
     }
@@ -41,6 +46,8 @@ extension SessionsAPI: TargetType {
                 "password": password
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
+        case .delete:
+            return .requestPlain
         }
     }
     public var headers: [String: String]? {

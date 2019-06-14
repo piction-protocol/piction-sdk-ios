@@ -33,6 +33,12 @@
 		432CAC0C22B328630007EE03 /* MyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC0A22B328630007EE03 /* MyAPI.swift */; };
 		432CAC0E22B32A2F0007EE03 /* My.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC0D22B32A2F0007EE03 /* My.swift */; };
 		432CAC0F22B32A2F0007EE03 /* My.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC0D22B32A2F0007EE03 /* My.swift */; };
+		432CAC2422B33F2D0007EE03 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2322B33F2D0007EE03 /* Series.swift */; };
+		432CAC2522B33F2D0007EE03 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2322B33F2D0007EE03 /* Series.swift */; };
+		432CAC2722B33F380007EE03 /* SeriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2622B33F380007EE03 /* SeriesAPI.swift */; };
+		432CAC2822B33F380007EE03 /* SeriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2622B33F380007EE03 /* SeriesAPI.swift */; };
+		432CAC2A22B33FBE0007EE03 /* SeriesViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2922B33FBE0007EE03 /* SeriesViewResponse.swift */; };
+		432CAC2B22B33FBE0007EE03 /* SeriesViewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2922B33FBE0007EE03 /* SeriesViewResponse.swift */; };
 		43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */; };
 		43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */; };
 		43CA1C0622A4EF2300CEF20A /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */; };
@@ -126,6 +132,9 @@
 		4329EBB422B1E3A900D01916 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		432CAC0A22B328630007EE03 /* MyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPI.swift; sourceTree = "<group>"; };
 		432CAC0D22B32A2F0007EE03 /* My.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My.swift; sourceTree = "<group>"; };
+		432CAC2322B33F2D0007EE03 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
+		432CAC2622B33F380007EE03 /* SeriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesAPI.swift; sourceTree = "<group>"; };
+		432CAC2922B33FBE0007EE03 /* SeriesViewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewResponse.swift; sourceTree = "<group>"; };
 		43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
 		43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTypeExtension.swift; sourceTree = "<group>"; };
 		43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfo.swift; sourceTree = "<group>"; };
@@ -269,6 +278,7 @@
 				4329EB9222B1D83B00D01916 /* PostViewResponse.swift */,
 				4329EB9522B1DBF800D01916 /* PageViewResponse.swift */,
 				43CA1BF222A4EF2200CEF20A /* WalletViewResponse.swift */,
+				432CAC2922B33FBE0007EE03 /* SeriesViewResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -289,6 +299,7 @@
 				43CA1BF822A4EF2200CEF20A /* Projects.swift */,
 				4329EBB422B1E3A900D01916 /* Posts.swift */,
 				432CAC0D22B32A2F0007EE03 /* My.swift */,
+				432CAC2322B33F2D0007EE03 /* Series.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -301,6 +312,7 @@
 				43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */,
 				4329EB8F22B1D76B00D01916 /* PostsAPI.swift */,
 				432CAC0A22B328630007EE03 /* MyAPI.swift */,
+				432CAC2622B33F380007EE03 /* SeriesAPI.swift */,
 			);
 			path = TargetType;
 			sourceTree = "<group>";
@@ -540,9 +552,11 @@
 				43CA1D1F22A75A2200CEF20A /* PictionSDK+Rx.swift in Sources */,
 				4329EB9422B1D83B00D01916 /* PostViewResponse.swift in Sources */,
 				43CA1CFA22A759DC00CEF20A /* PictionManager.swift in Sources */,
+				432CAC2822B33F380007EE03 /* SeriesAPI.swift in Sources */,
 				43CA221822B0A37600CEF20A /* TransactionViewResponse.swift in Sources */,
 				43CA1CFB22A759DC00CEF20A /* Request.swift in Sources */,
 				4329EBB622B1E3A900D01916 /* Posts.swift in Sources */,
+				432CAC2B22B33FBE0007EE03 /* SeriesViewResponse.swift in Sources */,
 				432CAC0F22B32A2F0007EE03 /* My.swift in Sources */,
 				43CA1CFC22A759DC00CEF20A /* StorageAttachmentViewResponse.swift in Sources */,
 				43CA1CFD22A759DC00CEF20A /* AuthenticationViewResponse.swift in Sources */,
@@ -560,6 +574,7 @@
 				43CA1D0822A759DC00CEF20A /* TargetTypeExtension.swift in Sources */,
 				43CA1D0922A759DC00CEF20A /* UsersAPI.swift in Sources */,
 				432CAC0C22B328630007EE03 /* MyAPI.swift in Sources */,
+				432CAC2522B33F2D0007EE03 /* Series.swift in Sources */,
 				43CA1D0A22A759DC00CEF20A /* ProjectsAPI.swift in Sources */,
 				43CA1D0B22A759DC00CEF20A /* ErrorModel.swift in Sources */,
 				4329EB9722B1DBF800D01916 /* PageViewResponse.swift in Sources */,
@@ -581,6 +596,7 @@
 				43CA1C0722A4EF2300CEF20A /* UserViewResponse.swift in Sources */,
 				4329EBB522B1E3A900D01916 /* Posts.swift in Sources */,
 				43CA1C0F22A4EF2300CEF20A /* Sessions.swift in Sources */,
+				432CAC2722B33F380007EE03 /* SeriesAPI.swift in Sources */,
 				43CA1C1322A4EF2300CEF20A /* SessionsAPI.swift in Sources */,
 				43CA1C1422A4EF2300CEF20A /* PictionSDK.swift in Sources */,
 				43CA1C0B22A4EF2300CEF20A /* WalletViewResponse.swift in Sources */,
@@ -593,9 +609,11 @@
 				4329EB9622B1DBF800D01916 /* PageViewResponse.swift in Sources */,
 				43CA1C0E22A4EF2300CEF20A /* Users.swift in Sources */,
 				432CAC0B22B328630007EE03 /* MyAPI.swift in Sources */,
+				432CAC2422B33F2D0007EE03 /* Series.swift in Sources */,
 				43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */,
 				43CA1C1122A4EF2300CEF20A /* UsersAPI.swift in Sources */,
 				43CA1C1222A4EF2300CEF20A /* ProjectsAPI.swift in Sources */,
+				432CAC2A22B33FBE0007EE03 /* SeriesViewResponse.swift in Sources */,
 				43CA1C0D22A4EF2300CEF20A /* ErrorModel.swift in Sources */,
 				43CA1C0A22A4EF2300CEF20A /* ProjectViewResponse.swift in Sources */,
 				43CA1C1022A4EF2300CEF20A /* Projects.swift in Sources */,

@@ -40,7 +40,7 @@ class ProjectsUploadThumbnailViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.users.uploadPicture(image: self.selectImageButton.backgroundImage(for: .normal) ?? UIImage(),
+        PictionSDK.projects.uploadThumbnail(image: self.selectImageButton.backgroundImage(for: .normal) ?? UIImage(),
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false

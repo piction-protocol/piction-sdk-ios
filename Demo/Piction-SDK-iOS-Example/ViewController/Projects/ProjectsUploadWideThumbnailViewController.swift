@@ -11,6 +11,7 @@ import PictionSDK
 
 class ProjectsUploadWideThumbnailViewController: UIViewController {
     @IBOutlet weak var selectImageButton: UIButton!
+    
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
 
@@ -39,7 +40,7 @@ class ProjectsUploadWideThumbnailViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.users.uploadPicture(image: self.selectImageButton.backgroundImage(for: .normal) ?? UIImage(),
+        PictionSDK.projects.uploadWideThumbnail(image: self.selectImageButton.backgroundImage(for: .normal) ?? UIImage(),
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false

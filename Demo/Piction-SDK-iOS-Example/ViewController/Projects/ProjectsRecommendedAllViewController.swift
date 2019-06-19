@@ -29,7 +29,7 @@ class ProjectsRecommendedAllViewController: UIViewController {
 
         PictionSDK.projects.recommendedAll(
             success: { response in
-                self.responseTextView.text = String(describing: response)
+                self.responseTextView.text = JsonUtil.toString(dict: response.map { $0.toDict() })
                 self.isLoading = false
             },
             failure: { error in

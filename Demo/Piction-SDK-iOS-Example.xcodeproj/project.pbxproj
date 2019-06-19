@@ -55,6 +55,9 @@
 		432CAC5D22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC5C22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard */; };
 		432CAC5F22B386750007EE03 /* ProjectsRecommendedAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC5E22B386750007EE03 /* ProjectsRecommendedAdd.storyboard */; };
 		432CAC6122B386830007EE03 /* ProjectsRecommendedDelete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC6022B386830007EE03 /* ProjectsRecommendedDelete.storyboard */; };
+		432CAC6D22B3A6CF0007EE03 /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC6C22B3A6CF0007EE03 /* JsonUtil.swift */; };
+		432CAC6F22B724870007EE03 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CAC6E22B724870007EE03 /* SwiftyJSON.framework */; };
+		432CAC7022B724870007EE03 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 432CAC6E22B724870007EE03 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43C3142E228AA198007E9EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142D228AA198007E9EAF /* AppDelegate.swift */; };
 		43C31430228AA198007E9EAF /* UsersSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */; };
 		43C31433228AA198007E9EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C31431228AA198007E9EAF /* Main.storyboard */; };
@@ -99,6 +102,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				432CAC7022B724870007EE03 /* SwiftyJSON.framework in Embed Frameworks */,
 				43CA218F22AE3C0000CEF20A /* RxMoya.framework in Embed Frameworks */,
 				43CA218B22AE3BDC00CEF20A /* RxAtomic.framework in Embed Frameworks */,
 				43CA217C22AE3B4800CEF20A /* RxCocoa.framework in Embed Frameworks */,
@@ -166,6 +170,9 @@
 		432CAC5C22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsRecommendedAll.storyboard; sourceTree = "<group>"; };
 		432CAC5E22B386750007EE03 /* ProjectsRecommendedAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsRecommendedAdd.storyboard; sourceTree = "<group>"; };
 		432CAC6022B386830007EE03 /* ProjectsRecommendedDelete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsRecommendedDelete.storyboard; sourceTree = "<group>"; };
+		432CAC6522B398590007EE03 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
+		432CAC6C22B3A6CF0007EE03 /* JsonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
+		432CAC6E22B724870007EE03 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Piction-SDK-iOS-Example/Frameworks/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		43C3142A228AA198007E9EAF /* Piction-SDK-iOS-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piction-SDK-iOS-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C3142D228AA198007E9EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSignupViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				432CAC6F22B724870007EE03 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,9 +301,18 @@
 			path = Series;
 			sourceTree = "<group>";
 		};
+		432CAC6B22B3A6C30007EE03 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				432CAC6C22B3A6CF0007EE03 /* JsonUtil.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		43C31421228AA198007E9EAF = {
 			isa = PBXGroup;
 			children = (
+				432CAC6E22B724870007EE03 /* SwiftyJSON.framework */,
 				43C3142C228AA198007E9EAF /* Piction-SDK-iOS-Example */,
 				43C3142B228AA198007E9EAF /* Products */,
 				43CA1CE922A620D600CEF20A /* Frameworks */,
@@ -313,6 +330,7 @@
 		43C3142C228AA198007E9EAF /* Piction-SDK-iOS-Example */ = {
 			isa = PBXGroup;
 			children = (
+				432CAC6B22B3A6C30007EE03 /* Helper */,
 				43C3167022927627007E9EAF /* ViewController */,
 				43C3166F22927620007E9EAF /* View */,
 				43C3142D228AA198007E9EAF /* AppDelegate.swift */,
@@ -327,6 +345,7 @@
 		43C3144C228AAF20007E9EAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				432CAC6522B398590007EE03 /* SwiftyJSON.framework */,
 				43CA218D22AE3BF500CEF20A /* RxMoya.framework */,
 				43CA217922AE3B1B00CEF20A /* RxCocoa.framework */,
 				43CA218522AE3BC400CEF20A /* RxAtomic.framework */,
@@ -600,6 +619,7 @@
 				4329EB9D22B1DFE600D01916 /* PostsCreateViewController.swift in Sources */,
 				432CAC4422B34D420007EE03 /* SeriesGetViewController.swift in Sources */,
 				432CAC4222B34D370007EE03 /* SeriesUpdatePriorityViewController.swift in Sources */,
+				432CAC6D22B3A6CF0007EE03 /* JsonUtil.swift in Sources */,
 				432CAC4822B34D5D0007EE03 /* SeriesDeleteViewController.swift in Sources */,
 				432CAC1C22B32D190007EE03 /* MyProjectsViewController.swift in Sources */,
 				4329EB8622B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift in Sources */,

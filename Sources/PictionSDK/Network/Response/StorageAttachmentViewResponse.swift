@@ -8,7 +8,7 @@
 
 import Mapper
 
-public struct StorageAttachmentViewResponse: Mappable {
+public struct StorageAttachmentViewResponse: Response {
     public let filename: String?
     public let id: String?
     public let url: String?
@@ -17,6 +17,18 @@ public struct StorageAttachmentViewResponse: Mappable {
         filename = map.optionalFrom("filename")
         id = map.optionalFrom("id")
         url = map.optionalFrom("url")
+    }
+
+    public func toJSONString() throws -> String {
+        return try! toJSON(dict: self.toDict())
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [
+            "filename": filename,
+            "id": id,
+            "url": url
+        ]
     }
 }
 

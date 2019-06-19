@@ -8,7 +8,7 @@
 
 import Mapper
 
-public struct ErrorModel: Mappable {
+public struct ErrorModel: Response {
     public let code: Int?
     public let status_code: String?
     public let message: String?
@@ -17,6 +17,18 @@ public struct ErrorModel: Mappable {
         code = map.optionalFrom("code")
         status_code = map.optionalFrom("status_code")
         message = map.optionalFrom("message")
+    }
+
+    public func toJSONString() throws -> String {
+         return try! toJSON(dict: self.toDict())
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [
+            "code": code,
+            "status_code": status_code,
+            "message": message
+        ]
     }
 }
 

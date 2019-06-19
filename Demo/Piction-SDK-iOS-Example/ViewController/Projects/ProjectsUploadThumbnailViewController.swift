@@ -42,7 +42,7 @@ class ProjectsUploadThumbnailViewController: UIViewController {
 
         PictionSDK.projects.uploadThumbnail(image: self.selectImageButton.backgroundImage(for: .normal) ?? UIImage(),
             success: { response in
-                self.responseTextView.text = String(describing: response)
+                self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false
             },
             failure: { error in

@@ -8,8 +8,16 @@
 
 import Mapper
 
-public struct DefaultResponse: Mappable {
+public struct DefaultResponse: Response {
     public init(map: Mapper) throws {}
+
+    public func toJSONString() throws -> String {
+        return try! toJSON(dict: self.toDict())
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [:]
+    }
 }
 
 extension DefaultResponse {

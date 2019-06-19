@@ -8,7 +8,7 @@
 
 import Mapper
 
-public struct PageViewResponse<T: Mappable>: Mappable {
+public struct PageViewResponse<T: Response>: Response {
     public let content: [T]?
     public let empty: Bool?
     public let first: Bool?
@@ -34,6 +34,26 @@ public struct PageViewResponse<T: Mappable>: Mappable {
         totalElements = map.optionalFrom("totalElements")
         totalPages = map.optionalFrom("totalPages")
     }
+
+    public func toJSONString() throws -> String {
+        return try! toJSON(dict: self.toDict())
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [
+            "content": content?.compactMap({ $0.toDict() }),
+            "empty": empty,
+            "first": first,
+            "last": last,
+            "number": number,
+            "numberOfElements": numberOfElements,
+            "pageable": pageable?.toDict(),
+            "size": size,
+            "sort": sort?.toDict(),
+            "totalElements": totalElements,
+            "totalPages": totalPages,
+        ]
+    }
 }
 
 extension PageViewResponse {
@@ -54,7 +74,7 @@ extension PageViewResponse {
     }
 }
 
-public struct PageableModel: Mappable {
+public struct PageableModel: Response {
     public let offset: Int?
     public let pageNumber: Int?
     public let pageSize: Int?
@@ -69,6 +89,17 @@ public struct PageableModel: Mappable {
         paged = map.optionalFrom("paged")
         sort = map.optionalFrom("sort")
         unpaged = map.optionalFrom("unpaged")
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [
+            "offset": offset,
+            "pageNumber": pageNumber,
+            "pageSize": pageSize,
+            "paged": paged,
+            "sort": sort,
+            "unpaged": unpaged
+        ]
     }
 }
 
@@ -94,6 +125,14 @@ public struct SortModel: Mappable {
         empty = map.optionalFrom("empty")
         sorted = map.optionalFrom("sorted")
         unsorted = map.optionalFrom("unsorted")
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [
+            "empty": empty,
+            "sorted": sorted,
+            "unsorted": unsorted
+        ]
     }
 }
 

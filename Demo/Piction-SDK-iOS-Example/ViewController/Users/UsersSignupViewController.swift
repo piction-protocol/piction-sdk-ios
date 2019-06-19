@@ -35,7 +35,7 @@ class UsersSignupViewController: UIViewController {
 
         PictionSDK.users.signup(email: emailTextField.text ?? "", username: usernameTextField.text ?? "", password: passwordTextField.text ?? "",
             success: { response in
-                self.responseTextView.text = String(describing: response)
+                self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false
             },
             failure: { error in

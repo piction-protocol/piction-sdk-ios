@@ -34,7 +34,7 @@ class ProjectsUpdateViewController: UIViewController {
 
         PictionSDK.projects.update(projectId: projectIdTextField.text ?? "", title: titleTextField.text ?? "", synopsis: synopsisTextField.text ?? "", thumbnail: thumbnailTextField.text ?? "", wideThumbnail: wideThumbnailTextField.text ?? "",
             success: { response in
-                self.responseTextView.text = String(describing: response)
+                self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false
             },
             failure: { error in
@@ -67,7 +67,7 @@ class ProjectsUpdateViewController: UIViewController {
                     self.projectIdTextField.text = inputId
                     self.titleTextField.text = currentProject?.title
                     self.synopsisTextField.text = currentProject?.synopsis
-                    self.responseTextView.text = String(describing: currentProject)
+                    self.responseTextView.text = response.map { try! $0.toJSONString() }.description//String(describing: currentProject)
                     self.isLoading = false
             },
                 failure: { error in

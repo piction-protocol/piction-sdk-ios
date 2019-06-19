@@ -1,1 +1,2 @@
 github "piction-protocol/piction-sdk-ios" ~> 0.0.1
+github "SwiftyJSON/SwiftyJSON"

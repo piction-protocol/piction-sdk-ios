@@ -31,7 +31,7 @@ class SessionsCreateViewController: UIViewController {
         
         PictionSDK.sessions.create(email: emailTextField.text ?? "", password: passwordTextField.text ?? "",
             success: { response in
-                self.responseTextView.text = String(describing: response)
+                self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false
             },
             failure: { error in

@@ -29,7 +29,7 @@ class MyWalletViewController: UIViewController {
 
         PictionSDK.my.wallet(
             success: { response in
-                self.responseTextView.text = String(describing: response)
+                self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false
             },
             failure: { error in

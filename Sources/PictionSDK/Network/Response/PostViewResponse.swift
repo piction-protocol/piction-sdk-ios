@@ -10,7 +10,7 @@ import Mapper
 
 public typealias PostModel = PostViewResponse
 
-public struct PostViewResponse: Mappable {
+public struct PostViewResponse: Response {
     public let content: String?
     public let cover: String?
     public let createdAt: String?
@@ -29,6 +29,22 @@ public struct PostViewResponse: Mappable {
         series = map.optionalFrom("series")
         status = map.optionalFrom("status")
         title = map.optionalFrom("title")
+    }
+
+    public func toJSONString() throws -> String {
+         return try! toJSON(dict: self.toDict())
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [
+            "content": content,
+            "cover": cover,
+            "createdAt": createdAt,
+            "id": id,
+            "series": series?.toDict(),
+            "status": status,
+            "title": title,
+        ]
     }
 }
 

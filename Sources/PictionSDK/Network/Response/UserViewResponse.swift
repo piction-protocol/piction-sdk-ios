@@ -8,17 +8,32 @@
 
 import Mapper
 
-public struct UserViewResponse: Mappable {
+public typealias UserModel = UserViewResponse
+
+public struct UserViewResponse: Response {
     public let createdAt: String?
     public let email: String?
-    public let name: String?
+    public let username: String?
     public let picture: String?
 
     public init(map: Mapper) throws {
         createdAt = map.optionalFrom("createdAt")
         email = map.optionalFrom("email")
-        name = map.optionalFrom("name")
+        username = map.optionalFrom("username")
         picture = map.optionalFrom("picture")
+    }
+
+    public func toJSONString() throws -> String {
+        return try! toJSON(dict: self.toDict())
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [
+            "createdAt": createdAt,
+            "email": email,
+            "username": username,
+            "picture": picture
+        ]
     }
 }
 
@@ -27,7 +42,7 @@ extension UserViewResponse {
         return [
             "createdAt": "2019-05-30T03:22:18.480Z",
             "email": "piction@piction.network",
-            "name": "PictionCreator",
+            "username": "PictionCreator",
             "picture": "4200deeba2bde9aea76e4d1842a43c0a0eca2f8b"
         ]
     }

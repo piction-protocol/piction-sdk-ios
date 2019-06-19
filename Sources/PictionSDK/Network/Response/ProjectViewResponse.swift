@@ -8,7 +8,7 @@
 
 import Mapper
 
-public struct ProjectViewResponse: Mappable {
+public struct ProjectViewResponse: Response {
     public let created_at: String?
     public let id: String?
     public let synopsis: String?
@@ -16,6 +16,7 @@ public struct ProjectViewResponse: Mappable {
     public let title: String?
     public let uri: String?
     public let wideThumbnail: String?
+    public let user: UserModel?
 
     public init(map: Mapper) throws {
         created_at = map.optionalFrom("created_at")
@@ -25,6 +26,24 @@ public struct ProjectViewResponse: Mappable {
         title = map.optionalFrom("title")
         uri = map.optionalFrom("uri")
         wideThumbnail = map.optionalFrom("wideThumbnail")
+        user = map.optionalFrom("user")
+    }
+
+    public func toJSONString() throws -> String {
+        return try! toJSON(dict: self.toDict())
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [
+            "created_at": created_at,
+            "id": id,
+            "synopsis": synopsis,
+            "thumbnail": thumbnail,
+            "title": title,
+            "uri": uri,
+            "wideThumbnail": wideThumbnail,
+            "user": user?.toDict()
+        ]
     }
 }
 
@@ -37,7 +56,8 @@ extension ProjectViewResponse {
             "thumbnail": "thumbnail",
             "title": "title",
             "url": "url",
-            "wideThumbnail": "wideThumbnail"
+            "wideThumbnail": "wideThumbnail",
+            "user": UserViewResponse.sampleData()
         ]
     }
 }

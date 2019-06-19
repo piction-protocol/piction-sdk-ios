@@ -31,7 +31,7 @@ class SeriesGetViewController: UIViewController {
 
         PictionSDK.series.get(projectId: projectIdTextField.text ?? "", seriesId: Int(seriesIdTextField.text ?? "0") ?? 0,
             success: { response in
-                self.responseTextView.text = String(describing: response)
+                self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false
         },
             failure: { error in

@@ -8,13 +8,24 @@
 
 import Mapper
 
-public struct WalletViewResponse: Mappable {
+public struct WalletViewResponse: Response {
     public let amount: Int?
     public let publicKey: String?
 
     public init(map: Mapper) throws {
         amount = map.optionalFrom("amount")
         publicKey = map.optionalFrom("publicKey")
+    }
+
+    public func toJSONString() throws -> String {
+        return try! toJSON(dict: self.toDict())
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [
+            "amount": amount,
+            "publicKey": publicKey
+        ]
     }
 }
 

@@ -73,7 +73,7 @@ class PostsUpdateViewController: UIViewController {
                     self.contentTextField.text = response.content
                     self.statusTextField.text = response.status
                     self.seriesIdTextField.text = String(response.series?.id ?? 0)
-                    self.responseTextView.text = String(describing: response)
+                    self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                     self.isLoading = false
             },
                 failure: { error in

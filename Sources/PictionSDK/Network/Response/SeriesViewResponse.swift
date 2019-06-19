@@ -10,7 +10,7 @@ import Mapper
 
 public typealias SeriesModel = SeriesViewResponse
 
-public struct SeriesViewResponse: Mappable {
+public struct SeriesViewResponse: Response {
     public let createdAt: String?
     public let id: Int?
     public let name: String?
@@ -23,6 +23,20 @@ public struct SeriesViewResponse: Mappable {
         name = map.optionalFrom("name")
         postCount = map.optionalFrom("postCount")
         priority = map.optionalFrom("priority")
+    }
+
+    public func toJSONString() throws -> String {
+        return try! toJSON(dict: self.toDict())
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [
+            "createdAt": createdAt,
+            "id": id,
+            "name": name,
+            "postCount": postCount,
+            "priority": priority
+        ]
     }
 }
 

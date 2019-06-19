@@ -7,5 +7,6 @@ target 'Piction-SDK-iOS-Example' do
 
   # Pods for Piction-SDK-iOS-Example
   pod "PictionSDK", '~> 0.0.1'
+  Pod "SwiftJSON"
 
 end

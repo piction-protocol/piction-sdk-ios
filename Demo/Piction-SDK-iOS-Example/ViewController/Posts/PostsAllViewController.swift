@@ -32,7 +32,7 @@ class PostsAllController: UIViewController {
 
         PictionSDK.posts.all(projectId: projectIdTextField.text ?? "", page: Int(pageTextField.text ?? "0") ?? 0, size: Int(sizeTextField.text ?? "0") ?? 0,
             success: { response in
-                self.responseTextView.text = String(describing: response)
+                self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false
         },
             failure: { error in

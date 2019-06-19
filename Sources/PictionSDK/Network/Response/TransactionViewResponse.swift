@@ -10,7 +10,7 @@ import Mapper
 
 public typealias TransactionModel = TransactionViewResponse
 
-public struct TransactionViewResponse: Mappable {
+public struct TransactionViewResponse: Response {
     public let amount: Int?
     public let createdAt: String?
     public let inOut: String?
@@ -22,15 +22,28 @@ public struct TransactionViewResponse: Mappable {
         inOut = map.optionalFrom("inOut")
         status = map.optionalFrom("status")
     }
+
+    public func toJSONString() throws -> String {
+        return try! toJSON(dict: self.toDict())
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [
+            "amount": amount,
+            "createdAt": createdAt,
+            "inOut": inOut,
+            "status": status
+        ]
+    }
 }
 
 extension TransactionViewResponse {
     static func sampleData() -> [String: Any] {
         return [
-            "amount": 0,
+            "amount": 1000000000000000,
             "createdAt": "2019-06-13T01:23:04.540Z",
-            "inOut": "string",
-            "status": "string"
+            "inOut": "IN",
+            "status": "SUCCESS"
         ]
     }
 }

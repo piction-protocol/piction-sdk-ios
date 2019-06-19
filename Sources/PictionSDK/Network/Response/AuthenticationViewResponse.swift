@@ -8,11 +8,21 @@
 
 import Mapper
 
-public struct AuthenticationViewResponse: Mappable {
+public struct AuthenticationViewResponse: Response {
     public let accessToken: String?
 
     public init(map: Mapper) throws {
         accessToken = map.optionalFrom("accessToken")
+    }
+
+    public func toJSONString() throws -> String {
+        return try! toJSON(dict: self.toDict())
+    }
+
+    public func toDict() -> [String: Any?] {
+        return [
+            "accessToken": accessToken
+        ]
     }
 }
 

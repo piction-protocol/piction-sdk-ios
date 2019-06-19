@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 public final class Series {
     static let shared = Series()

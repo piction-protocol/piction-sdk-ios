@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 public final class My {
     static let shared = My()

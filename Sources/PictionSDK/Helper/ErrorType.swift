@@ -17,4 +17,18 @@ public enum ErrorType: Error {
     case internalServerError(_ error: ErrorModel)
     case gatewayTimeout(_ error: Moya.Response)
     case unknown(_ error: Moya.Response)
+
+    var message: String {
+        switch self {
+        case .badRequest(let error),
+             .unauthorized(let error),
+             .forbidden(let error),
+             .notFound(let error),
+             .internalServerError(let error):
+             return error.message ?? ""
+        case .gatewayTimeout(let error),
+             .unknown(let error):
+            return error.description
+        }
+    }
 }

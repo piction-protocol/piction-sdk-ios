@@ -11,6 +11,8 @@ import Mapper
 import Moya
 import Moya_ModelMapper
 
+typealias ResponseData = Moya.Response
+
 extension Moya.Response {
     func filterStatusCode() throws  {
         guard 200 ... 399 ~= self.statusCode else {

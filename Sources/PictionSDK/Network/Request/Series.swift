@@ -32,8 +32,8 @@ public final class Series {
             })
     }
 
-    public func updatePriority(projectId: String, seriesIdList: [Int], success successCompletion: (([SeriesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SeriesAPI.updatePriority(projectId: projectId, seriesIdList: seriesIdList),
+    public func sort(projectId: String, seriesIdList: [Int], success successCompletion: (([SeriesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.sort(projectId: projectId, seriesIdList: seriesIdList),
             success: { (response: [SeriesViewResponse]) in
                 successCompletion?(response)
             },
@@ -62,9 +62,9 @@ public final class Series {
             })
     }
 
-    public func delete(projectId: String, seriesId: Int, success successCompletion: ((DefaultResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func delete(projectId: String, seriesId: Int, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(SeriesAPI.delete(projectId: projectId, seriesId: seriesId),
-            success: { (response: DefaultResponse) in
+            success: { (response: DefaultViewResponse) in
                 successCompletion?(response)
             },
             failure: { error in

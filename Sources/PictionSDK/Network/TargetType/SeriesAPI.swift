@@ -13,7 +13,7 @@ import UIKit
 public enum SeriesAPI {
     case all(projectId: String)
     case create(projectId: String, name: String)
-    case updatePriority(projectId: String, seriesIdList: [Int])
+    case sort(projectId: String, seriesIdList: [Int])
     case get(projectId: String, seriesId: Int)
     case update(projectId: String, seriesId: Int, name: String)
     case delete(projectId: String, seriesId: Int)
@@ -26,7 +26,7 @@ extension SeriesAPI: TargetType {
         switch self {
         case .all(let projectId),
              .create(let projectId, _),
-             .updatePriority(let projectId, _):
+             .sort(let projectId, _):
             return "/projects/\(projectId)/series"
         case .get(let projectId, let seriesId),
              .update(let projectId, let seriesId, _),
@@ -44,7 +44,7 @@ extension SeriesAPI: TargetType {
             return .get
         case .create:
             return .post
-        case .updatePriority,
+        case .sort,
              .update:
             return .put
         case .delete:
@@ -54,14 +54,14 @@ extension SeriesAPI: TargetType {
     public var sampleData: Data {
         switch self {
         case .all,
-             .updatePriority:
+             .sort:
             return jsonSerializedUTF8(json: [SeriesViewResponse.sampleData()])
         case .create,
              .get,
              .update:
             return jsonSerializedUTF8(json: SeriesViewResponse.sampleData())
         case .delete:
-            return jsonSerializedUTF8(json: DefaultResponse.sampleData())
+            return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
         case .allSeriesPosts:
             return jsonSerializedUTF8(json: [PostViewResponse.sampleData()])
         }
@@ -79,7 +79,7 @@ extension SeriesAPI: TargetType {
                 "name": name
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
-        case .updatePriority(_, let seriesIdList):
+        case .sort(_, let seriesIdList):
             let param = [
                 "seriesIdList": seriesIdList
             ]

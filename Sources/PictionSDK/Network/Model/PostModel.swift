@@ -1,33 +1,34 @@
 //
-//  PostViewResponse.swift
+//  PostModel.swift
 //  PictionSDK
 //
 //  Created by jhseo on 13/06/2019.
 //  Copyright © 2019 Piction Network. All rights reserved.
 //
 
+import Foundation
 import Mapper
 
-public typealias PostModel = PostViewResponse
+public typealias PostViewResponse = PostModel
 
-public struct PostViewResponse: Response {
+public struct PostModel: Response {
     public let content: String?
     public let cover: String?
-    public let createdAt: String?
+    public let createdAt: Date
     public let id: String?
     public let likeCount: Int?
+    public let requiredSubscription: Bool?
     public let series: SeriesModel?
-    public let status: String?
     public let title: String?
 
     public init(map: Mapper) throws {
         content = map.optionalFrom("content")
         cover = map.optionalFrom("cover")
-        createdAt = map.optionalFrom("createdAt")
+        createdAt = try map.from("createdAt")
         id = map.optionalFrom("id")
         likeCount = map.optionalFrom("likeCount")
+        requiredSubscription = map.optionalFrom("requiredSubscription")
         series = map.optionalFrom("series")
-        status = map.optionalFrom("status")
         title = map.optionalFrom("title")
     }
 
@@ -41,23 +42,24 @@ public struct PostViewResponse: Response {
             "cover": cover,
             "createdAt": createdAt,
             "id": id,
+            "likeCount": likeCount,
+            "requiredSubscription": requiredSubscription,
             "series": series?.toDict(),
-            "status": status,
             "title": title,
         ]
     }
 }
 
-extension PostViewResponse {
+extension PostModel {
     static func sampleData() -> [String: Any] {
         return [
             "content": "content",
             "cover": "string",
-            "createdAt": "2019-06-13T01:23:04.413Z",
+            "createdAt": "2019-06-20T09:27:53.127+0000",
             "id": "id",
             "likeCount": 0,
+            "requiredSubscription": true,
             "series": SeriesModel.sampleData(),
-            "status": "status",
             "title": "title"
         ]
     }

@@ -1,5 +1,5 @@
 //
-//  PageViewResponse.swift
+//  PageModel.swift
 //  PictionSDK
 //
 //  Created by jhseo on 13/06/2019.
@@ -8,7 +8,9 @@
 
 import Mapper
 
-public struct PageViewResponse<T: Response>: Response {
+public typealias PageViewResponse = PageModel
+
+public struct PageModel<T: Response>: Response {
     public let content: [T]?
     public let empty: Bool?
     public let first: Bool?
@@ -56,7 +58,7 @@ public struct PageViewResponse<T: Response>: Response {
     }
 }
 
-extension PageViewResponse {
+extension PageModel {
     static func sampleData() -> [String: Any] {
         return [
             "content": [],

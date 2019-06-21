@@ -1,5 +1,5 @@
 //
-//  ProjectViewResponse.swift
+//  ProjectModel.swift
 //  PictionSDK
 //
 //  Created by jhseo on 30/05/2019.
@@ -8,25 +8,31 @@
 
 import Mapper
 
-public struct ProjectViewResponse: Response {
-    public let created_at: String?
+public typealias ProjectViewResponse = ProjectModel
+
+public struct ProjectModel: Response {
+    public let createdAt: String?
     public let id: String?
+    public let lastPublishedAt: String?
+    public let subscriptionPrice: Int?
     public let synopsis: String?
     public let thumbnail: String?
     public let title: String?
     public let uri: String?
-    public let wideThumbnail: String?
     public let user: UserModel?
+    public let wideThumbnail: String?
 
     public init(map: Mapper) throws {
-        created_at = map.optionalFrom("created_at")
+        createdAt = map.optionalFrom("createdAt")
         id = map.optionalFrom("id")
+        lastPublishedAt = map.optionalFrom("lastPublishedAt")
+        subscriptionPrice = map.optionalFrom("subscriptionPrice")
         synopsis = map.optionalFrom("synopsis")
         thumbnail = map.optionalFrom("thumbnail")
         title = map.optionalFrom("title")
         uri = map.optionalFrom("uri")
-        wideThumbnail = map.optionalFrom("wideThumbnail")
         user = map.optionalFrom("user")
+        wideThumbnail = map.optionalFrom("wideThumbnail")
     }
 
     public func toJSONString() throws -> String {
@@ -35,29 +41,33 @@ public struct ProjectViewResponse: Response {
 
     public func toDict() -> [String: Any?] {
         return [
-            "created_at": created_at,
+            "createdAt": createdAt,
             "id": id,
+            "lastPublishedAt": lastPublishedAt,
+            "subscriptionPrice": subscriptionPrice,
             "synopsis": synopsis,
             "thumbnail": thumbnail,
             "title": title,
             "uri": uri,
-            "wideThumbnail": wideThumbnail,
-            "user": user?.toDict()
+            "user": user?.toDict(),
+            "wideThumbnail": wideThumbnail
         ]
     }
 }
 
-extension ProjectViewResponse {
+extension ProjectModel {
     static func sampleData() -> [String: Any] {
         return [
-            "created_at": "created_at",
+            "createdAt": "2019-06-20T09:27:53.127+0000",
             "id": "id",
+            "lastPublishedAt": "2019-06-20T09:27:53.127+0000",
+            "subscriptionPrice": 0,
             "synopsis": "synopsis",
             "thumbnail": "thumbnail",
             "title": "title",
             "url": "url",
-            "wideThumbnail": "wideThumbnail",
-            "user": UserViewResponse.sampleData()
+            "user": UserModel.sampleData(),
+            "wideThumbnail": "wideThumbnail"
         ]
     }
 }

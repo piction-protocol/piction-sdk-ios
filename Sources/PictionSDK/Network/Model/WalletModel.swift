@@ -1,5 +1,5 @@
 //
-//  AuthenticationViewResponse.swift
+//  WalletModel.swift
 //  PictionSDK
 //
 //  Created by jhseo on 17/05/2019.
@@ -8,11 +8,15 @@
 
 import Mapper
 
-public struct AuthenticationViewResponse: Response {
-    public let accessToken: String?
+public typealias WalletViewResponse = WalletModel
+
+public struct WalletModel: Response {
+    public let amount: Int?
+    public let publicKey: String?
 
     public init(map: Mapper) throws {
-        accessToken = map.optionalFrom("accessToken")
+        amount = map.optionalFrom("amount")
+        publicKey = map.optionalFrom("publicKey")
     }
 
     public func toJSONString() throws -> String {
@@ -21,15 +25,17 @@ public struct AuthenticationViewResponse: Response {
 
     public func toDict() -> [String: Any?] {
         return [
-            "accessToken": accessToken
+            "amount": amount,
+            "publicKey": publicKey
         ]
     }
 }
 
-extension AuthenticationViewResponse {
+extension WalletModel {
     static func sampleData() -> [String: Any] {
         return [
-            "accessToken": "329726eb-342e-4b53-bb38-6649f6aaee36"
+            "amount": 0,
+            "publicKey": "0xcf35fcfa21a89c032b87cf35fcfa21a89c032b87"
         ]
     }
 }

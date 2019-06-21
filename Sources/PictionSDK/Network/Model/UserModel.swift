@@ -1,5 +1,5 @@
 //
-//  UserViewResponse.swift
+//  UserModel.swift
 //  PictionSDK
 //
 //  Created by jhseo on 20/05/2019.
@@ -7,19 +7,20 @@
 //
 
 import Mapper
+import Foundation
 
-public typealias UserModel = UserViewResponse
+public typealias UserViewResponse = UserModel
 
-public struct UserViewResponse: Response {
-    public let createdAt: String?
+public struct UserModel: Response {
+    public let createdAt: Date
     public let email: String?
-    public let username: String?
     public let picture: String?
+    public let username: String?
 
     public init(map: Mapper) throws {
-        createdAt = map.optionalFrom("createdAt")
-        email = map.optionalFrom("email")
+        createdAt = try map.from("createdAt")
         username = map.optionalFrom("username")
+        email = map.optionalFrom("email")
         picture = map.optionalFrom("picture")
     }
 
@@ -31,19 +32,21 @@ public struct UserViewResponse: Response {
         return [
             "createdAt": createdAt,
             "email": email,
-            "username": username,
-            "picture": picture
+            "picture": picture,
+            "username": username
         ]
     }
 }
 
-extension UserViewResponse {
+extension UserModel {
     static func sampleData() -> [String: Any] {
         return [
-            "createdAt": "2019-05-30T03:22:18.480Z",
+            "createdAt": "2019-06-20T09:27:53.127+0000",
             "email": "piction@piction.network",
-            "username": "PictionCreator",
-            "picture": "4200deeba2bde9aea76e4d1842a43c0a0eca2f8b"
+            "picture": "4200deeba2bde9aea76e4d1842a43c0a0eca2f8b",
+            "username": "PictionCreator"
         ]
     }
 }
+
+

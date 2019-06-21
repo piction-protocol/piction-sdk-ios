@@ -1,5 +1,5 @@
 //
-//  TransactionViewResponse.swift
+//  TransactionModel.swift
 //  PictionSDK
 //
 //  Created by jhseo on 12/06/2019.
@@ -8,9 +8,9 @@
 
 import Mapper
 
-public typealias TransactionModel = TransactionViewResponse
+public typealias TransactionViewResponse = TransactionModel
 
-public struct TransactionViewResponse: Response {
+public struct TransactionModel: Response {
     public let amount: Int?
     public let createdAt: String?
     public let inOut: String?
@@ -37,7 +37,7 @@ public struct TransactionViewResponse: Response {
     }
 }
 
-extension TransactionViewResponse {
+extension TransactionModel {
     static func sampleData() -> [String: Any] {
         return [
             "amount": 1000000000000000,

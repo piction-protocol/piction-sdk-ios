@@ -19,4 +19,3 @@ extension Response {
         return String.init(data: data, encoding: .utf8) ?? ""
     }
 }
-

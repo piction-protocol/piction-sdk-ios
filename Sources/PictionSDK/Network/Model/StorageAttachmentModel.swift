@@ -1,5 +1,5 @@
 //
-//  StorageAttachmentViewResponse.swift
+//  StorageAttachmentModel.swift
 //  PictionSDK
 //
 //  Created by jhseo on 30/05/2019.
@@ -8,7 +8,9 @@
 
 import Mapper
 
-public struct StorageAttachmentViewResponse: Response {
+public typealias  StorageAttachmentViewResponse = StorageAttachmentModel
+
+public struct StorageAttachmentModel: Response {
     public let filename: String?
     public let id: String?
     public let url: String?
@@ -32,7 +34,7 @@ public struct StorageAttachmentViewResponse: Response {
     }
 }
 
-extension StorageAttachmentViewResponse {
+extension StorageAttachmentModel {
     static func sampleData() -> [String: Any] {
         return [
             "filename": "1560307278891.png",

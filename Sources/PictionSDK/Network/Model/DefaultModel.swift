@@ -1,5 +1,5 @@
 //
-//  DefaultResponse.swift
+//  DefaultModel.swift
 //  PictionSDK
 //
 //  Created by jhseo on 14/06/2019.
@@ -8,7 +8,9 @@
 
 import Mapper
 
-public struct DefaultResponse: Response {
+public typealias DefaultViewResponse = DefaultModel
+
+public struct DefaultModel: Response {
     public init(map: Mapper) throws {}
 
     public func toJSONString() throws -> String {
@@ -20,7 +22,7 @@ public struct DefaultResponse: Response {
     }
 }
 
-extension DefaultResponse {
+extension DefaultModel {
     static func sampleData() -> [String: Any] {
         return [:]
     }

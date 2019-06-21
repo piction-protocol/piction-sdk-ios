@@ -41,4 +41,24 @@ public final class My {
                 failureCompletion?(error)
             })
     }
+
+    public func sales(salesMonth: Int, salesYear: Int, success successCompletion: (([SalesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(MyAPI.sales(salesMonth: salesMonth, salesYear: salesYear),
+            success: { (response: [SalesViewResponse]) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func subscription(page: Int, size: Int, success successCompletion: ((PageViewResponse<SubscriptionModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(MyAPI.subscription(page: page, size: size),
+            success: { (response: PageViewResponse<SubscriptionModel>) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
 }

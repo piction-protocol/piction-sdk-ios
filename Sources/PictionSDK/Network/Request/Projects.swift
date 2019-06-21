@@ -53,6 +53,16 @@ public final class Projects {
             })
     }
 
+    public func subscription(projectId: String, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.subscription(projectId: projectId),
+            success: { (response: SubscriptionViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
     public func uploadThumbnail(image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.uploadThumbnail(image: image),
             success: { (response: StorageAttachmentViewResponse) in
@@ -83,9 +93,9 @@ public final class Projects {
             })
     }
 
-    public func recommendedAdd(projectId: String, success successCompletion: ((DefaultResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func recommendedAdd(projectId: String, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.recommendedAdd(projectId: projectId),
-            success: { (response: DefaultResponse) in
+            success: { (response: DefaultViewResponse) in
                 successCompletion?(response)
             },
             failure: { error in
@@ -93,9 +103,9 @@ public final class Projects {
             })
     }
 
-    public func recommendedDelete(projectId: String, success successCompletion: ((DefaultResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func recommendedDelete(projectId: String, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.recommendedDelete(projectId: projectId),
-            success: { (response: DefaultResponse) in
+            success: { (response: DefaultViewResponse) in
                 successCompletion?(response)
             },
             failure: { error in

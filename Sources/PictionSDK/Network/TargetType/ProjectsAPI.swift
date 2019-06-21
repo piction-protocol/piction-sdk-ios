@@ -15,6 +15,7 @@ public enum ProjectsAPI {
     case create(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
     case get(projectId: String)
     case update(projectId: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
+    case subscription(projectId: String)
     case uploadThumbnail(image: UIImage)
     case uploadWideThumbnail(image: UIImage)
     case recommendedAll
@@ -32,6 +33,8 @@ extension ProjectsAPI: TargetType {
         case .get(let projectId),
              .update(let projectId, _, _, _, _):
             return "/projects/\(projectId)"
+        case .subscription(let projectId):
+            return "/projects/\(projectId)/subscription"
         case .uploadThumbnail:
             return "/projects/thumbnail"
         case .uploadWideThumbnail:
@@ -50,6 +53,7 @@ extension ProjectsAPI: TargetType {
              .recommendedAll:
             return .get
         case .create,
+             .subscription,
             .recommendedAdd:
             return .post
         case .update:
@@ -70,12 +74,14 @@ extension ProjectsAPI: TargetType {
              .get,
              .update:
             return jsonSerializedUTF8(json: ProjectViewResponse.sampleData())
+        case .subscription:
+            return jsonSerializedUTF8(json: SubscriptionViewResponse.sampleData())
         case .uploadThumbnail,
              .uploadWideThumbnail:
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
         case .recommendedAdd,
              .recommendedDelete:
-            return jsonSerializedUTF8(json: DefaultResponse.sampleData())
+            return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
         }
     }
     public var task: Task {
@@ -91,6 +97,7 @@ extension ProjectsAPI: TargetType {
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .all,
              .get,
+             .subscription,
              .recommendedAll,
              .recommendedAdd,
              .recommendedDelete:

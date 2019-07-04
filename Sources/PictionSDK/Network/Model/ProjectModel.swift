@@ -6,14 +6,15 @@
 //  Copyright © 2019 Piction Network. All rights reserved.
 //
 
+import Foundation
 import Mapper
 
 public typealias ProjectViewResponse = ProjectModel
 
 public struct ProjectModel: Response {
-    public let createdAt: String?
     public let id: String?
     public let lastPublishedAt: String?
+    public let createdAt: Date?
     public let subscriptionPrice: Int?
     public let synopsis: String?
     public let thumbnail: String?

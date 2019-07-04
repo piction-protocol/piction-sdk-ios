@@ -12,14 +12,14 @@ import Foundation
 public typealias UserViewResponse = UserModel
 
 public struct UserModel: Response {
-    public let createdAt: Date
+    public let createdAt: Date?
     public let email: String?
     public let picture: String?
     public let username: String?
 
     public init(map: Mapper) throws {
-        createdAt = try map.from("createdAt")
         username = map.optionalFrom("username")
+        createdAt = map.optionalFrom("createdAt")
         email = map.optionalFrom("email")
         picture = map.optionalFrom("picture")
     }

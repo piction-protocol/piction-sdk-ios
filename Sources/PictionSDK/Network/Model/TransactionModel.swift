@@ -6,13 +6,14 @@
 //  Copyright © 2019 Piction Network. All rights reserved.
 //
 
+import Foundation
 import Mapper
 
 public typealias TransactionViewResponse = TransactionModel
 
 public struct TransactionModel: Response {
     public let amount: Int?
-    public let createdAt: String?
+    public let createdAt: Date?
     public let inOut: String?
     public let status: String?
 

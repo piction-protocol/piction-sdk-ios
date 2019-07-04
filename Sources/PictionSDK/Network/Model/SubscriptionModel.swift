@@ -12,10 +12,10 @@ import Mapper
 public typealias SubscriptionViewResponse = SubscriptionModel
 
 public struct SubscriptionModel: Response {
-    public let expireDate: Date
+    public let expireDate: Date?
 
     public init(map: Mapper) throws {
-        expireDate = try map.from("expireDate")
+        expireDate = map.optionalFrom("expireDate")
     }
 
     public func toJSONString() throws -> String {

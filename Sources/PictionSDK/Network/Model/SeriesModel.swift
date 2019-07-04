@@ -12,14 +12,14 @@ import Mapper
 public typealias SeriesViewResponse = SeriesModel
 
 public struct SeriesModel: Response {
-    public let createdAt: Date
+    public let createdAt: Date?
     public let id: Int?
     public let name: String?
     public let postCount: Int?
     public let priority: Int?
 
     public init(map: Mapper) throws {
-        createdAt = try map.from("createdAt")
+        createdAt = map.optionalFrom("createdAt")
         id = map.optionalFrom("id")
         name = map.optionalFrom("name")
         postCount = map.optionalFrom("postCount")

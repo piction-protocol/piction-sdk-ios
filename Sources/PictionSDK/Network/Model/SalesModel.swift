@@ -6,12 +6,13 @@
 //  Copyright © 2019 Piction Network. All rights reserved.
 //
 
+import Foundation
 import Mapper
 
 public typealias SalesViewResponse = SalesModel
 
 public struct SalesModel: Response {
-    public let date: String?
+    public let date: Date?
     public let amount: Int?
 
     public init(map: Mapper) throws {

@@ -38,9 +38,10 @@ public extension Reactive {
             case let .success(response):
                 do {
                     try response.filterStatusCode()
-                    if T.self == SessionsAPI.self {
-                        let token = try response.map(to: AuthenticationViewResponse.self)
-                        PictionManager.setToken(token.accessToken ?? "")
+
+                    let responseJSON = try? response.mapJSON() as? [String : Any?]
+                    if let token = responseJSON?["accessToken"] as? String {
+                        PictionManager.setToken(token)
                     }
                     successCompletion(response)
                 } catch {

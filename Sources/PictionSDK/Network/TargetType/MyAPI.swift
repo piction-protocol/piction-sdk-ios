@@ -31,7 +31,7 @@ extension MyAPI: TargetType {
         case .sales:
             return "/my/sales"
         case .subscription:
-            return "/my/subscription"
+            return "/my/subscriptions"
         }
     }
     public var method: Moya.Method {

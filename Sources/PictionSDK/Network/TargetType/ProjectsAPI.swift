@@ -16,6 +16,7 @@ public enum ProjectsAPI {
     case get(uri: String)
     case update(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
     case subscription(uri: String, subscriptionPrice: Int)
+    case search(name: String)
     case uploadThumbnail(image: UIImage)
     case uploadWideThumbnail(image: UIImage)
     case recommendedAll
@@ -35,6 +36,8 @@ extension ProjectsAPI: TargetType {
             return "/projects/\(uri)"
         case .subscription(let uri, _):
             return "/projects/\(uri)/subscription"
+        case .search:
+            return "/projects/search"
         case .uploadThumbnail:
             return "/projects/thumbnail"
         case .uploadWideThumbnail:
@@ -50,6 +53,7 @@ extension ProjectsAPI: TargetType {
         switch self {
         case .all,
              .get,
+             .search,
              .recommendedAll:
             return .get
         case .create,
@@ -74,6 +78,8 @@ extension ProjectsAPI: TargetType {
              .get,
              .update:
             return jsonSerializedUTF8(json: ProjectViewResponse.sampleData())
+        case .search:
+            return jsonSerializedUTF8(json: PageViewResponse<ProjectModel>.sampleData())
         case .subscription:
             return jsonSerializedUTF8(json: SubscriptionViewResponse.sampleData())
         case .uploadThumbnail,
@@ -114,6 +120,11 @@ extension ProjectsAPI: TargetType {
                 "subscriptionPrice": subscriptionPrice
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
+        case .search(let name):
+            let param = [
+                "name": name
+            ]
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .uploadThumbnail(let image),
              .uploadWideThumbnail(let image):
             guard let imageData = image.jpegData(compressionQuality: 1.0) else {

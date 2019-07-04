@@ -63,6 +63,16 @@ public final class Projects {
             })
     }
 
+    public func search(name: String, success successCompletion: ((PageViewResponse<ProjectModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.search(name: name),
+            success: { (response: PageViewResponse<ProjectModel>) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
     public func uploadThumbnail(image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.uploadThumbnail(image: image),
             success: { (response: StorageAttachmentViewResponse) in

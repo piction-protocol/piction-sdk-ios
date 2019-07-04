@@ -207,6 +207,12 @@
 		43CA1D2022A75A4700CEF20A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CD722A5071D00CEF20A /* RxSwift.framework */; };
 		43CA1D2122A75A6000CEF20A /* RxMoya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CDA22A50A3400CEF20A /* RxMoya_ModelMapper.framework */; };
 		43CA1D2222A75A6400CEF20A /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA1CD622A5071D00CEF20A /* RxMoya.framework */; };
+		43E4C43A22CDED26004C4F8A /* LikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4C43922CDED26004C4F8A /* LikeModel.swift */; };
+		43E4C43B22CDED26004C4F8A /* LikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4C43922CDED26004C4F8A /* LikeModel.swift */; };
+		43E4C43C22CDED26004C4F8A /* LikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4C43922CDED26004C4F8A /* LikeModel.swift */; };
+		43E4C43E22CDED74004C4F8A /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4C43D22CDED74004C4F8A /* ContentModel.swift */; };
+		43E4C43F22CDED74004C4F8A /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4C43D22CDED74004C4F8A /* ContentModel.swift */; };
+		43E4C44022CDED74004C4F8A /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4C43D22CDED74004C4F8A /* ContentModel.swift */; };
 		43FC8938229E60BA0074C3D6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8932229E60BA0074C3D6 /* Alamofire.framework */; };
 		43FC8939229E60BA0074C3D6 /* Moya_ModelMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8933229E60BA0074C3D6 /* Moya_ModelMapper.framework */; };
 		43FC893A229E60BA0074C3D6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FC8934229E60BA0074C3D6 /* Result.framework */; };
@@ -349,6 +355,8 @@
 		43CA1CD722A5071D00CEF20A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		43CA1CDA22A50A3400CEF20A /* RxMoya_ModelMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya_ModelMapper.framework; path = Carthage/Build/iOS/RxMoya_ModelMapper.framework; sourceTree = "<group>"; };
 		43CA1D1B22A759DC00CEF20A /* PictionSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PictionSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43E4C43922CDED26004C4F8A /* LikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeModel.swift; sourceTree = "<group>"; };
+		43E4C43D22CDED74004C4F8A /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		43FC8932229E60BA0074C3D6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		43FC8933229E60BA0074C3D6 /* Moya_ModelMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya_ModelMapper.framework; path = Carthage/Build/iOS/Moya_ModelMapper.framework; sourceTree = "<group>"; };
 		43FC8934229E60BA0074C3D6 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -452,6 +460,8 @@
 				432A679C22BC681B009E51FF /* DefaultModel.swift */,
 				432A679E22BC681B009E51FF /* ErrorModel.swift */,
 				432A679F22BC681B009E51FF /* SeriesModel.swift */,
+				43E4C43922CDED26004C4F8A /* LikeModel.swift */,
+				43E4C43D22CDED74004C4F8A /* ContentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1061,9 +1071,11 @@
 				43C1F37D22B77DCA00D17127 /* InjectableViewModel.swift in Sources */,
 				438B0DE422BA318400000122 /* ChangeMyInfoViewModel.swift in Sources */,
 				4381BBB022BB319F007FD7E7 /* Toast.swift in Sources */,
+				43E4C44022CDED74004C4F8A /* ContentModel.swift in Sources */,
 				438B0DB822B8DEBD00000122 /* My.swift in Sources */,
 				432A67C022BC681B009E51FF /* DefaultModel.swift in Sources */,
 				438B0DD422BA11D100000122 /* UserInfoViewController.swift in Sources */,
+				43E4C43C22CDED26004C4F8A /* LikeModel.swift in Sources */,
 				43C1F38122B77E1000D17127 /* InputAppliable.swift in Sources */,
 				432A67C622BC681B009E51FF /* ErrorModel.swift in Sources */,
 				438B0DDB22BA291000000122 /* ChangePasswordViewController.swift in Sources */,
@@ -1128,6 +1140,7 @@
 			files = (
 				432A67C522BC681B009E51FF /* ErrorModel.swift in Sources */,
 				432A67A722BC681B009E51FF /* TransactionModel.swift in Sources */,
+				43E4C43F22CDED74004C4F8A /* ContentModel.swift in Sources */,
 				432A67B922BC681B009E51FF /* PostModel.swift in Sources */,
 				432A67AD22BC681B009E51FF /* AuthenticationModel.swift in Sources */,
 				432A67BF22BC681B009E51FF /* DefaultModel.swift in Sources */,
@@ -1136,6 +1149,7 @@
 				432CAC2822B33F380007EE03 /* SeriesAPI.swift in Sources */,
 				43CA1CFB22A759DC00CEF20A /* Request.swift in Sources */,
 				432A67A122BC681B009E51FF /* StorageAttachmentModel.swift in Sources */,
+				43E4C43B22CDED26004C4F8A /* LikeModel.swift in Sources */,
 				4329EBB622B1E3A900D01916 /* Posts.swift in Sources */,
 				432A67B322BC681B009E51FF /* PageModel.swift in Sources */,
 				432A67CC22BC7B7C009E51FF /* DateExtension.swift in Sources */,
@@ -1170,6 +1184,7 @@
 			files = (
 				43CA1C1522A4EF2300CEF20A /* PictionManager.swift in Sources */,
 				432A67CB22BC7B7C009E51FF /* DateExtension.swift in Sources */,
+				43E4C43E22CDED74004C4F8A /* ContentModel.swift in Sources */,
 				432A67AC22BC681B009E51FF /* AuthenticationModel.swift in Sources */,
 				43CA1C1722A4EF2300CEF20A /* Request.swift in Sources */,
 				43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */,
@@ -1186,6 +1201,7 @@
 				432A67C422BC681B009E51FF /* ErrorModel.swift in Sources */,
 				432A67C722BC681B009E51FF /* SeriesModel.swift in Sources */,
 				432A67B222BC681B009E51FF /* PageModel.swift in Sources */,
+				43E4C43A22CDED26004C4F8A /* LikeModel.swift in Sources */,
 				432CAC0E22B32A2F0007EE03 /* My.swift in Sources */,
 				432A67BE22BC681B009E51FF /* DefaultModel.swift in Sources */,
 				4329EB9022B1D76B00D01916 /* PostsAPI.swift in Sources */,

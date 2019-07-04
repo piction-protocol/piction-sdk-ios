@@ -15,7 +15,12 @@ public enum PostsAPI {
     case create(uri: String, title: String, content: String, cover: String, status: String, membership: String, seriesId: String)
     case get(uri: String, postId: Int)
     case update(uri: String, postId: Int, title: String, content: String, cover: String, status: String, membership: String, seriesId: String)
+    case delete(uri: String, postId: Int)
+    case contents(uri: String, postId: Int)
+    case isLike(uri: String, postId: Int)
     case like(uri: String, postId: Int)
+    case prevPost(uri: String, postId: Int)
+    case nextPost(uri: String, postId: Int)
     case uploadContentImage(uri: String, image: UIImage)
     case uploadCoverImage(uri: String, image: UIImage)
 }
@@ -28,8 +33,17 @@ extension PostsAPI: TargetType {
              .create(let uri, _, _, _, _, _, _):
             return "/projects/\(uri)/posts"
         case .get(let uri, let postId),
-             .update(let uri, let postId, _, _, _, _, _, _):
+             .update(let uri, let postId, _, _, _, _, _, _),
+             .delete(let uri, let postId):
             return "/projects/\(uri)/posts/\(postId)"
+        case .contents(let uri, let postId):
+            return "/projects/\(uri)/posts/\(postId)/contents"
+        case .isLike(let uri, let postId):
+            return "/projects/\(uri)/posts/\(postId)/isLike"
+        case .prevPost(let uri, let postId):
+            return "/projects/\(uri)/posts/\(postId)/previous"
+        case .nextPost(let uri, let postId):
+            return "/projects/\(uri)/posts/\(postId)/next"
         case .uploadContentImage(let uri, _):
             return "/projects/\(uri)/posts/content"
         case .uploadCoverImage(let uri, _):
@@ -41,13 +55,19 @@ extension PostsAPI: TargetType {
     public var method: Moya.Method {
         switch self {
         case .all,
-             .get:
+             .get,
+             .contents,
+             .isLike,
+             .prevPost,
+             .nextPost:
             return .get
         case .create,
              .like:
             return .post
         case .update:
             return .put
+        case .delete:
+            return .delete
         case .uploadContentImage,
              .uploadCoverImage:
             return .patch
@@ -60,8 +80,16 @@ extension PostsAPI: TargetType {
         case .create,
              .get,
              .update,
-             .like:
+             .like,
+             .prevPost,
+             .nextPost:
             return jsonSerializedUTF8(json: PostViewResponse.sampleData())
+        case .delete:
+            return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
+        case .contents:
+            return jsonSerializedUTF8(json: ContentViewResponse.sampleData())
+        case .isLike:
+            return jsonSerializedUTF8(json: LikeViewResponse.sampleData())
         case .uploadContentImage,
              .uploadCoverImage:
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
@@ -87,7 +115,12 @@ extension PostsAPI: TargetType {
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .get,
-             .like:
+             .like,
+             .delete,
+             .contents,
+             .isLike,
+             .prevPost,
+             .nextPost:
             return .requestPlain
         case .uploadContentImage(_, let image),
              .uploadCoverImage(_, let image):

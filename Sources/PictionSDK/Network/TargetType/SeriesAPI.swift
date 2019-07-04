@@ -11,29 +11,29 @@ import Moya
 import UIKit
 
 public enum SeriesAPI {
-    case all(projectId: String)
-    case create(projectId: String, name: String)
-    case sort(projectId: String, seriesIdList: [Int])
-    case get(projectId: String, seriesId: Int)
-    case update(projectId: String, seriesId: Int, name: String)
-    case delete(projectId: String, seriesId: Int)
-    case allSeriesPosts(projectId: String, seriesId: Int)
+    case all(uri: String)
+    case create(uri: String, name: String)
+    case sort(uri: String, seriesIdList: [Int])
+    case get(uri: String, seriesId: Int)
+    case update(uri: String, seriesId: Int, name: String)
+    case delete(uri: String, seriesId: Int)
+    case allSeriesPosts(uri: String, seriesId: Int, page: Int, size: Int)
 }
 
 extension SeriesAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
-        case .all(let projectId),
-             .create(let projectId, _),
-             .sort(let projectId, _):
-            return "/projects/\(projectId)/series"
-        case .get(let projectId, let seriesId),
-             .update(let projectId, let seriesId, _),
-             .delete(let projectId, let seriesId):
-            return "/projects/\(projectId)/series/\(seriesId)"
-        case .allSeriesPosts(let projectId, let seriesId):
-            return "/projects/\(projectId)/series/\(seriesId)/posts"
+        case .all(let uri),
+             .create(let uri, _),
+             .sort(let uri, _):
+            return "/projects/\(uri)/series"
+        case .get(let uri, let seriesId),
+             .update(let uri, let seriesId, _),
+             .delete(let uri, let seriesId):
+            return "/projects/\(uri)/series/\(seriesId)"
+        case .allSeriesPosts(let uri, let seriesId, _, _):
+            return "/projects/\(uri)/series/\(seriesId)/posts"
         }
     }
     public var method: Moya.Method {
@@ -63,15 +63,14 @@ extension SeriesAPI: TargetType {
         case .delete:
             return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
         case .allSeriesPosts:
-            return jsonSerializedUTF8(json: [PostViewResponse.sampleData()])
+            return jsonSerializedUTF8(json: PageViewResponse<PostModel>.sampleData())
         }
     }
     public var task: Task {
         switch self {
         case .all,
              .get,
-             .delete,
-             .allSeriesPosts:
+             .delete:
             return .requestPlain
         case .create(_, let name),
              .update(_, _, let name):
@@ -84,6 +83,12 @@ extension SeriesAPI: TargetType {
                 "seriesIdList": seriesIdList
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
+        case .allSeriesPosts(_, _, let page, let size):
+            let param = [
+                "page": page,
+                "size": size
+            ]
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }
     }
     public var headers: [String: String]? {

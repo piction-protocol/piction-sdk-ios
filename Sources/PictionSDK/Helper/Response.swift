@@ -15,7 +15,9 @@ public protocol Response: Mappable {
 
 extension Response {
     func toJSON(dict: [String: Any?]) throws -> String {
-        let data = try! JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+        guard let data = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted) else {
+            return ""
+        }
         return String.init(data: data, encoding: .utf8) ?? ""
     }
 }

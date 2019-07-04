@@ -13,8 +13,8 @@ public final class Posts {
     static let shared = Posts()
     private init() {}
 
-    public func all(projectId: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostsAPI.all(projectId: projectId, page: page, size: size),
+    public func all(uri: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.all(uri: uri, page: page, size: size),
             success: { (response: PageViewResponse<PostModel>) in
                 successCompletion?(response)
             },
@@ -23,8 +23,8 @@ public final class Posts {
             })
     }
 
-    public func create(projectId: String, title: String, content: String, cover: String, status: String, membership: String, seriesId: String, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostsAPI.create(projectId: projectId, title: title, content: content, cover: cover, status: status, membership: membership, seriesId: seriesId),
+    public func create(uri: String, title: String, content: String, cover: String, status: String, membership: String, seriesId: String, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.create(uri: uri, title: title, content: content, cover: cover, status: status, membership: membership, seriesId: seriesId),
             success: { (response: PostViewResponse) in
                 successCompletion?(response)
             },
@@ -33,8 +33,8 @@ public final class Posts {
             })
     }
 
-    public func get(projectId: String, postId: String, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostsAPI.get(projectId: projectId, postId: postId),
+    public func get(uri: String, postId: Int, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.get(uri: uri, postId: postId),
             success: { (response: PostViewResponse) in
                 successCompletion?(response)
             },
@@ -43,8 +43,8 @@ public final class Posts {
             })
     }
 
-    public func update(projectId: String, postId: String, title: String, content: String, cover: String, status: String, membership: String, seriesId: String, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostsAPI.update(projectId: projectId, postId: postId, title: title, content: content, cover: cover, status: status, membership: membership, seriesId: seriesId),
+    public func update(uri: String, postId: Int, title: String, content: String, cover: String, status: String, membership: String, seriesId: String, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.update(uri: uri, postId: postId, title: title, content: content, cover: cover, status: status, membership: membership, seriesId: seriesId),
             success: { (response: PostViewResponse) in
                 successCompletion?(response)
             },
@@ -53,8 +53,8 @@ public final class Posts {
             })
     }
 
-    public func like(projectId: String, postId: String, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostsAPI.like(projectId: projectId, postId: postId),
+    public func like(uri: String, postId: Int, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.like(uri: uri, postId: postId),
             success: { (response: PostViewResponse) in
                 successCompletion?(response)
             },
@@ -63,8 +63,8 @@ public final class Posts {
             })
     }
 
-    public func uploadContentImage(projectId: String, image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostsAPI.uploadContentImage(projectId: projectId, image: image),
+    public func uploadContentImage(uri: String, image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.uploadContentImage(uri: uri, image: image),
             success: { (response: StorageAttachmentViewResponse) in
                 successCompletion?(response)
             },
@@ -73,8 +73,8 @@ public final class Posts {
             })
     }
 
-    public func uploadCoverImage(projectId: String, image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostsAPI.uploadCoverImage(projectId: projectId, image: image),
+    public func uploadCoverImage(uri: String, image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.uploadCoverImage(uri: uri, image: image),
             success: { (response: StorageAttachmentViewResponse) in
                 successCompletion?(response)
             },

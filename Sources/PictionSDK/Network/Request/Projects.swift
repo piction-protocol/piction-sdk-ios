@@ -33,8 +33,8 @@ public final class Projects {
             })
     }
 
-    public func get(projectId: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.get(projectId: projectId),
+    public func get(uri: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.get(uri: uri),
             success: { (response: ProjectViewResponse) in
                 successCompletion?(response)
             },
@@ -43,8 +43,8 @@ public final class Projects {
             })
     }
 
-    public func update(projectId: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.update(projectId: projectId, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail),
+    public func update(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.update(uri: uri, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail),
             success: { (response: ProjectViewResponse) in
                 successCompletion?(response)
             },
@@ -53,8 +53,8 @@ public final class Projects {
             })
     }
 
-    public func subscription(projectId: String, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.subscription(projectId: projectId),
+    public func subscription(uri: String, subscriptionPrice: Int, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.subscription(uri: uri, subscriptionPrice: subscriptionPrice),
             success: { (response: SubscriptionViewResponse) in
                 successCompletion?(response)
             },
@@ -93,8 +93,8 @@ public final class Projects {
             })
     }
 
-    public func recommendedAdd(projectId: String, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.recommendedAdd(projectId: projectId),
+    public func recommendedAdd(uri: String, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.recommendedAdd(uri: uri),
             success: { (response: DefaultViewResponse) in
                 successCompletion?(response)
             },
@@ -103,8 +103,8 @@ public final class Projects {
             })
     }
 
-    public func recommendedDelete(projectId: String, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.recommendedDelete(projectId: projectId),
+    public func recommendedDelete(uri: String, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.recommendedDelete(uri: uri),
             success: { (response: DefaultViewResponse) in
                 successCompletion?(response)
             },

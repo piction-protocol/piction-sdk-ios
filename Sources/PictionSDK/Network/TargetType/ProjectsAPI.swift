@@ -13,14 +13,14 @@ import UIKit
 public enum ProjectsAPI {
     case all
     case create(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
-    case get(projectId: String)
-    case update(projectId: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
-    case subscription(projectId: String)
+    case get(uri: String)
+    case update(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
+    case subscription(uri: String, subscriptionPrice: Int)
     case uploadThumbnail(image: UIImage)
     case uploadWideThumbnail(image: UIImage)
     case recommendedAll
-    case recommendedAdd(projectId: String)
-    case recommendedDelete(projectId: String)
+    case recommendedAdd(uri: String)
+    case recommendedDelete(uri: String)
 }
 
 extension ProjectsAPI: TargetType {
@@ -30,20 +30,20 @@ extension ProjectsAPI: TargetType {
         case .all,
              .create:
             return "/projects"
-        case .get(let projectId),
-             .update(let projectId, _, _, _, _):
-            return "/projects/\(projectId)"
-        case .subscription(let projectId):
-            return "/projects/\(projectId)/subscription"
+        case .get(let uri),
+             .update(let uri, _, _, _, _):
+            return "/projects/\(uri)"
+        case .subscription(let uri, _):
+            return "/projects/\(uri)/subscription"
         case .uploadThumbnail:
             return "/projects/thumbnail"
         case .uploadWideThumbnail:
             return "/projects/wide-thumbnail"
         case .recommendedAll:
             return "/recommended-projects"
-        case .recommendedAdd(let projectId),
-             .recommendedDelete(let projectId):
-            return "/recommended-projects/\(projectId)"
+        case .recommendedAdd(let uri),
+             .recommendedDelete(let uri):
+            return "/recommended-projects/\(uri)"
         }
     }
     public var method: Moya.Method {
@@ -97,7 +97,6 @@ extension ProjectsAPI: TargetType {
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .all,
              .get,
-             .subscription,
              .recommendedAll,
              .recommendedAdd,
              .recommendedDelete:
@@ -108,6 +107,11 @@ extension ProjectsAPI: TargetType {
                 "synopsis": synopsis,
                 "thumbnail": thumbnail,
                 "wideThumbnail": wideThumbnail
+            ]
+            return .requestParameters(parameters: param, encoding: JSONEncoding.default)
+        case .subscription(_, let subscriptionPrice):
+            let param = [
+                "subscriptionPrice": subscriptionPrice
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .uploadThumbnail(let image),

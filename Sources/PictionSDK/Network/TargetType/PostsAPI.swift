@@ -11,31 +11,31 @@ import Moya
 import UIKit
 
 public enum PostsAPI {
-    case all(projectId: String, page: Int, size: Int)
-    case create(projectId: String, title: String, content: String, cover: String, status: String, membership: String, seriesId: String)
-    case get(projectId: String, postId: String)
-    case update(projectId: String, postId: String, title: String, content: String, cover: String, status: String, membership: String, seriesId: String)
-    case like(projectId: String, postId: String)
-    case uploadContentImage(projectId: String, image: UIImage)
-    case uploadCoverImage(projectId: String, image: UIImage)
+    case all(uri: String, page: Int, size: Int)
+    case create(uri: String, title: String, content: String, cover: String, status: String, membership: String, seriesId: String)
+    case get(uri: String, postId: Int)
+    case update(uri: String, postId: Int, title: String, content: String, cover: String, status: String, membership: String, seriesId: String)
+    case like(uri: String, postId: Int)
+    case uploadContentImage(uri: String, image: UIImage)
+    case uploadCoverImage(uri: String, image: UIImage)
 }
 
 extension PostsAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
-        case .all(let projectId, _, _),
-             .create(let projectId, _, _, _, _, _, _):
-            return "/projects/\(projectId)/posts"
-        case .get(let projectId, let postId),
-             .update(let projectId, let postId, _, _, _, _, _, _):
-            return "/projects/\(projectId)/posts/\(postId)"
-        case .uploadContentImage(let projectId, _):
-            return "/projects/\(projectId)/posts/content"
-        case .uploadCoverImage(let projectId, _):
-            return "/projects/\(projectId)/posts/cover"
-        case .like(let projectId, let postId):
-            return "/projects/\(projectId)/posts/\(postId)/like"
+        case .all(let uri, _, _),
+             .create(let uri, _, _, _, _, _, _):
+            return "/projects/\(uri)/posts"
+        case .get(let uri, let postId),
+             .update(let uri, let postId, _, _, _, _, _, _):
+            return "/projects/\(uri)/posts/\(postId)"
+        case .uploadContentImage(let uri, _):
+            return "/projects/\(uri)/posts/content"
+        case .uploadCoverImage(let uri, _):
+            return "/projects/\(uri)/posts/cover"
+        case .like(let uri, let postId):
+            return "/projects/\(uri)/posts/\(postId)/like"
         }
     }
     public var method: Moya.Method {

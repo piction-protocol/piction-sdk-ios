@@ -12,8 +12,8 @@ public final class Series {
     static let shared = Series()
     private init() {}
 
-    public func all(projectId: String, success successCompletion: (([SeriesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SeriesAPI.all(projectId: projectId),
+    public func all(uri: String, success successCompletion: (([SeriesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.all(uri: uri),
             success: { (response: [SeriesViewResponse]) in
                 successCompletion?(response)
             },
@@ -22,8 +22,8 @@ public final class Series {
             })
     }
 
-    public func create(projectId: String, name: String, success successCompletion: ((SeriesViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SeriesAPI.create(projectId: projectId, name: name),
+    public func create(uri: String, name: String, success successCompletion: ((SeriesViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.create(uri: uri, name: name),
             success: { (response: SeriesViewResponse) in
                 successCompletion?(response)
             },
@@ -32,8 +32,8 @@ public final class Series {
             })
     }
 
-    public func sort(projectId: String, seriesIdList: [Int], success successCompletion: (([SeriesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SeriesAPI.sort(projectId: projectId, seriesIdList: seriesIdList),
+    public func sort(uri: String, seriesIdList: [Int], success successCompletion: (([SeriesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.sort(uri: uri, seriesIdList: seriesIdList),
             success: { (response: [SeriesViewResponse]) in
                 successCompletion?(response)
             },
@@ -42,8 +42,8 @@ public final class Series {
             })
     }
 
-    public func get(projectId: String, seriesId: Int, success successCompletion: ((SeriesViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SeriesAPI.get(projectId: projectId, seriesId: seriesId),
+    public func get(uri: String, seriesId: Int, success successCompletion: ((SeriesViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.get(uri: uri, seriesId: seriesId),
             success: { (response: SeriesViewResponse) in
                 successCompletion?(response)
             },
@@ -52,8 +52,8 @@ public final class Series {
             })
     }
 
-    public func update(projectId: String, seriesId: Int, name: String, success successCompletion: ((SeriesViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SeriesAPI.update(projectId: projectId, seriesId: seriesId, name: name),
+    public func update(uri: String, seriesId: Int, name: String, success successCompletion: ((SeriesViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.update(uri: uri, seriesId: seriesId, name: name),
             success: { (response: SeriesViewResponse) in
                 successCompletion?(response)
             },
@@ -62,8 +62,8 @@ public final class Series {
             })
     }
 
-    public func delete(projectId: String, seriesId: Int, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SeriesAPI.delete(projectId: projectId, seriesId: seriesId),
+    public func delete(uri: String, seriesId: Int, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.delete(uri: uri, seriesId: seriesId),
             success: { (response: DefaultViewResponse) in
                 successCompletion?(response)
             },
@@ -72,9 +72,9 @@ public final class Series {
             })
     }
 
-    public func allSeriesPosts(projectId: String, seriesId: Int, success successCompletion: (([PostViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SeriesAPI.allSeriesPosts(projectId: projectId, seriesId: seriesId),
-            success: { (response: [PostViewResponse]) in
+    public func allSeriesPosts(uri: String, seriesId: Int, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.allSeriesPosts(uri: uri, seriesId: seriesId, page: page, size: size),
+            success: { (response: PageViewResponse<PostModel>) in
                 successCompletion?(response)
             },
             failure: { error in

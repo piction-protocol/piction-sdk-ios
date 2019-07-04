@@ -14,8 +14,9 @@ public typealias PostViewResponse = PostModel
 public struct PostModel: Response {
     public let content: String?
     public let cover: String?
-    public let createdAt: Date
-    public let id: String?
+    public let createdAt: Date?
+    public let id: Int?
+    public let like: Bool?
     public let likeCount: Int?
     public let requiredSubscription: Bool?
     public let series: SeriesModel?
@@ -24,8 +25,9 @@ public struct PostModel: Response {
     public init(map: Mapper) throws {
         content = map.optionalFrom("content")
         cover = map.optionalFrom("cover")
-        createdAt = try map.from("createdAt")
+        createdAt = map.optionalFrom("createdAt")
         id = map.optionalFrom("id")
+        like = map.optionalFrom("like")
         likeCount = map.optionalFrom("likeCount")
         requiredSubscription = map.optionalFrom("requiredSubscription")
         series = map.optionalFrom("series")
@@ -42,6 +44,7 @@ public struct PostModel: Response {
             "cover": cover,
             "createdAt": createdAt,
             "id": id,
+            "like": like,
             "likeCount": likeCount,
             "requiredSubscription": requiredSubscription,
             "series": series?.toDict(),
@@ -56,7 +59,8 @@ extension PostModel {
             "content": "content",
             "cover": "string",
             "createdAt": "2019-06-20T09:27:53.127+0000",
-            "id": "id",
+            "id": 0,
+            "like": false,
             "likeCount": 0,
             "requiredSubscription": true,
             "series": SeriesModel.sampleData(),

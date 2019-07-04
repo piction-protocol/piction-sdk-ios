@@ -13,8 +13,8 @@ public final class Users {
     static let shared = Users()
     private init() {}
 
-    public func signup(email: String, username: String, password: String, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(UsersAPI.signup(email: email, username: username, password: password),
+    public func signup(loginId: String, email: String, username: String, password: String, passwordCheck: String, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(UsersAPI.signup(loginId: loginId, email: email, username: username, password: password, passwordCheck: passwordCheck),
             success: { (response: AuthenticationViewResponse) in
                 successCompletion?(response)
             },
@@ -43,8 +43,8 @@ public final class Users {
             })
     }
 
-    public func updatePassword(password: String, newPassword: String, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(UsersAPI.updatePassword(password: password, newPassword: newPassword),
+    public func updatePassword(password: String, newPassword: String, passwordCheck: String, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(UsersAPI.updatePassword(password: password, newPassword: newPassword, passwordCheck: passwordCheck),
             success: { (response: AuthenticationViewResponse) in
                 successCompletion?(response)
             },

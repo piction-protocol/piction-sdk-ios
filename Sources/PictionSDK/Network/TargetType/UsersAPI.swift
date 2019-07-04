@@ -11,10 +11,10 @@ import Moya
 import UIKit
 
 public enum UsersAPI {
-    case signup(email: String, username: String, password: String)
+    case signup(loginId: String, email: String, username: String, password: String, passwordCheck: String)
     case me
     case update(email: String, username: String, password: String, picture: String?)
-    case updatePassword(password: String, newPassword: String)
+    case updatePassword(password: String, newPassword: String, passwordCheck: String)
     case uploadPicture(image: UIImage)
 }
 
@@ -61,11 +61,13 @@ extension UsersAPI: TargetType {
     }
     public var task: Task {
         switch self {
-        case .signup(let email, let username, let password):
+        case .signup(let loginId, let email, let username, let password, let passwordCheck):
             let param = [
+                "loginId": loginId,
                 "email": email,
                 "username": username,
-                "password": password
+                "password": password,
+                "passwordCheck": passwordCheck
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .me:
@@ -78,10 +80,11 @@ extension UsersAPI: TargetType {
                 "picture": picture
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
-        case .updatePassword(let password, let newPassword):
+        case .updatePassword(let password, let newPassword, let passwordCheck):
             let param = [
                 "password": password,
-                "newPassword": newPassword
+                "newPassword": newPassword,
+                "passwordCheck": passwordCheck
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .uploadPicture(let image):

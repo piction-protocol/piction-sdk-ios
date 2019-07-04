@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 public enum SessionsAPI {
-    case create(email: String, password: String)
+    case create(loginId: String, password: String, rememberme: Bool)
     case delete
 }
 
@@ -40,10 +40,11 @@ extension SessionsAPI: TargetType {
     }
     public var task: Task {
         switch self {
-        case .create(let email, let password):
-            let param = [
-                "email": email,
-                "password": password
+        case .create(let loginId, let password, let rememberme):
+            let param: [String : Any] = [
+                "loginId": loginId,
+                "password": password,
+                "rememberme": rememberme
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .delete:

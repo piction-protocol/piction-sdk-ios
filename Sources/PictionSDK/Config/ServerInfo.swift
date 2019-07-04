@@ -9,10 +9,10 @@
 import Foundation
 
 final class ServerInfo {
-    static let apiUrl = "api-iro.piction.network"
+    static let apiUrl = "api-stg.piction.network"
 
     static var baseApiUrl: String {
-        return "http://\(apiUrl)"
+        return "https://\(apiUrl)"
     }
 
     static func getCustomHeader() -> [String: String] {

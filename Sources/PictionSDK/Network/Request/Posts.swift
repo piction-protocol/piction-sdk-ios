@@ -63,8 +63,8 @@ public final class Posts {
             })
     }
 
-    public func contents(uri: String, postId: Int, success successCompletion: ((ContentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostsAPI.contents(uri: uri, postId: postId),
+    public func content(uri: String, postId: Int, success successCompletion: ((ContentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.content(uri: uri, postId: postId),
             success: { (response: ContentViewResponse) in
                 successCompletion?(response)
             },

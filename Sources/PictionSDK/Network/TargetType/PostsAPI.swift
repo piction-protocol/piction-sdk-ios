@@ -16,7 +16,7 @@ public enum PostsAPI {
     case get(uri: String, postId: Int)
     case update(uri: String, postId: Int, title: String, content: String, cover: String, status: String, membership: String, seriesId: String)
     case delete(uri: String, postId: Int)
-    case contents(uri: String, postId: Int)
+    case content(uri: String, postId: Int)
     case isLike(uri: String, postId: Int)
     case like(uri: String, postId: Int)
     case prevPost(uri: String, postId: Int)
@@ -36,8 +36,8 @@ extension PostsAPI: TargetType {
              .update(let uri, let postId, _, _, _, _, _, _),
              .delete(let uri, let postId):
             return "/projects/\(uri)/posts/\(postId)"
-        case .contents(let uri, let postId):
-            return "/projects/\(uri)/posts/\(postId)/contents"
+        case .content(let uri, let postId):
+            return "/projects/\(uri)/posts/\(postId)/content"
         case .isLike(let uri, let postId):
             return "/projects/\(uri)/posts/\(postId)/isLike"
         case .prevPost(let uri, let postId):
@@ -56,7 +56,7 @@ extension PostsAPI: TargetType {
         switch self {
         case .all,
              .get,
-             .contents,
+             .content,
              .isLike,
              .prevPost,
              .nextPost:
@@ -86,7 +86,7 @@ extension PostsAPI: TargetType {
             return jsonSerializedUTF8(json: PostViewResponse.sampleData())
         case .delete:
             return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
-        case .contents:
+        case .content:
             return jsonSerializedUTF8(json: ContentViewResponse.sampleData())
         case .isLike:
             return jsonSerializedUTF8(json: LikeViewResponse.sampleData())
@@ -117,7 +117,7 @@ extension PostsAPI: TargetType {
         case .get,
              .like,
              .delete,
-             .contents,
+             .content,
              .isLike,
              .prevPost,
              .nextPost:

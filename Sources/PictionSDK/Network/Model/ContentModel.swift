@@ -11,7 +11,7 @@ import Mapper
 public typealias ContentViewResponse = ContentModel
 
 public struct ContentModel: Response {
-    public let content: Bool?
+    public let content: String?
 
     public init(map: Mapper) throws {
         content = map.optionalFrom("content")

@@ -15,6 +15,7 @@ public enum ProjectsAPI {
     case create(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
     case get(uri: String)
     case update(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
+    case isSubscribing(uri: String)
     case subscription(uri: String, subscriptionPrice: Int)
     case search(name: String)
     case uploadThumbnail(image: UIImage)
@@ -34,7 +35,8 @@ extension ProjectsAPI: TargetType {
         case .get(let uri),
              .update(let uri, _, _, _, _):
             return "/projects/\(uri)"
-        case .subscription(let uri, _):
+        case .subscription(let uri, _),
+             .isSubscribing(let uri):
             return "/projects/\(uri)/subscription"
         case .search:
             return "/projects/search"
@@ -53,6 +55,7 @@ extension ProjectsAPI: TargetType {
         switch self {
         case .all,
              .get,
+             .isSubscribing,
              .search,
              .recommendedAll:
             return .get
@@ -80,7 +83,8 @@ extension ProjectsAPI: TargetType {
             return jsonSerializedUTF8(json: ProjectViewResponse.sampleData())
         case .search:
             return jsonSerializedUTF8(json: PageViewResponse<ProjectModel>.sampleData())
-        case .subscription:
+        case .subscription,
+             .isSubscribing:
             return jsonSerializedUTF8(json: SubscriptionViewResponse.sampleData())
         case .uploadThumbnail,
              .uploadWideThumbnail:
@@ -103,6 +107,7 @@ extension ProjectsAPI: TargetType {
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .all,
              .get,
+             .isSubscribing,
              .recommendedAll,
              .recommendedAdd,
              .recommendedDelete:

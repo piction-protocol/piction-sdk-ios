@@ -53,6 +53,16 @@ public final class Projects {
             })
     }
 
+    public func isSubscription(uri: String, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.isSubscribing(uri: uri),
+            success: { (response: SubscriptionViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
     public func subscription(uri: String, subscriptionPrice: Int, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.subscription(uri: uri, subscriptionPrice: subscriptionPrice),
             success: { (response: SubscriptionViewResponse) in

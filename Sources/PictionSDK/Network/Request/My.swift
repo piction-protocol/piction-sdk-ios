@@ -42,8 +42,8 @@ public final class My {
             })
     }
 
-    public func sales(salesMonth: Int, salesYear: Int, success successCompletion: (([SalesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(MyAPI.sales(salesMonth: salesMonth, salesYear: salesYear),
+    public func sales(salesYear: Int, salesMonth: Int, success successCompletion: (([SalesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(MyAPI.sales(salesYear: salesYear, salesMonth: salesMonth),
             success: { (response: [SalesViewResponse]) in
                 successCompletion?(response)
             },

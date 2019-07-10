@@ -8,13 +8,12 @@
 
 import Foundation
 import Moya
-import UIKit
 
 public enum MyAPI {
     case projects
     case transactions(page: Int, size: Int)
     case wallet
-    case sales(salesMonth: Int, salesYear: Int)
+    case sales(salesYear: Int, salesMonth: Int)
     case subscription(page: Int, size: Int)
 }
 
@@ -70,12 +69,12 @@ extension MyAPI: TargetType {
                 "size": size
             ]
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
-        case .sales(let salesMonth, let salesYear):
+        case .sales(let salesYear, let salesMonth):
             let param = [
-                "salesMonth": salesMonth,
-                "salesYear": salesYear
+                "salesYear": salesYear,
+                "salesMonth": salesMonth
             ]
-            return .requestParameters(parameters: param, encoding: JSONEncoding.default)
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }
     }
     public var headers: [String: String]? {

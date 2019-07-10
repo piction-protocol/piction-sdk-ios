@@ -23,8 +23,8 @@ public final class Projects {
             })
     }
 
-    public func create(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.create(uri: uri, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail),
+    public func create(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, subscriptionPrice: Int, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.create(uri: uri, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail, subscriptionPrice: subscriptionPrice),
             success: { (response: ProjectViewResponse) in
                 successCompletion?(response)
             },
@@ -43,8 +43,8 @@ public final class Projects {
             })
     }
 
-    public func update(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.update(uri: uri, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail),
+    public func update(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, subscriptionPrice: Int, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.update(uri: uri, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail, subscriptionPrice: subscriptionPrice),
             success: { (response: ProjectViewResponse) in
                 successCompletion?(response)
             },
@@ -53,7 +53,7 @@ public final class Projects {
             })
     }
 
-    public func isSubscription(uri: String, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func isSubscribing(uri: String, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.isSubscribing(uri: uri),
             success: { (response: SubscriptionViewResponse) in
                 successCompletion?(response)

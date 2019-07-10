@@ -12,9 +12,9 @@ import UIKit
 
 public enum ProjectsAPI {
     case all
-    case create(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
+    case create(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, subscriptionPrice: Int)
     case get(uri: String)
-    case update(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String)
+    case update(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, subscriptionPrice: Int)
     case isSubscribing(uri: String)
     case subscription(uri: String, subscriptionPrice: Int)
     case search(name: String)
@@ -30,7 +30,7 @@ extension ProjectsAPI: TargetType {
              .create:
             return "/projects"
         case .get(let uri),
-             .update(let uri, _, _, _, _):
+             .update(let uri, _, _, _, _, _):
             return "/projects/\(uri)"
         case .subscription(let uri, _),
              .isSubscribing(let uri):
@@ -80,26 +80,28 @@ extension ProjectsAPI: TargetType {
     }
     public var task: Task {
         switch self {
-        case .create(let uri, let title, let synopsis, let thumbnail, let wideThumbnail):
-            let param = [
+        case .create(let uri, let title, let synopsis, let thumbnail, let wideThumbnail, let subscriptionPrice):
+            let param: [String : Any] = [
                 "uri": uri,
                 "title": title,
                 "synopsis": synopsis,
                 "thumbnail": thumbnail,
-                "wideThumbnail": wideThumbnail
-            ]
+                "wideThumbnail": wideThumbnail,
+                "subscriptionPrice": subscriptionPrice
+                ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .all,
              .get,
              .isSubscribing:
             return .requestPlain
-        case .update(_, let title, let synopsis, let thumbnail, let wideThumbnail):
-            let param = [
+        case .update(_, let title, let synopsis, let thumbnail, let wideThumbnail, let subscriptionPrice):
+            let param: [String : Any] = [
                 "title": title,
                 "synopsis": synopsis,
                 "thumbnail": thumbnail,
-                "wideThumbnail": wideThumbnail
-            ]
+                "wideThumbnail": wideThumbnail,
+                "subscriptionPrice": subscriptionPrice
+                ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .subscription(_, let subscriptionPrice):
             let param = [

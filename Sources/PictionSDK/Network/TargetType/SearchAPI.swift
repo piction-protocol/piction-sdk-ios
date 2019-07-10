@@ -8,11 +8,10 @@
 
 import Foundation
 import Moya
-import UIKit
 
 public enum SearchAPI {
     case project(name: String, page: Int, size: Int)
-    case writer(name: String, page: Int, size: Int)
+    case writer(writer: String, page: Int, size: Int)
 }
 
 extension SearchAPI: TargetType {
@@ -42,13 +41,19 @@ extension SearchAPI: TargetType {
     }
     public var task: Task {
         switch self {
-        case .project(let name, let page, let size),
-             .writer(let name, let page, let size):
-            let param = [
+        case .project(let name, let page, let size):
+            let param: [String : Any] = [
                 "name": name,
                 "page": page,
                 "size": size
-                ] as [String : Any]
+                ]
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
+        case .writer(let writer, let page, let size):
+            let param: [String : Any] = [
+                "writer": writer,
+                "page": page,
+                "size": size
+            ]
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }
     }

@@ -15,7 +15,7 @@ public enum UsersAPI {
     case signup(loginId: String, email: String, username: String, password: String, passwordCheck: String)
     case findOne(id: Int)
     case me
-    case update(email: String, username: String, password: String, picture: String?)
+    case update(username: String, password: String, picture: String?)
     case updatePassword(password: String, newPassword: String, passwordCheck: String)
     case uploadPicture(image: UIImage)
 }
@@ -84,9 +84,8 @@ extension UsersAPI: TargetType {
                 "passwordCheck": passwordCheck
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
-        case .update(let email, let username, let password, let picture):
-            let param = [
-                "email": email,
+        case .update(let username, let password, let picture):
+            let param: [String : Any] = [
                 "username": username,
                 "password": password,
                 "picture": picture

@@ -1,15 +1,15 @@
 //
-//  PostsLikeViewController.swift
+//  PostsDeleteViewController.swift
 //  Piction-SDK-iOS-Example
 //
-//  Created by jhseo on 14/06/2019.
+//  Created by jhseo on 10/07/2019.
 //  Copyright © 2019 Piction Network. All rights reserved.
 //
 
 import UIKit
 import PictionSDK
 
-class PostsLikeViewController: UIViewController {
+class PostsDeleteViewController: UIViewController {
     @IBOutlet weak var uriTextField: UITextField!
     @IBOutlet weak var postIdTextField: UITextField!
 
@@ -29,14 +29,15 @@ class PostsLikeViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.posts.like(uri: uriTextField.text ?? "", postId: Int(postIdTextField.text ?? "0") ?? 0,
+        PictionSDK.posts.delete(uri: uriTextField.text ?? "", postId: Int(postIdTextField.text ?? "0") ?? 0,
             success: { response in
-                self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
-                self.isLoading = false
+               self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
+               self.isLoading = false
             },
             failure: { error in
-                self.responseTextView.text = String(describing: error)
-                self.isLoading = false
+               self.responseTextView.text = String(describing: error)
+               self.isLoading = false
             })
     }
 }
+

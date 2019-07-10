@@ -24,7 +24,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KvE-5Y-rYU">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="projectId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99l-c8-hYd">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99l-c8-hYd">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="kOU-71-b4G"/>
@@ -60,7 +60,7 @@
                                                 <rect key="frame" x="165" y="0.0" width="189" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -139,8 +139,8 @@
                         <outlet property="activityIndicator" destination="7rA-lv-aYM" id="gep-5j-bbx"/>
                         <outlet property="executeButton" destination="rdE-DV-wyq" id="oXx-TJ-vdX"/>
                         <outlet property="postIdTextField" destination="1wi-cF-gbx" id="wnn-bx-0hr"/>
-                        <outlet property="projectIdTextField" destination="ztj-aw-vK4" id="VTa-uI-v69"/>
                         <outlet property="responseTextView" destination="a80-Ml-Vcx" id="9PZ-D1-dzZ"/>
+                        <outlet property="uriTextField" destination="ztj-aw-vK4" id="jVY-KF-epm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Emo-4Y-pJn" userLabel="First Responder" sceneMemberID="firstResponder"/>

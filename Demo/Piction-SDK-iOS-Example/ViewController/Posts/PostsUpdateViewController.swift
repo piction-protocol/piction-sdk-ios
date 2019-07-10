@@ -10,13 +10,12 @@ import UIKit
 import PictionSDK
 
 class PostsUpdateViewController: UIViewController {
-    @IBOutlet weak var projectIdTextField: UITextField!
+    @IBOutlet weak var uriTextField: UITextField!
     @IBOutlet weak var postIdTextField: UITextField!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextField: UITextField!
     @IBOutlet weak var coverTextField: UITextField!
-    @IBOutlet weak var statusTextField: UITextField!
-    @IBOutlet weak var membershipTextField: UITextField!
+    @IBOutlet weak var requiredSubscriptionTextField: UITextField!
     @IBOutlet weak var seriesIdTextField: UITextField!
 
     @IBOutlet weak var responseTextView: UITextView!
@@ -35,7 +34,7 @@ class PostsUpdateViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.posts.update(projectId: projectIdTextField.text ?? "", postId: postIdTextField.text ?? "", title: titleTextField.text ?? "", content: contentTextField.text ?? "", cover: coverTextField.text ?? "", status: statusTextField.text ?? "", membership: membershipTextField.text ?? "", seriesId: seriesIdTextField.text ?? "",
+        PictionSDK.posts.update(uri: uriTextField.text ?? "", postId: Int(postIdTextField.text ?? "0") ?? 0, title: titleTextField.text ?? "", content: contentTextField.text ?? "", cover: coverTextField.text ?? "", requiredSubscription: Bool(requiredSubscriptionTextField.text ?? "false") ?? false, seriesId: seriesIdTextField.text ?? "",
             success: { response in
                 self.responseTextView.text = String(describing: response)
                 self.isLoading = false
@@ -60,27 +59,35 @@ class PostsUpdateViewController: UIViewController {
 
         let okAction = UIAlertAction(title: "OK", style: .default, handler: { action in
 
-            let inputProjectId = alert.textFields?.first?.text ?? ""
-            let inputPostId = alert.textFields?.last?.text ?? ""
+            let inputUri = alert.textFields?.first?.text ?? ""
+            let inputPostId = alert.textFields?.last?.text ?? "0"
 
             self.responseTextView.text = ""
             self.isLoading = true
-            PictionSDK.posts.get(projectId: inputProjectId, postId: inputPostId,
+            PictionSDK.posts.get(uri: inputUri, postId: Int(inputPostId) ?? 0,
                 success: { response in
-                    self.projectIdTextField.text = inputProjectId
+                    self.uriTextField.text = inputUri
                     self.postIdTextField.text = inputPostId
                     self.titleTextField.text = response.title
-                    self.contentTextField.text = response.content
-                    self.statusTextField.text = response.status
+                    self.requiredSubscriptionTextField.text = String(response.requiredSubscription ?? false)
                     self.seriesIdTextField.text = String(response.series?.id ?? 0)
                     self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                     self.isLoading = false
-            },
+                },
                 failure: { error in
                     self.responseTextView.text = String(describing: error)
                     self.isLoading = false
-            })
+                })
 
+            PictionSDK.posts.content(uri: inputUri, postId: Int(inputPostId) ?? 0,
+                success: { response in
+                    self.contentTextField.text = response.content
+                    self.isLoading = false
+                },
+                failure: { error in
+                    self.responseTextView.text = String(describing: error)
+                    self.isLoading = false
+                })
         })
         alert.addAction(okAction)
 
@@ -91,9 +98,6 @@ class PostsUpdateViewController: UIViewController {
         alert.addTextField(configurationHandler: configurationPostIdTextField)
 
         present(alert, animated: false, completion: nil)
-
-        self.isLoading = true
-
     }
 
     private func configurationProjectIdTextField(textField: UITextField!){

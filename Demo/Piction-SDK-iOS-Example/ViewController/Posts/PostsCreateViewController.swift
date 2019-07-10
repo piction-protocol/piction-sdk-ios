@@ -10,12 +10,11 @@ import UIKit
 import PictionSDK
 
 class PostsCreateViewController: UIViewController {
-    @IBOutlet weak var projectIdTextField: UITextField!
+    @IBOutlet weak var uriTextField: UITextField!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextField: UITextField!
     @IBOutlet weak var coverTextField: UITextField!
-    @IBOutlet weak var statusTextField: UITextField!
-    @IBOutlet weak var membershipTextField: UITextField!
+    @IBOutlet weak var requiredSubscriptionTextField: UITextField!
     @IBOutlet weak var seriesIdTextField: UITextField!
 
     @IBOutlet weak var responseTextView: UITextView!
@@ -34,7 +33,7 @@ class PostsCreateViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.posts.create(projectId: projectIdTextField.text ?? "", title: titleTextField.text ?? "", content: contentTextField.text ?? "", cover: coverTextField.text ?? "", status: statusTextField.text ?? "", membership: membershipTextField.text ?? "", seriesId: seriesIdTextField.text ?? "",
+        PictionSDK.posts.create(uri: uriTextField.text ?? "", title: titleTextField.text ?? "", content: contentTextField.text ?? "", cover: coverTextField.text ?? "", requiredSubscription: Bool(requiredSubscriptionTextField.text ?? "false") ?? false, seriesId: seriesIdTextField.text ?? "",
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false

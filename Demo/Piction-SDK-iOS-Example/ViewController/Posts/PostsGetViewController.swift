@@ -10,7 +10,7 @@ import UIKit
 import PictionSDK
 
 class PostsGetViewController: UIViewController {
-    @IBOutlet weak var projectIdTextField: UITextField!
+    @IBOutlet weak var uriTextField: UITextField!
     @IBOutlet weak var postIdTextField: UITextField!
 
     @IBOutlet weak var responseTextView: UITextView!
@@ -29,7 +29,7 @@ class PostsGetViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.posts.get(projectId: projectIdTextField.text ?? "", postId: postIdTextField.text ?? "",
+        PictionSDK.posts.get(uri: uriTextField.text ?? "", postId: Int(postIdTextField.text ?? "0") ?? 0,
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false

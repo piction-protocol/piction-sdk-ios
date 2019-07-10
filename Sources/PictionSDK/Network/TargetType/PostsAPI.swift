@@ -11,10 +11,10 @@ import Moya
 import UIKit
 
 public enum PostsAPI {
-    case all(uri: String, page: Int, size: Int)
-    case create(uri: String, title: String, content: String, cover: String, status: String, membership: String, seriesId: String)
+    case all(uri: String, isFree: Bool?, page: Int, size: Int)
+    case create(uri: String, title: String, content: String, cover: String, requiredSubscription: Bool, seriesId: String)
     case get(uri: String, postId: Int)
-    case update(uri: String, postId: Int, title: String, content: String, cover: String, status: String, membership: String, seriesId: String)
+    case update(uri: String, postId: Int, title: String, content: String, cover: String, requiredSubscription: Bool, seriesId: String)
     case delete(uri: String, postId: Int)
     case content(uri: String, postId: Int)
     case isLike(uri: String, postId: Int)
@@ -29,11 +29,11 @@ extension PostsAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
-        case .all(let uri, _, _),
-             .create(let uri, _, _, _, _, _, _):
+        case .all(let uri, _, _, _),
+             .create(let uri, _, _, _, _, _):
             return "/projects/\(uri)/posts"
         case .get(let uri, let postId),
-             .update(let uri, let postId, _, _, _, _, _, _),
+             .update(let uri, let postId, _, _, _, _, _),
              .delete(let uri, let postId):
             return "/projects/\(uri)/posts/\(postId)"
         case .content(let uri, let postId):
@@ -97,20 +97,21 @@ extension PostsAPI: TargetType {
     }
     public var task: Task {
         switch self {
-        case .all(_, let page, let size):
-            let param = [
-                "page": page,
-                "size": size
-            ]
+        case .all(_, let isFree, let page, let size):
+            var param: [String: Any] = [:]
+            if isFree != nil {
+                param["isFree"] = isFree
+            }
+            param["page"] = page
+            param["size"] = size
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
-        case .create(_, let title, let content, let cover, let status, let membership, let seriesId),
-             .update(_, _, let title, let content, let cover, let status, let membership, let seriesId):
-            let param = [
+        case .create(_, let title, let content, let cover, let requiredSubscription, let seriesId),
+             .update(_, _, let title, let content, let cover, let requiredSubscription, let seriesId):
+            let param: [String : Any] = [
                 "title": title,
                 "content": content,
                 "cover": cover,
-                "status": status,
-                "membership": membership,
+                "requiredSubscription": requiredSubscription,
                 "seriesId": seriesId
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)

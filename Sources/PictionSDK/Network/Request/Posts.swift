@@ -13,8 +13,8 @@ public final class Posts {
     static let shared = Posts()
     private init() {}
 
-    public func all(uri: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostsAPI.all(uri: uri, page: page, size: size),
+    public func all(uri: String, isFree: Bool?, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.all(uri: uri, isFree: isFree, page: page, size: size),
             success: { (response: PageViewResponse<PostModel>) in
                 successCompletion?(response)
             },
@@ -23,8 +23,8 @@ public final class Posts {
             })
     }
 
-    public func create(uri: String, title: String, content: String, cover: String, status: String, membership: String, seriesId: String, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostsAPI.create(uri: uri, title: title, content: content, cover: cover, status: status, membership: membership, seriesId: seriesId),
+    public func create(uri: String, title: String, content: String, cover: String, requiredSubscription: Bool, seriesId: String, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.create(uri: uri, title: title, content: content, cover: cover, requiredSubscription: requiredSubscription, seriesId: seriesId),
             success: { (response: PostViewResponse) in
                 successCompletion?(response)
             },
@@ -43,8 +43,8 @@ public final class Posts {
             })
     }
 
-    public func update(uri: String, postId: Int, title: String, content: String, cover: String, status: String, membership: String, seriesId: String, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostsAPI.update(uri: uri, postId: postId, title: title, content: content, cover: cover, status: status, membership: membership, seriesId: seriesId),
+    public func update(uri: String, postId: Int, title: String, content: String, cover: String, requiredSubscription: Bool, seriesId: String, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.update(uri: uri, postId: postId, title: title, content: content, cover: cover, requiredSubscription: requiredSubscription, seriesId: seriesId),
             success: { (response: PostViewResponse) in
                 successCompletion?(response)
             },

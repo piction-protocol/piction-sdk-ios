@@ -13,9 +13,29 @@ public final class Users {
     static let shared = Users()
     private init() {}
 
+    public func findAll(success successCompletion: (([UserViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(UsersAPI.findAll,
+            success: { (response: [UserViewResponse]) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
     public func signup(loginId: String, email: String, username: String, password: String, passwordCheck: String, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(UsersAPI.signup(loginId: loginId, email: email, username: username, password: password, passwordCheck: passwordCheck),
             success: { (response: AuthenticationViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func findOne(id: Int, success successCompletion: ((UserViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(UsersAPI.findOne(id: id),
+            success: { (response: UserViewResponse) in
                 successCompletion?(response)
             },
             failure: { error in

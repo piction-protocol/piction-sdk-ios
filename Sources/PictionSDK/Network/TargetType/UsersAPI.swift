@@ -11,7 +11,9 @@ import Moya
 import UIKit
 
 public enum UsersAPI {
+    case findAll
     case signup(loginId: String, email: String, username: String, password: String, passwordCheck: String)
+    case findOne(id: Int)
     case me
     case update(email: String, username: String, password: String, picture: String?)
     case updatePassword(password: String, newPassword: String, passwordCheck: String)
@@ -22,8 +24,11 @@ extension UsersAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
-        case .signup:
+        case .findAll,
+             .signup:
             return "/users"
+        case .findOne(let id):
+            return "/users/\(id)"
         case .me,
              .update:
             return "/users/me"
@@ -37,7 +42,9 @@ extension UsersAPI: TargetType {
         switch self {
         case .signup:
             return .post
-        case .me:
+        case .findAll,
+             .findOne,
+             .me:
             return .get
         case .update:
             return .put
@@ -48,10 +55,13 @@ extension UsersAPI: TargetType {
     }
     public var sampleData: Data {
         switch self {
+        case .findAll:
+            return jsonSerializedUTF8(json: [UserViewResponse.sampleData()])
         case .signup,
              .updatePassword:
             return jsonSerializedUTF8(json: AuthenticationViewResponse.sampleData())
-        case .me:
+        case .findOne,
+             .me:
             return jsonSerializedUTF8(json: UserViewResponse.sampleData())
         case .update:
             return jsonSerializedUTF8(json: UserViewResponse.sampleData())
@@ -61,6 +71,10 @@ extension UsersAPI: TargetType {
     }
     public var task: Task {
         switch self {
+        case .findAll,
+             .findOne,
+             .me:
+            return .requestPlain
         case .signup(let loginId, let email, let username, let password, let passwordCheck):
             let param = [
                 "loginId": loginId,
@@ -70,8 +84,6 @@ extension UsersAPI: TargetType {
                 "passwordCheck": passwordCheck
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
-        case .me:
-            return .requestPlain
         case .update(let email, let username, let password, let picture):
             let param = [
                 "email": email,

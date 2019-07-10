@@ -7,6 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431918A622D577080005328E /* MySalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918A522D577080005328E /* MySalesViewController.swift */; };
+		431918A822D577180005328E /* MySubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918A722D577180005328E /* MySubscriptionViewController.swift */; };
+		431918AA22D577EA0005328E /* MySales.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918A922D577EA0005328E /* MySales.storyboard */; };
+		431918AC22D5786E0005328E /* MySubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918AB22D5786E0005328E /* MySubscription.storyboard */; };
+		431918B222D5795B0005328E /* ProjectsAPIHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918B122D5795B0005328E /* ProjectsAPIHome.storyboard */; };
+		431918B422D579660005328E /* PostsAPIHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918B322D579660005328E /* PostsAPIHome.storyboard */; };
+		431918B822D579C40005328E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918B522D579C30005328E /* Main.storyboard */; };
+		431918B922D579C40005328E /* SessionsAPIHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918B622D579C30005328E /* SessionsAPIHome.storyboard */; };
+		431918BA22D579C40005328E /* UsersAPIHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918B722D579C40005328E /* UsersAPIHome.storyboard */; };
+		431918BC22D579D00005328E /* MyAPIHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918BB22D579D00005328E /* MyAPIHome.storyboard */; };
+		431918BE22D579DC0005328E /* SeriesAPIHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918BD22D579DC0005328E /* SeriesAPIHome.storyboard */; };
+		431918C222D57C260005328E /* PostsDelete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918C122D57C260005328E /* PostsDelete.storyboard */; };
+		431918C422D57C2F0005328E /* PostsContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918C322D57C2F0005328E /* PostsContent.storyboard */; };
+		431918C622D57C3C0005328E /* PostsIsLike.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918C522D57C3C0005328E /* PostsIsLike.storyboard */; };
+		431918C822D57C4F0005328E /* PostsPrevPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918C722D57C4F0005328E /* PostsPrevPost.storyboard */; };
+		431918CA22D57C5B0005328E /* PostsNextPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918C922D57C5B0005328E /* PostsNextPost.storyboard */; };
+		431918CC22D57D4B0005328E /* PostsDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918CB22D57D4B0005328E /* PostsDeleteViewController.swift */; };
+		431918D022D57D6A0005328E /* PostsContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918CF22D57D6A0005328E /* PostsContentViewController.swift */; };
+		431918D222D57D790005328E /* PostsIsLikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918D122D57D790005328E /* PostsIsLikeViewController.swift */; };
+		431918D422D57D860005328E /* PostsPrevPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918D322D57D860005328E /* PostsPrevPostViewController.swift */; };
+		431918D622D57D920005328E /* PostsNextPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918D522D57D920005328E /* PostsNextPostViewController.swift */; };
+		431918D822D57EE80005328E /* ProjectsIsSubscribing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918D722D57EE80005328E /* ProjectsIsSubscribing.storyboard */; };
+		431918DA22D57EFD0005328E /* ProjectsSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918D922D57EFD0005328E /* ProjectsSubscription.storyboard */; };
+		431918DC22D57FA40005328E /* RecommendationAPIHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918DB22D57FA40005328E /* RecommendationAPIHome.storyboard */; };
+		431918DE22D57FEB0005328E /* SearchAPIHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918DD22D57FEB0005328E /* SearchAPIHome.storyboard */; };
+		431918E422D580A20005328E /* RecommendationAll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918E122D580A20005328E /* RecommendationAll.storyboard */; };
+		431918E522D580A20005328E /* RecommendationAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918E222D580A20005328E /* RecommendationAdd.storyboard */; };
+		431918E622D580A20005328E /* RecommendationDelete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918E322D580A20005328E /* RecommendationDelete.storyboard */; };
+		431918EA22D580C80005328E /* ProjectsIsSubscribingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918E922D580C70005328E /* ProjectsIsSubscribingViewController.swift */; };
+		431918EC22D580DB0005328E /* ProjectsSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918EB22D580DB0005328E /* ProjectsSubscriptionViewController.swift */; };
+		431918F122D5821E0005328E /* RecommendationAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918EE22D5821E0005328E /* RecommendationAllViewController.swift */; };
+		431918F222D5821E0005328E /* RecommendationDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918EF22D5821E0005328E /* RecommendationDeleteViewController.swift */; };
+		431918F322D5821E0005328E /* RecommendationAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918F022D5821E0005328E /* RecommendationAddViewController.swift */; };
+		431918F722D583560005328E /* SearchProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918F622D583560005328E /* SearchProject.storyboard */; };
+		431918F922D583630005328E /* SearchWriter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431918F822D583630005328E /* SearchWriter.storyboard */; };
+		431918FB22D583730005328E /* SearchProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918FA22D583730005328E /* SearchProjectViewController.swift */; };
+		431918FD22D583840005328E /* SearchWriterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918FC22D583840005328E /* SearchWriterViewController.swift */; };
 		4329EB8422B0F83600D01916 /* ProjectsAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB8322B0F83600D01916 /* ProjectsAllViewController.swift */; };
 		4329EB8622B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB8522B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift */; };
 		4329EB8822B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB8722B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift */; };
@@ -33,14 +70,14 @@
 		432CAC2022B32D2F0007EE03 /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC1F22B32D2F0007EE03 /* MyWalletViewController.swift */; };
 		432CAC2F22B34CCA0007EE03 /* SeriesAll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC2E22B34CCA0007EE03 /* SeriesAll.storyboard */; };
 		432CAC3122B34CD80007EE03 /* SeriesCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3022B34CD80007EE03 /* SeriesCreate.storyboard */; };
-		432CAC3322B34CE40007EE03 /* SeriesUpdatePriority.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3222B34CE40007EE03 /* SeriesUpdatePriority.storyboard */; };
+		432CAC3322B34CE40007EE03 /* SeriesSort.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3222B34CE40007EE03 /* SeriesSort.storyboard */; };
 		432CAC3522B34CED0007EE03 /* SeriesGet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3422B34CED0007EE03 /* SeriesGet.storyboard */; };
 		432CAC3722B34CF60007EE03 /* SeriesUpdate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3622B34CF60007EE03 /* SeriesUpdate.storyboard */; };
 		432CAC3922B34CFF0007EE03 /* SeriesDelete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3822B34CFF0007EE03 /* SeriesDelete.storyboard */; };
 		432CAC3C22B34D0F0007EE03 /* SeriesAllSeriesPosts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC3B22B34D0F0007EE03 /* SeriesAllSeriesPosts.storyboard */; };
 		432CAC3E22B34D1E0007EE03 /* SeriesAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC3D22B34D1E0007EE03 /* SeriesAllViewController.swift */; };
 		432CAC4022B34D2C0007EE03 /* SeriesCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC3F22B34D2C0007EE03 /* SeriesCreateViewController.swift */; };
-		432CAC4222B34D370007EE03 /* SeriesUpdatePriorityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4122B34D370007EE03 /* SeriesUpdatePriorityViewController.swift */; };
+		432CAC4222B34D370007EE03 /* SeriesSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4122B34D370007EE03 /* SeriesSortViewController.swift */; };
 		432CAC4422B34D420007EE03 /* SeriesGetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4322B34D420007EE03 /* SeriesGetViewController.swift */; };
 		432CAC4622B34D4C0007EE03 /* SeriesUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4522B34D4C0007EE03 /* SeriesUpdateViewController.swift */; };
 		432CAC4822B34D5D0007EE03 /* SeriesDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC4722B34D5D0007EE03 /* SeriesDeleteViewController.swift */; };
@@ -49,18 +86,11 @@
 		432CAC5122B380CA0007EE03 /* PostsLikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC5022B380CA0007EE03 /* PostsLikeViewController.swift */; };
 		432CAC5322B3821D0007EE03 /* SessionsDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC5222B3821D0007EE03 /* SessionsDeleteViewController.swift */; };
 		432CAC5522B3824E0007EE03 /* SessionsDelete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC5422B3824E0007EE03 /* SessionsDelete.storyboard */; };
-		432CAC5722B385A70007EE03 /* ProjectsRecommendedAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC5622B385A70007EE03 /* ProjectsRecommendedAllViewController.swift */; };
-		432CAC5922B385B70007EE03 /* ProjectsRecommendedAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC5822B385B70007EE03 /* ProjectsRecommendedAddViewController.swift */; };
-		432CAC5B22B385C40007EE03 /* ProjectsRecommendedDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC5A22B385C40007EE03 /* ProjectsRecommendedDeleteViewController.swift */; };
-		432CAC5D22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC5C22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard */; };
-		432CAC5F22B386750007EE03 /* ProjectsRecommendedAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC5E22B386750007EE03 /* ProjectsRecommendedAdd.storyboard */; };
-		432CAC6122B386830007EE03 /* ProjectsRecommendedDelete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432CAC6022B386830007EE03 /* ProjectsRecommendedDelete.storyboard */; };
 		432CAC6D22B3A6CF0007EE03 /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC6C22B3A6CF0007EE03 /* JsonUtil.swift */; };
 		432CAC6F22B724870007EE03 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CAC6E22B724870007EE03 /* SwiftyJSON.framework */; };
 		432CAC7022B724870007EE03 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 432CAC6E22B724870007EE03 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43C3142E228AA198007E9EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142D228AA198007E9EAF /* AppDelegate.swift */; };
 		43C31430228AA198007E9EAF /* UsersSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */; };
-		43C31433228AA198007E9EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C31431228AA198007E9EAF /* Main.storyboard */; };
 		43C31438228AA199007E9EAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C31437228AA199007E9EAF /* Assets.xcassets */; };
 		43C3143B228AA199007E9EAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C31439228AA199007E9EAF /* LaunchScreen.storyboard */; };
 		43C3167222927728007E9EAF /* UsersSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C3167122927728007E9EAF /* UsersSignup.storyboard */; };
@@ -122,6 +152,43 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		431918A522D577080005328E /* MySalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySalesViewController.swift; sourceTree = "<group>"; };
+		431918A722D577180005328E /* MySubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySubscriptionViewController.swift; sourceTree = "<group>"; };
+		431918A922D577EA0005328E /* MySales.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MySales.storyboard; sourceTree = "<group>"; };
+		431918AB22D5786E0005328E /* MySubscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MySubscription.storyboard; sourceTree = "<group>"; };
+		431918B122D5795B0005328E /* ProjectsAPIHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsAPIHome.storyboard; sourceTree = "<group>"; };
+		431918B322D579660005328E /* PostsAPIHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostsAPIHome.storyboard; sourceTree = "<group>"; };
+		431918B522D579C30005328E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		431918B622D579C30005328E /* SessionsAPIHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SessionsAPIHome.storyboard; sourceTree = "<group>"; };
+		431918B722D579C40005328E /* UsersAPIHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UsersAPIHome.storyboard; sourceTree = "<group>"; };
+		431918BB22D579D00005328E /* MyAPIHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyAPIHome.storyboard; sourceTree = "<group>"; };
+		431918BD22D579DC0005328E /* SeriesAPIHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesAPIHome.storyboard; sourceTree = "<group>"; };
+		431918C122D57C260005328E /* PostsDelete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostsDelete.storyboard; sourceTree = "<group>"; };
+		431918C322D57C2F0005328E /* PostsContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostsContent.storyboard; sourceTree = "<group>"; };
+		431918C522D57C3C0005328E /* PostsIsLike.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostsIsLike.storyboard; sourceTree = "<group>"; };
+		431918C722D57C4F0005328E /* PostsPrevPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostsPrevPost.storyboard; sourceTree = "<group>"; };
+		431918C922D57C5B0005328E /* PostsNextPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostsNextPost.storyboard; sourceTree = "<group>"; };
+		431918CB22D57D4B0005328E /* PostsDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsDeleteViewController.swift; sourceTree = "<group>"; };
+		431918CF22D57D6A0005328E /* PostsContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsContentViewController.swift; sourceTree = "<group>"; };
+		431918D122D57D790005328E /* PostsIsLikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsIsLikeViewController.swift; sourceTree = "<group>"; };
+		431918D322D57D860005328E /* PostsPrevPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPrevPostViewController.swift; sourceTree = "<group>"; };
+		431918D522D57D920005328E /* PostsNextPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNextPostViewController.swift; sourceTree = "<group>"; };
+		431918D722D57EE80005328E /* ProjectsIsSubscribing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsIsSubscribing.storyboard; sourceTree = "<group>"; };
+		431918D922D57EFD0005328E /* ProjectsSubscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsSubscription.storyboard; sourceTree = "<group>"; };
+		431918DB22D57FA40005328E /* RecommendationAPIHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecommendationAPIHome.storyboard; sourceTree = "<group>"; };
+		431918DD22D57FEB0005328E /* SearchAPIHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchAPIHome.storyboard; sourceTree = "<group>"; };
+		431918E122D580A20005328E /* RecommendationAll.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecommendationAll.storyboard; sourceTree = "<group>"; };
+		431918E222D580A20005328E /* RecommendationAdd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecommendationAdd.storyboard; sourceTree = "<group>"; };
+		431918E322D580A20005328E /* RecommendationDelete.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecommendationDelete.storyboard; sourceTree = "<group>"; };
+		431918E922D580C70005328E /* ProjectsIsSubscribingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsIsSubscribingViewController.swift; sourceTree = "<group>"; };
+		431918EB22D580DB0005328E /* ProjectsSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsSubscriptionViewController.swift; sourceTree = "<group>"; };
+		431918EE22D5821E0005328E /* RecommendationAllViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationAllViewController.swift; sourceTree = "<group>"; };
+		431918EF22D5821E0005328E /* RecommendationDeleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationDeleteViewController.swift; sourceTree = "<group>"; };
+		431918F022D5821E0005328E /* RecommendationAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationAddViewController.swift; sourceTree = "<group>"; };
+		431918F622D583560005328E /* SearchProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchProject.storyboard; sourceTree = "<group>"; };
+		431918F822D583630005328E /* SearchWriter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchWriter.storyboard; sourceTree = "<group>"; };
+		431918FA22D583730005328E /* SearchProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProjectViewController.swift; sourceTree = "<group>"; };
+		431918FC22D583840005328E /* SearchWriterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWriterViewController.swift; sourceTree = "<group>"; };
 		4329EB8322B0F83600D01916 /* ProjectsAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsAllViewController.swift; sourceTree = "<group>"; };
 		4329EB8522B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsUploadThumbnailViewController.swift; sourceTree = "<group>"; };
 		4329EB8722B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsUploadWideThumbnailViewController.swift; sourceTree = "<group>"; };
@@ -148,14 +215,14 @@
 		432CAC1F22B32D2F0007EE03 /* MyWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewController.swift; sourceTree = "<group>"; };
 		432CAC2E22B34CCA0007EE03 /* SeriesAll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesAll.storyboard; sourceTree = "<group>"; };
 		432CAC3022B34CD80007EE03 /* SeriesCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesCreate.storyboard; sourceTree = "<group>"; };
-		432CAC3222B34CE40007EE03 /* SeriesUpdatePriority.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesUpdatePriority.storyboard; sourceTree = "<group>"; };
+		432CAC3222B34CE40007EE03 /* SeriesSort.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesSort.storyboard; sourceTree = "<group>"; };
 		432CAC3422B34CED0007EE03 /* SeriesGet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesGet.storyboard; sourceTree = "<group>"; };
 		432CAC3622B34CF60007EE03 /* SeriesUpdate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesUpdate.storyboard; sourceTree = "<group>"; };
 		432CAC3822B34CFF0007EE03 /* SeriesDelete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesDelete.storyboard; sourceTree = "<group>"; };
 		432CAC3B22B34D0F0007EE03 /* SeriesAllSeriesPosts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesAllSeriesPosts.storyboard; sourceTree = "<group>"; };
 		432CAC3D22B34D1E0007EE03 /* SeriesAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesAllViewController.swift; sourceTree = "<group>"; };
 		432CAC3F22B34D2C0007EE03 /* SeriesCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCreateViewController.swift; sourceTree = "<group>"; };
-		432CAC4122B34D370007EE03 /* SeriesUpdatePriorityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesUpdatePriorityViewController.swift; sourceTree = "<group>"; };
+		432CAC4122B34D370007EE03 /* SeriesSortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesSortViewController.swift; sourceTree = "<group>"; };
 		432CAC4322B34D420007EE03 /* SeriesGetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesGetViewController.swift; sourceTree = "<group>"; };
 		432CAC4522B34D4C0007EE03 /* SeriesUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesUpdateViewController.swift; sourceTree = "<group>"; };
 		432CAC4722B34D5D0007EE03 /* SeriesDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDeleteViewController.swift; sourceTree = "<group>"; };
@@ -164,19 +231,12 @@
 		432CAC5022B380CA0007EE03 /* PostsLikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsLikeViewController.swift; sourceTree = "<group>"; };
 		432CAC5222B3821D0007EE03 /* SessionsDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsDeleteViewController.swift; sourceTree = "<group>"; };
 		432CAC5422B3824E0007EE03 /* SessionsDelete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SessionsDelete.storyboard; sourceTree = "<group>"; };
-		432CAC5622B385A70007EE03 /* ProjectsRecommendedAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsRecommendedAllViewController.swift; sourceTree = "<group>"; };
-		432CAC5822B385B70007EE03 /* ProjectsRecommendedAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsRecommendedAddViewController.swift; sourceTree = "<group>"; };
-		432CAC5A22B385C40007EE03 /* ProjectsRecommendedDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsRecommendedDeleteViewController.swift; sourceTree = "<group>"; };
-		432CAC5C22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsRecommendedAll.storyboard; sourceTree = "<group>"; };
-		432CAC5E22B386750007EE03 /* ProjectsRecommendedAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsRecommendedAdd.storyboard; sourceTree = "<group>"; };
-		432CAC6022B386830007EE03 /* ProjectsRecommendedDelete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectsRecommendedDelete.storyboard; sourceTree = "<group>"; };
 		432CAC6522B398590007EE03 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
 		432CAC6C22B3A6CF0007EE03 /* JsonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
 		432CAC6E22B724870007EE03 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Piction-SDK-iOS-Example/Frameworks/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		43C3142A228AA198007E9EAF /* Piction-SDK-iOS-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piction-SDK-iOS-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C3142D228AA198007E9EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSignupViewController.swift; sourceTree = "<group>"; };
-		43C31432228AA198007E9EAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43C31437228AA199007E9EAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43C3143A228AA199007E9EAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43C3143C228AA199007E9EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -225,6 +285,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431918E022D580740005328E /* Recommendation */ = {
+			isa = PBXGroup;
+			children = (
+				431918E122D580A20005328E /* RecommendationAll.storyboard */,
+				431918E222D580A20005328E /* RecommendationAdd.storyboard */,
+				431918E322D580A20005328E /* RecommendationDelete.storyboard */,
+			);
+			path = Recommendation;
+			sourceTree = "<group>";
+		};
+		431918ED22D5821E0005328E /* Recommendation */ = {
+			isa = PBXGroup;
+			children = (
+				431918EE22D5821E0005328E /* RecommendationAllViewController.swift */,
+				431918F022D5821E0005328E /* RecommendationAddViewController.swift */,
+				431918EF22D5821E0005328E /* RecommendationDeleteViewController.swift */,
+			);
+			path = Recommendation;
+			sourceTree = "<group>";
+		};
+		431918F422D583300005328E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				431918FA22D583730005328E /* SearchProjectViewController.swift */,
+				431918FC22D583840005328E /* SearchWriterViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		431918F522D583470005328E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				431918F622D583560005328E /* SearchProject.storyboard */,
+				431918F822D583630005328E /* SearchWriter.storyboard */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		4329EB9822B1DFBC00D01916 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,7 +330,12 @@
 				4329EBA822B1E04B00D01916 /* PostsCreate.storyboard */,
 				4329EBAC22B1E06C00D01916 /* PostsGet.storyboard */,
 				4329EBAE22B1E07600D01916 /* PostsUpdate.storyboard */,
+				431918C122D57C260005328E /* PostsDelete.storyboard */,
+				431918C322D57C2F0005328E /* PostsContent.storyboard */,
+				431918C522D57C3C0005328E /* PostsIsLike.storyboard */,
 				432CAC4E22B380930007EE03 /* PostsLike.storyboard */,
+				431918C722D57C4F0005328E /* PostsPrevPost.storyboard */,
+				431918C922D57C5B0005328E /* PostsNextPost.storyboard */,
 				4329EBB022B1E08700D01916 /* PostsUploadContentImage.storyboard */,
 				4329EBB222B1E09300D01916 /* PostsUploadCoverImage.storyboard */,
 			);
@@ -246,7 +349,12 @@
 				4329EB9C22B1DFE600D01916 /* PostsCreateViewController.swift */,
 				4329EB9E22B1DFF200D01916 /* PostsGetViewController.swift */,
 				4329EBA022B1DFFD00D01916 /* PostsUpdateViewController.swift */,
+				431918CB22D57D4B0005328E /* PostsDeleteViewController.swift */,
+				431918CF22D57D6A0005328E /* PostsContentViewController.swift */,
+				431918D122D57D790005328E /* PostsIsLikeViewController.swift */,
 				432CAC5022B380CA0007EE03 /* PostsLikeViewController.swift */,
+				431918D322D57D860005328E /* PostsPrevPostViewController.swift */,
+				431918D522D57D920005328E /* PostsNextPostViewController.swift */,
 				4329EBA222B1E01800D01916 /* PostsUploadContentImageViewController.swift */,
 				4329EBA422B1E02700D01916 /* PostsUploadCoverImageViewController.swift */,
 			);
@@ -259,6 +367,8 @@
 				432CAC1B22B32D190007EE03 /* MyProjectsViewController.swift */,
 				432CAC1D22B32D230007EE03 /* MyTransactionsViewController.swift */,
 				432CAC1F22B32D2F0007EE03 /* MyWalletViewController.swift */,
+				431918A522D577080005328E /* MySalesViewController.swift */,
+				431918A722D577180005328E /* MySubscriptionViewController.swift */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -269,6 +379,8 @@
 				432CAC1222B32CD70007EE03 /* MyProjects.storyboard */,
 				432CAC1522B32CF30007EE03 /* MyTransactions.storyboard */,
 				432CAC1722B32CFE0007EE03 /* MyWallet.storyboard */,
+				431918A922D577EA0005328E /* MySales.storyboard */,
+				431918AB22D5786E0005328E /* MySubscription.storyboard */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -278,7 +390,7 @@
 			children = (
 				432CAC3D22B34D1E0007EE03 /* SeriesAllViewController.swift */,
 				432CAC3F22B34D2C0007EE03 /* SeriesCreateViewController.swift */,
-				432CAC4122B34D370007EE03 /* SeriesUpdatePriorityViewController.swift */,
+				432CAC4122B34D370007EE03 /* SeriesSortViewController.swift */,
 				432CAC4322B34D420007EE03 /* SeriesGetViewController.swift */,
 				432CAC4522B34D4C0007EE03 /* SeriesUpdateViewController.swift */,
 				432CAC4722B34D5D0007EE03 /* SeriesDeleteViewController.swift */,
@@ -292,7 +404,7 @@
 			children = (
 				432CAC2E22B34CCA0007EE03 /* SeriesAll.storyboard */,
 				432CAC3022B34CD80007EE03 /* SeriesCreate.storyboard */,
-				432CAC3222B34CE40007EE03 /* SeriesUpdatePriority.storyboard */,
+				432CAC3222B34CE40007EE03 /* SeriesSort.storyboard */,
 				432CAC3422B34CED0007EE03 /* SeriesGet.storyboard */,
 				432CAC3622B34CF60007EE03 /* SeriesUpdate.storyboard */,
 				432CAC3822B34CFF0007EE03 /* SeriesDelete.storyboard */,
@@ -373,7 +485,9 @@
 				43CA1BB0229FAD1800CEF20A /* Projects */,
 				4329EB9822B1DFBC00D01916 /* Posts */,
 				432CAC1122B32CC50007EE03 /* My */,
+				431918E022D580740005328E /* Recommendation */,
 				432CAC2D22B34CB20007EE03 /* Series */,
+				431918F522D583470005328E /* Search */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -387,7 +501,9 @@
 				43CA1BB7229FAD6800CEF20A /* Projects */,
 				4329EB9922B1DFCC00D01916 /* Posts */,
 				432CAC1022B32CBC0007EE03 /* My */,
+				431918ED22D5821E0005328E /* Recommendation */,
 				432CAC2C22B34CA70007EE03 /* Series */,
+				431918F422D583300005328E /* Search */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -445,7 +561,15 @@
 		43C316862292AB49007E9EAF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				43C31431228AA198007E9EAF /* Main.storyboard */,
+				431918B522D579C30005328E /* Main.storyboard */,
+				431918B722D579C40005328E /* UsersAPIHome.storyboard */,
+				431918B622D579C30005328E /* SessionsAPIHome.storyboard */,
+				431918B122D5795B0005328E /* ProjectsAPIHome.storyboard */,
+				431918B322D579660005328E /* PostsAPIHome.storyboard */,
+				431918BB22D579D00005328E /* MyAPIHome.storyboard */,
+				431918BD22D579DC0005328E /* SeriesAPIHome.storyboard */,
+				431918DD22D57FEB0005328E /* SearchAPIHome.storyboard */,
+				431918DB22D57FA40005328E /* RecommendationAPIHome.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -457,11 +581,10 @@
 				43CA1BB1229FAD3900CEF20A /* ProjectsCreate.storyboard */,
 				43CA1BB3229FAD4C00CEF20A /* ProjectsGet.storyboard */,
 				43CA1BB5229FAD5900CEF20A /* ProjectsUpdate.storyboard */,
+				431918D722D57EE80005328E /* ProjectsIsSubscribing.storyboard */,
+				431918D922D57EFD0005328E /* ProjectsSubscription.storyboard */,
 				4329EB8B22B0F87000D01916 /* ProjectsUploadThumbnail.storyboard */,
 				4329EB8D22B0F87D00D01916 /* ProjectsUploadWideThumbnail.storyboard */,
-				432CAC5C22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard */,
-				432CAC5E22B386750007EE03 /* ProjectsRecommendedAdd.storyboard */,
-				432CAC6022B386830007EE03 /* ProjectsRecommendedDelete.storyboard */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -473,11 +596,10 @@
 				43CA1BB8229FAD7E00CEF20A /* ProjectsCreateViewController.swift */,
 				43CA1BBE229FB26500CEF20A /* ProjectsGetViewController.swift */,
 				43CA1BBC229FAD9400CEF20A /* ProjectsUpdateViewController.swift */,
+				431918E922D580C70005328E /* ProjectsIsSubscribingViewController.swift */,
+				431918EB22D580DB0005328E /* ProjectsSubscriptionViewController.swift */,
 				4329EB8522B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift */,
 				4329EB8722B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift */,
-				432CAC5622B385A70007EE03 /* ProjectsRecommendedAllViewController.swift */,
-				432CAC5822B385B70007EE03 /* ProjectsRecommendedAddViewController.swift */,
-				432CAC5A22B385C40007EE03 /* ProjectsRecommendedDeleteViewController.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -549,40 +671,59 @@
 			buildActionMask = 2147483647;
 			files = (
 				43CA1BA7229FA20800CEF20A /* UsersUpdate.storyboard in Resources */,
+				431918E422D580A20005328E /* RecommendationAll.storyboard in Resources */,
 				4329EBAF22B1E07600D01916 /* PostsUpdate.storyboard in Resources */,
+				431918C422D57C2F0005328E /* PostsContent.storyboard in Resources */,
+				431918C622D57C3C0005328E /* PostsIsLike.storyboard in Resources */,
+				431918B822D579C40005328E /* Main.storyboard in Resources */,
 				43C3143B228AA199007E9EAF /* LaunchScreen.storyboard in Resources */,
 				432CAC1622B32CF30007EE03 /* MyTransactions.storyboard in Resources */,
+				431918F722D583560005328E /* SearchProject.storyboard in Resources */,
+				431918DA22D57EFD0005328E /* ProjectsSubscription.storyboard in Resources */,
 				4329EBAD22B1E06C00D01916 /* PostsGet.storyboard in Resources */,
 				43C316742292773A007E9EAF /* UsersMe.storyboard in Resources */,
+				431918DC22D57FA40005328E /* RecommendationAPIHome.storyboard in Resources */,
 				432CAC5522B3824E0007EE03 /* SessionsDelete.storyboard in Resources */,
-				432CAC3322B34CE40007EE03 /* SeriesUpdatePriority.storyboard in Resources */,
+				432CAC3322B34CE40007EE03 /* SeriesSort.storyboard in Resources */,
+				431918E622D580A20005328E /* RecommendationDelete.storyboard in Resources */,
+				431918B222D5795B0005328E /* ProjectsAPIHome.storyboard in Resources */,
 				4329EBB122B1E08700D01916 /* PostsUploadContentImage.storyboard in Resources */,
 				43CA1BB4229FAD4C00CEF20A /* ProjectsGet.storyboard in Resources */,
 				432CAC4F22B380930007EE03 /* PostsLike.storyboard in Resources */,
 				4329EBA922B1E04B00D01916 /* PostsCreate.storyboard in Resources */,
 				432CAC1822B32CFE0007EE03 /* MyWallet.storyboard in Resources */,
+				431918AC22D5786E0005328E /* MySubscription.storyboard in Resources */,
 				43C3167222927728007E9EAF /* UsersSignup.storyboard in Resources */,
 				432CAC3722B34CF60007EE03 /* SeriesUpdate.storyboard in Resources */,
 				4329EB8A22B0F86100D01916 /* ProjectsAll.storyboard in Resources */,
+				431918DE22D57FEB0005328E /* SearchAPIHome.storyboard in Resources */,
+				431918E522D580A20005328E /* RecommendationAdd.storyboard in Resources */,
 				4329EB8C22B0F87000D01916 /* ProjectsUploadThumbnail.storyboard in Resources */,
+				431918BC22D579D00005328E /* MyAPIHome.storyboard in Resources */,
 				432CAC1322B32CD70007EE03 /* MyProjects.storyboard in Resources */,
+				431918B922D579C40005328E /* SessionsAPIHome.storyboard in Resources */,
 				43CA1BB2229FAD3900CEF20A /* ProjectsCreate.storyboard in Resources */,
-				432CAC6122B386830007EE03 /* ProjectsRecommendedDelete.storyboard in Resources */,
 				4329EB8E22B0F87D00D01916 /* ProjectsUploadWideThumbnail.storyboard in Resources */,
 				432CAC3922B34CFF0007EE03 /* SeriesDelete.storyboard in Resources */,
+				431918C222D57C260005328E /* PostsDelete.storyboard in Resources */,
+				431918D822D57EE80005328E /* ProjectsIsSubscribing.storyboard in Resources */,
 				43C31438228AA199007E9EAF /* Assets.xcassets in Resources */,
+				431918B422D579660005328E /* PostsAPIHome.storyboard in Resources */,
 				432CAC3122B34CD80007EE03 /* SeriesCreate.storyboard in Resources */,
 				43CA1BAB229FA23D00CEF20A /* UsersUpdatePassword.storyboard in Resources */,
 				4329EBB322B1E09300D01916 /* PostsUploadCoverImage.storyboard in Resources */,
+				431918BA22D579C40005328E /* UsersAPIHome.storyboard in Resources */,
+				431918F922D583630005328E /* SearchWriter.storyboard in Resources */,
+				431918BE22D579DC0005328E /* SeriesAPIHome.storyboard in Resources */,
 				43CA1BB6229FAD5900CEF20A /* ProjectsUpdate.storyboard in Resources */,
 				432CAC3522B34CED0007EE03 /* SeriesGet.storyboard in Resources */,
-				432CAC5F22B386750007EE03 /* ProjectsRecommendedAdd.storyboard in Resources */,
+				431918CA22D57C5B0005328E /* PostsNextPost.storyboard in Resources */,
 				432CAC3C22B34D0F0007EE03 /* SeriesAllSeriesPosts.storyboard in Resources */,
-				43C31433228AA198007E9EAF /* Main.storyboard in Resources */,
 				43C3168022928B4B007E9EAF /* SessionsCreate.storyboard in Resources */,
 				43CA221C22B0A76C00CEF20A /* UsersUploadPicture.storyboard in Resources */,
+				431918C822D57C4F0005328E /* PostsPrevPost.storyboard in Resources */,
 				432CAC2F22B34CCA0007EE03 /* SeriesAll.storyboard in Resources */,
-				432CAC5D22B3866A0007EE03 /* ProjectsRecommendedAll.storyboard in Resources */,
+				431918AA22D577EA0005328E /* MySales.storyboard in Resources */,
 				4329EBA722B1E03C00D01916 /* PostsAll.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,40 +736,51 @@
 			buildActionMask = 2147483647;
 			files = (
 				4329EBA522B1E02700D01916 /* PostsUploadCoverImageViewController.swift in Sources */,
+				431918FD22D583840005328E /* SearchWriterViewController.swift in Sources */,
+				431918D622D57D920005328E /* PostsNextPostViewController.swift in Sources */,
 				43CA1BA9229FA22800CEF20A /* UsersUpdatePasswordViewController.swift in Sources */,
 				432CAC5122B380CA0007EE03 /* PostsLikeViewController.swift in Sources */,
+				431918A822D577180005328E /* MySubscriptionViewController.swift in Sources */,
 				43C3167622927777007E9EAF /* UsersMeViewController.swift in Sources */,
 				43C3168222928BAA007E9EAF /* SessionsCreateViewController.swift in Sources */,
+				431918F322D5821E0005328E /* RecommendationAddViewController.swift in Sources */,
+				431918CC22D57D4B0005328E /* PostsDeleteViewController.swift in Sources */,
 				43CA1BBF229FB26500CEF20A /* ProjectsGetViewController.swift in Sources */,
 				4329EB8822B0F85000D01916 /* ProjectsUploadWideThumbnailViewController.swift in Sources */,
 				4329EBA322B1E01800D01916 /* PostsUploadContentImageViewController.swift in Sources */,
 				432CAC2022B32D2F0007EE03 /* MyWalletViewController.swift in Sources */,
+				431918F122D5821E0005328E /* RecommendationAllViewController.swift in Sources */,
 				432CAC4622B34D4C0007EE03 /* SeriesUpdateViewController.swift in Sources */,
 				43CA221A22B0A70100CEF20A /* UsersUploadPictureViewController.swift in Sources */,
+				431918D222D57D790005328E /* PostsIsLikeViewController.swift in Sources */,
 				43C316842292A67E007E9EAF /* MainViewController.swift in Sources */,
 				43CA1BA5229FA1F000CEF20A /* UsersUpdateViewController.swift in Sources */,
 				432CAC3E22B34D1E0007EE03 /* SeriesAllViewController.swift in Sources */,
+				431918EC22D580DB0005328E /* ProjectsSubscriptionViewController.swift in Sources */,
 				432CAC4022B34D2C0007EE03 /* SeriesCreateViewController.swift in Sources */,
 				4329EB9B22B1DFDC00D01916 /* PostsAllViewController.swift in Sources */,
+				431918F222D5821E0005328E /* RecommendationDeleteViewController.swift in Sources */,
 				4329EBA122B1DFFD00D01916 /* PostsUpdateViewController.swift in Sources */,
 				432CAC4A22B34D6B0007EE03 /* SeriesAllSeriesPostsViewController.swift in Sources */,
+				431918A622D577080005328E /* MySalesViewController.swift in Sources */,
 				43C31430228AA198007E9EAF /* UsersSignupViewController.swift in Sources */,
+				431918D422D57D860005328E /* PostsPrevPostViewController.swift in Sources */,
 				43C3142E228AA198007E9EAF /* AppDelegate.swift in Sources */,
+				431918FB22D583730005328E /* SearchProjectViewController.swift in Sources */,
 				4329EB9F22B1DFF200D01916 /* PostsGetViewController.swift in Sources */,
 				43CA1BB9229FAD7E00CEF20A /* ProjectsCreateViewController.swift in Sources */,
 				4329EB9D22B1DFE600D01916 /* PostsCreateViewController.swift in Sources */,
 				432CAC4422B34D420007EE03 /* SeriesGetViewController.swift in Sources */,
-				432CAC4222B34D370007EE03 /* SeriesUpdatePriorityViewController.swift in Sources */,
+				432CAC4222B34D370007EE03 /* SeriesSortViewController.swift in Sources */,
 				432CAC6D22B3A6CF0007EE03 /* JsonUtil.swift in Sources */,
 				432CAC4822B34D5D0007EE03 /* SeriesDeleteViewController.swift in Sources */,
 				432CAC1C22B32D190007EE03 /* MyProjectsViewController.swift in Sources */,
 				4329EB8622B0F84300D01916 /* ProjectsUploadThumbnailViewController.swift in Sources */,
 				4329EB8422B0F83600D01916 /* ProjectsAllViewController.swift in Sources */,
 				432CAC1E22B32D230007EE03 /* MyTransactionsViewController.swift in Sources */,
-				432CAC5722B385A70007EE03 /* ProjectsRecommendedAllViewController.swift in Sources */,
+				431918EA22D580C80005328E /* ProjectsIsSubscribingViewController.swift in Sources */,
 				432CAC5322B3821D0007EE03 /* SessionsDeleteViewController.swift in Sources */,
-				432CAC5B22B385C40007EE03 /* ProjectsRecommendedDeleteViewController.swift in Sources */,
-				432CAC5922B385B70007EE03 /* ProjectsRecommendedAddViewController.swift in Sources */,
+				431918D022D57D6A0005328E /* PostsContentViewController.swift in Sources */,
 				43CA1BBD229FAD9400CEF20A /* ProjectsUpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,14 +788,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		43C31431228AA198007E9EAF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43C31432228AA198007E9EAF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		43C31439228AA199007E9EAF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -26,7 +26,7 @@ public struct SubscriptionModel: Response {
 
     public func toDict() -> [String: Any?] {
         return [
-            "expireDate": expireDate,
+            "expireDate": expireDate?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "subscribing": subscribing
         ]
     }

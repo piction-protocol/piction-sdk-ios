@@ -19,15 +19,10 @@ extension Date {
 
 extension Date: Convertible {
     public static func fromMap(_ value: Any) throws -> Date {
-        guard let timeStr = value as? String else {
+        guard let timeInterval = value as? TimeInterval else {
             throw MapperError.convertibleError(value: value, type: Date.self)
         }
 
-        let dateFormat = DateFormatter()
-        dateFormat.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZ"
-        if let date = dateFormat.date(from: timeStr) {
-            return date
-        }
-        throw MapperError.convertibleError(value: value, type: Date.self)
+        return Date(timeIntervalSince1970: timeInterval / 1000)
     }
 }

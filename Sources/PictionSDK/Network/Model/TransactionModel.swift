@@ -31,7 +31,7 @@ public struct TransactionModel: Response {
     public func toDict() -> [String: Any?] {
         return [
             "amount": amount,
-            "createdAt": createdAt,
+            "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "inOut": inOut,
             "status": status
         ]
@@ -41,7 +41,7 @@ public struct TransactionModel: Response {
 extension TransactionModel {
     static func sampleData() -> [String: Any] {
         return [
-            "amount": 1000000000000000,
+            "amount": 1000,
             "createdAt": "2019-06-13T01:23:04.540Z",
             "inOut": "IN",
             "status": "SUCCESS"

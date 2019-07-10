@@ -32,7 +32,7 @@ public struct SeriesModel: Response {
 
     public func toDict() -> [String: Any?] {
         return [
-            "createdAt": createdAt,
+            "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "id": id,
             "name": name,
             "postCount": postCount,

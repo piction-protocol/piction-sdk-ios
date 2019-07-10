@@ -44,9 +44,9 @@ public struct ProjectModel: Response {
 
     public func toDict() -> [String: Any?] {
         return [
-            "createdAt": createdAt,
+            "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "id": id,
-            "lastPublishedAt": lastPublishedAt,
+            "lastPublishedAt": lastPublishedAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "status": status,
             "subscriptionPrice": subscriptionPrice,
             "synopsis": synopsis,

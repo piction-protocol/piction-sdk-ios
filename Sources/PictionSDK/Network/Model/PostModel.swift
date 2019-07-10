@@ -37,7 +37,7 @@ public struct PostModel: Response {
     public func toDict() -> [String: Any?] {
         return [
             "cover": cover,
-            "createdAt": createdAt,
+            "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "id": id,
             "likeCount": likeCount,
             "requiredSubscription": requiredSubscription,

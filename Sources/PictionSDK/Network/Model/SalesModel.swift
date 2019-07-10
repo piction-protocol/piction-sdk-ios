@@ -26,7 +26,7 @@ public struct SalesModel: Response {
 
     public func toDict() -> [String: Any?] {
         return [
-            "date": date,
+            "date": date?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "amount": amount
         ]
     }

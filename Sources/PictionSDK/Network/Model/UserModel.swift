@@ -32,7 +32,7 @@ public struct UserModel: Response {
 
     public func toDict() -> [String: Any?] {
         return [
-            "createdAt": createdAt,
+            "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "email": email,
             "loginId": loginId,
             "picture": picture,

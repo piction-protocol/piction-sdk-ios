@@ -8,7 +8,6 @@
 
 import Foundation
 import Moya
-import UIKit
 
 public enum SeriesAPI {
     case all(uri: String)

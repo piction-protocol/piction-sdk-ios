@@ -99,7 +99,7 @@ public struct PageableModel: Response {
             "pageNumber": pageNumber,
             "pageSize": pageSize,
             "paged": paged,
-            "sort": sort,
+            "sort": sort?.toDict(),
             "unpaged": unpaged
         ]
     }

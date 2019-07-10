@@ -20,9 +20,6 @@ public enum ProjectsAPI {
     case search(name: String)
     case uploadThumbnail(image: UIImage)
     case uploadWideThumbnail(image: UIImage)
-    case recommendedAll
-    case recommendedAdd(uri: String)
-    case recommendedDelete(uri: String)
 }
 
 extension ProjectsAPI: TargetType {
@@ -44,11 +41,6 @@ extension ProjectsAPI: TargetType {
             return "/projects/thumbnail"
         case .uploadWideThumbnail:
             return "/projects/wide-thumbnail"
-        case .recommendedAll:
-            return "/recommended-projects"
-        case .recommendedAdd(let uri),
-             .recommendedDelete(let uri):
-            return "/recommended-projects/\(uri)"
         }
     }
     public var method: Moya.Method {
@@ -56,26 +48,21 @@ extension ProjectsAPI: TargetType {
         case .all,
              .get,
              .isSubscribing,
-             .search,
-             .recommendedAll:
+             .search:
             return .get
         case .create,
-             .subscription,
-            .recommendedAdd:
+             .subscription:
             return .post
         case .update:
             return .put
         case .uploadThumbnail,
              .uploadWideThumbnail:
             return .patch
-        case .recommendedDelete:
-            return .delete
         }
     }
     public var sampleData: Data {
         switch self {
-        case .all,
-             .recommendedAll:
+        case .all:
             return jsonSerializedUTF8(json: [ProjectViewResponse.sampleData()])
         case .create,
              .get,
@@ -89,9 +76,6 @@ extension ProjectsAPI: TargetType {
         case .uploadThumbnail,
              .uploadWideThumbnail:
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
-        case .recommendedAdd,
-             .recommendedDelete:
-            return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
         }
     }
     public var task: Task {
@@ -107,10 +91,7 @@ extension ProjectsAPI: TargetType {
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .all,
              .get,
-             .isSubscribing,
-             .recommendedAll,
-             .recommendedAdd,
-             .recommendedDelete:
+             .isSubscribing:
             return .requestPlain
         case .update(_, let title, let synopsis, let thumbnail, let wideThumbnail):
             let param = [

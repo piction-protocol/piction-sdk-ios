@@ -102,34 +102,4 @@ public final class Projects {
                     failureCompletion?(error)
             })
     }
-
-    public func recommendedAll(success successCompletion: (([ProjectViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.recommendedAll,
-            success: { (response: [ProjectViewResponse]) in
-                successCompletion?(response)
-            },
-            failure: { error in
-                failureCompletion?(error)
-            })
-    }
-
-    public func recommendedAdd(uri: String, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.recommendedAdd(uri: uri),
-            success: { (response: DefaultViewResponse) in
-                successCompletion?(response)
-            },
-            failure: { error in
-                failureCompletion?(error)
-            })
-    }
-
-    public func recommendedDelete(uri: String, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.recommendedDelete(uri: uri),
-            success: { (response: DefaultViewResponse) in
-                successCompletion?(response)
-            },
-            failure: { error in
-                failureCompletion?(error)
-            })
-    }
 }

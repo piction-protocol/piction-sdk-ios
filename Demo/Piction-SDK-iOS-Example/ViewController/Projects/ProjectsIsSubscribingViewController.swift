@@ -1,15 +1,16 @@
 //
-//  ProjectsRecommendedAllViewController.swift
+//  ProjectsIsSubscribingViewController.swift
 //  Piction-SDK-iOS-Example
 //
-//  Created by jhseo on 14/06/2019.
+//  Created by jhseo on 10/07/2019.
 //  Copyright © 2019 Piction Network. All rights reserved.
 //
 
 import UIKit
 import PictionSDK
 
-class ProjectsRecommendedAllViewController: UIViewController {
+class ProjectsIsSubscribingViewController: UIViewController {
+    @IBOutlet weak var uriTextField: UITextField!
 
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
@@ -27,10 +28,10 @@ class ProjectsRecommendedAllViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.projects.recommendedAll(
+        PictionSDK.projects.isSubscribing(uri: uriTextField.text ?? "",
             success: { response in
-                self.responseTextView.text = JsonUtil.toString(dict: response.map { $0.toDict() })
-                self.isLoading = false
+                self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
+                                    self.isLoading = false
             },
             failure: { error in
                 self.responseTextView.text = String(describing: error)

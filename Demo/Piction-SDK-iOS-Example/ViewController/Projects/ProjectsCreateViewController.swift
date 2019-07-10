@@ -15,7 +15,8 @@ class ProjectsCreateViewController: UIViewController {
     @IBOutlet weak var synopsisTextField: UITextField!
     @IBOutlet weak var thumbnailTextField: UITextField!
     @IBOutlet weak var wideThumbnailTextField: UITextField!
-    
+    @IBOutlet weak var subscriptionPriceTextField: UITextField!
+
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
 
@@ -32,7 +33,7 @@ class ProjectsCreateViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
         
-        PictionSDK.projects.create(uri: uriTextField.text ?? "", title: titleTextField.text ?? "", synopsis: synopsisTextField.text ?? "", thumbnail: thumbnailTextField.text ?? "", wideThumbnail: wideThumbnailTextField.text ?? "",
+        PictionSDK.projects.create(uri: uriTextField.text ?? "", title: titleTextField.text ?? "", synopsis: synopsisTextField.text ?? "", thumbnail: thumbnailTextField.text ?? "", wideThumbnail: wideThumbnailTextField.text ?? "", subscriptionPrice:  Int(subscriptionPriceTextField.text ?? "0") ?? 0,
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false

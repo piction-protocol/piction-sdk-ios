@@ -10,7 +10,7 @@ import UIKit
 import PictionSDK
 
 class ProjectsGetViewController: UIViewController {
-    @IBOutlet weak var projectIdTextField: UITextField!
+    @IBOutlet weak var uriTextField: UITextField!
     
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
@@ -28,7 +28,7 @@ class ProjectsGetViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
         
-        PictionSDK.projects.get(projectId: projectIdTextField.text ?? "",
+        PictionSDK.projects.get(uri: uriTextField.text ?? "",
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false

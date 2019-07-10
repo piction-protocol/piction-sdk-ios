@@ -1,16 +1,17 @@
 //
-//  ProjectsRecommendedDeleteViewController.swift
+//  ProjectsSubscriptionViewController.swift
 //  Piction-SDK-iOS-Example
 //
-//  Created by jhseo on 14/06/2019.
+//  Created by jhseo on 10/07/2019.
 //  Copyright © 2019 Piction Network. All rights reserved.
 //
 
 import UIKit
 import PictionSDK
 
-class ProjectsRecommendedDeleteViewController: UIViewController {
-    @IBOutlet weak var projectIdTextField: UITextField!
+class ProjectsSubscriptionViewController: UIViewController {
+    @IBOutlet weak var uriTextField: UITextField!
+    @IBOutlet weak var subscriptionPriceTextField: UITextField!
 
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
@@ -28,7 +29,7 @@ class ProjectsRecommendedDeleteViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.projects.recommendedDelete(projectId: projectIdTextField.text ?? "",
+        PictionSDK.projects.subscription(uri: uriTextField.text ?? "", subscriptionPrice: Int(subscriptionPriceTextField.text ?? "0") ?? 0,
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false

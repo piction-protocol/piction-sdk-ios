@@ -10,11 +10,12 @@ import UIKit
 import PictionSDK
 
 class ProjectsUpdateViewController: UIViewController {
-    @IBOutlet weak var projectIdTextField: UITextField!
+    @IBOutlet weak var uriTextField: UITextField!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var synopsisTextField: UITextField!
     @IBOutlet weak var thumbnailTextField: UITextField!
     @IBOutlet weak var wideThumbnailTextField: UITextField!
+    @IBOutlet weak var subscriptionPriceTextField: UITextField!
     
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
@@ -32,7 +33,7 @@ class ProjectsUpdateViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.projects.update(projectId: projectIdTextField.text ?? "", title: titleTextField.text ?? "", synopsis: synopsisTextField.text ?? "", thumbnail: thumbnailTextField.text ?? "", wideThumbnail: wideThumbnailTextField.text ?? "",
+        PictionSDK.projects.update(uri: uriTextField.text ?? "", title: titleTextField.text ?? "", synopsis: synopsisTextField.text ?? "", thumbnail: thumbnailTextField.text ?? "", wideThumbnail: wideThumbnailTextField.text ?? "", subscriptionPrice:  Int(subscriptionPriceTextField.text ?? "0") ?? 0,
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false
@@ -57,17 +58,16 @@ class ProjectsUpdateViewController: UIViewController {
 
         let okAction = UIAlertAction(title: "OK", style: .default, handler: { action in
 
-            let inputId = alert.textFields?.first?.text ?? ""
+            let inputUri = alert.textFields?.first?.text ?? ""
 
             self.responseTextView.text = ""
             self.isLoading = true
-            PictionSDK.projects.all(
+            PictionSDK.projects.get(uri: inputUri,
                 success: { response in
-                    let currentProject = response.filter { $0.id == inputId }.first
-                    self.projectIdTextField.text = inputId
-                    self.titleTextField.text = currentProject?.title
-                    self.synopsisTextField.text = currentProject?.synopsis
-                    self.responseTextView.text = response.map { try! $0.toJSONString() }.description//String(describing: currentProject)
+                    self.uriTextField.text = response.uri
+                    self.titleTextField.text = response.title
+                    self.synopsisTextField.text = response.synopsis
+                    self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                     self.isLoading = false
             },
                 failure: { error in
@@ -85,9 +85,6 @@ class ProjectsUpdateViewController: UIViewController {
 
 
         present(alert, animated: false, completion: nil)
-
-        self.isLoading = true
-
     }
 
     private func configurationTextField(textField: UITextField!){

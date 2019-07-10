@@ -10,7 +10,7 @@ import UIKit
 import PictionSDK
 
 class SeriesDeleteViewController: UIViewController {
-    @IBOutlet weak var projectIdTextField: UITextField!
+    @IBOutlet weak var uriTextField: UITextField!
     @IBOutlet weak var seriesIdTextField: UITextField!
 
     @IBOutlet weak var responseTextView: UITextView!
@@ -29,14 +29,14 @@ class SeriesDeleteViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.series.delete(projectId: projectIdTextField.text ?? "", seriesId: Int(seriesIdTextField.text ?? "0") ?? 0,
+        PictionSDK.series.delete(uri: uriTextField.text ?? "", seriesId: Int(seriesIdTextField.text ?? "0") ?? 0,
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false
-        },
+            },
             failure: { error in
                 self.responseTextView.text = String(describing: error)
                 self.isLoading = false
-        })
+            })
     }
 }

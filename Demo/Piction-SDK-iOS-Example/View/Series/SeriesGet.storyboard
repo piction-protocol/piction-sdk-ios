@@ -24,7 +24,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mDK-Lu-com">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="projectId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnz-Rv-RTS">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnz-Rv-RTS">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="EBn-l3-mig"/>
@@ -138,9 +138,9 @@
                     <connections>
                         <outlet property="activityIndicator" destination="1W9-4f-HG5" id="8oq-fI-7cY"/>
                         <outlet property="executeButton" destination="9hP-le-It9" id="Xje-Dn-nrf"/>
-                        <outlet property="projectIdTextField" destination="2E8-xw-rKg" id="NA0-z0-0Id"/>
                         <outlet property="responseTextView" destination="NST-s9-6dh" id="bFg-FV-M6b"/>
                         <outlet property="seriesIdTextField" destination="Ong-G0-hkz" id="Vnp-3a-C4y"/>
+                        <outlet property="uriTextField" destination="2E8-xw-rKg" id="fk9-hw-eCr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6U-8D-L17" userLabel="First Responder" sceneMemberID="firstResponder"/>

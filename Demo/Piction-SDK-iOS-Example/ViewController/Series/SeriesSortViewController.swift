@@ -9,8 +9,8 @@
 import UIKit
 import PictionSDK
 
-class SeriesUpdatePriorityViewController: UIViewController {
-    @IBOutlet weak var projectIdTextField: UITextField!
+class SeriesSortViewController: UIViewController {
+    @IBOutlet weak var uriTextField: UITextField!
     @IBOutlet weak var seriesIdListTextField: UITextField!
 
     @IBOutlet weak var responseTextView: UITextView!
@@ -32,7 +32,7 @@ class SeriesUpdatePriorityViewController: UIViewController {
         let idListArray = seriesIdListTextField.text?.components(separatedBy: ",")
         let seriesIdList = idListArray?.compactMap { Int($0)! } ?? []
 
-        PictionSDK.series.updatePriority(projectId: projectIdTextField.text ?? "", seriesIdList: seriesIdList,
+        PictionSDK.series.sort(uri: uriTextField.text ?? "", seriesIdList: seriesIdList,
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.map { $0.toDict() })
                 self.isLoading = false

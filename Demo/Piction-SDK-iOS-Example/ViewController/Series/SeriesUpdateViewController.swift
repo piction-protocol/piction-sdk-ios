@@ -10,7 +10,7 @@ import UIKit
 import PictionSDK
 
 class SeriesUpdateViewController: UIViewController {
-    @IBOutlet weak var projectIdTextField: UITextField!
+    @IBOutlet weak var uriTextField: UITextField!
     @IBOutlet weak var seriesIdTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
 
@@ -30,7 +30,7 @@ class SeriesUpdateViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.series.update(projectId: projectIdTextField.text ?? "", seriesId: Int(seriesIdTextField.text ?? "0") ?? 0, name: nameTextField.text ?? "",
+        PictionSDK.series.update(uri: uriTextField.text ?? "", seriesId: Int(seriesIdTextField.text ?? "0") ?? 0, name: nameTextField.text ?? "",
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false

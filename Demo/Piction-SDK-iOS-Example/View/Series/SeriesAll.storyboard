@@ -24,7 +24,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bYb-Nb-Pn4">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="projectId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc3-OI-nkA">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc3-OI-nkA">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="hwe-Km-24y"/>
@@ -113,8 +113,8 @@
                     <connections>
                         <outlet property="activityIndicator" destination="iPg-K7-9Sc" id="lhl-2i-hEt"/>
                         <outlet property="executeButton" destination="qeG-SK-sAY" id="Lag-iK-DuJ"/>
-                        <outlet property="projectIdTextField" destination="ZUM-ri-ccP" id="TmZ-RG-iQL"/>
                         <outlet property="responseTextView" destination="cW8-Gh-aUz" id="9U6-y9-5zz"/>
+                        <outlet property="uriTextField" destination="ZUM-ri-ccP" id="z4J-TG-k04"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRA-z4-EfU" userLabel="First Responder" sceneMemberID="firstResponder"/>

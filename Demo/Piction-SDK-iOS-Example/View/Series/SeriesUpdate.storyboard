@@ -24,7 +24,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="56B-M5-q9n">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="projectId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbJ-ce-u6J">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbJ-ce-u6J">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="vc5-aA-VcO"/>
@@ -164,9 +164,9 @@
                         <outlet property="activityIndicator" destination="PPx-JX-N8a" id="cZx-Yn-0f1"/>
                         <outlet property="executeButton" destination="cpn-xv-Qb3" id="xSF-WC-cS7"/>
                         <outlet property="nameTextField" destination="JDQ-xY-HLR" id="aNQ-BO-EHd"/>
-                        <outlet property="projectIdTextField" destination="mYN-vK-eCK" id="oUa-9a-Eik"/>
                         <outlet property="responseTextView" destination="zl6-zo-Dnk" id="NLV-0C-q1Z"/>
                         <outlet property="seriesIdTextField" destination="Pgd-ax-IN0" id="xTG-EY-jME"/>
+                        <outlet property="uriTextField" destination="mYN-vK-eCK" id="1Sa-LH-7b0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eA-SQ-fto" userLabel="First Responder" sceneMemberID="firstResponder"/>

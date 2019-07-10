@@ -10,7 +10,6 @@ import UIKit
 import PictionSDK
 
 class UsersUpdateViewController: UIViewController {
-    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var pictureTextField: UITextField!
@@ -31,7 +30,7 @@ class UsersUpdateViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
         
-        PictionSDK.users.update(email: emailTextField.text ?? "", username: usernameTextField.text ?? "", password: passwordTextField.text ?? "", picture: pictureTextField.text ?? "",
+        PictionSDK.users.update(username: usernameTextField.text ?? "", password: passwordTextField.text ?? "", picture: pictureTextField.text ?? "",
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false
@@ -56,9 +55,8 @@ class UsersUpdateViewController: UIViewController {
         self.isLoading = true
         PictionSDK.users.me(
             success: { response in
-                self.emailTextField.text = response.email
                 self.usernameTextField.text = response.username
-                self.responseTextView.text = try! response.toJSONString()//String(describing: response)
+                self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false
             },
             failure: { error in

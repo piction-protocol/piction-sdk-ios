@@ -11,9 +11,11 @@ import PictionSDK
 //import RxSwift
 
 class UsersSignupViewController: UIViewController {
+    @IBOutlet weak var loginIdTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordCheckTextField: UITextField!
 
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
@@ -33,9 +35,9 @@ class UsersSignupViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.users.signup(email: emailTextField.text ?? "", username: usernameTextField.text ?? "", password: passwordTextField.text ?? "",
+        PictionSDK.users.signup(loginId: loginIdTextField.text ?? "", email: emailTextField.text ?? "", username: usernameTextField.text ?? "", password: passwordTextField.text ?? "", passwordCheck: passwordCheckTextField.text ?? "",
             success: { response in
-                self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
+                self.responseTextView.text = try? response.toJSONString()
                 self.isLoading = false
             },
             failure: { error in

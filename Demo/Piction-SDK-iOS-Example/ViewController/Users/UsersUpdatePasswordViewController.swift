@@ -12,7 +12,8 @@ import PictionSDK
 class UsersUpdatePasswordViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var newPasswordTextField: UITextField!
-    
+    @IBOutlet weak var passwordCheckTextField: UITextField!
+
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
 
@@ -29,7 +30,7 @@ class UsersUpdatePasswordViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
         
-        PictionSDK.users.updatePassword(password: passwordTextField.text ?? "", newPassword: newPasswordTextField.text ?? "",
+        PictionSDK.users.updatePassword(password: passwordTextField.text ?? "", newPassword: newPasswordTextField.text ?? "", passwordCheck: passwordCheckTextField.text ?? "",
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false

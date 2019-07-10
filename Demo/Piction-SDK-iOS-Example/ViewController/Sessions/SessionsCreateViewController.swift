@@ -10,8 +10,9 @@ import UIKit
 import PictionSDK
 
 class SessionsCreateViewController: UIViewController {
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var loginIdTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var remembermeTextField: UITextField!
     
     @IBOutlet weak var responseTextView: UITextView!
     @IBOutlet weak var executeButton: UIButton!
@@ -29,7 +30,7 @@ class SessionsCreateViewController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
         
-        PictionSDK.sessions.create(email: emailTextField.text ?? "", password: passwordTextField.text ?? "",
+        PictionSDK.sessions.create(loginId: loginIdTextField.text ?? "", password: passwordTextField.text ?? "", rememberme: Bool(remembermeTextField.text ?? "false") ?? false,
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false

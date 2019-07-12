@@ -13,8 +13,8 @@ public final class Posts {
     static let shared = Posts()
     private init() {}
 
-    public func all(uri: String, isFree: Bool?, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostsAPI.all(uri: uri, isFree: isFree, page: page, size: size),
+    public func all(uri: String, isRequiredSubscription: Bool?, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostsAPI.all(uri: uri, isRequiredSubscription: isRequiredSubscription, page: page, size: size),
             success: { (response: PageViewResponse<PostModel>) in
                 successCompletion?(response)
             },

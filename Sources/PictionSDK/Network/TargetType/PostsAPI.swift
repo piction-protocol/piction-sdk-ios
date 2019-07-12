@@ -11,7 +11,7 @@ import Moya
 import UIKit
 
 public enum PostsAPI {
-    case all(uri: String, isFree: Bool?, page: Int, size: Int)
+    case all(uri: String, isRequiredSubscription: Bool?, page: Int, size: Int)
     case create(uri: String, title: String, content: String, cover: String, requiredSubscription: Bool, seriesId: String)
     case get(uri: String, postId: Int)
     case update(uri: String, postId: Int, title: String, content: String, cover: String, requiredSubscription: Bool, seriesId: String)
@@ -97,10 +97,10 @@ extension PostsAPI: TargetType {
     }
     public var task: Task {
         switch self {
-        case .all(_, let isFree, let page, let size):
+        case .all(_, let isRequiredSubscription, let page, let size):
             var param: [String: Any] = [:]
-            if isFree != nil {
-                param["isFree"] = isFree
+            if isRequiredSubscription != nil {
+                param["isRequiredSubscription"] = isRequiredSubscription
             }
             param["page"] = page
             param["size"] = size

@@ -89,6 +89,13 @@
 		432CAC6D22B3A6CF0007EE03 /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC6C22B3A6CF0007EE03 /* JsonUtil.swift */; };
 		432CAC6F22B724870007EE03 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CAC6E22B724870007EE03 /* SwiftyJSON.framework */; };
 		432CAC7022B724870007EE03 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 432CAC6E22B724870007EE03 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43ADDBD522D8551D00B9D472 /* BannersAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ADDBD422D8551D00B9D472 /* BannersAllViewController.swift */; };
+		43ADDBD722D8553E00B9D472 /* BannersNoticesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ADDBD622D8553E00B9D472 /* BannersNoticesViewController.swift */; };
+		43ADDBD922D8555000B9D472 /* BannersEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ADDBD822D8555000B9D472 /* BannersEventsViewController.swift */; };
+		43ADDBDC22D8563800B9D472 /* BannersAll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43ADDBDB22D8563800B9D472 /* BannersAll.storyboard */; };
+		43ADDBDE22D8564400B9D472 /* BannersNotices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43ADDBDD22D8564400B9D472 /* BannersNotices.storyboard */; };
+		43ADDBE022D8564D00B9D472 /* BannersEvents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43ADDBDF22D8564D00B9D472 /* BannersEvents.storyboard */; };
+		43ADDBE222D8570500B9D472 /* BannersAPIHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43ADDBE122D8570500B9D472 /* BannersAPIHome.storyboard */; };
 		43C3142E228AA198007E9EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142D228AA198007E9EAF /* AppDelegate.swift */; };
 		43C31430228AA198007E9EAF /* UsersSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */; };
 		43C31438228AA199007E9EAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C31437228AA199007E9EAF /* Assets.xcassets */; };
@@ -234,6 +241,13 @@
 		432CAC6522B398590007EE03 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
 		432CAC6C22B3A6CF0007EE03 /* JsonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
 		432CAC6E22B724870007EE03 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Piction-SDK-iOS-Example/Frameworks/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		43ADDBD422D8551D00B9D472 /* BannersAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersAllViewController.swift; sourceTree = "<group>"; };
+		43ADDBD622D8553E00B9D472 /* BannersNoticesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersNoticesViewController.swift; sourceTree = "<group>"; };
+		43ADDBD822D8555000B9D472 /* BannersEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersEventsViewController.swift; sourceTree = "<group>"; };
+		43ADDBDB22D8563800B9D472 /* BannersAll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BannersAll.storyboard; sourceTree = "<group>"; };
+		43ADDBDD22D8564400B9D472 /* BannersNotices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BannersNotices.storyboard; sourceTree = "<group>"; };
+		43ADDBDF22D8564D00B9D472 /* BannersEvents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BannersEvents.storyboard; sourceTree = "<group>"; };
+		43ADDBE122D8570500B9D472 /* BannersAPIHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BannersAPIHome.storyboard; sourceTree = "<group>"; };
 		43C3142A228AA198007E9EAF /* Piction-SDK-iOS-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piction-SDK-iOS-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C3142D228AA198007E9EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C3142F228AA198007E9EAF /* UsersSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSignupViewController.swift; sourceTree = "<group>"; };
@@ -421,6 +435,26 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		43ADDBD322D854FA00B9D472 /* Banners */ = {
+			isa = PBXGroup;
+			children = (
+				43ADDBD422D8551D00B9D472 /* BannersAllViewController.swift */,
+				43ADDBD622D8553E00B9D472 /* BannersNoticesViewController.swift */,
+				43ADDBD822D8555000B9D472 /* BannersEventsViewController.swift */,
+			);
+			path = Banners;
+			sourceTree = "<group>";
+		};
+		43ADDBDA22D8562400B9D472 /* Banners */ = {
+			isa = PBXGroup;
+			children = (
+				43ADDBDB22D8563800B9D472 /* BannersAll.storyboard */,
+				43ADDBDD22D8564400B9D472 /* BannersNotices.storyboard */,
+				43ADDBDF22D8564D00B9D472 /* BannersEvents.storyboard */,
+			);
+			path = Banners;
+			sourceTree = "<group>";
+		};
 		43C31421228AA198007E9EAF = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +522,7 @@
 				431918E022D580740005328E /* Recommendation */,
 				432CAC2D22B34CB20007EE03 /* Series */,
 				431918F522D583470005328E /* Search */,
+				43ADDBDA22D8562400B9D472 /* Banners */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -504,6 +539,7 @@
 				431918ED22D5821E0005328E /* Recommendation */,
 				432CAC2C22B34CA70007EE03 /* Series */,
 				431918F422D583300005328E /* Search */,
+				43ADDBD322D854FA00B9D472 /* Banners */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -570,6 +606,7 @@
 				431918BD22D579DC0005328E /* SeriesAPIHome.storyboard */,
 				431918DD22D57FEB0005328E /* SearchAPIHome.storyboard */,
 				431918DB22D57FA40005328E /* RecommendationAPIHome.storyboard */,
+				43ADDBE122D8570500B9D472 /* BannersAPIHome.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -676,12 +713,14 @@
 				431918C422D57C2F0005328E /* PostsContent.storyboard in Resources */,
 				431918C622D57C3C0005328E /* PostsIsLike.storyboard in Resources */,
 				431918B822D579C40005328E /* Main.storyboard in Resources */,
+				43ADDBDC22D8563800B9D472 /* BannersAll.storyboard in Resources */,
 				43C3143B228AA199007E9EAF /* LaunchScreen.storyboard in Resources */,
 				432CAC1622B32CF30007EE03 /* MyTransactions.storyboard in Resources */,
 				431918F722D583560005328E /* SearchProject.storyboard in Resources */,
 				431918DA22D57EFD0005328E /* ProjectsSubscription.storyboard in Resources */,
 				4329EBAD22B1E06C00D01916 /* PostsGet.storyboard in Resources */,
 				43C316742292773A007E9EAF /* UsersMe.storyboard in Resources */,
+				43ADDBDE22D8564400B9D472 /* BannersNotices.storyboard in Resources */,
 				431918DC22D57FA40005328E /* RecommendationAPIHome.storyboard in Resources */,
 				432CAC5522B3824E0007EE03 /* SessionsDelete.storyboard in Resources */,
 				432CAC3322B34CE40007EE03 /* SeriesSort.storyboard in Resources */,
@@ -709,6 +748,7 @@
 				431918D822D57EE80005328E /* ProjectsIsSubscribing.storyboard in Resources */,
 				43C31438228AA199007E9EAF /* Assets.xcassets in Resources */,
 				431918B422D579660005328E /* PostsAPIHome.storyboard in Resources */,
+				43ADDBE022D8564D00B9D472 /* BannersEvents.storyboard in Resources */,
 				432CAC3122B34CD80007EE03 /* SeriesCreate.storyboard in Resources */,
 				43CA1BAB229FA23D00CEF20A /* UsersUpdatePassword.storyboard in Resources */,
 				4329EBB322B1E09300D01916 /* PostsUploadCoverImage.storyboard in Resources */,
@@ -722,6 +762,7 @@
 				43C3168022928B4B007E9EAF /* SessionsCreate.storyboard in Resources */,
 				43CA221C22B0A76C00CEF20A /* UsersUploadPicture.storyboard in Resources */,
 				431918C822D57C4F0005328E /* PostsPrevPost.storyboard in Resources */,
+				43ADDBE222D8570500B9D472 /* BannersAPIHome.storyboard in Resources */,
 				432CAC2F22B34CCA0007EE03 /* SeriesAll.storyboard in Resources */,
 				431918AA22D577EA0005328E /* MySales.storyboard in Resources */,
 				4329EBA722B1E03C00D01916 /* PostsAll.storyboard in Resources */,
@@ -737,6 +778,7 @@
 			files = (
 				4329EBA522B1E02700D01916 /* PostsUploadCoverImageViewController.swift in Sources */,
 				431918FD22D583840005328E /* SearchWriterViewController.swift in Sources */,
+				43ADDBD722D8553E00B9D472 /* BannersNoticesViewController.swift in Sources */,
 				431918D622D57D920005328E /* PostsNextPostViewController.swift in Sources */,
 				43CA1BA9229FA22800CEF20A /* UsersUpdatePasswordViewController.swift in Sources */,
 				432CAC5122B380CA0007EE03 /* PostsLikeViewController.swift in Sources */,
@@ -758,6 +800,7 @@
 				432CAC3E22B34D1E0007EE03 /* SeriesAllViewController.swift in Sources */,
 				431918EC22D580DB0005328E /* ProjectsSubscriptionViewController.swift in Sources */,
 				432CAC4022B34D2C0007EE03 /* SeriesCreateViewController.swift in Sources */,
+				43ADDBD922D8555000B9D472 /* BannersEventsViewController.swift in Sources */,
 				4329EB9B22B1DFDC00D01916 /* PostsAllViewController.swift in Sources */,
 				431918F222D5821E0005328E /* RecommendationDeleteViewController.swift in Sources */,
 				4329EBA122B1DFFD00D01916 /* PostsUpdateViewController.swift in Sources */,
@@ -769,6 +812,7 @@
 				431918FB22D583730005328E /* SearchProjectViewController.swift in Sources */,
 				4329EB9F22B1DFF200D01916 /* PostsGetViewController.swift in Sources */,
 				43CA1BB9229FAD7E00CEF20A /* ProjectsCreateViewController.swift in Sources */,
+				43ADDBD522D8551D00B9D472 /* BannersAllViewController.swift in Sources */,
 				4329EB9D22B1DFE600D01916 /* PostsCreateViewController.swift in Sources */,
 				432CAC4422B34D420007EE03 /* SeriesGetViewController.swift in Sources */,
 				432CAC4222B34D370007EE03 /* SeriesSortViewController.swift in Sources */,

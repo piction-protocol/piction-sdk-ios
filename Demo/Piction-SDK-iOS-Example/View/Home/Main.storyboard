@@ -212,6 +212,30 @@
                                             <segue destination="bpM-N9-8EI" kind="show" id="mMF-IS-oOc"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="jNU-eh-gL7">
+                                        <rect key="frame" x="0.0" y="407.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jNU-eh-gL7" id="Z2r-d5-sG0">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BannersAPI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaY-BQ-IxY">
+                                                    <rect key="frame" x="20" y="11.5" width="348" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KaY-BQ-IxY" secondAttribute="trailing" id="BXy-az-7vG"/>
+                                                <constraint firstItem="KaY-BQ-IxY" firstAttribute="centerY" secondItem="Z2r-d5-sG0" secondAttribute="centerY" id="Bmv-An-68a"/>
+                                                <constraint firstItem="KaY-BQ-IxY" firstAttribute="leading" secondItem="Z2r-d5-sG0" secondAttribute="leadingMargin" id="tag-hq-hkY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="O7h-AS-10I" kind="show" id="wzQ-eX-4kV"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -289,6 +313,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OpW-Bk-xUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1353" y="6"/>
+        </scene>
+        <!--BannersAPIHome-->
+        <scene sceneID="DeD-oQ-GVz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BannersAPIHome" id="O7h-AS-10I" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2f8-1N-oj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313" y="35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tg8-tQ-sBp">

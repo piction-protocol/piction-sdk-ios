@@ -1,5 +1,5 @@
 //
-//  NoticeAPI.swift
+//  BannersAPI.swift
 //  PictionSDK
 //
 //  Created by jhseo on 10/07/2019.
@@ -9,13 +9,13 @@
 import Foundation
 import Moya
 
-public enum NoticeAPI {
+public enum BannersAPI {
     case all
     case events
     case notices
 }
 
-extension NoticeAPI: TargetType {
+extension BannersAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
@@ -24,7 +24,7 @@ extension NoticeAPI: TargetType {
         case .events:
             return "/banners/events"
         case .notices:
-            return "/banners/notices"
+            return "/banners/notice"
         }
     }
     public var method: Moya.Method {

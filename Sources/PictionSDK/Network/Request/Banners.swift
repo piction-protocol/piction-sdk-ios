@@ -1,5 +1,5 @@
 //
-//  Notice.swift
+//  Banners.swift
 //  PictionSDK
 //
 //  Created by jhseo on 10/07/2019.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public final class Notice {
-    static let shared = Notice()
+public final class Banners {
+    static let shared = Banners()
     private init() {}
 
     public func all(success successCompletion: (([BannerViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(NoticeAPI.all,
+        PictionProvider.request(BannersAPI.all,
             success: { (response: [BannerViewResponse]) in
                 successCompletion?(response)
             },
@@ -23,7 +23,7 @@ public final class Notice {
     }
 
     public func events(success successCompletion: (([BannerViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(NoticeAPI.events,
+        PictionProvider.request(BannersAPI.events,
             success: { (response: [BannerViewResponse]) in
                 successCompletion?(response)
             },
@@ -33,7 +33,7 @@ public final class Notice {
     }
 
     public func notices(success successCompletion: (([BannerViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(NoticeAPI.notices,
+        PictionProvider.request(BannersAPI.notices,
             success: { (response: [BannerViewResponse]) in
                 successCompletion?(response)
             },

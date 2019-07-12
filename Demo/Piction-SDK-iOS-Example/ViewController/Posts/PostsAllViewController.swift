@@ -11,7 +11,7 @@ import PictionSDK
 
 class PostsAllController: UIViewController {
     @IBOutlet weak var uriTextField: UITextField!
-    @IBOutlet weak var isFreeTextField: UITextField!
+    @IBOutlet weak var isRequiredSubscriptionTextField: UITextField!
     @IBOutlet weak var pageTextField: UITextField!
     @IBOutlet weak var sizeTextField: UITextField!
 
@@ -31,7 +31,7 @@ class PostsAllController: UIViewController {
         self.responseTextView.text = ""
         self.isLoading = true
 
-        PictionSDK.posts.all(uri: uriTextField.text ?? "", isFree: Bool(isFreeTextField.text ?? "false") ?? false, page: Int(pageTextField.text ?? "0") ?? 0, size: Int(sizeTextField.text ?? "0") ?? 0,
+        PictionSDK.posts.all(uri: uriTextField.text ?? "", isRequiredSubscription: Bool(isRequiredSubscriptionTextField.text ?? "false") ?? false, page: Int(pageTextField.text ?? "0") ?? 0, size: Int(sizeTextField.text ?? "0") ?? 0,
             success: { response in
                 self.responseTextView.text = JsonUtil.toString(dict: response.toDict())
                 self.isLoading = false

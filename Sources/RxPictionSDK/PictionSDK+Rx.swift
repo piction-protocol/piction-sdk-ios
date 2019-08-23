@@ -37,6 +37,7 @@ public extension Reactive {
             switch result {
             case let .success(response):
                 do {
+                    print(response)
                     try response.filterStatusCode()
 
                     let responseJSON = try? response.mapJSON() as? [String : Any?]
@@ -45,12 +46,25 @@ public extension Reactive {
                     }
                     successCompletion(response)
                 } catch {
+                    print(error)
                     if let error = error as? ErrorType {
                         failureCompletion(error)
+                    } else {
+                        let errorItem: [String: Any] = [
+                            "code": response.statusCode,
+                            "status_code": response.statusCode,
+                            "message": response.description
+                        ]
+                        let errorModel = ErrorModel.from(NSDictionary(dictionary: errorItem))!
+                        let errorType = ErrorType.custom(errorModel)
+
+                        failureCompletion(errorType)
                     }
                 }
             case let .failure(error):
                 print("Request Error: \(error)")
+
+
             }
         }
     }

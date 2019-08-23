@@ -66,6 +66,13 @@ extension MyProjectViewController: ViewModelBindable {
         let output = viewModel.build(input: input)
 
         output
+            .viewWillAppear
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.navigationBar.prefersLargeTitles = false
+            })
+            .disposed(by: disposeBag)
+        
+        output
             .projectList
             .drive { $0 }
             .map { [SectionModel(model: "", items: $0)] }

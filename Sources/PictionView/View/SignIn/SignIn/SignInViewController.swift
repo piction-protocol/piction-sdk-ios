@@ -58,6 +58,7 @@ extension SignInViewController: ViewModelBindable {
     func bindViewModel(viewModel: ViewModel) {
 
         let input = SignInViewModel.Input(
+            viewWillAppear: rx.viewWillAppear.asDriver(),
             signInBtnDidTap: Driver.merge(signInButton.rx.tap.asDriver(), keyboardReturnSignIn.asDriver(onErrorDriveWith: .empty())),
             signUpBtnDidTap: signUpButton.rx.tap.asDriver(),
             loginIdTextFieldDidInput: loginIdInputView.inputTextField.rx.text.orEmpty.asDriver(),
@@ -67,6 +68,13 @@ extension SignInViewController: ViewModelBindable {
         )
 
         let output = viewModel.build(input: input)
+
+        output
+            .viewWillAppear
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.navigationBar.prefersLargeTitles = false
+            })
+            .disposed(by: disposeBag)
 
         output
             .openSignUpViewController

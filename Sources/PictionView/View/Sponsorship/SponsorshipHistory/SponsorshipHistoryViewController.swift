@@ -49,6 +49,13 @@ extension SponsorshipHistoryViewController: ViewModelBindable {
         let output = viewModel.build(input: input)
 
         output
+            .viewWillAppear
+            .drive(onNext: { [weak self] in
+                self?.navigationController?.navigationBar.prefersLargeTitles = false
+            })
+            .disposed(by: disposeBag)
+
+        output
             .sponsorshipList
             .drive { $0 }
             .map { [SectionModel(model: "", items: $0)] }

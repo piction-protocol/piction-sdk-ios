@@ -48,6 +48,7 @@ final class CreatePostViewModel: InjectableViewModel {
     }
 
     struct Output {
+        let viewWillAppear: Driver<Void>
         let isModify: Driver<Bool>
         let loadPostInfo: Driver<(PostModel, String)>
         let uploadContentImage: Driver<(String, UIImage)>
@@ -292,6 +293,7 @@ final class CreatePostViewModel: InjectableViewModel {
         let showToast = Driver.merge(uploadCoverImageError, uploadContentImageError, changePostInfoError)
 
         return Output(
+            viewWillAppear: input.viewWillAppear,
             isModify: isModify,
             loadPostInfo: loadPostInfo,
             uploadContentImage: contentImage,

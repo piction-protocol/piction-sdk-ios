@@ -23,6 +23,7 @@ final class SignUpViewModel: InjectableViewModel {
     }
 
     struct Input {
+        let viewWillAppear: Driver<Void>
         let signUpBtnDidTap: Driver<Void>
         let loginIdTextFieldDidInput: Driver<String>
         let emailTextFieldDidInput: Driver<String>
@@ -35,6 +36,7 @@ final class SignUpViewModel: InjectableViewModel {
     }
 
     struct Output {
+        let viewWillAppear: Driver<Void>
         let signUpBtnEnable: Driver<Void>
         let openSignUpComplete: Driver<Void>
         let openTermsView: Driver<Void>
@@ -44,6 +46,8 @@ final class SignUpViewModel: InjectableViewModel {
     }
 
     func build(input: Input) -> Output {
+        let viewWillAppear = input.viewWillAppear
+
         let signUpInfo = Driver.combineLatest(input.loginIdTextFieldDidInput, input.emailTextFieldDidInput, input.passwordTextFieldDidInput, input.passwordCheckTextFieldDidInput, input.nicknameTextFieldDidInput) { (loginId: $0, email: $1, password: $2, passwordCheck: $3, username: $4) }
 
         let signUpButtonAction = input.signUpBtnDidTap
@@ -101,6 +105,7 @@ final class SignUpViewModel: InjectableViewModel {
         let openPrivacyView = input.privacyBtnDidTap
 
         return Output(
+            viewWillAppear: viewWillAppear,
             signUpBtnEnable: input.agreeBtnDidTap,
             openSignUpComplete: sessionCreateSuccess,
             openTermsView: openTermsView,

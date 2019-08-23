@@ -81,6 +81,7 @@ extension PostViewController: ViewModelBindable {
         output
             .viewWillAppear
             .drive(onNext: { [weak self] in
+                self?.navigationController?.navigationBar.prefersLargeTitles = false
                 self?.tabBarController?.tabBar.isHidden = true
                 self?.navigationController?.isToolbarHidden = false
             })

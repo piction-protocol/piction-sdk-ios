@@ -88,6 +88,13 @@ extension TransactionHistoryViewController: ViewModelBindable {
         let output = viewModel.build(input: input)
 
         output
+            .viewWillAppear
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.navigationBar.prefersLargeTitles = false
+            })
+            .disposed(by: disposeBag)
+
+        output
             .transactionList
             .drive { $0 }
             .map { [$0] }

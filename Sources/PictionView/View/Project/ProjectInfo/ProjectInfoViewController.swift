@@ -43,6 +43,13 @@ extension ProjectInfoViewController: ViewModelBindable {
         let output = viewModel.build(input: input)
 
         output
+            .viewWillAppear
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.navigationBar.prefersLargeTitles = false
+            })
+            .disposed(by: disposeBag)
+
+        output
             .projectInfo
             .drive(onNext: { [weak self] projectInfo in
                 if let url = URL(string: projectInfo.thumbnail ?? "") {

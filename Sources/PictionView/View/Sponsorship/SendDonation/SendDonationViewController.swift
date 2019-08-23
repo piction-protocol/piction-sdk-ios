@@ -53,6 +53,13 @@ extension SendDonationViewController: ViewModelBindable {
         let output = viewModel.build(input: input)
 
         output
+            .viewWillAppear
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.navigationBar.prefersLargeTitles = false
+            })
+            .disposed(by: disposeBag)
+
+        output
             .userInfo
             .drive(onNext: { [weak self] userInfo in
                 let userPictureWithIC = "\(userInfo.picture ?? "")?w=240&h=240&quality=80&output=webp"

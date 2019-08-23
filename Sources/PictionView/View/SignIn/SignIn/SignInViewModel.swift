@@ -24,6 +24,7 @@ final class SignInViewModel: InjectableViewModel {
     }
 
     struct Input {
+        let viewWillAppear: Driver<Void>
         let signInBtnDidTap: Driver<Void>
         let signUpBtnDidTap: Driver<Void>
         let loginIdTextFieldDidInput: Driver<String>
@@ -33,6 +34,7 @@ final class SignInViewModel: InjectableViewModel {
     }
 
     struct Output {
+        let viewWillAppear: Driver<Void>
         let activityIndicator: Driver<Bool>
         let openSignUpViewController: Driver<Void>
         let openFindPassword: Driver<Void>
@@ -42,6 +44,8 @@ final class SignInViewModel: InjectableViewModel {
     }
 
     func build(input: Input) -> Output {
+        let viewWillAppear = input.viewWillAppear
+
         let signInInfo = Driver.combineLatest(input.loginIdTextFieldDidInput, input.passwordTextFieldDidInput) { (loginId: $0, password: $1) }
 
         let signInButtonAction = input.signInBtnDidTap
@@ -109,6 +113,7 @@ final class SignInViewModel: InjectableViewModel {
         let dismissViewController = Driver.merge(signInSuccess, input.closeBtnDidTap).flatMap { _ in Driver.just(()) }
 
         return Output(
+            viewWillAppear: viewWillAppear,
             activityIndicator: activityIndicator,
             openSignUpViewController: openSignUpViewController,
             openFindPassword: openFindPassword,

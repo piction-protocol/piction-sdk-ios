@@ -34,6 +34,13 @@ extension DepositViewController: ViewModelBindable {
         let output = viewModel.build(input: input)
 
         output
+            .viewWillAppear
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.navigationBar.prefersLargeTitles = false
+            })
+            .disposed(by: disposeBag)
+
+        output
             .userInfo
             .drive(onNext: { [weak self] userInfo in
                 self?.idLabel.text = "@\(userInfo.loginId ?? "")의 지갑주소"

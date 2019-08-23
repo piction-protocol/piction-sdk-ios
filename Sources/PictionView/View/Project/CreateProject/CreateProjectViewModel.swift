@@ -46,6 +46,7 @@ final class CreateProjectViewModel: InjectableViewModel {
     }
 
     struct Output {
+        let viewWillAppear: Driver<Void>
         let isModify: Driver<Bool>
         let loadProject: Driver<ProjectModel>
         let projectIdChanged: Driver<String>
@@ -60,6 +61,8 @@ final class CreateProjectViewModel: InjectableViewModel {
 
     func build(input: Input) -> Output {
         let updater = self.updater
+
+        let viewWillAppear = input.viewWillAppear
 
         let isModify = input.viewWillAppear
             .flatMap { [weak self] _ -> Driver<Bool> in
@@ -222,6 +225,7 @@ final class CreateProjectViewModel: InjectableViewModel {
         let showToast = Driver.merge(uploadWideThumbnailError, uploadThumbnailError, changeProjectInfoError)
 
         return Output(
+            viewWillAppear: viewWillAppear,
             isModify: isModify,
             loadProject: loadProjectSuccess,
             projectIdChanged: projectIdChanged,

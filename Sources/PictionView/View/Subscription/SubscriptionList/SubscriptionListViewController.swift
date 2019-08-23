@@ -97,7 +97,6 @@ extension SubscriptionListViewController: ViewModelBindable {
             .drive(onNext: { [weak self] _ in
                 self?.navigationController?.hideTransparentNavigationBar()
                 self?.navigationController?.setNavigationBarLine(true)
-                self?.navigationController?.navigationBar.prefersLargeTitles = false
             })
             .disposed(by: disposeBag)
 

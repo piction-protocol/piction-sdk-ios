@@ -68,6 +68,7 @@ extension SearchSponsorViewController: ViewModelBindable {
             .viewWillAppear
             .drive(onNext: { [weak self] _ in
                 guard let `self` = self else { return }
+                self.navigationController?.navigationBar.prefersLargeTitles = false
                 self.navigationController?.setNavigationBarLine(false)
                 self.searchBar.becomeFirstResponder()
             })

@@ -69,8 +69,6 @@ final class ExplorerViewController: UIViewController {
         searchController?.searchResultsUpdater = searchResultsController
         navigationItem.searchController = searchController
         definesPresentationContext = true
-
-//        navigationController?.navigationItem.largeTitleDisplayMode = .always
     }
 
     private func openProjectViewController(uri: String) {
@@ -134,7 +132,6 @@ extension ExplorerViewController: ViewModelBindable {
             .drive(onNext: { [weak self] _ in
                 self?.navigationController?.hideTransparentNavigationBar()
                 self?.navigationController?.setNavigationBarLine(true)
-                self?.navigationController?.navigationBar.prefersLargeTitles = false
             })
             .disposed(by: disposeBag)
 

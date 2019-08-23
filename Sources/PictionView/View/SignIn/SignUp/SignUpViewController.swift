@@ -73,6 +73,7 @@ extension SignUpViewController: ViewModelBindable {
     func bindViewModel(viewModel: ViewModel) {
 
         let input = SignUpViewModel.Input(
+            viewWillAppear: rx.viewWillAppear.asDriver(),
             signUpBtnDidTap: signUpButton.rx.tap.asDriver().throttle(1),
             loginIdTextFieldDidInput: loginIdInputView.inputTextField.rx.text.orEmpty.asDriver(),
             emailTextFieldDidInput: emailInputView.inputTextField.rx.text.orEmpty.asDriver(),
@@ -85,6 +86,13 @@ extension SignUpViewController: ViewModelBindable {
         )
 
         let output = viewModel.build(input: input)
+
+        output
+            .viewWillAppear
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.navigationBar.prefersLargeTitles = false
+            })
+            .disposed(by: disposeBag)
 
         output
             .signUpBtnEnable

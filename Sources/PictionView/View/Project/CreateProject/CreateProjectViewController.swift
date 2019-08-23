@@ -67,6 +67,13 @@ extension CreateProjectViewController: ViewModelBindable {
         let output = viewModel.build(input: input)
 
         output
+            .viewWillAppear
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.navigationBar.prefersLargeTitles = false
+            })
+            .disposed(by: disposeBag)
+
+        output
             .isModify
             .drive(onNext: { [weak self] isModify in
                 self?.navigationItem.title = isModify ? "프로젝트 수정" : "프로젝트 생성"

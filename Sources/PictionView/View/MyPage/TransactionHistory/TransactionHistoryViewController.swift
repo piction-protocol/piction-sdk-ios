@@ -1,0 +1,122 @@
+//
+//  TransactionHistoryViewController.swift
+//  PictionView
+//
+//  Created by jhseo on 19/06/2019.
+//  Copyright © 2019 Piction Network. All rights reserved.
+//
+
+import UIKit
+import RxSwift
+import RxCocoa
+import ViewModelBindable
+import RxDataSources
+import UIScrollView_InfiniteScroll
+import PictionSDK
+
+enum TransactionHistoryBySection {
+    case Section(title: String, items: [TransactionHistoryItemType])
+}
+
+extension TransactionHistoryBySection: SectionModelType {
+    typealias Item = TransactionHistoryItemType
+
+    var items: [TransactionHistoryItemType] {
+        switch self {
+        case .Section(_, items: let items):
+            return items.map { $0 }
+        }
+    }
+
+    init(original: TransactionHistoryBySection, items: [Item]) {
+        switch original {
+        case .Section(title: let title, _):
+            self = .Section(title: title, items: items)
+        }
+    }
+}
+
+enum TransactionHistoryItemType {
+    case header
+    case list(model: TransactionModel)
+    case footer
+}
+
+final class TransactionHistoryViewController: UITableViewController {
+    var disposeBag = DisposeBag()
+
+    private func configureDataSource() -> RxTableViewSectionedReloadDataSource<TransactionHistoryBySection> {
+        let dataSource = RxTableViewSectionedReloadDataSource<TransactionHistoryBySection>(
+            configureCell: { (dataSource, tableView, indexPath, model) in
+                switch dataSource[indexPath] {
+                case .header:
+                    let cell: TransactionHistoryHeaderTypeTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                    return cell
+                case .list(let model):
+                    let cell: TransactionHistoryListTypeTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                    cell.configure(with: model)
+                    return cell
+                case .footer:
+                    let cell: TransactionHistoryFooterTypeTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                    return cell
+                }
+            })
+        return dataSource
+    }
+}
+
+extension TransactionHistoryViewController: ViewModelBindable {
+
+    typealias ViewModel = TransactionHistoryViewModel
+
+    func bindViewModel(viewModel: ViewModel) {
+        let dataSource = configureDataSource()
+
+        tableView.addInfiniteScroll { [weak self] tableView in
+            self?.viewModel?.loadTrigger.onNext(())
+            self?.tableView.finishInfiniteScroll()
+        }
+        tableView.setShouldShowInfiniteScrollHandler { [weak self] _ in
+            return self?.viewModel?.shouldInfiniteScroll ?? false
+        }
+
+        let input = TransactionHistoryViewModel.Input(
+            viewWillAppear: rx.viewWillAppear.asDriver(),
+            refreshControlDidRefresh: refreshControl!.rx.controlEvent(.valueChanged).asDriver()
+        )
+
+        let output = viewModel.build(input: input)
+
+        output
+            .transactionList
+            .drive { $0 }
+            .map { [$0] }
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+        output
+            .transactionList
+            .drive(onNext: { [weak self] _ in
+                self?.tableView.layoutIfNeeded()
+                self?.tableView.finishInfiniteScroll()
+            })
+            .disposed(by: disposeBag)
+
+        output
+            .isFetching
+            .drive(refreshControl!.rx.isRefreshing)
+            .disposed(by: disposeBag)
+
+        output
+            .activityIndicator
+            .drive(onNext: { [weak self] status in
+                if status {
+                    self?.view.makeToastActivity(.center)
+                } else {
+                    self?.view.hideToastActivity()
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+}
+

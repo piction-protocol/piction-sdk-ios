@@ -11,12 +11,14 @@ import Mapper
 import Moya
 import Moya_ModelMapper
 
-typealias ResponseData = Moya.Response
+public typealias ResponseData = Moya.Response
 
-extension Moya.Response {
+public extension Moya.Response {
     func filterStatusCode() throws  {
         guard 200 ... 399 ~= self.statusCode else {
             let errorItem = try self.map(to: ErrorModel.self)
+
+            print(errorItem)
 
             switch self.statusCode {
             case 400:
@@ -27,10 +29,12 @@ extension Moya.Response {
                 throw ErrorType.forbidden(errorItem)
             case 404:
                 throw ErrorType.notFound(errorItem)
+//            case 413:
+//                throw ErrorType.payloadTooLarge(self)
             case 500:
                 throw ErrorType.internalServerError(errorItem)
-            case 504:
-                throw ErrorType.gatewayTimeout(self)
+//            case 504:
+//                throw ErrorType.gatewayTimeout(self)
             default:
                 throw ErrorType.unknown(self)
             }

@@ -14,20 +14,24 @@ public enum ErrorType: Error {
     case unauthorized(_ error: ErrorModel)
     case forbidden(_ error: ErrorModel)
     case notFound(_ error: ErrorModel)
+    case payloadTooLarge(_ error: Moya.Response)
     case internalServerError(_ error: ErrorModel)
     case gatewayTimeout(_ error: Moya.Response)
     case unknown(_ error: Moya.Response)
+    case custom(_ error: ErrorModel)
 
-    var message: String {
+    public var message: String {
         switch self {
         case .badRequest(let error),
              .unauthorized(let error),
              .forbidden(let error),
              .notFound(let error),
-             .internalServerError(let error):
+             .internalServerError(let error),
+             .custom(let error):
              return error.message ?? ""
         case .gatewayTimeout(let error),
-             .unknown(let error):
+             .unknown(let error),
+            .payloadTooLarge(let error):
             return error.description
         }
     }

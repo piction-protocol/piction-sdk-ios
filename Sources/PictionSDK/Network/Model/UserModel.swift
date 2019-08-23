@@ -12,6 +12,7 @@ import Foundation
 public typealias UserViewResponse = UserModel
 
 public struct UserModel: Response {
+    public let authority: [String]?
     public let createdAt: Date?
     public let email: String?
     public let loginId: String?
@@ -19,6 +20,7 @@ public struct UserModel: Response {
     public let username: String?
 
     public init(map: Mapper) throws {
+        authority = map.optionalFrom("authority")
         createdAt = map.optionalFrom("createdAt")
         email = map.optionalFrom("email")
         loginId = map.optionalFrom("loginId")
@@ -32,6 +34,7 @@ public struct UserModel: Response {
 
     public func toDict() -> [String: Any?] {
         return [
+            "authority": authority,
             "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "email": email,
             "loginId": loginId,
@@ -44,6 +47,7 @@ public struct UserModel: Response {
 extension UserModel {
     static func sampleData() -> [String: Any] {
         return [
+            "authority": ["ROLE_ADMIN"],
             "createdAt": "2019-06-20T09:27:53.127+0000",
             "email": "piction@piction.network",
             "loginId": "piction",
@@ -52,5 +56,3 @@ extension UserModel {
         ]
     }
 }
-
-

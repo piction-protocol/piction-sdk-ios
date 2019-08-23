@@ -39,7 +39,7 @@ extension RecommendationAPI: TargetType {
     public var sampleData: Data {
         switch self {
         case .all:
-            return jsonSerializedUTF8(json: [RecommendProjectViewResponse.sampleData()])
+            return jsonSerializedUTF8(json: [ProjectViewResponse.sampleData()])
         case .add,
              .delete:
             return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())

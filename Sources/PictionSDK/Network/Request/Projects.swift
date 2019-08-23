@@ -23,8 +23,8 @@ public final class Projects {
             })
     }
 
-    public func create(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, subscriptionPrice: Int, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.create(uri: uri, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail, subscriptionPrice: subscriptionPrice),
+    public func create(uri: String, title: String, synopsis: String, thumbnail: String?, wideThumbnail: String?, tags: [String], status: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.create(uri: uri, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail, tags: tags, status: status),
             success: { (response: ProjectViewResponse) in
                 successCompletion?(response)
             },
@@ -43,8 +43,8 @@ public final class Projects {
             })
     }
 
-    public func update(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, subscriptionPrice: Int, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.update(uri: uri, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail, subscriptionPrice: subscriptionPrice),
+    public func update(uri: String, title: String, synopsis: String, thumbnail: String?, wideThumbnail: String?, tags: [String], status: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.update(uri: uri, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail, tags: tags, status: status),
             success: { (response: ProjectViewResponse) in
                 successCompletion?(response)
             },
@@ -53,28 +53,8 @@ public final class Projects {
             })
     }
 
-    public func isSubscribing(uri: String, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.isSubscribing(uri: uri),
-            success: { (response: SubscriptionViewResponse) in
-                successCompletion?(response)
-            },
-            failure: { error in
-                failureCompletion?(error)
-            })
-    }
-
-    public func subscription(uri: String, subscriptionPrice: Int, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.subscription(uri: uri, subscriptionPrice: subscriptionPrice),
-            success: { (response: SubscriptionViewResponse) in
-                successCompletion?(response)
-            },
-            failure: { error in
-                failureCompletion?(error)
-            })
-    }
-
-    public func search(name: String, success successCompletion: ((PageViewResponse<ProjectModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.search(name: name),
+    public func taggingProjects(tag: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<ProjectModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.taggingProjects(tag: tag, page: page, size: size),
             success: { (response: PageViewResponse<ProjectModel>) in
                 successCompletion?(response)
             },
@@ -94,12 +74,12 @@ public final class Projects {
     }
 
     public func uploadWideThumbnail(image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.uploadThumbnail(image: image),
+        PictionProvider.request(ProjectsAPI.uploadWideThumbnail(image: image),
             success: { (response: StorageAttachmentViewResponse) in
                 successCompletion?(response)
             },
-                failure: { error in
-                    failureCompletion?(error)
+            failure: { error in
+                failureCompletion?(error)
             })
     }
 }

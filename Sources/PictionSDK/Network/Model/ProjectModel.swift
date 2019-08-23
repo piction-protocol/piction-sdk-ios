@@ -16,8 +16,9 @@ public struct ProjectModel: Response {
     public let id: Int?
     public let lastPublishedAt: Date?
     public let status: String?
-    public let subscriptionPrice: Int?
+    public let subscriptionUserCount: Int?
     public let synopsis: String?
+    public let tag: [String]?
     public let thumbnail: String?
     public let title: String?
     public let uri: String?
@@ -29,8 +30,9 @@ public struct ProjectModel: Response {
         id = map.optionalFrom("id")
         lastPublishedAt = map.optionalFrom("lastPublishedAt")
         status = map.optionalFrom("status")
-        subscriptionPrice = map.optionalFrom("subscriptionPrice")
+        subscriptionUserCount = map.optionalFrom("subscriptionUserCount")
         synopsis = map.optionalFrom("synopsis")
+        tag = map.optionalFrom("tag")
         thumbnail = map.optionalFrom("thumbnail")
         title = map.optionalFrom("title")
         uri = map.optionalFrom("uri")
@@ -48,8 +50,9 @@ public struct ProjectModel: Response {
             "id": id,
             "lastPublishedAt": lastPublishedAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "status": status,
-            "subscriptionPrice": subscriptionPrice,
+            "subscriptionUserCount": subscriptionUserCount,
             "synopsis": synopsis,
+            "tag": [],
             "thumbnail": thumbnail,
             "title": title,
             "uri": uri,
@@ -65,8 +68,8 @@ extension ProjectModel {
             "createdAt": "2019-06-20T09:27:53.127+0000",
             "id": 1,
             "lastPublishedAt": "2019-06-20T09:27:53.127+0000",
-            "status": "SUCCESS",
-            "subscriptionPrice": 0,
+            "status": "PUBLIC",
+            "subscriptionUserCount": 0,
             "synopsis": "synopsis",
             "thumbnail": "thumbnail",
             "title": "title",

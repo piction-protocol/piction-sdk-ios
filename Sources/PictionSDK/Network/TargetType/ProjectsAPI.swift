@@ -12,12 +12,10 @@ import UIKit
 
 public enum ProjectsAPI {
     case all
-    case create(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, subscriptionPrice: Int)
+    case create(uri: String, title: String, synopsis: String, thumbnail: String?, wideThumbnail: String?, tags: [String], status: String)
     case get(uri: String)
-    case update(uri: String, title: String, synopsis: String, thumbnail: String, wideThumbnail: String, subscriptionPrice: Int)
-    case isSubscribing(uri: String)
-    case subscription(uri: String, subscriptionPrice: Int)
-    case search(name: String)
+    case update(uri: String, title: String, synopsis: String, thumbnail: String?, wideThumbnail: String?, tags: [String], status: String)
+    case taggingProjects(tag: String, page: Int, size: Int)
     case uploadThumbnail(image: UIImage)
     case uploadWideThumbnail(image: UIImage)
 }
@@ -30,13 +28,10 @@ extension ProjectsAPI: TargetType {
              .create:
             return "/projects"
         case .get(let uri),
-             .update(let uri, _, _, _, _, _):
+             .update(let uri, _, _, _, _, _, _):
             return "/projects/\(uri)"
-        case .subscription(let uri, _),
-             .isSubscribing(let uri):
-            return "/projects/\(uri)/subscription"
-        case .search:
-            return "/projects/search"
+        case .taggingProjects(let tag, _, _):
+            return "/projects/tags/\(tag)"
         case .uploadThumbnail:
             return "/projects/thumbnail"
         case .uploadWideThumbnail:
@@ -47,11 +42,9 @@ extension ProjectsAPI: TargetType {
         switch self {
         case .all,
              .get,
-             .isSubscribing,
-             .search:
+             .taggingProjects:
             return .get
-        case .create,
-             .subscription:
+        case .create:
             return .post
         case .update:
             return .put
@@ -68,11 +61,8 @@ extension ProjectsAPI: TargetType {
              .get,
              .update:
             return jsonSerializedUTF8(json: ProjectViewResponse.sampleData())
-        case .search:
+        case .taggingProjects:
             return jsonSerializedUTF8(json: PageViewResponse<ProjectModel>.sampleData())
-        case .subscription,
-             .isSubscribing:
-            return jsonSerializedUTF8(json: SubscriptionViewResponse.sampleData())
         case .uploadThumbnail,
              .uploadWideThumbnail:
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
@@ -80,37 +70,40 @@ extension ProjectsAPI: TargetType {
     }
     public var task: Task {
         switch self {
-        case .create(let uri, let title, let synopsis, let thumbnail, let wideThumbnail, let subscriptionPrice):
-            let param: [String : Any] = [
-                "uri": uri,
-                "title": title,
-                "synopsis": synopsis,
-                "thumbnail": thumbnail,
-                "wideThumbnail": wideThumbnail,
-                "subscriptionPrice": subscriptionPrice
-                ]
+        case .create(let uri, let title, let synopsis, let thumbnail, let wideThumbnail, let tags, let status):
+            var param: [String: Any] = [:]
+            param["uri"] = uri
+            param["title"] = title
+            param["synopsis"] = synopsis
+            param["status"] = status
+            param["tags"] = tags
+            if thumbnail != nil {
+                param["thumbnail"] = thumbnail
+            }
+            if wideThumbnail != nil {
+                param["wideThumbnail"] = wideThumbnail
+            }
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .all,
-             .get,
-             .isSubscribing:
+             .get:
             return .requestPlain
-        case .update(_, let title, let synopsis, let thumbnail, let wideThumbnail, let subscriptionPrice):
-            let param: [String : Any] = [
-                "title": title,
-                "synopsis": synopsis,
-                "thumbnail": thumbnail,
-                "wideThumbnail": wideThumbnail,
-                "subscriptionPrice": subscriptionPrice
-                ]
+        case .update(_, let title, let synopsis, let thumbnail, let wideThumbnail, let tags, let status):
+            var param: [String: Any] = [:]
+            param["title"] = title
+            param["synopsis"] = synopsis
+            param["status"] = status
+            param["tags"] = tags
+            if thumbnail != nil {
+                param["thumbnail"] = thumbnail
+            }
+            if wideThumbnail != nil {
+                param["wideThumbnail"] = wideThumbnail
+            }
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
-        case .subscription(_, let subscriptionPrice):
+        case .taggingProjects(_, let page, let size):
             let param = [
-                "subscriptionPrice": subscriptionPrice
-            ]
-            return .requestParameters(parameters: param, encoding: JSONEncoding.default)
-        case .search(let name):
-            let param = [
-                "name": name
+                "page": page,
+                "size": size
             ]
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .uploadThumbnail(let image),

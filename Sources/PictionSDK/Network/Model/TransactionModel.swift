@@ -15,13 +15,13 @@ public struct TransactionModel: Response {
     public let amount: Int?
     public let createdAt: Date?
     public let inOut: String?
-    public let status: String?
+    public let transactionHash: String?
 
     public init(map: Mapper) throws {
         amount = map.optionalFrom("amount")
         createdAt = map.optionalFrom("createdAt")
         inOut = map.optionalFrom("inOut")
-        status = map.optionalFrom("status")
+        transactionHash = map.optionalFrom("transactionHash")
     }
 
     public func toJSONString() throws -> String {
@@ -33,7 +33,7 @@ public struct TransactionModel: Response {
             "amount": amount,
             "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "inOut": inOut,
-            "status": status
+            "transactionHash": transactionHash
         ]
     }
 }
@@ -44,7 +44,7 @@ extension TransactionModel {
             "amount": 1000,
             "createdAt": "2019-06-13T01:23:04.540Z",
             "inOut": "IN",
-            "status": "SUCCESS"
+            "transactionHash": "0x11ed8ac11209ce075d43911a9c0bedcddb38556db867d3bf94173695f8a62082"
         ]
     }
 }

@@ -22,9 +22,9 @@ public final class Search {
             })
     }
 
-    public func writer(writer: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<UserModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SearchAPI.writer(writer: writer, page: page, size: size),
-            success: { (response: PageViewResponse<UserModel>) in
+    public func writer(writer: String, success successCompletion: (([UserViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SearchAPI.writer(writer: writer),
+            success: { (response: [UserViewResponse]) in
                 successCompletion?(response)
             },
             failure: { error in

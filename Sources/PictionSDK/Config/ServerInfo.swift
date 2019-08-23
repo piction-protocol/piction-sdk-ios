@@ -9,10 +9,40 @@
 import Foundation
 
 final class ServerInfo {
-    static let apiUrl = "api-stg.piction.network"
+    static let devApiUrl = "api-stg.piction.network"
+    static let liveApiUrl = "api.piction.network"
+
+    enum stageType: Int {
+        case dev = 0
+        case live = 1
+
+        var bundleId: String {
+            switch self {
+            case .dev:
+                return "com.pictionnetwork.piction-test"
+            default:
+                return "com.pictionnetwork.piction"
+            }
+        }
+    }
+
+    static var stage: stageType {
+        var infoDictionary: [AnyHashable: Any] = Bundle.main.infoDictionary!
+        let appID: String = infoDictionary["CFBundleIdentifier"] as! String
+
+        if appID == stageType.dev.bundleId {
+            return .dev
+        } else {
+            return .live
+        }
+    }
 
     static var baseApiUrl: String {
-        return "https://\(apiUrl)"
+        if stage == .dev {
+            return "https://\(devApiUrl)"
+        } else {
+            return "https://\(liveApiUrl)"
+        }
     }
 
     static func getCustomHeader() -> [String: String] {

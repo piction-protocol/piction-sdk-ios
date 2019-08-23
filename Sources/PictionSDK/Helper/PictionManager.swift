@@ -22,7 +22,7 @@ public class PictionManager {
         removeToken()
     }
 
-    static func setToken(_ token: String) {
+    public static func setToken(_ token: String) {
         UserDefaults.standard.set(token, forKey: "AccessToken")
     }
 
@@ -31,7 +31,7 @@ public class PictionManager {
     }
 
     static var getDeviceUUID: String {
-        let keychain = Keychain(service: ServerInfo.apiUrl)
+        let keychain = Keychain(service: ServerInfo.baseApiUrl)
         var uuid: String? = keychain["UUID"]
 
         if uuid == nil || uuid == "" {

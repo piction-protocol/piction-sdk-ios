@@ -88,12 +88,6 @@ extension ProjectInfoViewController {
     }
 }
 
-extension ProjectSubscriptionViewController {
-    static func make(uri: String) -> ProjectSubscriptionViewController {
-        return Container.shared.resolve(ProjectSubscriptionViewController.self, argument: uri)!
-    }
-}
-
 extension PostViewController {
     static func make(uri: String, postId: Int) -> PostViewController {
         return Container.shared.resolve(PostViewController.self, arguments: uri, postId)!

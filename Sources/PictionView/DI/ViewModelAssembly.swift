@@ -76,13 +76,6 @@ final class ViewModelAssembly: Assembly {
             return ProjectInfoViewModel(uri: uri)
         }
 
-        container.register(ProjectSubscriptionViewModel.self) { (resolver, uri: String) in
-            return ProjectSubscriptionViewModel(dependency: (
-                resolver.resolve(Updater.self)!,
-                uri: uri)
-            )
-        }
-
         container.register(PostViewModel.self) { (resolver, uri: String, postId: Int) in
             return PostViewModel(dependency: (
                 resolver.resolve(Updater.self)!,

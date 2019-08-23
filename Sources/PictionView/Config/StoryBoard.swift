@@ -23,7 +23,6 @@ public enum Storyboard: String {
     case TransactionHistory
     case Project
     case ProjectInfo
-    case ProjectSubscription
     case Post
     case PostHeader
     case PostFooter

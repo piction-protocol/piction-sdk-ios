@@ -91,12 +91,6 @@ final class ViewControllerAssembly: Assembly {
             return vc
         }
 
-        container.register(ProjectSubscriptionViewController.self) { (resolver, uri: String) in
-            let vc = Storyboard.ProjectSubscription.instantiate(ProjectSubscriptionViewController.self)
-            vc.viewModel = resolver.resolve(ProjectSubscriptionViewModel.self, argument: uri)!
-            return vc
-        }
-
         container.register(PostViewController.self) { (resolver, uri: String, postId: Int) in
             let vc = Storyboard.Post.instantiate(PostViewController.self)
             vc.viewModel = resolver.resolve(PostViewModel.self, arguments: uri, postId)!

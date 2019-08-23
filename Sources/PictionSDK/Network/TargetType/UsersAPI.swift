@@ -13,7 +13,7 @@ import UIKit
 public enum UsersAPI {
     case findAll
     case signup(loginId: String, email: String, username: String, password: String, passwordCheck: String)
-    case findOne(id: Int)
+    case findOne(id: String)
     case me
     case update(username: String, password: String, picture: String?)
     case updatePassword(password: String, newPassword: String, passwordCheck: String)

@@ -33,7 +33,7 @@ public final class Users {
             })
     }
 
-    public func findOne(id: Int, success successCompletion: ((UserViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func findOne(id: String, success successCompletion: ((UserViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(UsersAPI.findOne(id: id),
             success: { (response: UserViewResponse) in
                 successCompletion?(response)

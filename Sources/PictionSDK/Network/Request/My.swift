@@ -52,9 +52,9 @@ public final class My {
             })
     }
 
-    public func subscription(page: Int, size: Int, success successCompletion: ((PageViewResponse<SubscriptionModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func subscription(page: Int, size: Int, success successCompletion: ((PageViewResponse<ProjectModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(MyAPI.subscription(page: page, size: size),
-            success: { (response: PageViewResponse<SubscriptionModel>) in
+            success: { (response: PageViewResponse<ProjectModel>) in
                 successCompletion?(response)
             },
             failure: { error in

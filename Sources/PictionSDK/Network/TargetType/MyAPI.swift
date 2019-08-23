@@ -54,7 +54,7 @@ extension MyAPI: TargetType {
         case .sales:
             return jsonSerializedUTF8(json: [SalesViewResponse.sampleData()])
         case .subscription:
-            return jsonSerializedUTF8(json: PageViewResponse<SubscriptionModel>.sampleData())
+            return jsonSerializedUTF8(json: PageViewResponse<ProjectModel>.sampleData())
         }
     }
     public var task: Task {

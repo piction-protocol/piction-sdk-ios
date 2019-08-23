@@ -13,11 +13,11 @@ public typealias SubscriptionViewResponse = SubscriptionModel
 
 public struct SubscriptionModel: Response {
     public let expireDate: Date?
-    public let subscribing: Bool?
+    public let fanPass: FanPassModel?
 
     public init(map: Mapper) throws {
         expireDate = map.optionalFrom("expireDate")
-        subscribing = map.optionalFrom("subscribing")
+        fanPass = map.optionalFrom("fanPass")
     }
 
     public func toJSONString() throws -> String {
@@ -27,7 +27,7 @@ public struct SubscriptionModel: Response {
     public func toDict() -> [String: Any?] {
         return [
             "expireDate": expireDate?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
-            "subscribing": subscribing
+            "fanPass": fanPass
         ]
     }
 }
@@ -36,7 +36,7 @@ extension SubscriptionModel {
     static func sampleData() -> [String: Any] {
         return [
             "expireDate": "2019-06-20T09:27:53.127+0000",
-            "subscribing": false
+            "fanPass": FanPassModel.sampleData()
         ]
     }
 }

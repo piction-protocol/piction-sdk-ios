@@ -19,7 +19,7 @@ final class MyProjectTableViewCell: ReuseTableViewCell {
     func configure(with model: Model) {
         let (wideThumbnail, title, subscriptionCount) = (model.wideThumbnail, model.title, model.subscriptionUserCount)
 
-        let wideThumbnailWithIC = "\(wideThumbnail ?? "")?w=720&h=360&quality=70&output=webp"
+        let wideThumbnailWithIC = "\(wideThumbnail ?? "")?w=720&h=360&quality=80&output=webp"
         if let url = URL(string: wideThumbnailWithIC) {
             thumbnailImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-projectcover-1440-x-450"), completed: nil)
         } else {

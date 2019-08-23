@@ -32,8 +32,8 @@ final class ProjectPostListTableViewCell: ReuseTableViewCell {
     func configure(with model: Model, projectInfo: ProjectModel?, isSubscribing: Bool) {
         let (thumbnail, seriesName, title, date, likeCount, fanPassId) = (model.cover, model.series?.name, model.title, model.createdAt, model.likeCount, model.fanPass?.id)
 
-        let thumbnailWithIC = "\(thumbnail ?? "")?w=720&h=270&quality=70&output=webp"
-        if let url = URL(string: thumbnailWithIC) {
+        let coverImageWithIC = "\(thumbnail ?? "")?w=656&h=246&quality=80&output=webp"
+        if let url = URL(string: coverImageWithIC) {
             thumbnailImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-post-960-x-360"), completed: nil)
         } else {
             thumbnailImageView.image = #imageLiteral(resourceName: "img-dummy-post-960-x-360")

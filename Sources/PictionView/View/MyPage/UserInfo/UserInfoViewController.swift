@@ -36,7 +36,7 @@ extension UserInfoViewController: ViewModelBindable {
         output
             .userInfo
             .drive(onNext: { [weak self] userInfo in
-                let userPictureWithIC = "\(userInfo.picture ?? "")?w=208&h=208&quality=70&output=webp"
+                let userPictureWithIC = "\(userInfo.picture ?? "")?w=240&h=240&quality=80&output=webp"
 
                 if let url = URL(string: userPictureWithIC) {
                     self?.profileImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-userprofile-500-x-500"), completed: nil)

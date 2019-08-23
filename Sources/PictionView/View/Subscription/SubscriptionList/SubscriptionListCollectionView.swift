@@ -19,7 +19,7 @@ final class SubscriptionListCollectionViewCell: ReuseCollectionViewCell {
     func configure(with model: Model) {
         let (thumbnail, title, lastPublished) = (model.thumbnail, model.title, model.lastPublishedAt)
 
-        let thumbnailWithIC = "\(thumbnail ?? "")?w=320&h=320&quality=70&output=webp"
+        let thumbnailWithIC = "\(thumbnail ?? "")?w=720&h=720&quality=80&output=webp"
         if let url = URL(string: thumbnailWithIC) {
             thumbnailImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-square-500-x-500"), completed: nil)
         } else {

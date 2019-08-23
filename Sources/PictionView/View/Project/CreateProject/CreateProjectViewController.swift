@@ -82,14 +82,14 @@ extension CreateProjectViewController: ViewModelBindable {
                 self?.projectTitleTextField.text = projectInfo.title
                 self?.projectIdTextField.text = projectInfo.uri
 
-                let wideThumbnailWithIC = "\(projectInfo.wideThumbnail ?? "")?w=720&h=360&quality=70&output=webp"
+                let wideThumbnailWithIC = "\(projectInfo.wideThumbnail ?? "")?w=720&h=360&quality=80&output=webp"
                 if let url = URL(string: wideThumbnailWithIC) {
                     self?.wideThumbnailImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-projectcover-1440-x-450"), completed: nil)
                 } else {
                     self?.wideThumbnailImageView.image = #imageLiteral(resourceName: "img-dummy-projectcover-1440-x-450")
                 }
 
-                let thumbnailWithIC = "\(projectInfo.thumbnail ?? "")?w=208&h=208&quality=70&output=webp"
+                let thumbnailWithIC = "\(projectInfo.thumbnail ?? "")?w=720&h=720&quality=80&output=webp"
                 if let url = URL(string: thumbnailWithIC) {
                     self?.thumbnailImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-square-500-x-500"), completed: nil)
                 } else {

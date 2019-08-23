@@ -17,8 +17,8 @@ final class ExplorerNoticeTableViewCell: ReuseTableViewCell {
     func configure(with model: Model) {
         let (thumbnail) = (model.image)
 
-        let thumbnailWithIC = "\(thumbnail ?? "")?w=720&h=360&quality=70&output=webp"
-        if let url = URL(string: thumbnailWithIC) {
+        let wideThumbnailWithIC = "\(thumbnail ?? "")?w=720&h=360&quality=80&output=webp"
+        if let url = URL(string: wideThumbnailWithIC) {
             thumbnailImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-projectcover-1440-x-450"), completed: nil)
         } else {
             thumbnailImageView.image = #imageLiteral(resourceName: "img-dummy-projectcover-1440-x-450")

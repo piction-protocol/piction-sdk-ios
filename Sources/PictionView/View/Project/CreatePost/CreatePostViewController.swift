@@ -178,7 +178,7 @@ extension CreatePostViewController: ViewModelBindable {
                 self?.postTitleTextField.text = postInfo.title
                 self?.editorView.setHTML(content)
 
-                let coverImageWithIC = "\(postInfo.cover ?? "")?w=720&h=270&quality=70&output=webp"
+                let coverImageWithIC = "\(postInfo.cover ?? "")?w=656&h=246&quality=80&output=webp"
                 if let url = URL(string: coverImageWithIC) {
                     self?.coverImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-post-960-x-360"))
                 } else {

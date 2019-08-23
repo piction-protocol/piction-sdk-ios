@@ -70,10 +70,10 @@ class ProjectHeaderView: GSKStretchyHeaderView {
     }
 
     func configureProjectInfo(model: ProjectModel) {
-        let (wideThumbnail, title, profileImage, writerName, writerloginId, subscriptionUserCount) = (model.wideThumbnail, model.title, model.user?.picture, model.user?.username, model.user?.loginId, model.subscriptionUserCount)
+        let (thumbnail, title, profileImage, writerName, writerloginId, subscriptionUserCount) = (model.thumbnail, model.title, model.user?.picture, model.user?.username, model.user?.loginId, model.subscriptionUserCount)
 
-        let wideThumbnailWithIC = "\(wideThumbnail ?? "")?w=750&h=750&quality=70&output=webp"
-        if let url = URL(string: wideThumbnailWithIC) {
+        let thumbnailWithIC = "\(thumbnail ?? "")?w=720&h=720&quality=80&output=webp"
+        if let url = URL(string: thumbnailWithIC) {
             thumbnailImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-projectcover-1440-x-450"), completed: nil)
         } else {
             thumbnailImageView.image = #imageLiteral(resourceName: "img-dummy-projectcover-1440-x-450")
@@ -81,7 +81,7 @@ class ProjectHeaderView: GSKStretchyHeaderView {
 
         titleLabel.text = title
 
-        let userPictureWithIC = "\(profileImage ?? "")?w=72&h=72&quality=70&output=webp"
+        let userPictureWithIC = "\(profileImage ?? "")?w=240&h=240&quality=80&output=webp"
         if let url = URL(string: userPictureWithIC) {
             profileImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-userprofile-500-x-500"), completed: nil)
         }

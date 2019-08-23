@@ -11,10 +11,10 @@ import Moya
 import UIKit
 
 public enum PostsAPI {
-    case all(uri: String, isRequiredSubscription: Bool?, page: Int, size: Int)
-    case create(uri: String, title: String, content: String, cover: String, requiredSubscription: Bool, seriesId: String)
+    case all(uri: String, isRequiredFanPass: Bool?, page: Int, size: Int)
+    case create(uri: String, title: String, content: String, cover: String?, seriesId: Int?, fanPassId: Int?, status: String, publishedAt: Int64)
     case get(uri: String, postId: Int)
-    case update(uri: String, postId: Int, title: String, content: String, cover: String, requiredSubscription: Bool, seriesId: String)
+    case update(uri: String, postId: Int, title: String, content: String, cover: String?, seriesId: Int?, fanPassId: Int?, status: String, publishedAt: Int64)
     case delete(uri: String, postId: Int)
     case content(uri: String, postId: Int)
     case isLike(uri: String, postId: Int)
@@ -30,10 +30,10 @@ extension PostsAPI: TargetType {
     public var path: String {
         switch self {
         case .all(let uri, _, _, _),
-             .create(let uri, _, _, _, _, _):
+             .create(let uri, _, _, _, _, _, _, _):
             return "/projects/\(uri)/posts"
         case .get(let uri, let postId),
-             .update(let uri, let postId, _, _, _, _, _),
+             .update(let uri, let postId, _, _, _, _, _, _, _),
              .delete(let uri, let postId):
             return "/projects/\(uri)/posts/\(postId)"
         case .content(let uri, let postId):
@@ -97,23 +97,28 @@ extension PostsAPI: TargetType {
     }
     public var task: Task {
         switch self {
-        case .all(_, let isRequiredSubscription, let page, let size):
+        case .all(_, let isRequiredFanPass, let page, let size):
             var param: [String: Any] = [:]
-            if isRequiredSubscription != nil {
-                param["isRequiredSubscription"] = isRequiredSubscription
+            if isRequiredFanPass != nil {
+                param["isRequiredFanPass"] = isRequiredFanPass
             }
             param["page"] = page
             param["size"] = size
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
-        case .create(_, let title, let content, let cover, let requiredSubscription, let seriesId),
-             .update(_, _, let title, let content, let cover, let requiredSubscription, let seriesId):
-            let param: [String : Any] = [
-                "title": title,
-                "content": content,
-                "cover": cover,
-                "requiredSubscription": requiredSubscription,
-                "seriesId": seriesId
-            ]
+        case .create(_, let title, let content, let cover, let seriesId, let fanPassId, let status, let publishedAt),
+             .update(_, _, let title, let content, let cover, let seriesId, let fanPassId, let status, let publishedAt):
+            var param: [String: Any] = [:]
+            param["title"] = title
+            param["content"] = content
+            param["cover"] = cover
+            param["status"] = status
+            param["publishedAt"] = publishedAt
+            if seriesId != nil {
+                param["seriesId"] = seriesId
+            }
+            if fanPassId != nil {
+                param["fanPassId"] = fanPassId
+            }
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .get,
              .like,

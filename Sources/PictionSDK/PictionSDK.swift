@@ -21,6 +21,7 @@ public final class PictionSDK {
     public static let recommendation = Recommendation.shared
     public static let banners = Banners.shared
     public static let sponsorships = Sponsorships.shared
+    public static let fanPass = FanPass.shared
 
     public static func requestAPI<M: Mappable, T: TargetType>(_ target: T, success successCompletion: ((M) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(target,

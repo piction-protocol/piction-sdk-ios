@@ -12,8 +12,6 @@ import Swinject
 
 final class TabBarController: UITabBarController {
 
-    var pincodeDidShow: Bool = false
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setTabBar(with: TabBarItem.all)
@@ -23,13 +21,6 @@ final class TabBarController: UITabBarController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-        if !pincodeDidShow {
-            pincodeDidShow = true
-            if UserDefaults.standard.string(forKey: "pincode") != nil {
-                self.openCheckPincodeViewController()
-            }
-        }
     }
 
     private func setTabBar(with types: [TabBarItem]) {
@@ -50,13 +41,6 @@ final class TabBarController: UITabBarController {
 //            return viewController
 //        }
 
-    }
-
-    private func openCheckPincodeViewController() {
-        let vc = CheckPincodeViewController.make(style: .check)
-        if let topViewController = UIApplication.topViewController() {
-            topViewController.openViewController(vc, type: .present)
-        }
     }
 }
 

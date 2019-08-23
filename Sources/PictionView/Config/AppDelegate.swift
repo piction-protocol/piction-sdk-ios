@@ -22,8 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        let rootView = TabBarController()
-        window?.rootViewController = rootView
+        if UserDefaults.standard.string(forKey: "pincode") != nil {
+            let vc = CheckPincodeViewController.make(style: .initial)
+            window?.rootViewController = vc
+        } else {
+            let rootView = TabBarController()
+            window?.rootViewController = rootView
+        }
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
 

@@ -57,6 +57,17 @@ final class CheckPincodeViewController: UIViewController {
         }
     }
 
+    private func authSuccess() {
+        UserDefaults.standard.set(0, forKey: "pincodeErrorCount")
+        if self.viewModel?.style == .initial {
+            self.dismiss(animated: true)
+            let rootView = TabBarController()
+            UIApplication.shared.keyWindow?.rootViewController = rootView
+        } else {
+            self.openRegisterPincodeViewController()
+        }
+    }
+
     func auth() {
         let authContext = LAContext()
         if authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
@@ -74,12 +85,7 @@ final class CheckPincodeViewController: UIViewController {
                 DispatchQueue.main.async {
                     if success {
                         print("인증 성공")
-                        UserDefaults.standard.set(0, forKey: "pincodeErrorCount")
-                        if self?.viewModel?.style == .check {
-                            self?.dismiss(animated: true)
-                        } else {
-                            self?.openRegisterPincodeViewController()
-                        }
+                        self?.authSuccess()
                     } else {
                         print("인증 실패")
                         if let error = error {
@@ -181,12 +187,7 @@ extension CheckPincodeViewController: ViewModelBindable {
                     self?.pincode6View.backgroundColor = UIColor(r: 26, g: 146, b: 255)
                     self?.pincodeTextField.text = ""
                     if UserDefaults.standard.string(forKey: "pincode") == inputPincode {
-                        UserDefaults.standard.set(0, forKey: "pincodeErrorCount")
-                        if self?.viewModel?.style == .check {
-                            self?.dismiss(animated: true)
-                        } else {
-                            self?.openRegisterPincodeViewController()
-                        }
+                        self?.authSuccess()
                     } else {
                         self?.errorPopup()
                     }

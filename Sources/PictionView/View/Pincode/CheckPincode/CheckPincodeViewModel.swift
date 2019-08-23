@@ -11,13 +11,14 @@ import RxCocoa
 import PictionSDK
 
 enum CheckPincodeStyle {
+    case initial
     case check
     case change
 }
 
 final class CheckPincodeViewModel: ViewModel {
 
-    var style: CheckPincodeStyle = .check
+    var style: CheckPincodeStyle = .initial
 
     init(style: CheckPincodeStyle) {
         self.style = style
@@ -39,7 +40,7 @@ final class CheckPincodeViewModel: ViewModel {
     func build(input: Input) -> Output {
         let viewWillAppear = input.viewWillAppear
             .flatMap { [weak self] _ -> Driver<CheckPincodeStyle> in
-                return Driver.just(self?.style ?? .check)
+                return Driver.just(self?.style ?? .initial)
             }
 
         let signOutAction = input.signout

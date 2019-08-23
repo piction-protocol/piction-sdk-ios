@@ -4,5 +4,6 @@
 project.xcworkspace
 *.plist
 !Info.plist
-/Carthage
+Carthage
 Frameworks
+*.xcbkptlist

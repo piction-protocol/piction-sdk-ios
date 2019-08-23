@@ -302,12 +302,6 @@
 		43F94996230D284B00BD5CD6 /* Project.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F948E0230D284A00BD5CD6 /* Project.storyboard */; };
 		43F94997230D284B00BD5CD6 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F948E1230D284A00BD5CD6 /* ProjectViewController.swift */; };
 		43F94998230D284B00BD5CD6 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F948E1230D284A00BD5CD6 /* ProjectViewController.swift */; };
-		43F94999230D284B00BD5CD6 /* ProjectSubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F948E3230D284A00BD5CD6 /* ProjectSubscriptionViewModel.swift */; };
-		43F9499A230D284B00BD5CD6 /* ProjectSubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F948E3230D284A00BD5CD6 /* ProjectSubscriptionViewModel.swift */; };
-		43F9499B230D284B00BD5CD6 /* ProjectSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F948E4230D284A00BD5CD6 /* ProjectSubscriptionViewController.swift */; };
-		43F9499C230D284B00BD5CD6 /* ProjectSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F948E4230D284A00BD5CD6 /* ProjectSubscriptionViewController.swift */; };
-		43F9499D230D284B00BD5CD6 /* ProjectSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F948E5230D284A00BD5CD6 /* ProjectSubscription.storyboard */; };
-		43F9499E230D284B00BD5CD6 /* ProjectSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F948E5230D284A00BD5CD6 /* ProjectSubscription.storyboard */; };
 		43F9499F230D284B00BD5CD6 /* PostFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F948E7230D284A00BD5CD6 /* PostFooterViewController.swift */; };
 		43F949A0230D284B00BD5CD6 /* PostFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F948E7230D284A00BD5CD6 /* PostFooterViewController.swift */; };
 		43F949A1230D284B00BD5CD6 /* PostFooter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F948E8230D284A00BD5CD6 /* PostFooter.storyboard */; };
@@ -676,9 +670,6 @@
 		43F948DF230D284A00BD5CD6 /* ProjectSeriesListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSeriesListTableViewCell.swift; sourceTree = "<group>"; };
 		43F948E0230D284A00BD5CD6 /* Project.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Project.storyboard; sourceTree = "<group>"; };
 		43F948E1230D284A00BD5CD6 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
-		43F948E3230D284A00BD5CD6 /* ProjectSubscriptionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSubscriptionViewModel.swift; sourceTree = "<group>"; };
-		43F948E4230D284A00BD5CD6 /* ProjectSubscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSubscriptionViewController.swift; sourceTree = "<group>"; };
-		43F948E5230D284A00BD5CD6 /* ProjectSubscription.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectSubscription.storyboard; sourceTree = "<group>"; };
 		43F948E7230D284A00BD5CD6 /* PostFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFooterViewController.swift; sourceTree = "<group>"; };
 		43F948E8230D284A00BD5CD6 /* PostFooter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostFooter.storyboard; sourceTree = "<group>"; };
 		43F948E9230D284A00BD5CD6 /* PostFooterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFooterViewModel.swift; sourceTree = "<group>"; };
@@ -1227,7 +1218,6 @@
 				43F948CC230D284A00BD5CD6 /* Post */,
 				43F948D1230D284A00BD5CD6 /* PostHeader */,
 				43F948E6230D284A00BD5CD6 /* PostFooter */,
-				43F948E2230D284A00BD5CD6 /* ProjectSubscription */,
 				43F948EA230D284A00BD5CD6 /* CreateProject */,
 			);
 			path = Project;
@@ -1286,16 +1276,6 @@
 				43F948E0230D284A00BD5CD6 /* Project.storyboard */,
 			);
 			path = Project;
-			sourceTree = "<group>";
-		};
-		43F948E2230D284A00BD5CD6 /* ProjectSubscription */ = {
-			isa = PBXGroup;
-			children = (
-				43F948E4230D284A00BD5CD6 /* ProjectSubscriptionViewController.swift */,
-				43F948E3230D284A00BD5CD6 /* ProjectSubscriptionViewModel.swift */,
-				43F948E5230D284A00BD5CD6 /* ProjectSubscription.storyboard */,
-			);
-			path = ProjectSubscription;
 			sourceTree = "<group>";
 		};
 		43F948E6230D284A00BD5CD6 /* PostFooter */ = {
@@ -1808,7 +1788,6 @@
 				43F949C0230D284B00BD5CD6 /* MyProject.storyboard in Resources */,
 				43F94960230D284B00BD5CD6 /* SignUpComplete.storyboard in Resources */,
 				43F949CA230D284B00BD5CD6 /* MyPage.storyboard in Resources */,
-				43F9499E230D284B00BD5CD6 /* ProjectSubscription.storyboard in Resources */,
 				43F94A16230D284B00BD5CD6 /* SendDonation.storyboard in Resources */,
 				43F949D4230D284B00BD5CD6 /* ChangePassword.storyboard in Resources */,
 				43F94A77230D31C600BD5CD6 /* SponsorshipList.storyboard in Resources */,
@@ -1849,7 +1828,6 @@
 				43F949BF230D284B00BD5CD6 /* MyProject.storyboard in Resources */,
 				43F9495F230D284B00BD5CD6 /* SignUpComplete.storyboard in Resources */,
 				43F949C9230D284B00BD5CD6 /* MyPage.storyboard in Resources */,
-				43F9499D230D284B00BD5CD6 /* ProjectSubscription.storyboard in Resources */,
 				43F94A15230D284B00BD5CD6 /* SendDonation.storyboard in Resources */,
 				43F949D3230D284B00BD5CD6 /* ChangePassword.storyboard in Resources */,
 				43F94A76230D31C600BD5CD6 /* SponsorshipList.storyboard in Resources */,
@@ -2007,7 +1985,6 @@
 				43F949F8230D284B00BD5CD6 /* ConfirmDonationViewModel.swift in Sources */,
 				437D3E89230D48530073EBAC /* Int+Extension.swift in Sources */,
 				43F94988230D284B00BD5CD6 /* ProjectInfoViewModel.swift in Sources */,
-				43F9499A230D284B00BD5CD6 /* ProjectSubscriptionViewModel.swift in Sources */,
 				4317A38622E172A200A5C725 /* UIView+Extension.swift in Sources */,
 				437D3EAF230E888D0073EBAC /* RegisterPincodeViewController.swift in Sources */,
 				43F949CC230D284B00BD5CD6 /* MyPageUnderlineTypeTableViewCell.swift in Sources */,
@@ -2052,7 +2029,6 @@
 				43F949AA230D284B00BD5CD6 /* CreateProjectViewController.swift in Sources */,
 				4317A3B622E172A200A5C725 /* UIViewController.Container+Extension.swift in Sources */,
 				4317A3B722E172A200A5C725 /* UITableView+Extension.swift in Sources */,
-				43F9499C230D284B00BD5CD6 /* ProjectSubscriptionViewController.swift in Sources */,
 				43F94982230D284B00BD5CD6 /* PostHeaderViewController.swift in Sources */,
 				43F94A02230D284B00BD5CD6 /* SponsorshipHistoryViewModel.swift in Sources */,
 				43F949E2230D284B00BD5CD6 /* TransactionHistoryFooterTypeTableViewCell.swift in Sources */,
@@ -2135,7 +2111,6 @@
 				43F949F7230D284B00BD5CD6 /* ConfirmDonationViewModel.swift in Sources */,
 				437D3E88230D48530073EBAC /* Int+Extension.swift in Sources */,
 				43F94987230D284B00BD5CD6 /* ProjectInfoViewModel.swift in Sources */,
-				43F94999230D284B00BD5CD6 /* ProjectSubscriptionViewModel.swift in Sources */,
 				432A67DD22BCB40E009E51FF /* UIView+Extension.swift in Sources */,
 				437D3EAE230E888D0073EBAC /* RegisterPincodeViewController.swift in Sources */,
 				43F949CB230D284B00BD5CD6 /* MyPageUnderlineTypeTableViewCell.swift in Sources */,
@@ -2180,7 +2155,6 @@
 				43F949A9230D284B00BD5CD6 /* CreateProjectViewController.swift in Sources */,
 				43C1F38A22B77F9000D17127 /* UIViewController.Container+Extension.swift in Sources */,
 				4381BBBA22BB708B007FD7E7 /* UITableView+Extension.swift in Sources */,
-				43F9499B230D284B00BD5CD6 /* ProjectSubscriptionViewController.swift in Sources */,
 				43F94981230D284B00BD5CD6 /* PostHeaderViewController.swift in Sources */,
 				43F94A01230D284B00BD5CD6 /* SponsorshipHistoryViewModel.swift in Sources */,
 				43F949E1230D284B00BD5CD6 /* TransactionHistoryFooterTypeTableViewCell.swift in Sources */,

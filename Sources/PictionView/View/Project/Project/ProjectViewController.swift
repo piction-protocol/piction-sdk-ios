@@ -114,7 +114,7 @@ final class ProjectViewController: UIViewController {
 
     private func embedCustomEmptyViewController(style: CustomEmptyViewStyle) {
         _ = emptyView.subviews.map { $0.removeFromSuperview() }
-        emptyView.frame.size.height = 150
+        emptyView.frame.size.height = getVisibleHeight() - 52
         let vc = CustomEmptyViewController.make(style: style)
         embed(vc, to: emptyView)
     }
@@ -143,7 +143,7 @@ final class ProjectViewController: UIViewController {
     }
 
     private func controlNavigationBar(_ offset: CGPoint) {
-        if (offset.y) > -NAVIGATION_HEIGHT {
+        if (offset.y) > -DEFAULT_NAVIGATION_HEIGHT {
             self.navigationController?.showBlurNavigationBar()
         } else {
             self.navigationController?.showTransparentNavigationBar()
@@ -211,7 +211,7 @@ extension ProjectViewController: ViewModelBindable {
             .contentList
             .do(onNext: { [weak self] _ in
                 _ = self?.emptyView.subviews.map { $0.removeFromSuperview() }
-                self?.emptyView.frame.size.height = 0
+                self?.emptyView.frame.size.height = (self?.getVisibleHeight() ?? 0) - 52
             })
             .drive { $0 }
             .map { [$0] }
@@ -229,7 +229,6 @@ extension ProjectViewController: ViewModelBindable {
         output
             .isWriter
             .drive(onNext: { _ in
-
             })
             .disposed(by: disposeBag)
 

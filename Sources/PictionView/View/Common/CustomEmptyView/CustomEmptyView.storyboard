@@ -15,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="CustomEmptyViewController" id="xiX-o1-zNy" customClass="CustomEmptyViewController" customModule="PictionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OFj-aT-IxW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="295"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="V5p-bB-0FT">
-                                <rect key="frame" x="132" y="127" width="150" height="196"/>
+                                <rect key="frame" x="132" y="20.5" width="150" height="196"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icMoodBad" translatesAutoresizingMaskIntoConstraints="NO" id="BmQ-jX-O9j">
                                         <rect key="frame" x="35" y="0.0" width="80" height="80"/>
@@ -63,11 +63,11 @@ wefwef</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="V5p-bB-0FT" firstAttribute="centerX" secondItem="OFj-aT-IxW" secondAttribute="centerX" id="2IR-yL-eCU"/>
-                            <constraint firstItem="V5p-bB-0FT" firstAttribute="centerY" secondItem="OFj-aT-IxW" secondAttribute="centerY" constant="50" id="Ssk-uH-AVq"/>
+                            <constraint firstItem="V5p-bB-0FT" firstAttribute="centerY" secondItem="OFj-aT-IxW" secondAttribute="centerY" constant="-29" id="Ssk-uH-AVq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sw5-ZX-1Ep"/>
                     </view>
-                    <size key="freeformSize" width="414" height="350"/>
+                    <size key="freeformSize" width="414" height="295"/>
                     <connections>
                         <outlet property="button" destination="BKs-qe-LKD" id="Oq6-0I-8nO"/>
                         <outlet property="descriptionLabel" destination="Yi4-BL-aRn" id="fmI-cG-XbO"/>

@@ -18,6 +18,13 @@ final class SponsorshipHistoryViewController: UITableViewController {
 
     @IBOutlet weak var emptyView: UIView!
 
+    private func embedCustomEmptyViewController(style: CustomEmptyViewStyle) {
+        _ = emptyView.subviews.map { $0.removeFromSuperview() }
+        emptyView.frame.size.height = getVisibleHeight()
+        let vc = CustomEmptyViewController.make(style: style)
+        embed(vc, to: emptyView)
+    }
+
     private func configureDataSource() -> RxTableViewSectionedReloadDataSource<SectionModel<String, SponsorshipModel>> {
         return RxTableViewSectionedReloadDataSource<SectionModel<String, SponsorshipModel>>(
             configureCell: { dataSource, tableView, indexPath, model in
@@ -60,6 +67,14 @@ extension SponsorshipHistoryViewController: ViewModelBindable {
             .drive { $0 }
             .map { [SectionModel(model: "", items: $0)] }
             .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+        output
+            .embedEmptyViewController
+            .drive(onNext: { [weak self] style in
+                guard let `self` = self else { return }
+                self.embedCustomEmptyViewController(style: style)
+            })
             .disposed(by: disposeBag)
 
 //        output

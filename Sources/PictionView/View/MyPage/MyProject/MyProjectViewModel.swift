@@ -27,6 +27,7 @@ final class MyProjectViewModel: ViewModel {
         let projectList: Driver<[ProjectModel]>
         let openCreateProjectViewController: Driver<Void>
         let openProjectViewController: Driver<IndexPath>
+        let embedEmptyViewController: Driver<CustomEmptyViewStyle>
     }
 
     func build(input: Input) -> Output {
@@ -45,6 +46,14 @@ final class MyProjectViewModel: ViewModel {
                 return Driver.just(projects)
             }
 
+        let embedEmptyView = myProjectSuccess
+            .flatMap { items -> Driver<CustomEmptyViewStyle> in
+                if items.count == 0 {
+                    return Driver.just(.myProjectListEmpty)
+                }
+                return Driver.empty()
+        }
+
         let openCreateProjectViewController = input.createProjectBtnDidTap
 
         let openProjectViewController = input.selectedIndexPath
@@ -53,7 +62,8 @@ final class MyProjectViewModel: ViewModel {
             viewWillAppear: input.viewWillAppear,
             projectList: myProjectSuccess,
             openCreateProjectViewController: openCreateProjectViewController,
-            openProjectViewController: openProjectViewController
+            openProjectViewController: openProjectViewController,
+            embedEmptyViewController: embedEmptyView
         )
     }
 }

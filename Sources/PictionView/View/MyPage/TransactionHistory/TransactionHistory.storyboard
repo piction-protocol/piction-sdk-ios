@@ -150,6 +150,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
+                    <connections>
+                        <outlet property="emptyView" destination="vBf-3L-BJC" id="yE9-s7-DzV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsC-cl-MO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

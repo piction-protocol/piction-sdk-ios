@@ -49,3 +49,18 @@ extension UIViewController {
         childViewController.removeFromParent()
     }
 }
+
+extension UIViewController {
+    func getVisibleHeight() -> CGFloat {
+        return self.view.bounds.size.height - getCurrentNavigationHeight() - getCurrentTabHeight()
+    }
+
+    func getCurrentNavigationHeight() -> CGFloat {
+        return UIApplication.shared.statusBarFrame.size.height + (self.navigationController?.navigationBar.frame.size.height ?? 0)
+    }
+
+    func getCurrentTabHeight() -> CGFloat {
+        return (self.tabBarController?.tabBar.bounds.size.height ?? 0)
+    }
+}
+

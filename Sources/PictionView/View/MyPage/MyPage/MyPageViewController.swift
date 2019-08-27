@@ -49,8 +49,15 @@ final class MyPageViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var emptyView: UIView!
+    private var emptyHeight: CGFloat = 0
 
     private let logout = PublishSubject<Void>()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        emptyHeight = getVisibleHeight()
+    }
 
     private func openMyProjectViewController() {
         let vc = MyProjectViewController.make()
@@ -115,7 +122,7 @@ final class MyPageViewController: UIViewController {
 
     private func embedCustomEmptyViewController(style: CustomEmptyViewStyle) {
         _ = emptyView.subviews.map { $0.removeFromSuperview() }
-        emptyView.frame.size.height = 350
+        emptyView.frame.size.height = emptyHeight
         let vc = CustomEmptyViewController.make(style: style)
         embed(vc, to: emptyView)
     }
@@ -192,7 +199,9 @@ extension MyPageViewController: ViewModelBindable {
         output
             .embedUserInfoViewController
             .drive(onNext: { [weak self] in
+                self?.containerView.frame.size.height = 104
                 self?.embedUserInfoViewController()
+                self?.tableView.reloadData()
             })
             .disposed(by: disposeBag)
 
@@ -241,7 +250,10 @@ extension MyPageViewController: ViewModelBindable {
             .embedEmptyViewController
             .drive(onNext: { [weak self] style in
                 _ = self?.containerView.subviews.map { $0.removeFromSuperview() }
+                self?.containerView.frame.size.height = 0
                 self?.embedCustomEmptyViewController(style: style)
+                self?.tableView.contentOffset = CGPoint(x: 0, y: -LARGE_NAVIGATION_HEIGHT)
+                self?.tableView.reloadData()
             })
             .disposed(by: disposeBag)
 

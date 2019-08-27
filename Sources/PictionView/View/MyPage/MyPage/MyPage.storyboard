@@ -18,23 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="UfL-Mx-8iH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UfL-Mx-8iH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <containerView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="LDX-xN-FHw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="104" id="AiJ-JQ-uTI"/>
-                                    </constraints>
                                 </containerView>
                                 <containerView key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="slA-nM-bNd">
-                                    <rect key="frame" x="0.0" y="355.33333333333337" width="375" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="205" width="375" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 </containerView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyPageHeaderTypeTableViewCell" rowHeight="39" id="CPX-bM-bHv" customClass="MyPageHeaderTypeTableViewCell" customModule="PictionView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="159.33333333333334" width="375" height="39"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="39"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CPX-bM-bHv" id="mEC-sz-grY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="39"/>
@@ -62,7 +59,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MyPagePushTypeTableViewCell" rowHeight="59" id="xr0-ho-NhW" customClass="MyPagePushTypeTableViewCell" customModule="PictionView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="198.33333333333334" width="375" height="59.000000000000028"/>
+                                        <rect key="frame" x="0.0" y="67" width="375" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xr0-ho-NhW" id="D2H-bG-Td5">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="59"/>
@@ -90,7 +87,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyPagePresentTypeTableViewCell" rowHeight="59" id="6jd-aH-Vuh" customClass="MyPagePresentTypeTableViewCell" customModule="PictionView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="257.33333333333337" width="375" height="59"/>
+                                        <rect key="frame" x="0.0" y="126" width="375" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6jd-aH-Vuh" id="Epm-Rz-VqD">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
@@ -117,15 +114,15 @@
                                             <outlet property="titleLabel" destination="upP-8P-tdk" id="TZg-5k-ql7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyPageUnderlineTypeTableViewCell" rowHeight="1" id="htH-g0-5OT" customClass="MyPageUnderlineTypeTableViewCell" customModule="PictionView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="316.33333333333337" width="375" height="1"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyPageUnderlineTypeTableViewCell" rowHeight="20" id="htH-g0-5OT" customClass="MyPageUnderlineTypeTableViewCell" customModule="PictionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="185" width="375" height="20"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="htH-g0-5OT" id="DQb-0G-Mvi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="htH-g0-5OT" id="DQb-0G-Mvi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-tb-t4r">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.33333333333333331"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.66666666666666663"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="0.5" id="ieJ-uN-cIM"/>
@@ -136,9 +133,10 @@
                                                 <constraint firstItem="Gt2-tb-t4r" firstAttribute="top" secondItem="DQb-0G-Mvi" secondAttribute="top" id="5hO-Ci-53f"/>
                                                 <constraint firstItem="Gt2-tb-t4r" firstAttribute="leading" secondItem="DQb-0G-Mvi" secondAttribute="leading" id="B2Y-E0-ZQx"/>
                                                 <constraint firstAttribute="trailing" secondItem="Gt2-tb-t4r" secondAttribute="trailing" id="Kev-ZE-eW6"/>
-                                                <constraint firstAttribute="bottom" secondItem="Gt2-tb-t4r" secondAttribute="bottom" id="VrY-qi-Oqd"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gt2-tb-t4r" secondAttribute="bottom" constant="19.5" id="VrY-qi-Oqd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -151,8 +149,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UfL-Mx-8iH" firstAttribute="leading" secondItem="IFx-wC-Flz" secondAttribute="leading" id="DBp-Ri-qba"/>
+                            <constraint firstItem="UfL-Mx-8iH" firstAttribute="top" secondItem="IFx-wC-Flz" secondAttribute="top" id="FqT-lk-ZLb"/>
                             <constraint firstItem="UfL-Mx-8iH" firstAttribute="bottom" secondItem="0m3-iq-ZSB" secondAttribute="bottom" id="GxP-EZ-jWQ"/>
-                            <constraint firstItem="UfL-Mx-8iH" firstAttribute="top" secondItem="IFx-wC-Flz" secondAttribute="top" id="abX-hi-bsX"/>
                             <constraint firstAttribute="trailing" secondItem="UfL-Mx-8iH" secondAttribute="trailing" id="oJT-6i-P6G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0m3-iq-ZSB"/>

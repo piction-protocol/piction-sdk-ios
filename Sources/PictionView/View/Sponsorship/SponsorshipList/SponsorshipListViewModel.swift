@@ -103,9 +103,12 @@ final class SponsorshipListViewModel: InjectableViewModel {
                 }
             }
 
-        let embedEmptyView = sponsorshipListSuccess
-            .flatMap { items -> Driver<CustomEmptyViewStyle> in
-                if (items.count == 0) {
+        let embedEmptyView = sponsorshipListAction.elements
+            .flatMap { response -> Driver<CustomEmptyViewStyle> in
+                guard let pageList = try? response.map(to: PageViewResponse<SponsorshipModel>.self) else {
+                    return Driver.empty()
+                }
+                if (pageList.content?.count ?? 0) == 0 {
                     return Driver.just(.sponsorshipListEmpty)
                 }
                 return Driver.empty()

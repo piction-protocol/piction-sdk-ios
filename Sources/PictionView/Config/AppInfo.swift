@@ -10,6 +10,8 @@ import UIKit
 
 let SCREEN_W = UIScreen.main.bounds.size.width
 let SCREEN_H = UIScreen.main.bounds.size.height
-let IS_IPHONEX = (SCREEN_W == 375 && SCREEN_H == 812)
-let IS_IPHONEXR = (SCREEN_W == 414 && SCREEN_H == 896)
-let NAVIGATION_HEIGHT: CGFloat = (IS_IPHONEX || IS_IPHONEXR) ? 88 : 64
+let STATUS_HEIGHT: CGFloat = UIApplication.shared.statusBarFrame.size.height
+let DEFAULT_NAVIGATION_HEIGHT: CGFloat = STATUS_HEIGHT + 44
+let LARGE_NAVIGATION_HEIGHT: CGFloat = STATUS_HEIGHT + 96
+let TAB_HEIGHT: CGFloat = 83
+

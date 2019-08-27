@@ -18,6 +18,8 @@ enum CustomEmptyViewStyle {
     case sponsorshipListLogin
     case subscriptionListEmpty
     case searchProjectListEmpty
+    case transactionListEmpty
+    case myProjectListEmpty
 
     var image: UIImage {
         switch self {
@@ -25,7 +27,9 @@ enum CustomEmptyViewStyle {
              .projectPostListEmpty,
              .projectSeriesListEmpty,
              .subscriptionListEmpty,
-             .searchProjectListEmpty:
+             .searchProjectListEmpty,
+             .transactionListEmpty,
+             .myProjectListEmpty:
             return #imageLiteral(resourceName: "icMoodBad")
         case .sponsorshipListEmpty,
              .sponsorshipListLogin:
@@ -45,9 +49,14 @@ enum CustomEmptyViewStyle {
         case .sponsorshipListEmpty:
             return "아직 후원 기록이 없습니다.\n지금 바로 크리에이터를 후원해보세요!"
         case .subscriptionListEmpty:
-            return "구독 중인 프로젝트가 없습니다."
+            return "아직 구독 중인\n프로젝트가 없습니다."
         case .searchProjectListEmpty:
             return "검색 결과가 없습니다."
+        case .transactionListEmpty:
+            return "거래 내역이 없습니다."
+        case .myProjectListEmpty:
+            return "등록된 프로젝트가 없습니다."
+
         }
     }
 
@@ -60,7 +69,9 @@ enum CustomEmptyViewStyle {
              .projectSeriesListEmpty,
              .sponsorshipListEmpty,
              .subscriptionListEmpty,
-             .searchProjectListEmpty:
+             .searchProjectListEmpty,
+             .transactionListEmpty,
+             .myProjectListEmpty:
             return nil
         }
     }

@@ -30,6 +30,7 @@ final class TransactionHistoryViewModel: ViewModel {
         let viewWillAppear: Driver<Void>
         let transactionList: Driver<TransactionHistoryBySection>
         let isFetching: Driver<Bool>
+        let embedEmptyViewController: Driver<CustomEmptyViewStyle>
         let activityIndicator: Driver<Bool>
     }
 
@@ -79,8 +80,10 @@ final class TransactionHistoryViewModel: ViewModel {
 //                    let sum = contents.filter({ ($0.createdAt?.toString(format: "YYYY-MM-dd") ?? "") == key })
 //                    resultArray.append(contentsOf: sum)
 //                }
-                self.sections.append(contentsOf: [.header])
-                self.sections.append(contentsOf: transactions)
+                if (pageList.content?.count ?? 0) > 0 {
+                    self.sections.append(contentsOf: [.header])
+                    self.sections.append(contentsOf: transactions)
+                }
                 return Driver.just(TransactionHistoryBySection.Section(title: "transacation", items: self.sections))
             }
 
@@ -104,11 +107,19 @@ final class TransactionHistoryViewModel: ViewModel {
         let activityIndicator = Driver.merge(showActivityIndicator, hideActivityIndicator)
             .flatMap { status in Driver.just(status) }
 
+        let embedEmptyView = transactionHistorySuccess
+            .flatMap { [weak self] _ -> Driver<CustomEmptyViewStyle> in
+                if (self?.sections.count ?? 0) == 0 {
+                    return Driver.just(.transactionListEmpty)
+                }
+                return Driver.empty()
+            }
 
         return Output(
             viewWillAppear: input.viewWillAppear,
             transactionList: transactionHistorySuccess,
             isFetching: refreshAction.isExecuting,
+            embedEmptyViewController: embedEmptyView,
             activityIndicator: activityIndicator
         )
     }

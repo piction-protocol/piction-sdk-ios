@@ -45,6 +45,15 @@ enum TransactionHistoryItemType {
 final class TransactionHistoryViewController: UITableViewController {
     var disposeBag = DisposeBag()
 
+    @IBOutlet weak var emptyView: UIView!
+
+    private func embedCustomEmptyViewController(style: CustomEmptyViewStyle) {
+        _ = emptyView.subviews.map { $0.removeFromSuperview() }
+        emptyView.frame.size.height = getVisibleHeight()
+        let vc = CustomEmptyViewController.make(style: style)
+        embed(vc, to: emptyView)
+    }
+
     private func configureDataSource() -> RxTableViewSectionedReloadDataSource<TransactionHistoryBySection> {
         let dataSource = RxTableViewSectionedReloadDataSource<TransactionHistoryBySection>(
             configureCell: { (dataSource, tableView, indexPath, model) in
@@ -112,6 +121,14 @@ extension TransactionHistoryViewController: ViewModelBindable {
         output
             .isFetching
             .drive(refreshControl!.rx.isRefreshing)
+            .disposed(by: disposeBag)
+
+        output
+            .embedEmptyViewController
+            .drive(onNext: { [weak self] style in
+                guard let `self` = self else { return }
+                self.embedCustomEmptyViewController(style: style)
+            })
             .disposed(by: disposeBag)
 
         output

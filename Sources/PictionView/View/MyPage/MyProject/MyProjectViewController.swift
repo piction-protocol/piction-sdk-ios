@@ -17,8 +17,15 @@ final class MyProjectViewController: UITableViewController {
     var disposeBag = DisposeBag()
 
 //    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var createProjectButton: UIBarButtonItem!
+
+    private func embedCustomEmptyViewController(style: CustomEmptyViewStyle) {
+        _ = emptyView.subviews.map { $0.removeFromSuperview() }
+        emptyView.frame.size.height = getVisibleHeight()
+        let vc = CustomEmptyViewController.make(style: style)
+        embed(vc, to: emptyView)
+    }
 
     private func openProjectViewController(uri: String) {
         let vc = ProjectViewController.make(uri: uri)
@@ -91,6 +98,14 @@ extension MyProjectViewController: ViewModelBindable {
             .drive(onNext: { [weak self] indexPath in
                 let uri = dataSource[indexPath].uri ?? ""
                 self?.openProjectViewController(uri: uri)
+            })
+            .disposed(by: disposeBag)
+
+        output
+            .embedEmptyViewController
+            .drive(onNext: { [weak self] style in
+                guard let `self` = self else { return }
+                self.embedCustomEmptyViewController(style: style)
             })
             .disposed(by: disposeBag)
     }

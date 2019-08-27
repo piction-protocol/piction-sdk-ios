@@ -17,9 +17,15 @@ import PictionSDK
 final class SubscriptionListViewController: UIViewController {
     var disposeBag = DisposeBag()
 
-    var emptyView = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_W, height: 350))
+    var emptyView = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_W, height: 0))
 
     @IBOutlet weak var collectionView: UICollectionView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        emptyView.frame.size.height = getVisibleHeight()
+    }
 
     private func openProjectViewController(uri: String) {
         let vc = ProjectViewController.make(uri: uri)
@@ -30,9 +36,9 @@ final class SubscriptionListViewController: UIViewController {
 
     private func embedCustomEmptyViewController(style: CustomEmptyViewStyle) {
         _ = emptyView.subviews.map { $0.removeFromSuperview() }
-        emptyView.frame.size.height = 350
         let vc = CustomEmptyViewController.make(style: style)
         embed(vc, to: emptyView)
+        self.collectionView.reloadData()
     }
 
     private func configureDataSource() -> RxCollectionViewSectionedReloadDataSource<SectionModel<String, ProjectModel>> {
@@ -44,10 +50,7 @@ final class SubscriptionListViewController: UIViewController {
         },
         configureSupplementaryView: { [weak self] (dataSource, collectionView, kind, indexPath) in
             guard let `self` = self else { return UICollectionReusableView() }
-            if (kind == UICollectionView.elementKindSectionHeader) {
-                let reusableView = collectionView.dequeueReusableView(SubscriptionListCollectionHeaderView.self, indexPath: indexPath, kind: .header)
-                return reusableView
-            } else if (kind == UICollectionView.elementKindSectionFooter) {
+            if (kind == UICollectionView.elementKindSectionFooter) {
                 let reusableView = collectionView.dequeueReusableView(SubscriptionListCollectionFooterView.self, indexPath: indexPath, kind: .footer)
 
                 _ = reusableView.subviews.map { $0.removeFromSuperview() }
@@ -104,7 +107,6 @@ extension SubscriptionListViewController: ViewModelBindable {
             .subscriptionList
             .do(onNext: { [weak self] _ in
                 _ = self?.emptyView.subviews.map { $0.removeFromSuperview() }
-                self?.emptyView.frame.size.height = 0
             })
             .drive { $0 }
             .map { [SectionModel(model: "", items: $0)] }
@@ -114,8 +116,8 @@ extension SubscriptionListViewController: ViewModelBindable {
         output
             .embedEmptyViewController
             .drive(onNext: { [weak self] style in
-                guard let `self` = self else { return }
-                self.embedCustomEmptyViewController(style: style)
+                self?.collectionView.contentOffset = CGPoint(x: 0, y: -LARGE_NAVIGATION_HEIGHT)
+                self?.embedCustomEmptyViewController(style: style)
             })
             .disposed(by: disposeBag)
 

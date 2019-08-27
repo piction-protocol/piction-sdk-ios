@@ -40,7 +40,7 @@ final class SearchProjectViewController: UITableViewController {
 
     private func embedCustomEmptyViewController(style: CustomEmptyViewStyle) {
         _ = emptyView.subviews.map { $0.removeFromSuperview() }
-        emptyView.frame.size.height = 350
+        emptyView.frame.size.height = getVisibleHeight()
         let vc = CustomEmptyViewController.make(style: style)
         embed(vc, to: emptyView)
     }

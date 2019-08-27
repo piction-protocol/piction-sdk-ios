@@ -79,14 +79,12 @@ final class SponsorshipHistoryViewModel: ViewModel {
                     return Driver.just(.sponsorshipListEmpty)
                 }
                 return Driver.empty()
-        }
-
-        let embedEmptyViewController = embedEmptyView
+            }
 
         return Output(
             viewWillAppear: viewWillAppear,
             sponsorshipList: sponsorshipListSuccess,
-            embedEmptyViewController: embedEmptyViewController
+            embedEmptyViewController: embedEmptyView
         )
     }
 }

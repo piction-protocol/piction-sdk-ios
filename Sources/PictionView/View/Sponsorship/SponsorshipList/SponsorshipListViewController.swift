@@ -49,7 +49,11 @@ final class SponsorshipListViewController: UIViewController {
 
     private func embedCustomEmptyViewController(style: CustomEmptyViewStyle) {
         _ = emptyView.subviews.map { $0.removeFromSuperview() }
-        emptyView.frame.size.height = 350
+        if style == .sponsorshipListEmpty {
+            emptyView.frame.size.height = 350
+        } else {
+            emptyView.frame.size.height = getVisibleHeight()
+        }
         let vc = CustomEmptyViewController.make(style: style)
         embed(vc, to: emptyView)
     }

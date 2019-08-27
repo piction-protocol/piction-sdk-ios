@@ -46,10 +46,10 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="27h-4N-pyM">
-                                            <rect key="frame" x="20" y="204" width="335" height="41.666666666666657"/>
+                                            <rect key="frame" x="20" y="204" width="335" height="42"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ID-R2-SvL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="20.666666666666668"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="09f-Cc-vUD"/>
                                                     </constraints>
@@ -58,7 +58,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXg-tv-Adg">
-                                                    <rect key="frame" x="0.0" y="24.666666666666657" width="335" height="17"/>
+                                                    <rect key="frame" x="0.0" y="25" width="335" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="gqI-4Y-B9X"/>
                                                     </constraints>
@@ -97,6 +97,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="createProjectButton" destination="LwN-vn-Xd5" id="ngs-ee-Pzn"/>
+                        <outlet property="emptyView" destination="BAA-VN-PbO" id="OXD-UO-qfw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PmW-Xd-Z6j" userLabel="First Responder" sceneMemberID="firstResponder"/>

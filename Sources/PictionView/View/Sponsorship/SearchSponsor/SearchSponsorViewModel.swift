@@ -25,6 +25,7 @@ final class SearchSponsorViewModel: ViewModel {
         let viewWillAppear: Driver<Void>
         let viewWillDisappear: Driver<Void>
         let userList: Driver<[UserModel]>
+        let embedEmptyViewController: Driver<CustomEmptyViewStyle>
         let openSendDonationViewController: Driver<IndexPath>
     }
 
@@ -56,12 +57,26 @@ final class SearchSponsorViewModel: ViewModel {
                 return Driver.just(user)
             }
 
-        let userList = Driver.merge(searchActionSuccess, searchTextIsEmpty)
+        let searchActionError = searchAction.error
+            .flatMap { _ -> Driver<[UserModel]> in
+                return Driver.just([])
+            }
+
+        let userList = Driver.merge(searchActionSuccess, searchActionError, searchTextIsEmpty)
+
+        let embedEmptyViewController = Driver.merge(searchActionSuccess, searchActionError)
+            .flatMap { searchList -> Driver<CustomEmptyViewStyle> in
+                if searchList.count == 0 {
+                    return Driver.just(.searchSponsorEmpty)
+                }
+                return Driver.empty()
+            }
 
         return Output(
             viewWillAppear: viewWillAppear,
             viewWillDisappear: viewWillDisappear,
             userList: userList,
+            embedEmptyViewController: embedEmptyViewController,
             openSendDonationViewController: openSendDonationViewController
         )
     }

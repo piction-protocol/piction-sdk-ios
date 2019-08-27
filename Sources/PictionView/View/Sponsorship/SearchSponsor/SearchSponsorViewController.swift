@@ -18,6 +18,8 @@ final class SearchSponsorViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
+
     let searchController = UISearchController(searchResultsController: nil)
 
     private func configureDataSource() -> RxTableViewSectionedReloadDataSource<SectionModel<String, UserModel>> {
@@ -37,16 +39,12 @@ final class SearchSponsorViewController: UIViewController {
         }
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        searchController.hidesNavigationBarDuringPresentation = false
-//        searchController.dimsBackgroundDuringPresentation = false
-//        searchController.obscuresBackgroundDuringPresentation = false
-//        searchController.searchBar.placeholder = "크리에이터 닉네임 또는 아이디"
-//        navigationItem.searchController = searchController
-//        navigationItem.hidesSearchBarWhenScrolling = false
-//        definesPresentationContext = true
+    private func embedCustomEmptyViewController(style: CustomEmptyViewStyle) {
+        emptyView.frame.size.height = 350
+        let vc = CustomEmptyViewController.make(style: style)
+        embed(vc, to: emptyView)
     }
+
 }
 
 extension SearchSponsorViewController: ViewModelBindable {
@@ -84,6 +82,10 @@ extension SearchSponsorViewController: ViewModelBindable {
 
         output
             .userList
+            .do(onNext: { [weak self] _ in
+                _ = self?.emptyView.subviews.map { $0.removeFromSuperview() }
+                self?.emptyView.frame.size.height = 0
+            })
             .drive { $0 }
             .map { [SectionModel(model: "", items: $0)] }
             .bind(to: tableView.rx.items(dataSource: dataSource))
@@ -94,6 +96,14 @@ extension SearchSponsorViewController: ViewModelBindable {
             .drive(onNext: { [weak self] indexPath in
                 let loginId = dataSource[indexPath].loginId ?? ""
                 self?.openSendDonationViewController(loginId: loginId)
+            })
+            .disposed(by: disposeBag)
+
+        output
+            .embedEmptyViewController
+            .drive(onNext: { [weak self] style in
+                guard let `self` = self else { return }
+                self.embedCustomEmptyViewController(style: style)
             })
             .disposed(by: disposeBag)
     }

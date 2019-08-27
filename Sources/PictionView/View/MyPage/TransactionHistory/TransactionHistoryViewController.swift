@@ -81,9 +81,8 @@ extension TransactionHistoryViewController: ViewModelBindable {
     func bindViewModel(viewModel: ViewModel) {
         let dataSource = configureDataSource()
 
-        tableView.addInfiniteScroll { [weak self] tableView in
+        tableView.addInfiniteScroll { [weak self] _ in
             self?.viewModel?.loadTrigger.onNext(())
-            self?.tableView.finishInfiniteScroll()
         }
         tableView.setShouldShowInfiniteScrollHandler { [weak self] _ in
             return self?.viewModel?.shouldInfiniteScroll ?? false
@@ -105,6 +104,10 @@ extension TransactionHistoryViewController: ViewModelBindable {
 
         output
             .transactionList
+            .do(onNext: { [weak self] _ in
+                _ = self?.emptyView.subviews.map { $0.removeFromSuperview() }
+                self?.emptyView.frame.size.height = 0
+            })
             .drive { $0 }
             .map { [$0] }
             .bind(to: tableView.rx.items(dataSource: dataSource))

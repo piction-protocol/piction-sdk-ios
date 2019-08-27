@@ -57,7 +57,7 @@ final class ProjectViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.estimatedRowHeight = 262
+            tableView.estimatedRowHeight = 228
             tableView.rowHeight = UITableView.automaticDimension
 
             stretchyHeader = ProjectHeaderView.getView()
@@ -114,7 +114,6 @@ final class ProjectViewController: UIViewController {
 
     private func embedCustomEmptyViewController(style: CustomEmptyViewStyle) {
         _ = emptyView.subviews.map { $0.removeFromSuperview() }
-        emptyView.frame.size.height = getVisibleHeight() - 52
         let vc = CustomEmptyViewController.make(style: style)
         embed(vc, to: emptyView)
     }
@@ -149,6 +148,14 @@ final class ProjectViewController: UIViewController {
             self.navigationController?.showTransparentNavigationBar()
         }
     }
+
+    override var preferredContentSize: CGSize {
+        get {
+            self.tableView.layoutIfNeeded()
+            return self.tableView.contentSize
+        }
+        set {}
+    }
 }
 
 extension ProjectViewController: ViewModelBindable {
@@ -162,7 +169,6 @@ extension ProjectViewController: ViewModelBindable {
 
         tableView.addInfiniteScroll { [weak self] _ in
             self?.viewModel?.loadTrigger.onNext(())
-            self?.tableView.finishInfiniteScroll()
         }
         tableView.setShouldShowInfiniteScrollHandler { [weak self] _ in
             return self?.viewModel?.shouldInfiniteScroll ?? false
@@ -211,11 +217,27 @@ extension ProjectViewController: ViewModelBindable {
             .contentList
             .do(onNext: { [weak self] _ in
                 _ = self?.emptyView.subviews.map { $0.removeFromSuperview() }
-                self?.emptyView.frame.size.height = (self?.getVisibleHeight() ?? 0) - 52
+                self?.emptyView.frame.size.height = 0
             })
             .drive { $0 }
             .map { [$0] }
             .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+        output
+            .contentList
+            .drive(onNext: { [weak self] list in
+                if list.items.count < 10 {
+                    let headerHeight = SCREEN_W + 274
+                    let footerHeight = SCREEN_H - DEFAULT_NAVIGATION_HEIGHT - TAB_HEIGHT - 52 - (self?.preferredContentSize.height ?? 0)
+                        self?.emptyView.frame.size.height = footerHeight
+                } else {
+                    self?.emptyView.frame.size.height = 0
+                }
+                self?.tableView.layoutIfNeeded()
+                self?.tableView.finishInfiniteScroll()
+                self?.tableView.reloadData()
+            })
             .disposed(by: disposeBag)
 
         output

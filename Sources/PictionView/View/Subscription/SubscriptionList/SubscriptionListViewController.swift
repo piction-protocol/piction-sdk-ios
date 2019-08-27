@@ -70,7 +70,6 @@ extension SubscriptionListViewController: ViewModelBindable {
 
         collectionView.addInfiniteScroll { [weak self] tableView in
             self?.viewModel?.loadTrigger.onNext(())
-            self?.collectionView.finishInfiniteScroll()
         }
         collectionView.setShouldShowInfiniteScrollHandler { [weak self] _ in
             return self?.viewModel?.shouldInfiniteScroll ?? false
@@ -111,6 +110,14 @@ extension SubscriptionListViewController: ViewModelBindable {
             .drive { $0 }
             .map { [SectionModel(model: "", items: $0)] }
             .bind(to: collectionView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+        output
+            .subscriptionList
+            .drive(onNext: { [weak self] _ in
+                self?.collectionView.layoutIfNeeded()
+                self?.collectionView.finishInfiniteScroll()
+            })
             .disposed(by: disposeBag)
 
         output

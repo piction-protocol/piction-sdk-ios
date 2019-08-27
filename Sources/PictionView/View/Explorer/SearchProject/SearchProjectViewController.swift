@@ -54,7 +54,6 @@ extension SearchProjectViewController: ViewModelBindable {
 
         tableView.addInfiniteScroll { [weak self] tableView in
             self?.viewModel?.loadTrigger.onNext(())
-            self?.tableView.finishInfiniteScroll()
         }
         tableView.setShouldShowInfiniteScrollHandler { [weak self] _ in
             return self?.viewModel?.shouldInfiniteScroll ?? false
@@ -90,6 +89,14 @@ extension SearchProjectViewController: ViewModelBindable {
             .drive { $0 }
             .map { [SectionModel(model: "", items: $0)] }
             .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+        output
+            .projectList
+            .drive(onNext: { [weak self] _ in
+                self?.tableView.layoutIfNeeded()
+                self?.tableView.finishInfiniteScroll()
+            })
             .disposed(by: disposeBag)
 
         output

@@ -13,9 +13,10 @@ import ViewModelBindable
 import RxDataSources
 import PictionSDK
 
-final class SponsorshipHistoryViewController: UITableViewController {
+final class SponsorshipHistoryViewController: UIViewController {
     var disposeBag = DisposeBag()
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyView: UIView!
 
     private func embedCustomEmptyViewController(style: CustomEmptyViewStyle) {
@@ -41,9 +42,8 @@ extension SponsorshipHistoryViewController: ViewModelBindable {
     func bindViewModel(viewModel: ViewModel) {
         let dataSource = configureDataSource()
 
-        tableView.addInfiniteScroll { [weak self] tableView in
+        tableView.addInfiniteScroll { [weak self] _ in
             self?.viewModel?.loadTrigger.onNext(())
-            self?.tableView.finishInfiniteScroll()
         }
         tableView.setShouldShowInfiniteScrollHandler { [weak self] _ in
             return self?.viewModel?.shouldInfiniteScroll ?? false
@@ -64,9 +64,21 @@ extension SponsorshipHistoryViewController: ViewModelBindable {
 
         output
             .sponsorshipList
+            .do(onNext: { [weak self] _ in
+                _ = self?.emptyView.subviews.map { $0.removeFromSuperview() }
+                self?.emptyView.frame.size.height = 0
+            })
             .drive { $0 }
             .map { [SectionModel(model: "", items: $0)] }
             .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+        output
+            .sponsorshipList
+            .drive(onNext: { [weak self] _ in
+                self?.tableView.layoutIfNeeded()
+                self?.tableView.finishInfiniteScroll()
+            })
             .disposed(by: disposeBag)
 
         output

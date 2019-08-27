@@ -14,16 +14,14 @@ public typealias SponsorshipViewResponse = SponsorshipModel
 public struct SponsorshipModel: Response {
     public let amount: Int?
     public let createdAt: Date?
-    public let creatorName: String?
-    public let creatorPicture: String?
+    public let creator: UserModel?
     public let id: Int?
     public let status: String?
 
     public init(map: Mapper) throws {
         amount = map.optionalFrom("amount")
         createdAt = map.optionalFrom("createdAt")
-        creatorName = map.optionalFrom("creatorName")
-        creatorPicture = map.optionalFrom("creatorPicture")
+        creator = map.optionalFrom("creator")
         id = map.optionalFrom("id")
         status = map.optionalFrom("status")
     }
@@ -36,8 +34,7 @@ public struct SponsorshipModel: Response {
         return [
             "amount": amount,
             "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
-            "creatorName": creatorName,
-            "creatorPicture": creatorPicture,
+            "creator": creator,
             "id": id,
             "status": status,
         ]
@@ -49,8 +46,7 @@ extension SponsorshipModel {
         return [
             "amount": 0,
             "createdAt": "2019-07-10T08:51:40.935Z",
-            "creatorName": "작가이름",
-            "creatorPicture": "",
+            "creator": UserModel.sampleData(),
             "id": 1,
             "status": "SUCCESS",
         ]

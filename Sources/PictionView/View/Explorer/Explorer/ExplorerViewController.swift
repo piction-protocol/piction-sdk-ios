@@ -68,6 +68,7 @@ final class ExplorerViewController: UIViewController {
         searchController?.searchBar.placeholder = "프로젝트 검색"
         searchController?.searchResultsUpdater = searchResultsController
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
     }
 
@@ -137,6 +138,9 @@ extension ExplorerViewController: ViewModelBindable {
 
         output
             .projectList
+            .do(onNext: { [weak self] _ in
+                self?.navigationItem.hidesSearchBarWhenScrolling = true
+            })
             .drive { $0 }
             .map { [$0] }
             .bind(to: tableView.rx.items(dataSource: dataSource))

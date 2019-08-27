@@ -40,7 +40,7 @@ final class SearchProjectViewController: UITableViewController {
 
     private func embedCustomEmptyViewController(style: CustomEmptyViewStyle) {
         _ = emptyView.subviews.map { $0.removeFromSuperview() }
-        emptyView.frame.size.height = getVisibleHeight()
+        emptyView.frame.size.height = 350
         let vc = CustomEmptyViewController.make(style: style)
         embed(vc, to: emptyView)
     }
@@ -113,6 +113,7 @@ extension SearchProjectViewController: ViewModelBindable {
 
 extension SearchProjectViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
+        searchController.searchResultsController?.view.isHidden = false
         guard let text = searchController.searchBar.text else { return }
         self.searchText.onNext(text)
     }

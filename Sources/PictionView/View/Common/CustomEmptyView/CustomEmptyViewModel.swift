@@ -17,6 +17,7 @@ enum CustomEmptyViewStyle {
     case sponsorshipListEmpty
     case sponsorshipListLogin
     case subscriptionListEmpty
+    case searchProjectGuide
     case searchProjectListEmpty
     case transactionListEmpty
     case myProjectListEmpty
@@ -36,6 +37,8 @@ enum CustomEmptyViewStyle {
         case .sponsorshipListEmpty,
              .sponsorshipListLogin:
             return #imageLiteral(resourceName: "icStartup")
+        case .searchProjectGuide:
+            return #imageLiteral(resourceName: "imgSearchNull")
         }
     }
 
@@ -59,7 +62,8 @@ enum CustomEmptyViewStyle {
             return "거래 내역이 없습니다."
         case .myProjectListEmpty:
             return "등록된 프로젝트가 없습니다."
-
+        case .searchProjectGuide:
+            return "프로젝트 제목 또는\n닉네임으로 검색하세요."
         }
     }
 
@@ -75,7 +79,8 @@ enum CustomEmptyViewStyle {
              .searchProjectListEmpty,
              .transactionListEmpty,
              .myProjectListEmpty,
-             .searchSponsorEmpty:
+             .searchSponsorEmpty,
+             .searchProjectGuide:
             return nil
         }
     }

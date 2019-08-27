@@ -71,6 +71,12 @@ final class SearchProjectViewModel: ViewModel {
                 return Driver.just([])
             }
 
+        let searchProjectGuideEmptyView = input.searchText
+            .filter { $0 == "" }
+            .flatMap { _ -> Driver<CustomEmptyViewStyle> in
+                return Driver.just(.searchProjectGuide)
+            }
+
         let searchActionSuccess = searchAction.elements
             .flatMap { [weak self] response -> Driver<[ProjectModel]> in
                 guard let `self` = self else { return Driver.empty() }
@@ -86,13 +92,15 @@ final class SearchProjectViewModel: ViewModel {
 
         let projectList = Driver.merge(searchActionSuccess, searchTextIsEmpty)
 
-        let embedEmptyViewController = projectList
+        let embedEmptyView = projectList
             .flatMap { items -> Driver<CustomEmptyViewStyle> in
                 if (items.count == 0) {
                     return Driver.just(.searchProjectListEmpty)
                 }
                 return Driver.empty()
-        }
+            }
+
+        let embedEmptyViewController = Driver.merge(searchProjectGuideEmptyView, embedEmptyView)
 
         return Output(
             viewWillAppear: viewWillAppear,

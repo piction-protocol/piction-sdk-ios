@@ -44,7 +44,6 @@ final class SearchSponsorViewController: UIViewController {
         let vc = CustomEmptyViewController.make(style: style)
         embed(vc, to: emptyView)
     }
-
 }
 
 extension SearchSponsorViewController: ViewModelBindable {
@@ -76,7 +75,6 @@ extension SearchSponsorViewController: ViewModelBindable {
             .viewWillDisappear
             .drive(onNext: { [weak self] in
                 self?.navigationController?.setNavigationBarLine(true)
-                self?.searchBar.resignFirstResponder()
             })
             .disposed(by: disposeBag)
 

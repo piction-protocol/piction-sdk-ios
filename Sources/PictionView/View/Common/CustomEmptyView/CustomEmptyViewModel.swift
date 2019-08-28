@@ -22,6 +22,7 @@ enum CustomEmptyViewStyle {
     case transactionListEmpty
     case myProjectListEmpty
     case searchSponsorEmpty
+    case searchSponsorGuide
 
     var image: UIImage {
         switch self {
@@ -37,7 +38,8 @@ enum CustomEmptyViewStyle {
         case .sponsorshipListEmpty,
              .sponsorshipListLogin:
             return #imageLiteral(resourceName: "icStartup")
-        case .searchProjectGuide:
+        case .searchProjectGuide,
+             .searchSponsorGuide:
             return #imageLiteral(resourceName: "imgSearchNull")
         }
     }
@@ -64,6 +66,8 @@ enum CustomEmptyViewStyle {
             return "등록된 프로젝트가 없습니다."
         case .searchProjectGuide:
             return "프로젝트 제목 또는\n닉네임으로 검색하세요."
+        case .searchSponsorGuide:
+            return "후원하고 싶은\n크리에이터를 검색하세요."
         }
     }
 
@@ -80,7 +84,8 @@ enum CustomEmptyViewStyle {
              .transactionListEmpty,
              .myProjectListEmpty,
              .searchSponsorEmpty,
-             .searchProjectGuide:
+             .searchProjectGuide,
+             .searchSponsorGuide:
             return nil
         }
     }

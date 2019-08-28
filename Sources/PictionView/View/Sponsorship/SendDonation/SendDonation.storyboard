@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="154"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cA5-ob-9Vf">
-                                        <rect key="frame" x="20" y="20" width="134.33333333333334" height="24"/>
+                                        <rect key="frame" x="20" y="20" width="76" height="24"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-dummy-userprofile-500-x-500" translatesAutoresizingMaskIntoConstraints="NO" id="IZJ-sd-c2N" customClass="UIImageViewExtension" customModule="PictionView" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -40,16 +40,16 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="UKp-LS-a0V">
-                                                <rect key="frame" x="31.999999999999993" y="3.6666666666666714" width="102.33333333333331" height="17"/>
+                                                <rect key="frame" x="32" y="3.6666666666666714" width="44" height="17"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@user_id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBP-bb-53X">
-                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBP-bb-53X">
+                                                        <rect key="frame" x="0.0" y="0.0" width="3.6666666666666665" height="17"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="님에게" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Az7-Tm-L7G">
-                                                        <rect key="frame" x="66" y="0.0" width="36.333333333333343" height="17"/>
+                                                        <rect key="frame" x="7.6666666666666643" y="0.0" width="36.333333333333336" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -114,8 +114,8 @@
                                                     <constraint firstItem="sU3-nB-9yI" firstAttribute="leading" secondItem="jql-4n-txA" secondAttribute="leading" id="c8u-vH-MdY"/>
                                                 </constraints>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234.56 PXL 보유 중" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9if-aR-hTc">
-                                                <rect key="frame" x="0.0" y="57" width="126" height="13"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9if-aR-hTc">
+                                                <rect key="frame" x="0.0" y="57" width="4" height="13"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -190,8 +190,8 @@
                             <constraint firstAttribute="bottom" secondItem="UOq-M0-fwm" secondAttribute="bottom" id="6Xv-MQ-qWJ"/>
                             <constraint firstItem="DQe-2R-JRM" firstAttribute="trailing" secondItem="Sa7-0e-9Mt" secondAttribute="trailing" id="8Lv-yU-sRl"/>
                             <constraint firstItem="DQe-2R-JRM" firstAttribute="leading" secondItem="Sa7-0e-9Mt" secondAttribute="leading" id="RVg-Bw-te0"/>
-                            <constraint firstItem="DQe-2R-JRM" firstAttribute="top" secondItem="Sa7-0e-9Mt" secondAttribute="top" id="X5D-Me-ump"/>
                             <constraint firstItem="UOq-M0-fwm" firstAttribute="trailing" secondItem="Sa7-0e-9Mt" secondAttribute="trailing" id="kkM-Kg-zE3"/>
+                            <constraint firstItem="DQe-2R-JRM" firstAttribute="top" secondItem="sb0-Rw-naq" secondAttribute="topMargin" id="ljd-Gt-7X1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sa7-0e-9Mt"/>
                     </view>

@@ -49,6 +49,12 @@ final class SearchSponsorViewModel: ViewModel {
                 return Driver.just([])
             }
 
+        let searchSponsorGuideEmptyView = input.searchText
+            .filter { $0 == "" }
+            .flatMap { _ -> Driver<CustomEmptyViewStyle> in
+                return Driver.just(.searchSponsorGuide)
+            }
+
         let searchActionSuccess = searchAction.elements
             .flatMap { response -> Driver<[UserModel]> in
                 guard let user = try? response.map(to: [UserModel].self) else {
@@ -64,13 +70,15 @@ final class SearchSponsorViewModel: ViewModel {
 
         let userList = Driver.merge(searchActionSuccess, searchActionError, searchTextIsEmpty)
 
-        let embedEmptyViewController = Driver.merge(searchActionSuccess, searchActionError)
+        let embedEmptyView = Driver.merge(searchActionSuccess, searchActionError)
             .flatMap { searchList -> Driver<CustomEmptyViewStyle> in
                 if searchList.count == 0 {
                     return Driver.just(.searchSponsorEmpty)
                 }
                 return Driver.empty()
             }
+
+        let embedEmptyViewController = Driver.merge(searchSponsorGuideEmptyView, embedEmptyView)
 
         return Output(
             viewWillAppear: viewWillAppear,

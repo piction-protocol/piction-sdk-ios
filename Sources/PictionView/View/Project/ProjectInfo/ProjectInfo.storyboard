@@ -30,7 +30,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Q2F-If-kYg">
                                         <rect key="frame" x="0.0" y="44.666666666666657" width="61" height="50"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-dummy-square-500-x-500" translatesAutoresizingMaskIntoConstraints="NO" id="YUs-ga-7JQ" customClass="UIImageViewExtension" customModule="PictionView" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-dummy-square-500-x-500" translatesAutoresizingMaskIntoConstraints="NO" id="YUs-ga-7JQ" customClass="UIImageViewExtension" customModule="PictionView" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="4c5-N2-lI8"/>

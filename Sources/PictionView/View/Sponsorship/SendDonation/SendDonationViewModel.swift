@@ -35,6 +35,7 @@ final class SendDonationViewModel: InjectableViewModel {
         let walletInfo: Driver<WalletModel>
         let enableSendButton: Driver<Bool>
         let openConfirmDonationViewController: Driver<(String, Int)>
+        let openErrorPopup: Driver<String>
     }
 
     func build(input: Input) -> Output {
@@ -85,18 +86,24 @@ final class SendDonationViewModel: InjectableViewModel {
                 return Driver.just((userInfo.loginId ?? "", Int(sendAmount) ?? 0))
             }
 
+        let sendAmountError = sendAmountAction.error
+            .flatMap { response -> Driver<String> in
+                let errorMsg = response as? ErrorType
+                return Driver.just(errorMsg?.message ?? "")
+            }
+
         let enableSendButton = input.amountTextFieldDidInput
             .flatMap { text -> Driver<Bool> in
                 return Driver.just(!text.isEmpty && (Int(text) ?? 0 > 0))
             }
-
 
         return Output(
             viewWillAppear: viewWillAppear,
             userInfo: userInfoSuccess,
             walletInfo: walletInfoSuccess,
             enableSendButton: enableSendButton,
-            openConfirmDonationViewController: sendAmountSuccess
+            openConfirmDonationViewController: sendAmountSuccess,
+            openErrorPopup: sendAmountError
         )
     }
 }

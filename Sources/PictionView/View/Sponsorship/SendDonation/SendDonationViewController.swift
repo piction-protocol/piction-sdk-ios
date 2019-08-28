@@ -38,6 +38,16 @@ final class SendDonationViewController: UIViewController {
             topViewController.openViewController(vc, type: .push)
         }
     }
+
+    private func errorPopup(message: String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: { [weak self] action in
+        })
+        alert.addAction(okAction)
+
+        present(alert, animated: false, completion: nil)
+    }
 }
 
 extension SendDonationViewController: ViewModelBindable {
@@ -107,6 +117,13 @@ extension SendDonationViewController: ViewModelBindable {
             .openConfirmDonationViewController
             .drive(onNext: { [weak self] (loginId, sendAmount) in
                 self?.openConfirmDonationViewController(loginId: loginId, sendAmount: sendAmount)
+            })
+            .disposed(by: disposeBag)
+
+        output
+            .openErrorPopup
+            .drive(onNext: { [weak self] message in
+                self?.errorPopup(message: message)
             })
             .disposed(by: disposeBag)
     }

@@ -226,6 +226,11 @@ extension ProjectViewController: ViewModelBindable {
                 if list.items.count < 10 {
                     let footerHeight = SCREEN_H - DEFAULT_NAVIGATION_HEIGHT - TAB_HEIGHT - 52 - (self?.preferredContentSize.height ?? 0)
                         self?.emptyView.frame.size.height = footerHeight
+                    if footerHeight > 0 {
+                        self?.emptyView.frame.size.height = footerHeight
+                    } else {
+                        self?.emptyView.frame.size.height = 0
+                    }
                 } else {
                     self?.emptyView.frame.size.height = 0
                 }

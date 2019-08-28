@@ -134,12 +134,21 @@ extension SubscriptionListViewController: ViewModelBindable {
     }
 }
 
-extension SubscriptionListViewController {
+extension SubscriptionListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         if self.emptyView.subviews.count > 0 {
-            return CGSize(width: SCREEN_W, height: 350)
+            return CGSize(width: SCREEN_W, height: emptyView.frame.size.height)
         } else {
             return CGSize.zero
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if self.emptyView.subviews.count > 0 {
+            return UIEdgeInsets.zero
+        } else {
+            return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+
         }
     }
 }

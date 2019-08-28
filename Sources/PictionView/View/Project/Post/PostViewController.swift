@@ -83,7 +83,7 @@ extension PostViewController: ViewModelBindable {
             .drive(onNext: { [weak self] in
                 self?.navigationController?.navigationBar.prefersLargeTitles = false
                 self?.tabBarController?.tabBar.isHidden = true
-                self?.navigationController?.isToolbarHidden = false
+//                self?.navigationController?.isToolbarHidden = false
             })
             .disposed(by: disposeBag)
 
@@ -91,7 +91,7 @@ extension PostViewController: ViewModelBindable {
             .viewWillDisappear
             .drive(onNext: { [weak self] in
                 self?.tabBarController?.tabBar.isHidden = false
-                self?.navigationController?.isToolbarHidden = true
+//                self?.navigationController?.isToolbarHidden = true
             })
             .disposed(by: disposeBag)
 

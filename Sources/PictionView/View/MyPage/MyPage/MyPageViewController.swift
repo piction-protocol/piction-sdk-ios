@@ -38,6 +38,7 @@ extension MyPageBySection: SectionModelType {
 enum MyPageItemType {
     case header(title: String)
     case pushType(title: String)
+    case switchType(title: String, key: String)
     case presentType(title: String, align: NSTextAlignment)
     case underline
 }
@@ -143,6 +144,10 @@ final class MyPageViewController: UIViewController {
                     let cell: MyPagePresentTypeTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
                     cell.configure(with: title, align: align)
                     return cell
+                case .switchType(let title, let key):
+                    let cell: MyPageSwitchTypeTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                    cell.configure(with: title, key: key)
+                    return cell
                 case .underline:
                     let cell: MyPageUnderlineTypeTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
                     return cell
@@ -242,6 +247,7 @@ extension MyPageViewController: ViewModelBindable {
                     default:
                         break
                     }
+                case .switchType: break
                 }
             })
             .disposed(by: disposeBag)

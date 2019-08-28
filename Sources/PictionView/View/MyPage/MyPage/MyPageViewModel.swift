@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 import PictionSDK
+import LocalAuthentication
 
 final class MyPageViewModel: InjectableViewModel {
 
@@ -69,11 +70,31 @@ final class MyPageViewModel: InjectableViewModel {
                     MyPageItemType.underline
                 ]
 
-                let securityItems: [MyPageItemType] = [
+                var securityItems: [MyPageItemType] = [
                     MyPageItemType.header(title: "보안"),
                     UserDefaults.standard.string(forKey: "pincode") == nil ? MyPageItemType.presentType(title: "PIN 번호 등록", align: .left) : MyPageItemType.presentType(title: "PIN 번호 변경", align: .left),
                     MyPageItemType.underline
                 ]
+
+                if UserDefaults.standard.string(forKey: "pincode") != nil {
+                    let authContext = LAContext()
+                    if authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+                        var description = ""
+                        switch authContext.biometryType {
+                        case .faceID:
+                            description = "Face ID"
+                        case .touchID:
+                            description = "Touch ID"
+                        case .none:
+                            break
+                        }
+
+                        if description != "" {
+                            let element = MyPageItemType.switchType(title: description, key: "isEnabledAuthBio")
+                            securityItems.insert(element, at: 2)
+                        }
+                    }
+                }
 
                 let myInfoItems: [MyPageItemType] = [
                     MyPageItemType.header(title: "회원 정보"),

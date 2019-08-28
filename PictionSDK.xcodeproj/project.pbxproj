@@ -114,6 +114,8 @@
 		432CAC2422B33F2D0007EE03 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2322B33F2D0007EE03 /* Series.swift */; };
 		432CAC2722B33F380007EE03 /* SeriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2622B33F380007EE03 /* SeriesAPI.swift */; };
 		432CAC7222B725410007EE03 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC7122B725410007EE03 /* Response.swift */; };
+		4331CE1523151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE1423151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift */; };
+		4331CE1623151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE1423151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift */; };
 		4333578E22F3C9780064CA1E /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4333578D22F3C9780064CA1E /* Kanna.framework */; };
 		433F1BD922DD93EA00F67D72 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F1BD822DD93EA00F67D72 /* KeyboardManager.swift */; };
 		436881B122E6E48800DB42B6 /* ViewModelBindable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4368819E22E6E48700DB42B6 /* ViewModelBindable.framework */; };
@@ -545,6 +547,7 @@
 		432CAC2622B33F380007EE03 /* SeriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesAPI.swift; sourceTree = "<group>"; };
 		432CAC7122B725410007EE03 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		432CAC7822B725F00007EE03 /* PictionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4331CE1423151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSwitchTypeTableViewCell.swift; sourceTree = "<group>"; };
 		4333578D22F3C9780064CA1E /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		433F1BD822DD93EA00F67D72 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		4368819E22E6E48700DB42B6 /* ViewModelBindable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViewModelBindable.framework; path = Carthage/Build/iOS/ViewModelBindable.framework; sourceTree = "<group>"; };
@@ -1369,6 +1372,7 @@
 				43F94901230D284A00BD5CD6 /* MyPagePushTypeTableViewCell.swift */,
 				43F94902230D284A00BD5CD6 /* MyPagePresentTypeTableViewCell.swift */,
 				43F94903230D284A00BD5CD6 /* MyPageHeaderTypeTableViewCell.swift */,
+				4331CE1423151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift */,
 				43F94905230D284A00BD5CD6 /* MyPageUnderlineTypeTableViewCell.swift */,
 				43F94904230D284A00BD5CD6 /* MyPage.storyboard */,
 			);
@@ -2001,6 +2005,7 @@
 				4317A3A422E172A200A5C725 /* UIImageView+Extension.swift in Sources */,
 				4317A3A822E172A200A5C725 /* ImagePickerManager.swift in Sources */,
 				43F949D0230D284B00BD5CD6 /* MyPageViewModel.swift in Sources */,
+				4331CE1623151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift in Sources */,
 				4317A3B022E172A200A5C725 /* UtilityAssembly.swift in Sources */,
 				43F9498E230D284B00BD5CD6 /* ProjectSeriesHeaderTableViewCell.swift in Sources */,
 				43F94A12230D284B00BD5CD6 /* SendDonationViewModel.swift in Sources */,
@@ -2127,6 +2132,7 @@
 				4381BBB422BB64DA007FD7E7 /* UIImageView+Extension.swift in Sources */,
 				4381BBAC22BB199B007FD7E7 /* ImagePickerManager.swift in Sources */,
 				43F949CF230D284B00BD5CD6 /* MyPageViewModel.swift in Sources */,
+				4331CE1523151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift in Sources */,
 				4381BBAA22BB12FB007FD7E7 /* UtilityAssembly.swift in Sources */,
 				43F9498D230D284B00BD5CD6 /* ProjectSeriesHeaderTableViewCell.swift in Sources */,
 				43F94A11230D284B00BD5CD6 /* SendDonationViewModel.swift in Sources */,

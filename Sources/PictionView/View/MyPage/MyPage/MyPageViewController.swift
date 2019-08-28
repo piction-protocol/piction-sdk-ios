@@ -192,22 +192,14 @@ extension MyPageViewController: ViewModelBindable {
             .do(onNext: { [weak self] _ in
                 _ = self?.emptyView.subviews.map { $0.removeFromSuperview() }
                 self?.emptyView.frame.size.height = 0
-                self?.emptyView.backgroundColor = .clear
+                let view = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_W, height: SCREEN_H))
+                view.backgroundColor = UIColor(r: 245, g: 245, b: 245)
+                self?.emptyView.addSubview(view)
             })
             .drive { $0 }
             .map { $0 }
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-
-        output
-            .myPageList
-            .drive(onNext: { [weak self] _ in
-                let view = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_W, height: SCREEN_H))
-                view.backgroundColor = UIColor(r: 245, g: 245, b: 245)
-                self?.emptyView.addSubview(view)
-            })
-            .disposed(by: disposeBag)
-
 
         output
             .embedUserInfoViewController
@@ -231,7 +223,7 @@ extension MyPageViewController: ViewModelBindable {
                         self?.openMyProjectViewController()
                     case "거래 내역":
                         self?.openTransactionHistoryListViewController()
-                    case "입금 내역":
+                    case "픽션 지갑으로 입금":
                         self?.openDepositViewController()
                     default:
                         break

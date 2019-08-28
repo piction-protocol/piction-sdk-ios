@@ -66,7 +66,7 @@ final class MyPageViewModel: InjectableViewModel {
                 let walletItems: [MyPageItemType] = [
                     MyPageItemType.header(title: "픽션 지갑관리"),
                     MyPageItemType.pushType(title: "거래 내역"),
-                    MyPageItemType.pushType(title: "입금 내역"),
+                    MyPageItemType.pushType(title: "픽션 지갑으로 입금"),
                     MyPageItemType.underline
                 ]
 

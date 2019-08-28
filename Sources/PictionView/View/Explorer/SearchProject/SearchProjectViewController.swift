@@ -76,7 +76,7 @@ extension SearchProjectViewController: ViewModelBindable {
 
         output
             .viewWillAppear
-            .drive(onNext: { in
+            .drive(onNext: { _ in
             })
             .disposed(by: disposeBag)
 

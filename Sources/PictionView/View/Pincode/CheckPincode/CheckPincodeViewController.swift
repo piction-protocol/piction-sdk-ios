@@ -116,8 +116,7 @@ extension CheckPincodeViewController: ViewModelBindable {
         output
             .viewWillAppear
             .drive(onNext: { [weak self] style in
-                self?.navigationController?.showTransparentNavigationBar()
-                self?.navigationController?.navigationBar.tintColor = UIView().tintColor
+                self?.navigationController?.setNavigationBarLine(false)
                 self?.pincodeTextField.becomeFirstResponder()
 
                 if style == .change {

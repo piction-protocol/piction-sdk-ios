@@ -120,9 +120,7 @@ extension ExplorerViewController: ViewModelBindable {
 
         output
             .viewWillAppear
-            .drive(onNext: { [weak self] _ in
-                self?.navigationController?.showTransparentNavigationBar()
-                self?.navigationController?.navigationBar.tintColor = UIView().tintColor
+            .drive(onNext: { [weak self] in
                 self?.navigationController?.setNavigationBarLine(false)
                 self?.navigationController?.navigationBar.prefersLargeTitles = true
             })
@@ -130,8 +128,7 @@ extension ExplorerViewController: ViewModelBindable {
 
         output
             .viewWillDisappear
-            .drive(onNext: { [weak self] _ in
-                self?.navigationController?.hideTransparentNavigationBar()
+            .drive(onNext: { [weak self] in
                 self?.navigationController?.setNavigationBarLine(true)
             })
             .disposed(by: disposeBag)

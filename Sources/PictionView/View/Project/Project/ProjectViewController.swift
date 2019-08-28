@@ -141,14 +141,6 @@ final class ProjectViewController: UIViewController {
         return dataSource
     }
 
-    private func controlNavigationBar(_ offset: CGPoint) {
-        if (offset.y) > -DEFAULT_NAVIGATION_HEIGHT {
-            self.navigationController?.showBlurNavigationBar()
-        } else {
-            self.navigationController?.showTransparentNavigationBar()
-        }
-    }
-
     override var preferredContentSize: CGSize {
         get {
             self.tableView.layoutIfNeeded()
@@ -191,17 +183,21 @@ extension ProjectViewController: ViewModelBindable {
             .viewWillAppear
             .drive(onNext: { [weak self] in
                 guard let `self` = self else { return }
-                self.controlNavigationBar(self.tableView.contentOffset)
+                self.navigationController?.navigationBar.prefersLargeTitles = false
                 self.navigationController?.navigationBar.barStyle = .black
+                self.navigationController?.showTransparentNavigationBar()
+                self.navigationController?.setNavigationBarLine(false)
+                self.navigationController?.navigationBar.tintColor = .white
             })
             .disposed(by: disposeBag)
 
         output
             .viewWillDisappear
             .drive(onNext: { [weak self] in
+                self?.navigationController?.navigationBar.barStyle = .default
                 self?.navigationController?.hideTransparentNavigationBar()
                 self?.navigationController?.setNavigationBarLine(true)
-                self?.navigationController?.navigationBar.barStyle = .default
+                self?.navigationController?.navigationBar.tintColor = UIView().tintColor
             })
             .disposed(by: disposeBag)
 

@@ -69,14 +69,7 @@ extension SearchProjectViewController: ViewModelBindable {
 
         output
             .viewWillAppear
-            .drive(onNext: { [weak self] _ in
-                guard let `self` = self else { return }
-                self.navigationController?.setNavigationBarHidden(false, animated: false)
-
-//                if self.searchBar.text == "" {
-//                    self.searchBar.becomeFirstResponder()
-//                }
-                //                self?.navigationController?.setNavigationBarLine(false)
+            .drive(onNext: { in
             })
             .disposed(by: disposeBag)
 

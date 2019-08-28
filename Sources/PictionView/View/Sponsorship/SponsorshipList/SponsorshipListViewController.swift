@@ -108,9 +108,7 @@ extension SponsorshipListViewController: ViewModelBindable {
 
         output
             .viewWillAppear
-            .drive(onNext: { [weak self] _ in
-                self?.navigationController?.showTransparentNavigationBar()
-                self?.navigationController?.navigationBar.tintColor = UIView().tintColor
+            .drive(onNext: { [weak self] in
                 self?.navigationController?.setNavigationBarLine(false)
                 self?.navigationController?.navigationBar.prefersLargeTitles = true
             })
@@ -118,9 +116,8 @@ extension SponsorshipListViewController: ViewModelBindable {
 
         output
             .viewWillDisappear
-            .drive(onNext: { [weak self] _ in
-                self?.navigationController?.hideTransparentNavigationBar()
-                    self?.navigationController?.setNavigationBarLine(true)
+            .drive(onNext: { [weak self] in
+                self?.navigationController?.setNavigationBarLine(true)
             })
             .disposed(by: disposeBag)
 

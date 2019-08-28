@@ -48,8 +48,7 @@ extension RegisterPincodeViewController: ViewModelBindable {
         output
             .viewWillAppear
             .drive(onNext: { [weak self] in
-                self?.navigationController?.showTransparentNavigationBar()
-                self?.navigationController?.navigationBar.tintColor = UIView().tintColor
+                self?.navigationController?.setNavigationBarLine(false)
                 self?.pincodeTextField.becomeFirstResponder()
             })
             .disposed(by: disposeBag)

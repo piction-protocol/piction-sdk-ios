@@ -26,8 +26,6 @@ extension UIViewController {
         switch type {
         case .present:
             let navigation = UINavigationController(rootViewController: childView)
-            navigation.navigationBar.isTranslucent = true
-            navigation.navigationBar.barTintColor = .white
             self.present(navigation, animated: true, completion: nil)
         case .push:
             self.navigationController?.pushViewController(childView, animated: true)

@@ -76,7 +76,7 @@ extension CreateProjectViewController: ViewModelBindable {
         output
             .isModify
             .drive(onNext: { [weak self] isModify in
-                self?.navigationItem.title = isModify ? "프로젝트 수정" : "프로젝트 생성"
+                self?.navigationItem.title = isModify ? "프로젝트 수정 BETA" : "프로젝트 생성 BETA"
                 self?.saveBarButton.title = isModify ? "수정" : "등록"
                 self?.projectIdTextField.isEnabled = !isModify
                 self?.projectIdTextField.textColor = isModify ? UIColor(r: 191, g: 191, b: 191) : .black

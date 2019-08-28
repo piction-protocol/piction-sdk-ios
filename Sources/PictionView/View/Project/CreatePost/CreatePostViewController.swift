@@ -174,7 +174,7 @@ extension CreatePostViewController: ViewModelBindable {
         output
             .isModify
             .drive(onNext: { [weak self] isModify in
-                self?.navigationItem.title = isModify ? "포스트 수정" : "포스트 생성"
+                self?.navigationItem.title = isModify ? "포스트 수정 BETA" : "포스트 생성 BETA"
                 self?.saveBarButton.title = isModify ? "수정" : "등록"
             })
             .disposed(by: disposeBag)

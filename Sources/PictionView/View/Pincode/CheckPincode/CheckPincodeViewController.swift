@@ -126,8 +126,6 @@ extension CheckPincodeViewController: ViewModelBindable {
                 if UserDefaults.standard.bool(forKey: "isEnabledAuthBio") {
                     self?.auth()
                 }
-//                UserDefaults.standard.set(true, forKey: "isEnabledAuthBio")
-
             })
             .disposed(by: disposeBag)
 

@@ -9,8 +9,6 @@
 import UIKit
 import CoreData
 import KeychainAccess
-//import Fabric
-//import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

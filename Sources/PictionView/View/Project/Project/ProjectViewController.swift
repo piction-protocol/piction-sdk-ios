@@ -224,7 +224,6 @@ extension ProjectViewController: ViewModelBindable {
             .contentList
             .drive(onNext: { [weak self] list in
                 if list.items.count < 10 {
-                    let headerHeight = SCREEN_W + 274
                     let footerHeight = SCREEN_H - DEFAULT_NAVIGATION_HEIGHT - TAB_HEIGHT - 52 - (self?.preferredContentSize.height ?? 0)
                         self?.emptyView.frame.size.height = footerHeight
                 } else {

@@ -50,7 +50,7 @@ final class ExplorerViewController: UIViewController {
     let searchResultsController = SearchProjectViewController.make()
     var searchController: UISearchController?
     private var refreshControl = UIRefreshControl()
-    @IBOutlet weak var containerView: UIView!
+
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.refreshControl = refreshControl
@@ -64,7 +64,6 @@ final class ExplorerViewController: UIViewController {
 
         searchController?.hidesNavigationBarDuringPresentation = true
         searchController?.dimsBackgroundDuringPresentation = false
-        searchController?.obscuresBackgroundDuringPresentation = false
         searchController?.searchBar.placeholder = "프로젝트 검색"
         searchController?.searchResultsUpdater = searchResultsController
         navigationItem.searchController = searchController

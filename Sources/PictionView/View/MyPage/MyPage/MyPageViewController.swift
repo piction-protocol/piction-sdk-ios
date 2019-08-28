@@ -111,8 +111,8 @@ final class MyPageViewController: UIViewController {
 
     private func openSafariViewController(url urlString: String) {
         guard let url = URL(string: urlString) else { return }
-            let safariViewController = SFSafariViewController(url: url)
-            self.present(safariViewController, animated: true, completion: nil)
+        let safariViewController = SFSafariViewController(url: url)
+        self.present(safariViewController, animated: true, completion: nil)
     }
 
     private func embedUserInfoViewController() {

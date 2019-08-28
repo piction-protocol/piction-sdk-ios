@@ -63,8 +63,14 @@ public extension Reactive {
                 }
             case let .failure(error):
                 print("Request Error: \(error)")
-
-
+                let errorItem: [String: Any] = [
+                    "code": error.errorCode,
+                    "status_code": error.errorCode,
+                    "message": error.localizedDescription
+                ]
+                let errorModel = ErrorModel.from(NSDictionary(dictionary: errorItem))!
+                let errorType = ErrorType.custom(errorModel)
+                failureCompletion(errorType)
             }
         }
     }

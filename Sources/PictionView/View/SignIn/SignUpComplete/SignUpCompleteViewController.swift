@@ -22,6 +22,13 @@ final class SignUpCompleteViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
+
+    private func openRegisterPincode() {
+        let vc = RegisterPincodeViewController.make()
+        if let topViewController = UIApplication.topViewController() {
+            topViewController.openViewController(vc, type: .present)
+        }
+    }
 }
 
 extension SignUpCompleteViewController: ViewModelBindable {
@@ -39,7 +46,11 @@ extension SignUpCompleteViewController: ViewModelBindable {
         output
             .dismissViewController
             .drive(onNext: { [weak self] in
-                self?.dismiss(animated: true)
+                self?.dismiss(animated: true, completion: { [weak self] in
+                    if UserDefaults.standard.string(forKey: "pincode") == nil {
+                        self?.openRegisterPincode()
+                    }
+                })
             })
             .disposed(by: disposeBag)
     }

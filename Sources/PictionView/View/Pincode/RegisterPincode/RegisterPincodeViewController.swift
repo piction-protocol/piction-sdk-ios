@@ -29,6 +29,20 @@ final class RegisterPincodeViewController: UIViewController {
             topViewController.openViewController(vc, type: .push)
         }
     }
+
+    private func openRecommendPopup() {
+        let alertController = UIAlertController(title: "PIN 등록", message: "픽션 내 콘텐츠의 안전한 거래를 위해\nPIN 등록을 권장합니다.", preferredStyle: .alert)
+        let cancelButton = UIAlertAction(title: "계속", style: .default) { _ in
+        }
+        let confirmButton = UIAlertAction(title: "건너뛰기", style: .default) { [weak self] _ in
+            self?.dismiss(animated: true)
+        }
+
+        alertController.addAction(confirmButton)
+        alertController.addAction(cancelButton)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
 
 extension RegisterPincodeViewController: ViewModelBindable {
@@ -115,9 +129,9 @@ extension RegisterPincodeViewController: ViewModelBindable {
             .disposed(by: disposeBag)
 
         output
-            .dismissViewController
+            .openRecommendPopup
             .drive(onNext: { [weak self] in
-                self?.dismiss(animated: true)
+                self?.openRecommendPopup()
             })
             .disposed(by: disposeBag)
 

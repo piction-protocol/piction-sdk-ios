@@ -41,6 +41,13 @@ final class SignInViewController: UIViewController {
         }
     }
 
+    private func openRegisterPincode() {
+        let vc = RegisterPincodeViewController.make()
+        if let topViewController = UIApplication.topViewController() {
+            topViewController.openViewController(vc, type: .present)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         KeyboardManager.shared.delegate = self
@@ -103,7 +110,11 @@ extension SignInViewController: ViewModelBindable {
         output
             .dismissViewController
             .drive(onNext: { [weak self] in
-                self?.dismiss(animated: true)
+                self?.dismiss(animated: true, completion: { [weak self] in
+                    if UserDefaults.standard.string(forKey: "pincode") == nil {
+                        self?.openRegisterPincode()
+                    }
+                })
             })
             .disposed(by: disposeBag)
 

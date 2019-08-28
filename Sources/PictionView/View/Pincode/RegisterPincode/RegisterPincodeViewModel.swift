@@ -22,14 +22,14 @@ final class RegisterPincodeViewModel: ViewModel {
     struct Output {
         let viewWillAppear: Driver<Void>
         let pincodeText: Driver<String>
-        let dismissViewController: Driver<Void>
+        let openRecommendPopup: Driver<Void>
     }
 
     func build(input: Input) -> Output {
         return Output(
             viewWillAppear: input.viewWillAppear,
             pincodeText: input.pincodeTextFieldDidInput,
-            dismissViewController: input.closeBtnDidTap
+            openRecommendPopup: input.closeBtnDidTap
         )
     }
 }

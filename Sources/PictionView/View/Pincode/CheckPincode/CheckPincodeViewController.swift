@@ -12,6 +12,10 @@ import RxCocoa
 import ViewModelBindable
 import LocalAuthentication
 
+protocol CheckPincodeDelegate: class {
+    func authSuccess()
+}
+
 final class CheckPincodeViewController: UIViewController {
     var disposeBag = DisposeBag()
 
@@ -23,6 +27,8 @@ final class CheckPincodeViewController: UIViewController {
     @IBOutlet weak var pincode5View: UIView!
     @IBOutlet weak var pincode6View: UIView!
     @IBOutlet weak var closeButton: UIBarButtonItem!
+
+    weak var delegate: CheckPincodeDelegate?
 
     private let signout = PublishSubject<Void>()
 
@@ -63,6 +69,10 @@ final class CheckPincodeViewController: UIViewController {
             self.dismiss(animated: true)
             let rootView = TabBarController()
             UIApplication.shared.keyWindow?.rootViewController = rootView
+        } else if self.viewModel?.style == .check {
+            self.dismiss(animated: true, completion: { [weak self] in
+                self?.delegate?.authSuccess()
+            })
         } else {
             self.openRegisterPincodeViewController()
         }
@@ -119,7 +129,7 @@ extension CheckPincodeViewController: ViewModelBindable {
                 self?.navigationController?.setNavigationBarLine(false)
                 self?.pincodeTextField.becomeFirstResponder()
 
-                if style == .change {
+                if style == .change || style == .check {
                     self?.closeButton.isEnabled = true
                     self?.closeButton.title = "취소"
                 }

@@ -25,21 +25,27 @@ final class SendDonationViewModel: InjectableViewModel {
 
     struct Input {
         let viewWillAppear: Driver<Void>
+        let viewWillDisappear: Driver<Void>
         let amountTextFieldDidInput: Driver<String>
         let sendBtnDidTap: Driver<Void>
+        let authSuccessWithPincode: Driver<Void>
     }
 
     struct Output {
         let viewWillAppear: Driver<Void>
+        let viewWillDisappear: Driver<Void>
         let userInfo: Driver<UserModel>
         let walletInfo: Driver<WalletModel>
         let enableSendButton: Driver<Bool>
+        let openCheckPincodeViewController: Driver<Void>
         let openConfirmDonationViewController: Driver<(String, Int)>
         let openErrorPopup: Driver<String>
     }
 
     func build(input: Input) -> Output {
         let viewWillAppear = input.viewWillAppear
+
+        let viewWillDisappear = input.viewWillDisappear
 
         let userInfoAction = viewWillAppear
             .flatMap { [weak self] _ -> Driver<Action<ResponseData>> in
@@ -76,17 +82,37 @@ final class SendDonationViewModel: InjectableViewModel {
         let sendAmountAction = input.sendBtnDidTap
             .withLatestFrom(latestSendInfo)
             .flatMap { (userInfo, walletInfo, sendAmount) -> Driver<Action<ResponseData>> in
+                if UserDefaults.standard.string(forKey: "pincode") == nil {
+                    let response = PictionSDK.rx.requestAPI(SponsorshipsAPI.sponsorship(creatorId: userInfo.loginId ?? "", amount: Int(sendAmount) ?? 0))
+                    return Action.makeDriver(response)
+                } else {
+                    return Driver.empty()
+                }
+            }
+
+        let openCheckPincodeViewController = input.sendBtnDidTap
+            .flatMap { _ -> Driver<Void> in
+                if UserDefaults.standard.string(forKey: "pincode") != nil {
+                    return Driver.just(())
+                } else {
+                    return Driver.empty()
+                }
+            }
+
+        let sendAmountWithPincodeAction = input.authSuccessWithPincode
+            .withLatestFrom(latestSendInfo)
+            .flatMap { (userInfo, walletInfo, sendAmount) -> Driver<Action<ResponseData>> in
                 let response = PictionSDK.rx.requestAPI(SponsorshipsAPI.sponsorship(creatorId: userInfo.loginId ?? "", amount: Int(sendAmount) ?? 0))
                 return Action.makeDriver(response)
             }
 
-        let sendAmountSuccess = sendAmountAction.elements
+        let sendAmountSuccess = Driver.merge(sendAmountAction.elements, sendAmountWithPincodeAction.elements)
             .withLatestFrom(latestSendInfo)
             .flatMap { (userInfo, walletInfo, sendAmount) -> Driver<(String, Int)> in
                 return Driver.just((userInfo.loginId ?? "", Int(sendAmount) ?? 0))
             }
 
-        let sendAmountError = sendAmountAction.error
+        let sendAmountError = Driver.merge(sendAmountAction.error, sendAmountWithPincodeAction.error)
             .flatMap { response -> Driver<String> in
                 let errorMsg = response as? ErrorType
                 return Driver.just(errorMsg?.message ?? "")
@@ -99,9 +125,11 @@ final class SendDonationViewModel: InjectableViewModel {
 
         return Output(
             viewWillAppear: viewWillAppear,
+            viewWillDisappear: viewWillDisappear,
             userInfo: userInfoSuccess,
             walletInfo: walletInfoSuccess,
             enableSendButton: enableSendButton,
+            openCheckPincodeViewController: openCheckPincodeViewController,
             openConfirmDonationViewController: sendAmountSuccess,
             openErrorPopup: sendAmountError
         )

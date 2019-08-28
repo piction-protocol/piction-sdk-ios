@@ -26,6 +26,8 @@ final class SendDonationViewController: UIViewController {
     @IBOutlet weak var amountUnderlineHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 
+    private let authSuccessWithPincode = PublishSubject<Void>()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         KeyboardManager.shared.delegate = self
@@ -36,6 +38,14 @@ final class SendDonationViewController: UIViewController {
         let vc = ConfirmDonationViewController.make(loginId: loginId, sendAmount: sendAmount)
         if let topViewController = UIApplication.topViewController() {
             topViewController.openViewController(vc, type: .push)
+        }
+    }
+
+    private func openCheckPincodeViewController() {
+        let vc = CheckPincodeViewController.make(style: .check)
+        vc.delegate = self
+        if let topViewController = UIApplication.topViewController() {
+            topViewController.openViewController(vc, type: .present)
         }
     }
 
@@ -56,8 +66,10 @@ extension SendDonationViewController: ViewModelBindable {
     func bindViewModel(viewModel: ViewModel) {
         let input = SendDonationViewModel.Input(
             viewWillAppear: rx.viewWillAppear.asDriver(),
+            viewWillDisappear: rx.viewWillDisappear.asDriver(),
             amountTextFieldDidInput: amountTextField.rx.text.orEmpty.asDriver(),
-            sendBtnDidTap: sendButton.rx.tap.asDriver()
+            sendBtnDidTap: sendButton.rx.tap.asDriver(),
+            authSuccessWithPincode: authSuccessWithPincode.asDriver(onErrorDriveWith: .empty())
         )
 
         let output = viewModel.build(input: input)
@@ -66,6 +78,14 @@ extension SendDonationViewController: ViewModelBindable {
             .viewWillAppear
             .drive(onNext: { [weak self] _ in
                 self?.navigationController?.navigationBar.prefersLargeTitles = false
+                self?.tabBarController?.tabBar.isHidden = true
+            })
+            .disposed(by: disposeBag)
+
+        output
+            .viewWillDisappear
+            .drive(onNext: { [weak self] _ in
+                self?.tabBarController?.tabBar.isHidden = false
             })
             .disposed(by: disposeBag)
 
@@ -121,6 +141,13 @@ extension SendDonationViewController: ViewModelBindable {
             .disposed(by: disposeBag)
 
         output
+            .openCheckPincodeViewController
+            .drive(onNext: { [weak self] _ in
+                self?.openCheckPincodeViewController()
+            })
+            .disposed(by: disposeBag)
+
+        output
             .openErrorPopup
             .drive(onNext: { [weak self] message in
                 self?.errorPopup(message: message)
@@ -142,5 +169,11 @@ extension SendDonationViewController: KeyboardManagerDelegate {
         UIView.animate(withDuration: duration, animations: {
             self.view.layoutIfNeeded()
         })
+    }
+}
+
+extension SendDonationViewController: CheckPincodeDelegate {
+    func authSuccess() {
+        self.authSuccessWithPincode.onNext(())
     }
 }

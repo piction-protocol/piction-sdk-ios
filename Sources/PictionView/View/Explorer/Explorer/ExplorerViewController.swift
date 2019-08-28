@@ -66,6 +66,7 @@ final class ExplorerViewController: UIViewController {
         searchController?.dimsBackgroundDuringPresentation = false
         searchController?.searchBar.placeholder = "프로젝트 검색"
         searchController?.searchResultsUpdater = searchResultsController
+
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
@@ -101,10 +102,15 @@ final class ExplorerViewController: UIViewController {
     }
 
     private func openErrorPopup() {
-        let alert = UIAlertController(title: "", message: "서버가 응답하지 않습니다.\n잠시 후 다시 시도해주세요.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "네트워크 오류", message: "서버가 응답하지 않습니다.\n네트워크 환경을 확인해주세요.", preferredStyle: .alert)
 
-        let okAction = UIAlertAction(title: "확인", style: .default, handler: { action in
+        let cancelButton = UIAlertAction(title: "취소", style: .cancel) { _ in
+        }
+        let okAction = UIAlertAction(title: "재시도", style: .default, handler: { [weak self] action in
+            self?.viewModel?.loadTrigger.onNext(())
         })
+
+        alert.addAction(cancelButton)
         alert.addAction(okAction)
 
         present(alert, animated: false, completion: nil)

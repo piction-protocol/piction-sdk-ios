@@ -20,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
+        // urlcache
+        let cacheSizeMemory: Int = 4 * 1024 * 1024
+        let cacheSizeDisk: Int = 32 * 1024 * 1024
+        let sharedCache: URLCache = URLCache(memoryCapacity: cacheSizeMemory, diskCapacity: cacheSizeDisk, diskPath: "nsurlcache")
+        URLCache.shared = sharedCache
+
         window = UIWindow(frame: UIScreen.main.bounds)
 
         if UserDefaults.standard.string(forKey: "pincode") != nil {

@@ -116,6 +116,8 @@
 		432CAC7222B725410007EE03 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC7122B725410007EE03 /* Response.swift */; };
 		4331CE1523151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE1423151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift */; };
 		4331CE1623151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE1423151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift */; };
+		4331CE2123152BD900CF635B /* input.xcfilelist in Resources */ = {isa = PBXBuildFile; fileRef = 4331CE2023152BD800CF635B /* input.xcfilelist */; };
+		4331CE2223152BD900CF635B /* input.xcfilelist in Resources */ = {isa = PBXBuildFile; fileRef = 4331CE2023152BD800CF635B /* input.xcfilelist */; };
 		4333578E22F3C9780064CA1E /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4333578D22F3C9780064CA1E /* Kanna.framework */; };
 		433F1BD922DD93EA00F67D72 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F1BD822DD93EA00F67D72 /* KeyboardManager.swift */; };
 		436881B122E6E48800DB42B6 /* ViewModelBindable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4368819E22E6E48700DB42B6 /* ViewModelBindable.framework */; };
@@ -492,19 +494,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		438B0D9C22B8C84400000122 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		43156AA322E54F2D0045F920 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		431760AB22C0BA83003FCA0F /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
@@ -539,7 +528,6 @@
 		432A67D622BCB25B009E51FF /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		432A67DA22BCB40E009E51FF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		432A67DE22BCB464009E51FF /* BorderLineConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderLineConfigurable.swift; sourceTree = "<group>"; };
-		432BB2EA22E95E51006E9D5C /* input.xcfilelist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcfilelist; path = input.xcfilelist; sourceTree = SOURCE_ROOT; };
 		432BB2ED22E95E79006E9D5C /* Debug */ = {isa = PBXFileReference; lastKnownFileType = text; name = Debug; path = "../../../../Library/Developer/Xcode/DerivedData/PictionSDK-esqmbsxoomweeagjgkadtqfydrwb/Build/Products/Debug"; sourceTree = "<group>"; };
 		432CAC0A22B328630007EE03 /* MyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPI.swift; sourceTree = "<group>"; };
 		432CAC0D22B32A2F0007EE03 /* My.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My.swift; sourceTree = "<group>"; };
@@ -548,6 +536,7 @@
 		432CAC7122B725410007EE03 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		432CAC7822B725F00007EE03 /* PictionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4331CE1423151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSwitchTypeTableViewCell.swift; sourceTree = "<group>"; };
+		4331CE2023152BD800CF635B /* input.xcfilelist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcfilelist; path = input.xcfilelist; sourceTree = "<group>"; };
 		4333578D22F3C9780064CA1E /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		433F1BD822DD93EA00F67D72 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		4368819E22E6E48700DB42B6 /* ViewModelBindable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViewModelBindable.framework; path = Carthage/Build/iOS/ViewModelBindable.framework; sourceTree = "<group>"; };
@@ -876,6 +865,14 @@
 				43FC6F8922F832A50086B65A /* FanPassModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4331CE1F23152BD000CF635B /* XCFileList */ = {
+			isa = PBXGroup;
+			children = (
+				4331CE2023152BD800CF635B /* input.xcfilelist */,
+			);
+			path = XCFileList;
 			sourceTree = "<group>";
 		};
 		433F1BD722DD93DE00F67D72 /* KeyboardManager */ = {
@@ -1598,10 +1595,10 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
+				4331CE1F23152BD000CF635B /* XCFileList */,
 				OBJ_33 /* Tests */,
 				OBJ_117 /* Products */,
 				43FC8931229E60B90074C3D6 /* Frameworks */,
-				432BB2EA22E95E51006E9D5C /* input.xcfilelist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1646,7 +1643,6 @@
 				432CAC7522B725F00007EE03 /* Frameworks */,
 				432CAC7622B725F00007EE03 /* Resources */,
 				43C1F3A222B790AE00D17127 /* ShellScript */,
-				438B0D9C22B8C84400000122 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1796,6 +1792,7 @@
 				43F94A77230D31C600BD5CD6 /* SponsorshipList.storyboard in Resources */,
 				43F9497C230D284B00BD5CD6 /* Post.storyboard in Resources */,
 				43F94996230D284B00BD5CD6 /* Project.storyboard in Resources */,
+				4331CE2223152BD900CF635B /* input.xcfilelist in Resources */,
 				4317A3FC22E172A200A5C725 /* Assets.xcassets in Resources */,
 				43F949A2230D284B00BD5CD6 /* PostFooter.storyboard in Resources */,
 				43F949BA230D284B00BD5CD6 /* Deposit.storyboard in Resources */,
@@ -1836,6 +1833,7 @@
 				43F94A76230D31C600BD5CD6 /* SponsorshipList.storyboard in Resources */,
 				43F9497B230D284B00BD5CD6 /* Post.storyboard in Resources */,
 				43F94995230D284B00BD5CD6 /* Project.storyboard in Resources */,
+				4331CE2123152BD900CF635B /* input.xcfilelist in Resources */,
 				43C1F36822B72D7400D17127 /* Assets.xcassets in Resources */,
 				43F949A1230D284B00BD5CD6 /* PostFooter.storyboard in Resources */,
 				43F949B9230D284B00BD5CD6 /* Deposit.storyboard in Resources */,
@@ -1888,7 +1886,7 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"$(SRCROOT)/input.xcfilelist",
+				"$(SRCROOT)/XCFileList/input.xcfilelist",
 			);
 			inputPaths = (
 			);
@@ -1906,7 +1904,7 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"$(SRCROOT)/input.xcfilelist",
+				"$(SRCROOT)/XCFileList/input.xcfilelist",
 			);
 			inputPaths = (
 			);
@@ -2348,6 +2346,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sources/PictionView/Library",
 					"$(PROJECT_DIR)/Product",
+					"$(PROJECT_DIR)/Framework",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2431,6 +2430,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sources/PictionView/Library",
 					"$(PROJECT_DIR)/Product",
+					"$(PROJECT_DIR)/Framework",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -2506,6 +2506,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Framework",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2587,6 +2588,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Framework",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;

@@ -13,12 +13,19 @@ import ViewModelBindable
 import RxDataSources
 import PictionSDK
 
-final class SearchProjectViewController: UITableViewController {
+final class SearchProjectViewController: UIViewController {
     var disposeBag = DisposeBag()
 
     private let searchText = PublishSubject<String>()
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        KeyboardManager.shared.delegate = self
+    }
 
     private func configureDataSource() -> RxTableViewSectionedReloadDataSource<SectionModel<String, ProjectModel>> {
         let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, ProjectModel>>(
@@ -116,5 +123,21 @@ extension SearchProjectViewController: UISearchResultsUpdating {
         searchController.searchResultsController?.view.isHidden = false
         guard let text = searchController.searchBar.text else { return }
         self.searchText.onNext(text)
+    }
+}
+
+extension SearchProjectViewController: KeyboardManagerDelegate {
+    func keyboardManager(_ keyboardManager: KeyboardManager, keyboardWillChangeFrame endFrame: CGRect?, duration: TimeInterval, animationCurve: UIView.AnimationOptions) {
+        guard let endFrame = endFrame else { return }
+
+        if endFrame.origin.y >= SCREEN_H {
+            bottomConstraint.constant = 0
+        } else {
+            bottomConstraint.constant = endFrame.size.height
+        }
+
+        UIView.animate(withDuration: duration, animations: {
+            self.view.layoutIfNeeded()
+        })
     }
 }

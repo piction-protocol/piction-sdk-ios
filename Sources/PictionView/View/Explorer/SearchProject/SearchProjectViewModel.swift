@@ -60,7 +60,8 @@ final class SearchProjectViewModel: ViewModel {
         let searchAction = Driver.merge(inputSearchText, loadNext)
             .withLatestFrom(input.searchText)
             .filter { $0 != "" }
-            .flatMap { [weak self] searchText -> Driver<Action<ResponseData>> in
+            .flatMap { [weak self] searchText ->
+                Driver<Action<ResponseData>> in
                 let response = PictionSDK.rx.requestAPI(SearchAPI.project(name: searchText, page: self?.page ?? 0, size: 10))
                 return Action.makeDriver(response)
             }
@@ -73,7 +74,8 @@ final class SearchProjectViewModel: ViewModel {
 
         let searchProjectGuideEmptyView = input.searchText
             .filter { $0 == "" }
-            .flatMap { _ -> Driver<CustomEmptyViewStyle> in
+            .flatMap { [weak self] _ -> Driver<CustomEmptyViewStyle> in
+                self?.shouldInfiniteScroll = false
                 return Driver.just(.searchProjectGuide)
             }
 

@@ -28,6 +28,7 @@ final class ExplorerViewModel: ViewModel {
         let viewWillDisappear: Driver<Void>
         let projectList: Driver<ExplorerBySection>
         let openProjectViewController: Driver<IndexPath>
+        let openErrorPopup: Driver<Void>
         let isFetching: Driver<Bool>
     }
 
@@ -107,11 +108,17 @@ final class ExplorerViewModel: ViewModel {
                 return Action.makeDriver(Driver.just(()))
             }
 
+        let openErrorPopup = Driver.zip(recommendedProjectAction.error, noticeListAction.error)
+            .flatMap { _ -> Driver<Void> in
+                return Driver.just(())
+            }
+
         return Output(
             viewWillAppear: viewWillAppear,
             viewWillDisappear: viewWillDisappear,
             projectList: projectList,
             openProjectViewController: openProjectViewController,
+            openErrorPopup: openErrorPopup,
             isFetching: refreshAction.isExecuting
         )
     }

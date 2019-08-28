@@ -100,6 +100,16 @@ final class ExplorerViewController: UIViewController {
                 }
             })
     }
+
+    private func openErrorPopup() {
+        let alert = UIAlertController(title: "", message: "서버가 응답하지 않습니다.\n잠시 후 다시 시도해주세요.", preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: { action in
+        })
+        alert.addAction(okAction)
+
+        present(alert, animated: false, completion: nil)
+    }
 }
 
 extension ExplorerViewController: ViewModelBindable {
@@ -160,6 +170,13 @@ extension ExplorerViewController: ViewModelBindable {
 //                if let item: ProjectModel = try? self?.table.rx.model(at: indexPath) {
 //                    self?.openProjectViewController(uri: item.uri ?? "")
 //                }
+            })
+            .disposed(by: disposeBag)
+
+        output
+            .openErrorPopup
+            .drive(onNext: { [weak self] in
+                self?.openErrorPopup()
             })
             .disposed(by: disposeBag)
 

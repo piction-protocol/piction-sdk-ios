@@ -31,7 +31,6 @@ final class SendDonationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         KeyboardManager.shared.delegate = self
-        amountTextField.becomeFirstResponder()
     }
 
     private func openConfirmDonationViewController(loginId: String, sendAmount: Int) {
@@ -79,6 +78,7 @@ extension SendDonationViewController: ViewModelBindable {
             .drive(onNext: { [weak self] _ in
                 self?.navigationController?.navigationBar.prefersLargeTitles = false
                 self?.tabBarController?.tabBar.isHidden = true
+                self?.amountTextField.becomeFirstResponder()
             })
             .disposed(by: disposeBag)
 

@@ -92,6 +92,7 @@ extension SearchSponsorViewController: ViewModelBindable {
         output
             .openSendDonationViewController
             .drive(onNext: { [weak self] indexPath in
+                self?.searchBar.resignFirstResponder()
                 let loginId = dataSource[indexPath].loginId ?? ""
                 self?.openSendDonationViewController(loginId: loginId)
             })

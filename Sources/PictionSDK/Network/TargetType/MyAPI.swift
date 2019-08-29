@@ -15,6 +15,8 @@ public enum MyAPI {
     case wallet
     case sales(salesYear: Int, salesMonth: Int)
     case subscription(page: Int, size: Int)
+    case sponsorshipTransaction(txHash: String)
+    case subscriptionTransaction(txHash: String)
 }
 
 extension MyAPI: TargetType {
@@ -31,6 +33,10 @@ extension MyAPI: TargetType {
             return "/my/sales"
         case .subscription:
             return "/my/subscriptions"
+        case .sponsorshipTransaction(let txHash):
+            return "/my/transactions/sponsorship/\(txHash)"
+        case .subscriptionTransaction(let txHash):
+            return "/my/transactions/subscription/\(txHash)"
         }
     }
     public var method: Moya.Method {
@@ -39,7 +45,9 @@ extension MyAPI: TargetType {
              .transactions,
              .wallet,
              .sales,
-             .subscription:
+             .subscription,
+             .sponsorshipTransaction,
+             .subscriptionTransaction:
             return .get
         }
     }
@@ -55,12 +63,18 @@ extension MyAPI: TargetType {
             return jsonSerializedUTF8(json: [SalesViewResponse.sampleData()])
         case .subscription:
             return jsonSerializedUTF8(json: PageViewResponse<ProjectModel>.sampleData())
+        case .sponsorshipTransaction:
+            return jsonSerializedUTF8(json: SponsorshipViewResponse.sampleData())
+        case .subscriptionTransaction:
+            return jsonSerializedUTF8(json: SubscriptionViewResponse.sampleData())
         }
     }
     public var task: Task {
         switch self {
         case .projects,
-             .wallet:
+             .wallet,
+             .sponsorshipTransaction,
+             .subscriptionTransaction:
             return .requestPlain
         case .transactions(let page, let size),
              .subscription(let page, let size):

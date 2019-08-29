@@ -61,4 +61,24 @@ public final class My {
                 failureCompletion?(error)
             })
     }
+
+    public func sponsorshipTransaction(txHash: String, success successCompletion: ((SponsorshipViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(MyAPI.sponsorshipTransaction(txHash: txHash),
+            success: { (response: SponsorshipViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func subscriptionTransaction(txHash: String, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(MyAPI.subscriptionTransaction(txHash: txHash),
+            success: { (response: SubscriptionViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
 }

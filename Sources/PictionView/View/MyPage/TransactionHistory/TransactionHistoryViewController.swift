@@ -38,7 +38,8 @@ extension TransactionHistoryBySection: SectionModelType {
 
 enum TransactionHistoryItemType {
     case header
-    case list(model: TransactionModel)
+    case year(model: String)
+    case list(model: TransactionModel, dateTitle: Bool)
     case footer
 }
 
@@ -61,9 +62,13 @@ final class TransactionHistoryViewController: UITableViewController {
                 case .header:
                     let cell: TransactionHistoryHeaderTypeTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
                     return cell
-                case .list(let model):
-                    let cell: TransactionHistoryListTypeTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                case .year(let model):
+                    let cell: TransactionHistoryYearTypeTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
                     cell.configure(with: model)
+                    return cell
+                case .list(let model, let dateTitle):
+                    let cell: TransactionHistoryListTypeTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                    cell.configure(with: model, dateTitle: dateTitle)
                     return cell
                 case .footer:
                     let cell: TransactionHistoryFooterTypeTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)

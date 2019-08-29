@@ -13,15 +13,29 @@ public typealias TransactionViewResponse = TransactionModel
 
 public struct TransactionModel: Response {
     public let amount: Int?
+    public let amountOriginal: String?
+    public let blockNumber: Int?
+    public let blockTime: Date?
     public let createdAt: Date?
+    public let detailEndPoint: String?
+    public let fromAddress: String?
     public let inOut: String?
     public let transactionHash: String?
+    public let transactionType: String?
+    public let txHashWithUrl: String?
 
     public init(map: Mapper) throws {
         amount = map.optionalFrom("amount")
+        amountOriginal = map.optionalFrom("amountOriginal")
+        blockNumber = map.optionalFrom("blockNumber")
+        blockTime = map.optionalFrom("blockTime")
         createdAt = map.optionalFrom("createdAt")
+        detailEndPoint = map.optionalFrom("detailEndPoint")
+        fromAddress = map.optionalFrom("fromAddress")
         inOut = map.optionalFrom("inOut")
         transactionHash = map.optionalFrom("transactionHash")
+        transactionType = map.optionalFrom("transactionType")
+        txHashWithUrl = map.optionalFrom("txHashWithUrl")
     }
 
     public func toJSONString() throws -> String {
@@ -31,9 +45,16 @@ public struct TransactionModel: Response {
     public func toDict() -> [String: Any?] {
         return [
             "amount": amount,
+            "amountOriginal": amountOriginal,
+            "blockNumber": blockNumber,
+            "blockTime": blockTime?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
+            "detailEndPoint": detailEndPoint,
+            "fromAddress": fromAddress,
             "inOut": inOut,
-            "transactionHash": transactionHash
+            "transactionHash": transactionHash,
+            "transactionType": transactionType,
+            "txHashWithUrl": txHashWithUrl
         ]
     }
 }
@@ -41,10 +62,18 @@ public struct TransactionModel: Response {
 extension TransactionModel {
     static func sampleData() -> [String: Any] {
         return [
-            "amount": 1000,
-            "createdAt": "2019-06-13T01:23:04.540Z",
             "inOut": "IN",
-            "transactionHash": "0x11ed8ac11209ce075d43911a9c0bedcddb38556db867d3bf94173695f8a62082"
+            "transactionHash": "0x6a675b726a07b117eef....03f9b6723bb47455ab697c7caea9",
+            "transactionType": "SPONSORSHIP",
+            "txHashWithUrl": "",
+            "detailEndPoint": "",
+            "fromAddress": "0xf2f61a03bb....d5d97fa36897d66010bce",
+            "toAddress": "0xfcff5beaf97....892a0581eca7f0d5aa3",
+            "amount": 1,
+            "amountOriginal": "1.000000000000000000 PXL",
+            "blockNumber": 4724969,
+            "blockTime": 1566269739000,
+            "createdAt": 1566789723859
         ]
     }
 }

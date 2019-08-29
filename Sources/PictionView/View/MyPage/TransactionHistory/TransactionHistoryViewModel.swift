@@ -14,7 +14,7 @@ import RxPictionSDK
 final class TransactionHistoryViewModel: ViewModel {
 
     var page = 0
-    var sections: [TransactionHistoryItemType] = []
+    var sections: [TransactionModel] = []
     var shouldInfiniteScroll = true
 
     var loadTrigger = PublishSubject<Void>()
@@ -58,7 +58,7 @@ final class TransactionHistoryViewModel: ViewModel {
         let transactionHistoryAction = Driver.merge(initialLoad, loadNext)
             .flatMap { [weak self] _ -> Driver<Action<ResponseData>> in
                 guard let `self` = self else { return Driver.empty() }
-                let response = PictionSDK.rx.requestAPI(MyAPI.transactions(page: self.page, size: 10))
+                let response = PictionSDK.rx.requestAPI(MyAPI.transactions(page: self.page, size: 30))
                 return Action.makeDriver(response)
             }
 
@@ -71,25 +71,31 @@ final class TransactionHistoryViewModel: ViewModel {
                 if (pageList.pageable?.pageNumber ?? 0) >= (pageList.totalPages ?? 0) - 1 {
                     self.shouldInfiniteScroll = false
                 }
-                let transactions: [TransactionHistoryItemType] = (pageList.content ?? []).map { .list(model: $0) }
-//                let contents: [TransactionModel] = pageList.content ?? []
-//                let dayKey = Set<String>(contents.map { $0.createdAt?.toString(format: "YYYY-MM-dd") ?? ""})
-//
-//                var resultArray: [TransactionModel] = []
-//                for key in dayKey {
-//                    let sum = contents.filter({ ($0.createdAt?.toString(format: "YYYY-MM-dd") ?? "") == key })
-//                    resultArray.append(contentsOf: sum)
-//                }
-                if (pageList.content?.count ?? 0) > 0 {
-                    self.sections.append(contentsOf: [.header])
-                    self.sections.append(contentsOf: transactions)
+                self.sections.append(contentsOf: pageList.content ?? [])
+
+                var transactions: [TransactionHistoryItemType] = []
+
+                let yearGroup = self.groupedBy(self.sections, dateComponents: [.year, .month])
+
+                for (index, element) in yearGroup.sorted(by: { $0.0 > $1.0 }).enumerated() {
+                    if index != 0 {
+                        transactions.append(contentsOf: [.year(model: element.key.toString(format: "YYYY"))])
+                    }
+                    let dayGroup = self.groupedBy(element.value, dateComponents: [.year, .month, .day])
+                    for item in dayGroup.sorted(by: { $0.0 > $1.0 }) {
+                        transactions.append(contentsOf: [.header])
+                        let transaction: [TransactionHistoryItemType] = (item.value).enumerated().map { .list(model: $1, dateTitle: $0 == 0) }
+                        transactions.append(contentsOf: transaction)
+                        transactions.append(contentsOf: [.footer])
+                    }
                 }
-                return Driver.just(TransactionHistoryBySection.Section(title: "transacation", items: self.sections))
+
+                return Driver.just(TransactionHistoryBySection.Section(title: "transacation", items: transactions))
             }
 
         let transactionHistoryError = transactionHistoryAction.error
             .flatMap { response -> Driver<TransactionHistoryBySection> in
-                return Driver.just(TransactionHistoryBySection.Section(title: "transacation", items: self.sections))
+                return Driver.just(TransactionHistoryBySection.Section(title: "transacation", items: []))
             }
 
         let refreshAction = input.refreshControlDidRefresh
@@ -124,9 +130,13 @@ final class TransactionHistoryViewModel: ViewModel {
         )
     }
 
-    fileprivate func firstDayOfMonth(date: Date) -> Date {
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.year, .month, .day], from: date)
-        return calendar.date(from: components)!
+    func groupedBy(_ list: [TransactionModel], dateComponents: Set<Calendar.Component>) -> [Date: [TransactionModel]] {
+        let empty: [Date: [TransactionModel]] = [:]
+        return list.reduce(into: empty) { acc, cur in
+            let components = Calendar.current.dateComponents(dateComponents, from: cur.createdAt ?? Date())
+            let date = Calendar.current.date(from: components)!
+            let existing = acc[date] ?? []
+            acc[date] = existing + [cur]
+        }
     }
 }

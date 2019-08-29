@@ -118,6 +118,8 @@
 		4331CE1623151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE1423151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift */; };
 		4331CE2123152BD900CF635B /* input.xcfilelist in Resources */ = {isa = PBXBuildFile; fileRef = 4331CE2023152BD800CF635B /* input.xcfilelist */; };
 		4331CE2223152BD900CF635B /* input.xcfilelist in Resources */ = {isa = PBXBuildFile; fileRef = 4331CE2023152BD800CF635B /* input.xcfilelist */; };
+		4331CE2423177EB800CF635B /* TransactionHistoryYearTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE2323177EB700CF635B /* TransactionHistoryYearTypeTableViewCell.swift */; };
+		4331CE2523177EB800CF635B /* TransactionHistoryYearTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE2323177EB700CF635B /* TransactionHistoryYearTypeTableViewCell.swift */; };
 		4333578E22F3C9780064CA1E /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4333578D22F3C9780064CA1E /* Kanna.framework */; };
 		433F1BD922DD93EA00F67D72 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F1BD822DD93EA00F67D72 /* KeyboardManager.swift */; };
 		436881B122E6E48800DB42B6 /* ViewModelBindable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4368819E22E6E48700DB42B6 /* ViewModelBindable.framework */; };
@@ -537,6 +539,7 @@
 		432CAC7822B725F00007EE03 /* PictionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4331CE1423151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSwitchTypeTableViewCell.swift; sourceTree = "<group>"; };
 		4331CE2023152BD800CF635B /* input.xcfilelist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcfilelist; path = input.xcfilelist; sourceTree = "<group>"; };
+		4331CE2323177EB700CF635B /* TransactionHistoryYearTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHistoryYearTypeTableViewCell.swift; sourceTree = "<group>"; };
 		4333578D22F3C9780064CA1E /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		433F1BD822DD93EA00F67D72 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		4368819E22E6E48700DB42B6 /* ViewModelBindable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViewModelBindable.framework; path = Carthage/Build/iOS/ViewModelBindable.framework; sourceTree = "<group>"; };
@@ -1401,9 +1404,10 @@
 			children = (
 				43F94916230D284A00BD5CD6 /* TransactionHistoryViewController.swift */,
 				43F94914230D284A00BD5CD6 /* TransactionHistoryViewModel.swift */,
+				4331CE2323177EB700CF635B /* TransactionHistoryYearTypeTableViewCell.swift */,
+				43F94915230D284A00BD5CD6 /* TransactionHistoryHeaderTypeTableViewCell.swift */,
 				43F94911230D284A00BD5CD6 /* TransactionHistoryListTypeTableViewCell.swift */,
 				43F94913230D284A00BD5CD6 /* TransactionHistoryFooterTypeTableViewCell.swift */,
-				43F94915230D284A00BD5CD6 /* TransactionHistoryHeaderTypeTableViewCell.swift */,
 				43F94912230D284A00BD5CD6 /* TransactionHistory.storyboard */,
 			);
 			path = TransactionHistory;
@@ -1973,6 +1977,7 @@
 				437D3EAF230E888D0073EBAC /* RegisterPincodeViewController.swift in Sources */,
 				43F949CC230D284B00BD5CD6 /* MyPageUnderlineTypeTableViewCell.swift in Sources */,
 				43F949EA230D284B00BD5CD6 /* UserInfoViewController.swift in Sources */,
+				4331CE2523177EB800CF635B /* TransactionHistoryYearTypeTableViewCell.swift in Sources */,
 				4317A38822E172A200A5C725 /* InputAppliable.swift in Sources */,
 				43F94A79230D31C600BD5CD6 /* SponsorshipListHeaderTypeTableViewCell.swift in Sources */,
 				43F949B2230D284B00BD5CD6 /* DynamicInputView.swift in Sources */,
@@ -2100,6 +2105,7 @@
 				437D3EAE230E888D0073EBAC /* RegisterPincodeViewController.swift in Sources */,
 				43F949CB230D284B00BD5CD6 /* MyPageUnderlineTypeTableViewCell.swift in Sources */,
 				43F949E9230D284B00BD5CD6 /* UserInfoViewController.swift in Sources */,
+				4331CE2423177EB800CF635B /* TransactionHistoryYearTypeTableViewCell.swift in Sources */,
 				43C1F38122B77E1000D17127 /* InputAppliable.swift in Sources */,
 				43F94A78230D31C600BD5CD6 /* SponsorshipListHeaderTypeTableViewCell.swift in Sources */,
 				43F949B1230D284B00BD5CD6 /* DynamicInputView.swift in Sources */,

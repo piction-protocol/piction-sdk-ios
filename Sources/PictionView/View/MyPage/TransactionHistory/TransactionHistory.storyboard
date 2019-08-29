@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="vBf-3L-BJC">
-                            <rect key="frame" x="0.0" y="120" width="375" height="0.0"/>
+                            <rect key="frame" x="0.0" y="162" width="375" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -118,15 +118,15 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TransactionHistoryFooterTypeTableViewCell" rowHeight="20" id="cMx-Kr-NyT" customClass="TransactionHistoryFooterTypeTableViewCell" customModule="PictionView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="100" width="375" height="20"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cMx-Kr-NyT" id="VdG-91-L64">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cMx-Kr-NyT" id="VdG-91-L64">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUM-w7-DGY">
-                                            <rect key="frame" x="20" y="19.666666666666668" width="335" height="0.33333333333333215"/>
+                                            <rect key="frame" x="20" y="19.666666666666664" width="335" height="1"/>
                                             <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="0.5" id="gB3-be-nxf"/>
+                                                <constraint firstAttribute="height" constant="1" id="gB3-be-nxf"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -137,6 +137,32 @@
                                         <constraint firstItem="gUM-w7-DGY" firstAttribute="leading" secondItem="VdG-91-L64" secondAttribute="leading" constant="20" id="epd-Tp-13c"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TransactionHistoryYearTypeTableViewCell" rowHeight="42" id="ZjH-0J-lav" customClass="TransactionHistoryYearTypeTableViewCell" customModule="PictionView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="120" width="375" height="42"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZjH-0J-lav" id="TJh-3E-ZOz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45O-mk-u8V">
+                                            <rect key="frame" x="20" y="21" width="60" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="x9x-WB-3Cc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="45O-mk-u8V" firstAttribute="leading" secondItem="TJh-3E-ZOz" secondAttribute="leading" constant="20" id="dzB-Kt-Ikz"/>
+                                        <constraint firstItem="45O-mk-u8V" firstAttribute="top" secondItem="TJh-3E-ZOz" secondAttribute="top" constant="21" id="hR8-Fi-MMy"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="45O-mk-u8V" id="90g-3A-pQC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

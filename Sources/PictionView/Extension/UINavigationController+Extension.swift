@@ -29,7 +29,13 @@ extension UINavigationController {
     }
 
     public func setNavigationBarLine(_ show: Bool) {
-        navigationBar.setValue(show, forKey: "hidesShadow")
+        if show {
+            navigationBar.setValue(false, forKey: "hidesShadow")
+            navigationBar.shadowImage = UINavigationBar.appearance().shadowImage
+        } else {
+            navigationBar.setValue(true, forKey: "hidesShadow")
+            navigationBar.shadowImage = UIImage()
+        }
     }
 }
 

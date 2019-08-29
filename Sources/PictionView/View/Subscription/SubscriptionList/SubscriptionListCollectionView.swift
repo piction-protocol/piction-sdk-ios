@@ -46,6 +46,6 @@ final class SubscriptionListCollectionViewCell: ReuseCollectionViewCell {
             }
         }
 
-        lastPublishedLabel.text = "\(lashPublishedDateTime) 업데이트"
+        lastPublishedLabel.text = lastPublished == nil ? "포스트 없음" : "\(lashPublishedDateTime) 업데이트"
     }
 }

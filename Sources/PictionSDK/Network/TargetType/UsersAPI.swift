@@ -18,6 +18,7 @@ public enum UsersAPI {
     case update(username: String, password: String, picture: String?)
     case updatePassword(password: String, newPassword: String, passwordCheck: String)
     case uploadPicture(image: UIImage)
+    case findPublicAddress(address: String)
 }
 
 extension UsersAPI: TargetType {
@@ -36,6 +37,8 @@ extension UsersAPI: TargetType {
             return "/users/me/password"
         case .uploadPicture:
             return "/users/me/picture"
+        case .findPublicAddress(let address):
+            return "/users/wallet/\(address)"
         }
     }
     public var method: Moya.Method {
@@ -44,7 +47,8 @@ extension UsersAPI: TargetType {
             return .post
         case .findAll,
              .findOne,
-             .me:
+             .me,
+             .findPublicAddress:
             return .get
         case .update:
             return .put
@@ -61,9 +65,9 @@ extension UsersAPI: TargetType {
              .updatePassword:
             return jsonSerializedUTF8(json: AuthenticationViewResponse.sampleData())
         case .findOne,
-             .me:
-            return jsonSerializedUTF8(json: UserViewResponse.sampleData())
-        case .update:
+             .update,
+             .me,
+             .findPublicAddress:
             return jsonSerializedUTF8(json: UserViewResponse.sampleData())
         case .uploadPicture:
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
@@ -73,7 +77,8 @@ extension UsersAPI: TargetType {
         switch self {
         case .findAll,
              .findOne,
-             .me:
+             .me,
+             .findPublicAddress:
             return .requestPlain
         case .signup(let loginId, let email, let username, let password, let passwordCheck):
             let param = [

@@ -82,4 +82,14 @@ public final class Users {
                 failureCompletion?(error)
             })
     }
+
+    public func findPublicAddress(address: String, success successCompletion: ((UserViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(UsersAPI.findPublicAddress(address: address),
+            success: { (response: UserViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+        })
+    }
 }

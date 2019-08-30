@@ -138,6 +138,9 @@ extension ExplorerViewController: ViewModelBindable {
             .drive(onNext: { [weak self] in
                 self?.navigationController?.setNavigationBarLine(false)
                 self?.navigationController?.navigationBar.prefersLargeTitles = true
+                self?.navigationController?.navigationBar.barStyle = .default
+                self?.navigationController?.navigationBar.tintColor = UIView().tintColor
+                self?.navigationController?.hideTransparentNavigationBar()
             })
             .disposed(by: disposeBag)
 

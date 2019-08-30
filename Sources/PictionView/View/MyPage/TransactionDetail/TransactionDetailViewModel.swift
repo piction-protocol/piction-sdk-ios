@@ -45,26 +45,30 @@ final class TransactionDetailViewModel: ViewModel {
             }
 
         let transactionDetailAction = input.viewWillAppear
+            .filter { self.transaction.transactionType != "VALUE_TRANSFER" }
             .flatMap { [weak self] _ -> Driver<Action<ResponseData>> in
                 guard let `self` = self else { return Driver.empty() }
                 if self.transaction.transactionType == "SPONSORSHIP" {
                     let response =  PictionSDK.rx.requestAPI(MyAPI.sponsorshipTransaction(txHash: self.transaction.transactionHash ?? ""))
                     return Action.makeDriver(response)
-                } else {
+                } else if self.transaction.transactionType == "SUBSCRIPTION" {
                     let response = PictionSDK.rx.requestAPI(MyAPI.subscriptionTransaction(txHash: self.transaction.transactionHash ?? ""))
                     return Action.makeDriver(response)
+                } else {
+                    return Driver.empty()
                 }
             }
 
-        let transactionInfo = transactionDetailAction.elements
-            .flatMap { [weak self] response -> Driver<TransactionDetailBySection> in
+        let valueTypeInfo = input.viewWillAppear
+            .filter { self.transaction.transactionType == "VALUE_TRANSFER" }
+            .flatMap { _ -> Driver<[TransactionDetailItemType]> in
+                return Driver.just([])
+            }
+
+        let otherTypeInfo = transactionDetailAction.elements
+            .flatMap { [weak self] response -> Driver<[TransactionDetailItemType]> in
                 guard let `self` = self else { return Driver.empty() }
                 let inOut = self.transaction.inOut ?? ""
-
-                var sections: [TransactionDetailItemType] = [
-                    TransactionDetailItemType.info(transaction: self.transaction),
-                    TransactionDetailItemType.footer
-                ]
 
                 if self.transaction.transactionType == "SPONSORSHIP" {
                     guard let sponsorshipItem = try? response.map(to: SponsorshipModel.self) else {
@@ -75,8 +79,8 @@ final class TransactionDetailViewModel: ViewModel {
                         TransactionDetailItemType.list(title: inOut == "IN" ? "후원자" : "후원 대상", description: inOut == "IN" ? "@\(sponsorshipItem.sponsor?.loginId ?? "")" : "@\(sponsorshipItem.creator?.loginId ?? "")", link: ""),
                         TransactionDetailItemType.footer,
                     ]
-                    sections.append(contentsOf: sponsorshipSection)
-                } else {
+                    return Driver.just(sponsorshipSection)
+                } else if self.transaction.transactionType == "SUBSCRIPTION" {
                     guard let subscriptionItem = try? response.map(to: SubscriptionModel.self) else {
                         return Driver.empty()
                     }
@@ -90,8 +94,21 @@ final class TransactionDetailViewModel: ViewModel {
                         TransactionDetailItemType.list(title: inOut == "IN" ? "구매자" : "판매자", description: inOut == "IN" ? "\(subscriptionItem.subscriber?.loginId ?? "")" : "\(subscriptionItem.creator?.loginId ?? "")", link: ""),
                         TransactionDetailItemType.footer,
                     ]
-                    sections.append(contentsOf: subscriptionSection)
+                    return Driver.just(subscriptionSection)
                 }
+                return Driver.empty()
+            }
+
+        let transactionInfo = Driver.merge(valueTypeInfo, otherTypeInfo)
+            .flatMap { [weak self] typeSection -> Driver<TransactionDetailBySection> in
+                guard let `self` = self else { return Driver.empty() }
+
+                var sections: [TransactionDetailItemType] = [
+                    TransactionDetailItemType.info(transaction: self.transaction),
+                    TransactionDetailItemType.footer
+                ]
+
+                sections.append(contentsOf: typeSection)
 
                 let transactionSection = [
                     TransactionDetailItemType.header(title: "트랜잭션 정보"),

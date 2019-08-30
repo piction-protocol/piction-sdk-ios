@@ -70,7 +70,7 @@ final class PostViewModel: InjectableViewModel {
                     return Driver.just("")
                 }
 
-                let content = "<style type=\"text/css\"> body { font: -apple-system-body; margin: 220px 16px 278px 16px; } p { margin: 0px; } img{ max-height: 100%; max-width: \(SCREEN_W - 32) !important; width: auto; height: auto; } iframe{ width: 100%; height: 30%; max-height: 100%; max-width: \(SCREEN_W - 32); } </style><meta name=\"viewport\" content=\"initial-scale=1.0\" /><body>\(postItem.content ?? "")</body>"
+                let content = "<style type=\"text/css\"> body { font: -apple-system-body; margin: 220px 16px 278px 16px; line-height: 28px; max-width: \(SCREEN_W); } p { margin: 0px; word-wrap: break-word; } img{ max-height: 100%; width: calc(100% + 32px); max-width: \(SCREEN_W); margin-left: -16px; margin-right: -16px; !important; width: auto; height: auto; } iframe{ width: 100%; height: 30%; max-height: 100%; width: calc(100% + 32px); max-width: \(SCREEN_W); margin-left: -16px; margin-right: -16px; } </style><meta name=\"viewport\" content=\"initial-scale=1.0\" /><body>\(postItem.content ?? "")</body>"
                 print(postItem.content)
                 return Driver.just(content)
             }

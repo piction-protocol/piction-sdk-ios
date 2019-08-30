@@ -12,6 +12,7 @@ import Mapper
 public typealias ProjectViewResponse = ProjectModel
 
 public struct ProjectModel: Response {
+    public let adult: Bool?
     public let createdAt: Date?
     public let id: Int?
     public let lastPublishedAt: Date?
@@ -26,6 +27,7 @@ public struct ProjectModel: Response {
     public let wideThumbnail: String?
 
     public init(map: Mapper) throws {
+        adult = map.optionalFrom("adult")
         createdAt = map.optionalFrom("createdAt")
         id = map.optionalFrom("id")
         lastPublishedAt = map.optionalFrom("lastPublishedAt")
@@ -46,6 +48,7 @@ public struct ProjectModel: Response {
 
     public func toDict() -> [String: Any?] {
         return [
+            "adult": adult,
             "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "id": id,
             "lastPublishedAt": lastPublishedAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
@@ -65,6 +68,7 @@ public struct ProjectModel: Response {
 extension ProjectModel {
     static func sampleData() -> [String: Any] {
         return [
+            "adult": false,
             "createdAt": "2019-06-20T09:27:53.127+0000",
             "id": 1,
             "lastPublishedAt": "2019-06-20T09:27:53.127+0000",

@@ -19,6 +19,7 @@ public struct TransactionModel: Response {
     public let createdAt: Date?
     public let detailEndPoint: String?
     public let fromAddress: String?
+    public let toAddress: String?
     public let inOut: String?
     public let transactionHash: String?
     public let transactionType: String?
@@ -32,6 +33,7 @@ public struct TransactionModel: Response {
         createdAt = map.optionalFrom("createdAt")
         detailEndPoint = map.optionalFrom("detailEndPoint")
         fromAddress = map.optionalFrom("fromAddress")
+        toAddress = map.optionalFrom("toAddress")
         inOut = map.optionalFrom("inOut")
         transactionHash = map.optionalFrom("transactionHash")
         transactionType = map.optionalFrom("transactionType")
@@ -51,6 +53,7 @@ public struct TransactionModel: Response {
             "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "detailEndPoint": detailEndPoint,
             "fromAddress": fromAddress,
+            "toAddress": toAddress,
             "inOut": inOut,
             "transactionHash": transactionHash,
             "transactionType": transactionType,

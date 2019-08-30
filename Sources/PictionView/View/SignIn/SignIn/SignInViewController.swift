@@ -109,10 +109,12 @@ extension SignInViewController: ViewModelBindable {
 
         output
             .dismissViewController
-            .drive(onNext: { [weak self] in
+            .drive(onNext: { [weak self] complete in
                 self?.dismiss(animated: true, completion: { [weak self] in
-                    if UserDefaults.standard.string(forKey: "pincode") == nil {
-                        self?.openRegisterPincode()
+                    if complete {
+                        if UserDefaults.standard.string(forKey: "pincode") == nil {
+                            self?.openRegisterPincode()
+                        }
                     }
                 })
             })

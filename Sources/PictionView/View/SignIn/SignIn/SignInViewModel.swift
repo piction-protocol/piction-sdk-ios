@@ -38,7 +38,7 @@ final class SignInViewModel: InjectableViewModel {
         let activityIndicator: Driver<Bool>
         let openSignUpViewController: Driver<Void>
         let openFindPassword: Driver<Void>
-        let dismissViewController: Driver<Void>
+        let dismissViewController: Driver<Bool>
         let errorMsg: Driver<ErrorModel>
         let showToast: Driver<String>
     }
@@ -88,13 +88,13 @@ final class SignInViewModel: InjectableViewModel {
             }
 
         let signInSuccess = signInButtonAction.elements
-            .flatMap { [weak self] response -> Driver<Void> in
+            .flatMap { [weak self] response -> Driver<Bool> in
                 guard let accessToken = try? response.map(to: AuthenticationViewResponse.self) else {
                     return Driver.empty()
                 }
                 self?.updater.refreshSession.onNext(())
                 print(accessToken)
-                return Driver.just(())
+                return Driver.just(true)
             }
 
         let openSignUpViewController = input.signUpBtnDidTap
@@ -110,7 +110,12 @@ final class SignInViewModel: InjectableViewModel {
         let activityIndicator = Driver.merge(showActivityIndicator, hideActivityIndicator)
             .flatMap { status in Driver.just(status) }
 
-        let dismissViewController = Driver.merge(signInSuccess, input.closeBtnDidTap).flatMap { _ in Driver.just(()) }
+        let closeAction = input.closeBtnDidTap
+            .flatMap { _ -> Driver<Bool> in
+                return Driver.just(false)
+            }
+
+        let dismissViewController = Driver.merge(signInSuccess, closeAction)
 
         return Output(
             viewWillAppear: viewWillAppear,

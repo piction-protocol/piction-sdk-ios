@@ -33,6 +33,7 @@ extension ConfirmDonationViewController: ViewModelBindable {
     func bindViewModel(viewModel: ViewModel) {
         let input = ConfirmDonationViewModel.Input(
             viewWillAppear: rx.viewWillAppear.asDriver(),
+            viewWillDisappear: rx.viewWillDisappear.asDriver(),
             confirmBtnDidTap: confirmButton.rx.tap.asDriver()
         )
 
@@ -42,8 +43,19 @@ extension ConfirmDonationViewController: ViewModelBindable {
             .viewWillAppear
             .drive(onNext: { [weak self] in
                 self?.navigationController?.setNavigationBarHidden(true, animated: false)
+                self?.tabBarController?.tabBar.isHidden = true
                 self?.navigationItem.hidesBackButton = true
                 self?.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+            })
+            .disposed(by: disposeBag)
+
+        output
+            .viewWillDisappear
+            .drive(onNext: { [weak self] in
+                self?.navigationController?.setNavigationBarHidden(false, animated: false)
+                self?.navigationItem.hidesBackButton = false
+                self?.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+                self?.tabBarController?.tabBar.isHidden = false
             })
             .disposed(by: disposeBag)
 
@@ -73,6 +85,7 @@ extension ConfirmDonationViewController: ViewModelBindable {
                 self?.navigationController?.setNavigationBarHidden(false, animated: false)
                 self?.navigationItem.hidesBackButton = false
                 self?.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+                self?.tabBarController?.tabBar.isHidden = false
 
                 guard let viewControllers = self?.navigationController?.viewControllers else { return }
 

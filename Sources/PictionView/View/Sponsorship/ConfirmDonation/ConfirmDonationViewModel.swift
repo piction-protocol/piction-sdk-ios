@@ -27,18 +27,19 @@ final class ConfirmDonationViewModel: InjectableViewModel {
 
     struct Input {
         let viewWillAppear: Driver<Void>
+        let viewWillDisappear: Driver<Void>
         let confirmBtnDidTap: Driver<Void>
     }
 
     struct Output {
         let viewWillAppear: Driver<Void>
+        let viewWillDisappear: Driver<Void>
         let sendAmountInfo: Driver<Int>
         let userInfo: Driver<UserModel>
         let popViewController: Driver<Void>
     }
 
     func build(input: Input) -> Output {
-        let viewWillAppear = input.viewWillAppear
 
         let sendAmountInfo = input.viewWillAppear
             .flatMap { [weak self] _ -> Driver<Int> in
@@ -46,7 +47,7 @@ final class ConfirmDonationViewModel: InjectableViewModel {
                 return Driver.just(self.sendAmount)
             }
 
-        let userInfoAction = viewWillAppear
+        let userInfoAction = input.viewWillAppear
             .flatMap { [weak self] _ -> Driver<Action<ResponseData>> in
                 let response = PictionSDK.rx.requestAPI(UsersAPI.findOne(id: self?.loginId ?? ""))
 
@@ -63,19 +64,9 @@ final class ConfirmDonationViewModel: InjectableViewModel {
 
         let popViewController = input.confirmBtnDidTap
 
-//        let sendAmountAction = input.sendBtnDidTap
-//            .flatMap { _ -> Driver<Action<ResponseData>> in
-//                let response = PictionSDK.rx.requestAPI(SponsorshipsAPI.sponsorship(creatorId: self.loginId, amount: self.sendAmount))
-//                return Action.makeDriver(response)
-//            }
-//
-//        let sendAmountSuccess = sendAmountAction.elements
-//            .flatMap { response -> Driver<Void> in
-//                return Driver.just(())
-//            }
-
         return Output(
-            viewWillAppear: viewWillAppear,
+            viewWillAppear: input.viewWillAppear,
+            viewWillDisappear: input.viewWillDisappear,
             sendAmountInfo: sendAmountInfo,
             userInfo: userInfoSuccess,
             popViewController: popViewController

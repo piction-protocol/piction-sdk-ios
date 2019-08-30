@@ -52,8 +52,8 @@ extension ProjectInfoViewController: ViewModelBindable {
         output
             .projectInfo
             .drive(onNext: { [weak self] projectInfo in
-                let thumbnailWithIC = "\(projectInfo.thumbnail ?? "")?w=720&h=720&quality=80&output=webp"
-                if let url = URL(string: thumbnailWithIC) {
+                let userPictureWithIC = "\(projectInfo.user?.picture ?? "")?w=240&h=240&quality=80&output=webp"
+                if let url = URL(string: userPictureWithIC) {
                     self?.thumbnailImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-square-500-x-500"), completed: nil)
                 }
                 self?.writerLabel.text = projectInfo.user?.username

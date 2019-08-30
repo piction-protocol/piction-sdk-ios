@@ -55,6 +55,10 @@ extension CustomEmptyViewController: ViewModelBindable {
 
                 self.button.isHidden = style.buttonTitle == nil
                 self.button.setTitle(style.buttonTitle, for: .normal)
+                if style.buttonImage != nil {
+                    self.button.imageView?.contentMode = .scaleAspectFit
+                    self.button.setImage(style.buttonImage, for: .normal)
+                }
             })
             .disposed(by: disposeBag)
 

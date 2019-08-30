@@ -90,6 +90,15 @@ enum CustomEmptyViewStyle {
             return nil
         }
     }
+
+    var buttonImage: UIImage? {
+        switch self {
+        case .searchSponsorGuide:
+            return #imageLiteral(resourceName: "icQrcode")
+        default:
+            return nil
+        }
+    }
 }
 
 final class CustomEmptyViewModel: ViewModel {

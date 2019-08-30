@@ -189,3 +189,9 @@ extension TransactionDetailViewController {
         return Container.shared.resolve(TransactionDetailViewController.self, argument: transaction)!
     }
 }
+
+extension QRCodeScannerViewController {
+    static func make() -> QRCodeScannerViewController {
+        return Container.shared.resolve(QRCodeScannerViewController.self)!
+    }
+}

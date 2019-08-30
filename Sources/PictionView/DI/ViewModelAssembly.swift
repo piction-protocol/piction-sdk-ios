@@ -174,5 +174,9 @@ final class ViewModelAssembly: Assembly {
         container.register(TransactionDetailViewModel.self) { (resolver, transaction: TransactionModel) in
             return TransactionDetailViewModel(transaction: transaction)
         }
+
+        container.register(QRCodeScannerViewModel.self) { resolver in
+            return QRCodeScannerViewModel()
+        }
     }
 }

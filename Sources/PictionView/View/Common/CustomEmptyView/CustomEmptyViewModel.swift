@@ -76,6 +76,8 @@ enum CustomEmptyViewStyle {
         case .defaultLogin,
              .sponsorshipListLogin:
             return "로그인"
+        case .searchSponsorGuide:
+            return "QR 코드로 선택하기"
         case .projectPostListEmpty,
              .projectSeriesListEmpty,
              .sponsorshipListEmpty,
@@ -84,8 +86,7 @@ enum CustomEmptyViewStyle {
              .transactionListEmpty,
              .myProjectListEmpty,
              .searchSponsorEmpty,
-             .searchProjectGuide,
-             .searchSponsorGuide:
+             .searchProjectGuide:
             return nil
         }
     }

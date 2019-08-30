@@ -192,5 +192,11 @@ final class ViewControllerAssembly: Assembly {
             vc.viewModel = resolver.resolve(TransactionDetailViewModel.self, argument: transaction)!
             return vc
         }
+
+        container.register(QRCodeScannerViewController.self) { resolver in
+            let vc = Storyboard.QRCodeScanner.instantiate(QRCodeScannerViewController.self)
+            vc.viewModel = resolver.resolve(QRCodeScannerViewModel.self)!
+            return vc
+        }
     }
 }

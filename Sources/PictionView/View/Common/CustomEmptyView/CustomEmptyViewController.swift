@@ -24,6 +24,13 @@ final class CustomEmptyViewController: UIViewController {
             topViewController.openViewController(vc, type: .present)
         }
     }
+
+    private func openQRCodeScannerViewController() {
+        let vc = QRCodeScannerViewController.make()
+        if let topViewController = UIApplication.topViewController() {
+            topViewController.openViewController(vc, type: .present)
+        }
+    }
 }
 
 extension CustomEmptyViewController: ViewModelBindable {
@@ -59,6 +66,8 @@ extension CustomEmptyViewController: ViewModelBindable {
                 case .defaultLogin,
                      .sponsorshipListLogin:
                     self.openSignInViewController()
+                case .searchSponsorGuide:
+                    self.openQRCodeScannerViewController()
                 default:
                     break
                 }

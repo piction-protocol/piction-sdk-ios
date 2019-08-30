@@ -44,6 +44,11 @@ final class SearchSponsorViewController: UIViewController {
         let vc = CustomEmptyViewController.make(style: style)
         embed(vc, to: emptyView)
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.searchBar.becomeFirstResponder()
+    }
 }
 
 extension SearchSponsorViewController: ViewModelBindable {
@@ -67,7 +72,6 @@ extension SearchSponsorViewController: ViewModelBindable {
                 guard let `self` = self else { return }
                 self.navigationController?.navigationBar.prefersLargeTitles = false
                 self.navigationController?.setNavigationBarLine(false)
-                self.searchBar.becomeFirstResponder()
             })
             .disposed(by: disposeBag)
 

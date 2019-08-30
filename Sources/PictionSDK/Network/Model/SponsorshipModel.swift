@@ -16,6 +16,7 @@ public struct SponsorshipModel: Response {
     public let createdAt: Date?
     public let creator: UserModel?
     public let id: Int?
+    public let sponsor: UserModel?
     public let status: String?
 
     public init(map: Mapper) throws {
@@ -23,6 +24,7 @@ public struct SponsorshipModel: Response {
         createdAt = map.optionalFrom("createdAt")
         creator = map.optionalFrom("creator")
         id = map.optionalFrom("id")
+        sponsor = map.optionalFrom("sponsor")
         status = map.optionalFrom("status")
     }
 
@@ -36,6 +38,7 @@ public struct SponsorshipModel: Response {
             "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "creator": creator,
             "id": id,
+            "sponsor": sponsor,
             "status": status,
         ]
     }
@@ -48,6 +51,7 @@ extension SponsorshipModel {
             "createdAt": "2019-07-10T08:51:40.935Z",
             "creator": UserModel.sampleData(),
             "id": 1,
+            "sponsor": UserModel.sampleData(),
             "status": "SUCCESS",
         ]
     }

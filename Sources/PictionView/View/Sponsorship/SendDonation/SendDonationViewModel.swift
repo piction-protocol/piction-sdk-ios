@@ -108,7 +108,8 @@ final class SendDonationViewModel: InjectableViewModel {
 
         let sendAmountSuccess = Driver.merge(sendAmountAction.elements, sendAmountWithPincodeAction.elements)
             .withLatestFrom(latestSendInfo)
-            .flatMap { (userInfo, walletInfo, sendAmount) -> Driver<(String, Int)> in
+            .flatMap { [weak self] (userInfo, walletInfo, sendAmount) -> Driver<(String, Int)> in
+                self?.updater.refreshAmount.onNext(())
                 return Driver.just((userInfo.loginId ?? "", Int(sendAmount) ?? 0))
             }
 

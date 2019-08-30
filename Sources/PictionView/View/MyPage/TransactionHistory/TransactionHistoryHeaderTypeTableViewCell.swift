@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import PictionSDK
 
 final class TransactionHistoryHeaderTypeTableViewCell: ReuseTableViewCell {
 }
-
-

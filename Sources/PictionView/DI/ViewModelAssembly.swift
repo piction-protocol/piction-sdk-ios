@@ -170,5 +170,9 @@ final class ViewModelAssembly: Assembly {
                 inputPincode: inputPincode)
             )
         }
+
+        container.register(TransactionDetailViewModel.self) { (resolver, transaction: TransactionModel) in
+            return TransactionDetailViewModel(transaction: transaction)
+        }
     }
 }

@@ -24,6 +24,7 @@ final class TransactionHistoryViewModel: ViewModel {
     struct Input {
         let viewWillAppear: Driver<Void>
         let refreshControlDidRefresh: Driver<Void>
+        let selectedIndexPath: Driver<IndexPath>
     }
 
     struct Output {
@@ -32,6 +33,7 @@ final class TransactionHistoryViewModel: ViewModel {
         let isFetching: Driver<Bool>
         let embedEmptyViewController: Driver<CustomEmptyViewStyle>
         let activityIndicator: Driver<Bool>
+        let openTransactionDetailViewController: Driver<IndexPath>
     }
 
     func build(input: Input) -> Output {
@@ -126,7 +128,8 @@ final class TransactionHistoryViewModel: ViewModel {
             transactionList: transactionHistorySuccess,
             isFetching: refreshAction.isExecuting,
             embedEmptyViewController: embedEmptyView,
-            activityIndicator: activityIndicator
+            activityIndicator: activityIndicator,
+            openTransactionDetailViewController: input.selectedIndexPath
         )
     }
 

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PictionSDK
 
 final class TransactionHistoryYearTypeTableViewCell: ReuseTableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
@@ -19,5 +18,3 @@ final class TransactionHistoryYearTypeTableViewCell: ReuseTableViewCell {
         dateLabel.text = "\(model)년"
     }
 }
-
-

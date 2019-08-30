@@ -183,3 +183,9 @@ extension ConfirmPincodeViewController {
         return Container.shared.resolve(ConfirmPincodeViewController.self, argument: inputPincode)!
     }
 }
+
+extension TransactionDetailViewController {
+    static func make(transaction: TransactionModel) -> TransactionDetailViewController {
+        return Container.shared.resolve(TransactionDetailViewController.self, argument: transaction)!
+    }
+}

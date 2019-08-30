@@ -55,6 +55,13 @@ final class TransactionHistoryViewController: UITableViewController {
         embed(vc, to: emptyView)
     }
 
+    private func openTransactionDetailViewController(transaction: TransactionModel) {
+        let vc = TransactionDetailViewController.make(transaction: transaction)
+        if let topViewController = UIApplication.topViewController() {
+            topViewController.openViewController(vc, type: .push)
+        }
+    }
+
     private func configureDataSource() -> RxTableViewSectionedReloadDataSource<TransactionHistoryBySection> {
         let dataSource = RxTableViewSectionedReloadDataSource<TransactionHistoryBySection>(
             configureCell: { (dataSource, tableView, indexPath, model) in
@@ -95,7 +102,8 @@ extension TransactionHistoryViewController: ViewModelBindable {
 
         let input = TransactionHistoryViewModel.Input(
             viewWillAppear: rx.viewWillAppear.asDriver(),
-            refreshControlDidRefresh: refreshControl!.rx.controlEvent(.valueChanged).asDriver()
+            refreshControlDidRefresh: refreshControl!.rx.controlEvent(.valueChanged).asDriver(),
+            selectedIndexPath: tableView.rx.itemSelected.asDriver()
         )
 
         let output = viewModel.build(input: input)
@@ -138,6 +146,19 @@ extension TransactionHistoryViewController: ViewModelBindable {
                 self.embedCustomEmptyViewController(style: style)
             })
             .disposed(by: disposeBag)
+
+        output
+            .openTransactionDetailViewController
+            .drive(onNext: { [weak self] indexPath in
+                switch dataSource[indexPath] {
+                case .list(let model, _):
+                    self?.openTransactionDetailViewController(transaction: model)
+                default:
+                    return
+                }
+            })
+            .disposed(by: disposeBag)
+
 
         output
             .activityIndicator

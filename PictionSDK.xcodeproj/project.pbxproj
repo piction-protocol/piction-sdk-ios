@@ -120,6 +120,20 @@
 		4331CE2223152BD900CF635B /* input.xcfilelist in Resources */ = {isa = PBXBuildFile; fileRef = 4331CE2023152BD800CF635B /* input.xcfilelist */; };
 		4331CE2423177EB800CF635B /* TransactionHistoryYearTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE2323177EB700CF635B /* TransactionHistoryYearTypeTableViewCell.swift */; };
 		4331CE2523177EB800CF635B /* TransactionHistoryYearTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE2323177EB700CF635B /* TransactionHistoryYearTypeTableViewCell.swift */; };
+		4331CE292317BFAF00CF635B /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE282317BFAF00CF635B /* TransactionDetailViewController.swift */; };
+		4331CE2A2317BFAF00CF635B /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE282317BFAF00CF635B /* TransactionDetailViewController.swift */; };
+		4331CE2C2317BFBD00CF635B /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE2B2317BFBD00CF635B /* TransactionDetailViewModel.swift */; };
+		4331CE2D2317BFBD00CF635B /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE2B2317BFBD00CF635B /* TransactionDetailViewModel.swift */; };
+		4331CE2F2317BFD200CF635B /* TransactionDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4331CE2E2317BFD200CF635B /* TransactionDetail.storyboard */; };
+		4331CE302317BFD200CF635B /* TransactionDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4331CE2E2317BFD200CF635B /* TransactionDetail.storyboard */; };
+		4331CE322317C29700CF635B /* TransactionDetailHeaderTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE312317C29700CF635B /* TransactionDetailHeaderTypeTableViewCell.swift */; };
+		4331CE332317C29700CF635B /* TransactionDetailHeaderTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE312317C29700CF635B /* TransactionDetailHeaderTypeTableViewCell.swift */; };
+		4331CE352317C2B900CF635B /* TransactionDetailFooterTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE342317C2B900CF635B /* TransactionDetailFooterTypeTableViewCell.swift */; };
+		4331CE362317C2B900CF635B /* TransactionDetailFooterTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE342317C2B900CF635B /* TransactionDetailFooterTypeTableViewCell.swift */; };
+		4331CE382317C2C700CF635B /* TransactionDetailItemTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE372317C2C700CF635B /* TransactionDetailItemTypeTableViewCell.swift */; };
+		4331CE392317C2C700CF635B /* TransactionDetailItemTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE372317C2C700CF635B /* TransactionDetailItemTypeTableViewCell.swift */; };
+		4331CE3B2317C2FD00CF635B /* TransactionDetailInfoTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE3A2317C2FD00CF635B /* TransactionDetailInfoTypeTableViewCell.swift */; };
+		4331CE3C2317C2FD00CF635B /* TransactionDetailInfoTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331CE3A2317C2FD00CF635B /* TransactionDetailInfoTypeTableViewCell.swift */; };
 		4333578E22F3C9780064CA1E /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4333578D22F3C9780064CA1E /* Kanna.framework */; };
 		433F1BD922DD93EA00F67D72 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F1BD822DD93EA00F67D72 /* KeyboardManager.swift */; };
 		436881B122E6E48800DB42B6 /* ViewModelBindable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4368819E22E6E48700DB42B6 /* ViewModelBindable.framework */; };
@@ -540,6 +554,13 @@
 		4331CE1423151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSwitchTypeTableViewCell.swift; sourceTree = "<group>"; };
 		4331CE2023152BD800CF635B /* input.xcfilelist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcfilelist; path = input.xcfilelist; sourceTree = "<group>"; };
 		4331CE2323177EB700CF635B /* TransactionHistoryYearTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHistoryYearTypeTableViewCell.swift; sourceTree = "<group>"; };
+		4331CE282317BFAF00CF635B /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
+		4331CE2B2317BFBD00CF635B /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
+		4331CE2E2317BFD200CF635B /* TransactionDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionDetail.storyboard; sourceTree = "<group>"; };
+		4331CE312317C29700CF635B /* TransactionDetailHeaderTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailHeaderTypeTableViewCell.swift; sourceTree = "<group>"; };
+		4331CE342317C2B900CF635B /* TransactionDetailFooterTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailFooterTypeTableViewCell.swift; sourceTree = "<group>"; };
+		4331CE372317C2C700CF635B /* TransactionDetailItemTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailItemTypeTableViewCell.swift; sourceTree = "<group>"; };
+		4331CE3A2317C2FD00CF635B /* TransactionDetailInfoTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailInfoTypeTableViewCell.swift; sourceTree = "<group>"; };
 		4333578D22F3C9780064CA1E /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		433F1BD822DD93EA00F67D72 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		4368819E22E6E48700DB42B6 /* ViewModelBindable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViewModelBindable.framework; path = Carthage/Build/iOS/ViewModelBindable.framework; sourceTree = "<group>"; };
@@ -876,6 +897,20 @@
 				4331CE2023152BD800CF635B /* input.xcfilelist */,
 			);
 			path = XCFileList;
+			sourceTree = "<group>";
+		};
+		4331CE272317BFA100CF635B /* TransactionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4331CE282317BFAF00CF635B /* TransactionDetailViewController.swift */,
+				4331CE2B2317BFBD00CF635B /* TransactionDetailViewModel.swift */,
+				4331CE312317C29700CF635B /* TransactionDetailHeaderTypeTableViewCell.swift */,
+				4331CE342317C2B900CF635B /* TransactionDetailFooterTypeTableViewCell.swift */,
+				4331CE372317C2C700CF635B /* TransactionDetailItemTypeTableViewCell.swift */,
+				4331CE3A2317C2FD00CF635B /* TransactionDetailInfoTypeTableViewCell.swift */,
+				4331CE2E2317BFD200CF635B /* TransactionDetail.storyboard */,
+			);
+			path = TransactionDetail;
 			sourceTree = "<group>";
 		};
 		433F1BD722DD93DE00F67D72 /* KeyboardManager */ = {
@@ -1335,6 +1370,7 @@
 				43F94900230D284A00BD5CD6 /* MyPage */,
 				43F948FB230D284A00BD5CD6 /* MyProject */,
 				43F94910230D284A00BD5CD6 /* TransactionHistory */,
+				4331CE272317BFA100CF635B /* TransactionDetail */,
 				43F948F7230D284A00BD5CD6 /* Deposit */,
 				43F94908230D284A00BD5CD6 /* ChangePassword */,
 				43F9490C230D284A00BD5CD6 /* ChangeMyInfo */,
@@ -1782,6 +1818,7 @@
 				43F9494A230D284B00BD5CD6 /* Explorer.storyboard in Resources */,
 				43F94A1E230D284B00BD5CD6 /* SignIn.storyboard in Resources */,
 				43F949DA230D284B00BD5CD6 /* ChangeMyInfo.storyboard in Resources */,
+				4331CE302317BFD200CF635B /* TransactionDetail.storyboard in Resources */,
 				43F949B0230D284B00BD5CD6 /* CustomEmptyView.storyboard in Resources */,
 				4317A3EA22E172A200A5C725 /* LaunchScreen.storyboard in Resources */,
 				43F949FE230D284B00BD5CD6 /* SponsorshipHistory.storyboard in Resources */,
@@ -1823,6 +1860,7 @@
 				43F94949230D284B00BD5CD6 /* Explorer.storyboard in Resources */,
 				43F94A1D230D284B00BD5CD6 /* SignIn.storyboard in Resources */,
 				43F949D9230D284B00BD5CD6 /* ChangeMyInfo.storyboard in Resources */,
+				4331CE2F2317BFD200CF635B /* TransactionDetail.storyboard in Resources */,
 				43F949AF230D284B00BD5CD6 /* CustomEmptyView.storyboard in Resources */,
 				43C1F36222B72D7400D17127 /* LaunchScreen.storyboard in Resources */,
 				43F949FD230D284B00BD5CD6 /* SponsorshipHistory.storyboard in Resources */,
@@ -1939,6 +1977,7 @@
 				4317A35822E172A200A5C725 /* SharedSequence+Extension.swift in Sources */,
 				4317A35C22E172A200A5C725 /* UIViewController+Extension.swift in Sources */,
 				43F949FC230D284B00BD5CD6 /* ConfirmDonationViewController.swift in Sources */,
+				4331CE2A2317BFAF00CF635B /* TransactionDetailViewController.swift in Sources */,
 				437D3EA4230E88860073EBAC /* ConfirmPincodeViewController.swift in Sources */,
 				4317A36722E172A200A5C725 /* KeyboardManager.swift in Sources */,
 				43F94966230D284B00BD5CD6 /* SubscriptionListViewController.swift in Sources */,
@@ -1986,7 +2025,9 @@
 				43F94A00230D284B00BD5CD6 /* SponsorshipHistoryViewController.swift in Sources */,
 				43F949C6230D284B00BD5CD6 /* MyPagePresentTypeTableViewCell.swift in Sources */,
 				43F9496E230D284B00BD5CD6 /* SubscriptionListCollectionFooterView.swift in Sources */,
+				4331CE332317C29700CF635B /* TransactionDetailHeaderTypeTableViewCell.swift in Sources */,
 				4317A38B22E172A200A5C725 /* UIApplication+Extension.swift in Sources */,
+				4331CE3C2317C2FD00CF635B /* TransactionDetailInfoTypeTableViewCell.swift in Sources */,
 				43F949E6230D284B00BD5CD6 /* TransactionHistoryHeaderTypeTableViewCell.swift in Sources */,
 				4317A38E22E172A200A5C725 /* UIViewController+Rx.swift in Sources */,
 				43F949D2230D284B00BD5CD6 /* ChangePasswordViewController.swift in Sources */,
@@ -1996,6 +2037,8 @@
 				43F9495A230D284B00BD5CD6 /* SearchProjectViewController.swift in Sources */,
 				43F949BE230D284B00BD5CD6 /* MyProjectViewModel.swift in Sources */,
 				43F9496A230D284B00BD5CD6 /* SubscriptionListCollectionView.swift in Sources */,
+				4331CE2D2317BFBD00CF635B /* TransactionDetailViewModel.swift in Sources */,
+				4331CE392317C2C700CF635B /* TransactionDetailItemTypeTableViewCell.swift in Sources */,
 				43156AA522E54F2D0045F920 /* Date+Extension.swift in Sources */,
 				43F9495E230D284B00BD5CD6 /* SignUpCompleteViewModel.swift in Sources */,
 				43F949F6230D284B00BD5CD6 /* SearchSponsorViewController.swift in Sources */,
@@ -2006,6 +2049,7 @@
 				437D3EB1230E888D0073EBAC /* RegisterPincodeViewModel.swift in Sources */,
 				4317A39D22E172A200A5C725 /* AppInfo.swift in Sources */,
 				4317A3A422E172A200A5C725 /* UIImageView+Extension.swift in Sources */,
+				4331CE362317C2B900CF635B /* TransactionDetailFooterTypeTableViewCell.swift in Sources */,
 				4317A3A822E172A200A5C725 /* ImagePickerManager.swift in Sources */,
 				43F949D0230D284B00BD5CD6 /* MyPageViewModel.swift in Sources */,
 				4331CE1623151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift in Sources */,
@@ -2067,6 +2111,7 @@
 				438B0D9322B8AA6B00000122 /* SharedSequence+Extension.swift in Sources */,
 				43C1F39022B783D900D17127 /* UIViewController+Extension.swift in Sources */,
 				43F949FB230D284B00BD5CD6 /* ConfirmDonationViewController.swift in Sources */,
+				4331CE292317BFAF00CF635B /* TransactionDetailViewController.swift in Sources */,
 				437D3EA3230E88860073EBAC /* ConfirmPincodeViewController.swift in Sources */,
 				433F1BD922DD93EA00F67D72 /* KeyboardManager.swift in Sources */,
 				43F94965230D284B00BD5CD6 /* SubscriptionListViewController.swift in Sources */,
@@ -2114,7 +2159,9 @@
 				43F949FF230D284B00BD5CD6 /* SponsorshipHistoryViewController.swift in Sources */,
 				43F949C5230D284B00BD5CD6 /* MyPagePresentTypeTableViewCell.swift in Sources */,
 				43F9496D230D284B00BD5CD6 /* SubscriptionListCollectionFooterView.swift in Sources */,
+				4331CE322317C29700CF635B /* TransactionDetailHeaderTypeTableViewCell.swift in Sources */,
 				43C1F39222B783F000D17127 /* UIApplication+Extension.swift in Sources */,
+				4331CE3B2317C2FD00CF635B /* TransactionDetailInfoTypeTableViewCell.swift in Sources */,
 				43F949E5230D284B00BD5CD6 /* TransactionHistoryHeaderTypeTableViewCell.swift in Sources */,
 				43C1F3BA22B7997F00D17127 /* UIViewController+Rx.swift in Sources */,
 				43F949D1230D284B00BD5CD6 /* ChangePasswordViewController.swift in Sources */,
@@ -2124,6 +2171,8 @@
 				43F94959230D284B00BD5CD6 /* SearchProjectViewController.swift in Sources */,
 				43F949BD230D284B00BD5CD6 /* MyProjectViewModel.swift in Sources */,
 				43F94969230D284B00BD5CD6 /* SubscriptionListCollectionView.swift in Sources */,
+				4331CE2C2317BFBD00CF635B /* TransactionDetailViewModel.swift in Sources */,
+				4331CE382317C2C700CF635B /* TransactionDetailItemTypeTableViewCell.swift in Sources */,
 				43156AA422E54F2D0045F920 /* Date+Extension.swift in Sources */,
 				43F9495D230D284B00BD5CD6 /* SignUpCompleteViewModel.swift in Sources */,
 				43F949F5230D284B00BD5CD6 /* SearchSponsorViewController.swift in Sources */,
@@ -2134,6 +2183,7 @@
 				437D3EB0230E888D0073EBAC /* RegisterPincodeViewModel.swift in Sources */,
 				4381BBAE22BB3161007FD7E7 /* AppInfo.swift in Sources */,
 				4381BBB422BB64DA007FD7E7 /* UIImageView+Extension.swift in Sources */,
+				4331CE352317C2B900CF635B /* TransactionDetailFooterTypeTableViewCell.swift in Sources */,
 				4381BBAC22BB199B007FD7E7 /* ImagePickerManager.swift in Sources */,
 				43F949CF230D284B00BD5CD6 /* MyPageViewModel.swift in Sources */,
 				4331CE1523151DE200CF635B /* MyPageSwitchTypeTableViewCell.swift in Sources */,

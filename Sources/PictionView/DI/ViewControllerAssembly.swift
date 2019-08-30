@@ -186,5 +186,11 @@ final class ViewControllerAssembly: Assembly {
             vc.viewModel = resolver.resolve(ConfirmPincodeViewModel.self, argument: inputPincode)!
             return vc
         }
+
+        container.register(TransactionDetailViewController.self) { (resolver, transaction: TransactionModel) in
+            let vc = Storyboard.TransactionDetail.instantiate(TransactionDetailViewController.self)
+            vc.viewModel = resolver.resolve(TransactionDetailViewModel.self, argument: transaction)!
+            return vc
+        }
     }
 }

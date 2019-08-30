@@ -26,5 +26,3 @@ final class TransactionHistoryListTypeTableViewCell: ReuseTableViewCell {
         statusLabel.text = "완료"
     }
 }
-
-

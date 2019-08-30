@@ -173,14 +173,10 @@
                                                 <constraint firstAttribute="bottom" secondItem="Gt2-tb-t4r" secondAttribute="bottom" constant="19.5" id="VrY-qi-Oqd"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
-                                <connections>
-                                    <outlet property="dataSource" destination="emb-5T-xR2" id="LIH-SS-eZ2"/>
-                                    <outlet property="delegate" destination="emb-5T-xR2" id="U7w-hu-1AX"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

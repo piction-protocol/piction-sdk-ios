@@ -193,7 +193,7 @@ extension MyPageViewController: ViewModelBindable {
                 _ = self?.emptyView.subviews.map { $0.removeFromSuperview() }
                 self?.emptyView.frame.size.height = 0
                 let view = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_W, height: SCREEN_H))
-                view.backgroundColor = UIColor(r: 245, g: 245, b: 245)
+                view.backgroundColor = UIColor(r: 250, g: 250, b: 250)
                 self?.emptyView.addSubview(view)
             })
             .drive { $0 }
@@ -270,14 +270,4 @@ extension MyPageViewController: ViewModelBindable {
             })
             .disposed(by: disposeBag)
     }
-}
-
-extension MyPageViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return CGFloat.leastNormalMagnitude
-    }
-//
-//    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        return UIView()
-//    }
 }

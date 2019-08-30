@@ -70,8 +70,6 @@ final class ProjectViewController: UIViewController {
     }
 
     private func openPostViewController(uri: String, postId: Int) {
-        self.hidesBottomBarWhenPushed = true
-
         let vc = PostViewController.make(uri: uri, postId: postId)
         if let topViewController = UIApplication.topViewController() {
             topViewController.openViewController(vc, type: .push)

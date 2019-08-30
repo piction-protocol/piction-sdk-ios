@@ -59,7 +59,6 @@ final class PostViewController: UIViewController {
             topViewController.openViewController(vc, type: .present)
         }
     }
-
 }
 
 extension PostViewController: ViewModelBindable {

@@ -17,6 +17,7 @@ public struct FanPassModel: Response {
     public let id: Int?
     public let level: Int?
     public let name: String?
+    public let project: ProjectModel?
     public let status: Bool?
     public let subscriptionCount: Int?
     public let subscriptionLimit: Int?
@@ -29,6 +30,7 @@ public struct FanPassModel: Response {
         id = map.optionalFrom("id")
         level = map.optionalFrom("level")
         name = map.optionalFrom("name")
+        project = map.optionalFrom("project")
         status = map.optionalFrom("status")
         subscriptionCount = map.optionalFrom("subscriptionCount")
         subscriptionLimit = map.optionalFrom("subscriptionLimit")

@@ -81,6 +81,10 @@ extension MyProjectViewController: ViewModelBindable {
         
         output
             .projectList
+            .do(onNext: { [weak self] _ in
+                _ = self?.emptyView.subviews.map { $0.removeFromSuperview() }
+                self?.emptyView.frame.size.height = 0
+            })
             .drive { $0 }
             .map { [SectionModel(model: "", items: $0)] }
             .bind(to: tableView.rx.items(dataSource: dataSource))

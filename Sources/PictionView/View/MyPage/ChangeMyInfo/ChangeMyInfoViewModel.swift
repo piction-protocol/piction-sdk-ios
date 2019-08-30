@@ -12,12 +12,21 @@ import RxCocoa
 import PictionSDK
 import RxPictionSDK
 
-final class ChangeMyInfoViewModel: ViewModel {
+final class ChangeMyInfoViewModel: InjectableViewModel {
+
+    typealias Dependency = (
+        UpdaterProtocol
+    )
+
+    private let updater: UpdaterProtocol
+
+    init(dependency: Dependency) {
+        (updater) = dependency
+    }
+
     private let userName = PublishSubject<String>()
     private let imageId = PublishSubject<String?>()
     private let changeInfo = PublishSubject<Bool>()
-
-    init() {}
 
     struct Input {
         let viewWillAppear: Driver<Void>
@@ -132,10 +141,11 @@ final class ChangeMyInfoViewModel: ViewModel {
             }
 
         let changeUserInfoSuccess = saveButtonAction.elements
-            .flatMap { response -> Driver<Void> in
+            .flatMap { [weak self] response -> Driver<Void> in
                 guard let accessToken = try? response.map(to: AuthenticationViewResponse.self) else {
                     return Driver.empty()
                 }
+                self?.updater.refreshSession.onNext(())
                 print(accessToken)
                 return Driver.just(())
             }

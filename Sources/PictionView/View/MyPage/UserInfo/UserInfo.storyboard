@@ -52,8 +52,8 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lTO-B9-qnB">
                                                 <rect key="frame" x="0.0" y="33" width="259" height="15"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 토리 보호자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E49-wj-sXN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E49-wj-sXN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="3.6666666666666665" height="15"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" id="oMZ-Qh-Mo8"/>
                                                         </constraints>
@@ -62,7 +62,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="·" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzP-K1-F8y">
-                                                        <rect key="frame" x="63" y="0.0" width="4" height="15"/>
+                                                        <rect key="frame" x="7.6666666666666714" y="0.0" width="4" height="15"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="4" id="KV2-aT-aAt"/>
                                                         </constraints>
@@ -71,7 +71,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text=" @user_id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r75-FC-z4d">
-                                                        <rect key="frame" x="71" y="0.0" width="188" height="15"/>
+                                                        <rect key="frame" x="15.666666666666671" y="0.0" width="243.33333333333331" height="15"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" id="a5R-an-gKq"/>
                                                         </constraints>

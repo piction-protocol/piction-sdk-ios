@@ -48,7 +48,9 @@ final class ViewModelAssembly: Assembly {
         }
 
         container.register(ChangeMyInfoViewModel.self) { resolver in
-            return ChangeMyInfoViewModel()
+            return ChangeMyInfoViewModel(dependency: (
+                resolver.resolve(Updater.self)!)
+            )
         }
 
         container.register(ChangePasswordViewModel.self) { resolver in

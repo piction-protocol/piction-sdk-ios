@@ -298,10 +298,10 @@ final class PostViewModel: InjectableViewModel {
                 return Driver.just(errorMsg.message)
             }
 
-        let showActivityIndicator = Driver.merge(subscriptionAction, postContentAction)
+        let showActivityIndicator = postContentAction
             .flatMap { _ in Driver.just(true) }
 
-        let hideActivityIndicator = Driver.merge(subscriptionSuccess, subscriptionError, showPostContent)
+        let hideActivityIndicator = showPostContent
             .flatMap { _ in Driver.just(false) }
 
         let activityIndicator = Driver.merge(showActivityIndicator, hideActivityIndicator)

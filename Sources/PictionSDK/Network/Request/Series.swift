@@ -72,8 +72,8 @@ public final class Series {
             })
     }
 
-    public func allSeriesPosts(uri: String, seriesId: Int, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SeriesAPI.allSeriesPosts(uri: uri, seriesId: seriesId, page: page, size: size),
+    public func allSeriesPosts(uri: String, seriesId: Int, page: Int, size: Int, isDescending: Bool, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.allSeriesPosts(uri: uri, seriesId: seriesId, page: page, size: size, isDescending: isDescending),
             success: { (response: PageViewResponse<PostModel>) in
                 successCompletion?(response)
             },
@@ -81,4 +81,14 @@ public final class Series {
                 failureCompletion?(error)
             })
     }
+
+//    public func getThumbnails(uri: String, seriesId: Int, success successCompletion: (([String]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+//        PictionProvider.request(SeriesAPI.getThumbnails(uri: uri, seriesId: seriesId),
+//            success: { (response: [String]) in
+//                successCompletion?(response)
+//            },
+//            failure: { error in
+//                failureCompletion?(error)
+//            })
+//    }
 }

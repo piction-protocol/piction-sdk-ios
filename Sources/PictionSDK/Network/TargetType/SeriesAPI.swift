@@ -16,7 +16,7 @@ public enum SeriesAPI {
     case get(uri: String, seriesId: Int)
     case update(uri: String, seriesId: Int, name: String)
     case delete(uri: String, seriesId: Int)
-    case allSeriesPosts(uri: String, seriesId: Int, page: Int, size: Int)
+    case allSeriesPosts(uri: String, seriesId: Int, page: Int, size: Int, isDescending: Bool)
 }
 
 extension SeriesAPI: TargetType {
@@ -31,7 +31,7 @@ extension SeriesAPI: TargetType {
              .update(let uri, let seriesId, _),
              .delete(let uri, let seriesId):
             return "/projects/\(uri)/series/\(seriesId)"
-        case .allSeriesPosts(let uri, let seriesId, _, _):
+        case .allSeriesPosts(let uri, let seriesId, _, _, _):
             return "/projects/\(uri)/series/\(seriesId)/posts"
         }
     }
@@ -82,10 +82,11 @@ extension SeriesAPI: TargetType {
                 "seriesIdList": seriesIdList
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
-        case .allSeriesPosts(_, _, let page, let size):
-            let param = [
+        case .allSeriesPosts(_, _, let page, let size, let isDescending):
+            let param: [String: Any] = [
                 "page": page,
-                "size": size
+                "size": size,
+                "isDescending": isDescending
             ]
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }

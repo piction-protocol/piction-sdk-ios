@@ -39,6 +39,7 @@ extension ContentsBySection: SectionModelType {
 
 enum ContentsItemType {
     case postList(post: PostModel, isSubscribing: Bool)
+    case seriesPostList(post: PostModel, isSubscribing: Bool, number: Int)
     case seriesHeader(series: SeriesModel)
     case seriesList(series: SeriesModel)
 }
@@ -71,6 +72,13 @@ final class ProjectViewController: UIViewController {
 
     private func openPostViewController(uri: String, postId: Int) {
         let vc = PostViewController.make(uri: uri, postId: postId)
+        if let topViewController = UIApplication.topViewController() {
+            topViewController.openViewController(vc, type: .push)
+        }
+    }
+
+    private func openSeriesPostViewController(uri: String, seriesId: Int) {
+        let vc = SeriesPostViewController.make(uri: uri, seriesId: seriesId)
         if let topViewController = UIApplication.topViewController() {
             topViewController.openViewController(vc, type: .push)
         }
@@ -131,6 +139,9 @@ final class ProjectViewController: UIViewController {
                 case .seriesList(let series):
                     let cell: ProjectSeriesListTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
                     cell.configure(with: series)
+                    return cell
+                default:
+                    let cell = UITableViewCell()
                     return cell
                 }
         }, canEditRowAtIndexPath: { [weak self] (_, _) in
@@ -204,6 +215,14 @@ extension ProjectViewController: ViewModelBindable {
             .drive(onNext: { [weak self] postInfo in
                 let (uri, postId) = postInfo
                 self?.openPostViewController(uri: uri, postId: postId)
+            })
+            .disposed(by: disposeBag)
+
+        output
+            .openSeriesPostViewController
+            .drive(onNext: { [weak self] seriesInfo in
+                let (uri, seriesId) = seriesInfo
+                self?.openSeriesPostViewController(uri: uri, seriesId: seriesId)
             })
             .disposed(by: disposeBag)
 

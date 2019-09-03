@@ -54,6 +54,7 @@ final class ProjectViewModel: InjectableViewModel {
         let contentList: Driver<ContentsBySection>
         let embedEmptyViewController: Driver<CustomEmptyViewStyle>
         let openPostViewController: Driver<(String, Int)>
+        let openSeriesPostViewController: Driver<(String, Int)>
         let openProjectInfoViewController: Driver<String>
         let contentOffset: Driver<CGPoint>
         let activityIndicator: Driver<Bool>
@@ -70,20 +71,17 @@ final class ProjectViewModel: InjectableViewModel {
 
         let refreshSession = updater.refreshSession.asDriver(onErrorDriveWith: .empty())
 
-        let refreshAction = Driver.merge(updater.refreshSession.asDriver(onErrorDriveWith: .empty()),
-            updater.refreshContent.asDriver(onErrorDriveWith: .empty()))
-            .flatMap { _ -> Driver<Int> in
-                return Driver.just(0)
+        let updateSelectedProjectMenu = input.changeMenu
+            .flatMap { menu -> Driver<Int> in
+                return Driver.just(menu)
             }
 
-        let updateSelectedProjectMenu = input.changeMenu
-            .do(onNext: { _ in
-                print("")
-            })
+        let refreshAction = Driver.merge(refreshContent, refreshSession)
 
-        let initialSetting = input.viewWillAppear.asObservable().take(1).asDriver(onErrorDriveWith: .empty())
-            .flatMap { _ -> Driver<Int> in
-                return Driver.just(0)
+        let refreshMenu = refreshAction
+            .withLatestFrom(updateSelectedProjectMenu)
+            .flatMap { menu -> Driver<Int> in
+                return Driver.just(menu)
             }
 
         let loadNext = loadTrigger.asDriver(onErrorDriveWith: .empty())
@@ -95,7 +93,10 @@ final class ProjectViewModel: InjectableViewModel {
                 return Driver.just(())
             }
 
-        let selectPostMenu = Driver.merge(initialSetting, updateSelectedProjectMenu, refreshAction)
+        let loadNextMenu = loadNext
+            .withLatestFrom(updateSelectedProjectMenu)
+
+        let selectPostMenu = Driver.merge(updateSelectedProjectMenu, refreshMenu)
             .filter { $0 == 0 }
             .flatMap { [weak self] _ -> Driver<Void> in
                 self?.page = 1
@@ -104,7 +105,7 @@ final class ProjectViewModel: InjectableViewModel {
                 return Driver.just(())
             }
 
-        let selectSeriesMenu = Driver.merge(initialSetting, updateSelectedProjectMenu, refreshAction)
+        let selectSeriesMenu = Driver.merge(updateSelectedProjectMenu, refreshMenu)
             .filter { $0 == 1 }
             .flatMap { [weak self] _ -> Driver<Void> in
                 self?.page = 1
@@ -113,7 +114,7 @@ final class ProjectViewModel: InjectableViewModel {
                 return Driver.just(())
             }
 
-        let isSubscribingAction = Driver.merge(selectPostMenu, selectSeriesMenu, loadNext)
+        let isSubscribingAction = Driver.merge(updateSelectedProjectMenu, refreshMenu, loadNextMenu)
             .flatMap { [weak self] _ -> Driver<Action<ResponseData>> in
                 let response = PictionSDK.rx.requestAPI(FanPassAPI.isSubscription(uri: self?.uri ?? ""))
                 return Action.makeDriver(response)
@@ -202,11 +203,16 @@ final class ProjectViewModel: InjectableViewModel {
                 return Driver.just(self?.isWriter ?? false)
             }
 
-        let isSubscribing = Driver.merge(isSubscribingSuccess, isSubscribingError)
+        let isSubscribingForInfo = Driver.merge(isSubscribingSuccess, isSubscribingError)
 
-        let subscriptionInfo = Driver.combineLatest(isWriter, isSubscribing)
+        let isSubscribing = isSubscribingForInfo
+            .withLatestFrom(updateSelectedProjectMenu)
+            .filter { $0 == 0 }
+            .withLatestFrom(isSubscribingForInfo)
 
-        let fanPassListAction = Driver.merge(viewWillAppear, refreshContent, refreshSession)
+        let subscriptionInfo = Driver.combineLatest(isWriter, isSubscribingForInfo)
+
+        let fanPassListAction = Driver.merge(viewWillAppear)
             .flatMap { [weak self] _ -> Driver<Action<ResponseData>> in
                 let response = PictionSDK.rx.requestAPI(FanPassAPI.projectAll(uri: self?.uri ?? ""))
                 return Action.makeDriver(response)
@@ -291,14 +297,14 @@ final class ProjectViewModel: InjectableViewModel {
                 return Driver.just(self?.uri ?? "")
             }
 
-        let postSection = Driver.zip(loadPostSuccess, loadProjectInfoSuccess, isSubscribing)
-            .flatMap { [weak self] (postList, projectInfo, isSubscribing) -> Driver<ContentsBySection> in
+        let postSection = Driver.zip(loadPostSuccess, isSubscribing)
+            .flatMap { [weak self] (postList, isSubscribing) -> Driver<ContentsBySection> in
 
                 if (postList.pageable?.pageNumber ?? 0) >= (postList.totalPages ?? 0) - 1 {
                     self?.shouldInfiniteScroll = false
                 }
 
-                let posts: [ContentsItemType] = (postList.content ?? []).map { .postList(post: $0, info: projectInfo, isSubscribing: isSubscribing) }
+                let posts: [ContentsItemType] = (postList.content ?? []).map { .postList(post: $0, isSubscribing: isSubscribing) }
 
                 self?.sections.append(contentsOf: posts)
 
@@ -336,56 +342,19 @@ final class ProjectViewModel: InjectableViewModel {
             }
 
         let selectSeriesItem = input.selectedIndexPath
-            .flatMap { [weak self] indexPath -> Driver<Void> in
+            .flatMap { [weak self] indexPath -> Driver<(String, Int)> in
                 guard let `self` = self else { return Driver.empty() }
                 guard self.sections.count > indexPath.row else { return Driver.empty() }
 
                 switch self.sections[indexPath.row] {
                 case .seriesList(let series):
-                    self.shouldInfiniteScroll = true
-                    self.sections = [.seriesHeader(series: series)]
-                    return Driver.just(())
+                    return Driver.just((self.uri, series.id ?? 0))
                 default:
                     return Driver.empty()
                 }
             }
 
-        let loadSeriesPostsAction = Driver.merge(selectSeriesItem, loadNext)
-            .flatMap { [weak self] _ -> Driver<Action<ResponseData>> in
-                guard let `self` = self else { return Driver.empty() }
-                guard let seriesHeader = self.sections.first else { return Driver.empty() }
-
-                switch seriesHeader {
-                case .seriesHeader(let series):
-                    let response = PictionSDK.rx.requestAPI(SeriesAPI.allSeriesPosts(uri: self.uri, seriesId: series.id ?? 0, page: self.page, size: 10))
-                    return Action.makeDriver(response)
-                default:
-                    return Driver.empty()
-                }
-            }
-
-        let loadSeriesPostsSuccess = loadSeriesPostsAction.elements
-            .flatMap { response -> Driver<PageViewResponse<PostModel>> in
-                guard let pageList = try? response.map(to: PageViewResponse<PostModel>.self) else {
-                    return Driver.empty()
-                }
-                return Driver.just(pageList)
-            }
-
-        let seriesPostSection = Driver.zip(loadSeriesPostsSuccess, loadProjectInfoSuccess, isSubscribing)
-            .flatMap { [weak self] (postList, projectInfo, isSubscribing) -> Driver<ContentsBySection> in
-
-                if (postList.pageable?.pageNumber ?? 0) >= (postList.totalPages ?? 0) - 1 {
-                    self?.shouldInfiniteScroll = false
-                }
-
-                let posts: [ContentsItemType] = (postList.content ?? []).map { .postList(post: $0, info: projectInfo, isSubscribing: isSubscribing) }
-                self?.sections.append(contentsOf: posts)
-
-                return Driver.just(ContentsBySection.Section(title: "post", items: self?.sections ?? []))
-            }
-
-        let embedPostEmptyView = Driver.merge(loadPostSuccess, loadSeriesPostsSuccess)
+        let embedPostEmptyView = loadPostSuccess
             .flatMap { items -> Driver<CustomEmptyViewStyle> in
                 if ((items.content?.count ?? 0) == 0) {
                     return Driver.just(.projectPostListEmpty)
@@ -403,7 +372,7 @@ final class ProjectViewModel: InjectableViewModel {
 
         let embedEmptyViewController = Driver.merge(embedPostEmptyView, embedSeriesEmptyView)
 
-        let contentList = Driver.merge(postSection, seriesSection, seriesPostSection)
+        let contentList = Driver.merge(postSection, seriesSection)
 
         let showActivityIndicator = Driver.merge(subscriptionAction, cancelSubscriptionAction)
             .flatMap { _ in Driver.just(true) }
@@ -427,6 +396,7 @@ final class ProjectViewModel: InjectableViewModel {
             contentList: contentList,
             embedEmptyViewController: embedEmptyViewController,
             openPostViewController: selectPostItem,
+            openSeriesPostViewController: selectSeriesItem,
             openProjectInfoViewController: openProjectInfoViewController,
             contentOffset: contentOffset,
             activityIndicator: activityIndicator,

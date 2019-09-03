@@ -198,5 +198,11 @@ final class ViewControllerAssembly: Assembly {
             vc.viewModel = resolver.resolve(QRCodeScannerViewModel.self)!
             return vc
         }
+
+        container.register(SeriesPostViewController.self) { (resolver, uri: String, seriesId: Int) in
+            let vc = Storyboard.SeriesPost.instantiate(SeriesPostViewController.self)
+            vc.viewModel = resolver.resolve(SeriesPostViewModel.self, arguments: uri, seriesId)!
+            return vc
+        }
     }
 }

@@ -202,6 +202,14 @@
 		4381BBBA22BB708B007FD7E7 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4381BBB922BB708B007FD7E7 /* UITableView+Extension.swift */; };
 		438B0D9122B890BB00000122 /* StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B0D9022B890BB00000122 /* StoryBoard.swift */; };
 		438B0D9322B8AA6B00000122 /* SharedSequence+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B0D9222B8AA6B00000122 /* SharedSequence+Extension.swift */; };
+		43AC63DF231CC55000A6C62E /* SeriesPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AC63DD231CC55000A6C62E /* SeriesPostViewModel.swift */; };
+		43AC63E1231CC55000A6C62E /* SeriesPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AC63DE231CC55000A6C62E /* SeriesPostViewController.swift */; };
+		43AC63E4231CC58D00A6C62E /* SeriesPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AC63E3231CC58D00A6C62E /* SeriesPost.storyboard */; };
+		43AC63E7231CDFD600A6C62E /* SeriesPostListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AC63E6231CDFD600A6C62E /* SeriesPostListTableViewCell.swift */; };
+		43AC6402231E108C00A6C62E /* SeriesPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AC63DE231CC55000A6C62E /* SeriesPostViewController.swift */; };
+		43AC6403231E109100A6C62E /* SeriesPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AC63DD231CC55000A6C62E /* SeriesPostViewModel.swift */; };
+		43AC6404231E109400A6C62E /* SeriesPostListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AC63E6231CDFD600A6C62E /* SeriesPostListTableViewCell.swift */; };
+		43AC6405231E109D00A6C62E /* SeriesPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AC63E3231CC58D00A6C62E /* SeriesPost.storyboard */; };
 		43C1F36122B72D7400D17127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1F35022B72D7300D17127 /* AppDelegate.swift */; };
 		43C1F36222B72D7400D17127 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C1F35122B72D7300D17127 /* LaunchScreen.storyboard */; };
 		43C1F36722B72D7400D17127 /* pictionView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43C1F35C22B72D7300D17127 /* pictionView.xcdatamodeld */; };
@@ -613,6 +621,10 @@
 		4381BBB922BB708B007FD7E7 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		438B0D9022B890BB00000122 /* StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoard.swift; sourceTree = "<group>"; };
 		438B0D9222B8AA6B00000122 /* SharedSequence+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SharedSequence+Extension.swift"; sourceTree = "<group>"; };
+		43AC63DD231CC55000A6C62E /* SeriesPostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesPostViewModel.swift; sourceTree = "<group>"; };
+		43AC63DE231CC55000A6C62E /* SeriesPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesPostViewController.swift; sourceTree = "<group>"; };
+		43AC63E3231CC58D00A6C62E /* SeriesPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesPost.storyboard; sourceTree = "<group>"; };
+		43AC63E6231CDFD600A6C62E /* SeriesPostListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesPostListTableViewCell.swift; sourceTree = "<group>"; };
 		43C1F35022B72D7300D17127 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C1F35222B72D7300D17127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43C1F35D22B72D7300D17127 /* pictionView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = pictionView.xcdatamodel; sourceTree = "<group>"; };
@@ -991,6 +1003,17 @@
 			path = Sources/PictionView/Utility;
 			sourceTree = SOURCE_ROOT;
 		};
+		43AC63DC231CC55000A6C62E /* SeriesPost */ = {
+			isa = PBXGroup;
+			children = (
+				43AC63DE231CC55000A6C62E /* SeriesPostViewController.swift */,
+				43AC63DD231CC55000A6C62E /* SeriesPostViewModel.swift */,
+				43AC63E6231CDFD600A6C62E /* SeriesPostListTableViewCell.swift */,
+				43AC63E3231CC58D00A6C62E /* SeriesPost.storyboard */,
+			);
+			path = SeriesPost;
+			sourceTree = "<group>";
+		};
 		43C1F34E22B72D7300D17127 /* PictionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1271,6 +1294,7 @@
 			children = (
 				43F948D9230D284A00BD5CD6 /* Project */,
 				43F948D5230D284A00BD5CD6 /* ProjectInfo */,
+				43AC63DC231CC55000A6C62E /* SeriesPost */,
 				43F948C8230D284A00BD5CD6 /* CreatePost */,
 				43F948CC230D284A00BD5CD6 /* Post */,
 				43F948D1230D284A00BD5CD6 /* PostHeader */,
@@ -1850,6 +1874,7 @@
 				43F94960230D284B00BD5CD6 /* SignUpComplete.storyboard in Resources */,
 				43F949CA230D284B00BD5CD6 /* MyPage.storyboard in Resources */,
 				43F94A16230D284B00BD5CD6 /* SendDonation.storyboard in Resources */,
+				43AC6405231E109D00A6C62E /* SeriesPost.storyboard in Resources */,
 				43F949D4230D284B00BD5CD6 /* ChangePassword.storyboard in Resources */,
 				43F94A77230D31C600BD5CD6 /* SponsorshipList.storyboard in Resources */,
 				43F9497C230D284B00BD5CD6 /* Post.storyboard in Resources */,
@@ -1891,6 +1916,7 @@
 				43F949B3230D284B00BD5CD6 /* DynamicInputView.xib in Resources */,
 				43F949BF230D284B00BD5CD6 /* MyProject.storyboard in Resources */,
 				43F9495F230D284B00BD5CD6 /* SignUpComplete.storyboard in Resources */,
+				43AC63E4231CC58D00A6C62E /* SeriesPost.storyboard in Resources */,
 				43F949C9230D284B00BD5CD6 /* MyPage.storyboard in Resources */,
 				43F94A15230D284B00BD5CD6 /* SendDonation.storyboard in Resources */,
 				43F949D3230D284B00BD5CD6 /* ChangePassword.storyboard in Resources */,
@@ -2009,6 +2035,7 @@
 				43F949F2230D284B00BD5CD6 /* SearchSponsorTableViewCell.swift in Sources */,
 				43F949AC230D284B00BD5CD6 /* CustomEmptyViewModel.swift in Sources */,
 				43F94990230D284B00BD5CD6 /* ProjectPostListTableViewCell.swift in Sources */,
+				43AC6402231E108C00A6C62E /* SeriesPostViewController.swift in Sources */,
 				43F9496C230D284B00BD5CD6 /* SubscriptionListViewModel.swift in Sources */,
 				43F949A0230D284B00BD5CD6 /* PostFooterViewController.swift in Sources */,
 				4317A37322E172A200A5C725 /* pictionView.xcdatamodeld in Sources */,
@@ -2056,6 +2083,7 @@
 				43F9495C230D284B00BD5CD6 /* SearchProjectTableViewCell.swift in Sources */,
 				43F94994230D284B00BD5CD6 /* ProjectSeriesListTableViewCell.swift in Sources */,
 				43F94976230D284B00BD5CD6 /* PostViewModel.swift in Sources */,
+				43AC6404231E109400A6C62E /* SeriesPostListTableViewCell.swift in Sources */,
 				43F9495A230D284B00BD5CD6 /* SearchProjectViewController.swift in Sources */,
 				43F949BE230D284B00BD5CD6 /* MyProjectViewModel.swift in Sources */,
 				43F9496A230D284B00BD5CD6 /* SubscriptionListCollectionView.swift in Sources */,
@@ -2116,6 +2144,7 @@
 				4331CE432318D05A00CF635B /* QRCodeScannerViewModel.swift in Sources */,
 				43F94A22230D284B00BD5CD6 /* SignInViewController.swift in Sources */,
 				43F94980230D284B00BD5CD6 /* PostHeaderViewModel.swift in Sources */,
+				43AC6403231E109100A6C62E /* SeriesPostViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2123,6 +2152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43AC63E7231CDFD600A6C62E /* SeriesPostListTableViewCell.swift in Sources */,
 				432A67D922BCB25B009E51FF /* UICollectionView+Extension.swift in Sources */,
 				43F94957230D284B00BD5CD6 /* SearchProjectViewModel.swift in Sources */,
 				43238EC122C1D18900A4F6CD /* Collection+Extension.swift in Sources */,
@@ -2225,6 +2255,7 @@
 				43F94A01230D284B00BD5CD6 /* SponsorshipHistoryViewModel.swift in Sources */,
 				43F949E1230D284B00BD5CD6 /* TransactionHistoryFooterTypeTableViewCell.swift in Sources */,
 				43F94945230D284B00BD5CD6 /* TabBarViewController.swift in Sources */,
+				43AC63E1231CC55000A6C62E /* SeriesPostViewController.swift in Sources */,
 				43C1F37F22B77DEC00D17127 /* Injectable.swift in Sources */,
 				43F949B5230D284B00BD5CD6 /* DepositViewController.swift in Sources */,
 				43F949E3230D284B00BD5CD6 /* TransactionHistoryViewModel.swift in Sources */,
@@ -2252,6 +2283,7 @@
 				4331CE422318D05A00CF635B /* QRCodeScannerViewModel.swift in Sources */,
 				43F94A21230D284B00BD5CD6 /* SignInViewController.swift in Sources */,
 				43F9497F230D284B00BD5CD6 /* PostHeaderViewModel.swift in Sources */,
+				43AC63DF231CC55000A6C62E /* SeriesPostViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

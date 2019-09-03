@@ -18,19 +18,25 @@ final class ProjectSeriesListTableViewCell: ReuseTableViewCell {
     typealias Model = SeriesModel
 
     func configure(with model: Model) {
-        let (seriesName, postCount) = (model.name, model.postCount)
+        let (thumbnails, seriesName, postCount) = (model.thumbnails, model.name, model.postCount)
 
-        //        if let url = URL(string: postList.first?.cover ?? "") {
-        //            thumbnailImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-square-500-x-500"), completed: nil)
-        //        } else {
-        //            thumbnailImageView.image = #imageLiteral(resourceName: "img-dummy-square-500-x-500")
-        //        }
-        //
-        //        if let url = URL(string: postList[safe: 1]?.cover ?? "") {
-        //            thumbnailImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-square-500-x-500"), completed: nil)
-        //        } else {
-        //            thumbnailImageView.image = UIImage()
-        //        }
+        if let thumbnail = thumbnails?[safe: 0] {
+            let coverImageWithIC = "\(thumbnail)?w=656&h=246&quality=80&output=webp"
+            if let url = URL(string: coverImageWithIC) {
+                thumbnailImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-projectcover-1440-x-450"), completed: nil)
+            } else {
+                thumbnailImageView.image = #imageLiteral(resourceName: "img-dummy-projectcover-1440-x-450")
+            }
+        }
+
+        if let backgroundThumbnail = thumbnails?[safe: 1] {
+            let coverImageWithIC = "\(backgroundThumbnail)?w=656&h=246&quality=80&output=webp"
+            if let url = URL(string: coverImageWithIC) {
+                backgroundThumbnailImageView.sd_setImageWithFade(with: url, placeholderImage: #imageLiteral(resourceName: "img-dummy-projectcover-1440-x-450"), completed: nil)
+            } else {
+                backgroundThumbnailImageView.image = #imageLiteral(resourceName: "img-dummy-projectcover-1440-x-450")
+            }
+        }
         seriesLabel.text = seriesName
         postCountLabel.text = "\(String(postCount ?? 0)) 포스트"
     }

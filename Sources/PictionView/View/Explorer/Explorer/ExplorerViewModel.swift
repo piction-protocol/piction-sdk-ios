@@ -39,7 +39,7 @@ final class ExplorerViewModel: ViewModel {
 
         let openProjectViewController = input.selectedIndexPath
 
-        let recommendedProjectAction = Driver.merge(input.viewWillAppear.asObservable().take(1).asDriver(onErrorDriveWith: .empty()), input.refreshControlDidRefresh)
+        let recommendedProjectAction = Driver.merge(input.viewWillAppear.asObservable().take(1).asDriver(onErrorDriveWith: .empty()), input.refreshControlDidRefresh, loadTrigger.asDriver(onErrorDriveWith: .empty()))
             .flatMap { _ -> Driver<Action<ResponseData>> in
                 let response = PictionSDK.rx.requestAPI(RecommendationAPI.all(size: 10))
                 return Action.makeDriver(response)
@@ -63,7 +63,7 @@ final class ExplorerViewModel: ViewModel {
         let recommendedProject = Driver.merge(recommendedProjectListSuccess, recommendedProjectListError)
             .flatMap { projects in Driver.just(projects) }
 
-        let noticeListAction = Driver.merge(input.viewWillAppear.asObservable().take(1).asDriver(onErrorDriveWith: .empty()), input.refreshControlDidRefresh)
+        let noticeListAction = Driver.merge(input.viewWillAppear.asObservable().take(1).asDriver(onErrorDriveWith: .empty()), input.refreshControlDidRefresh, loadTrigger.asDriver(onErrorDriveWith: .empty()))
             .flatMap { _ -> Driver<Action<ResponseData>> in
                 let response = PictionSDK.rx.requestAPI(BannersAPI.all)
                 return Action.makeDriver(response)

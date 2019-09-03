@@ -85,47 +85,8 @@
                                 <constraints>
                                     <constraint firstItem="vKf-WR-6Z5" firstAttribute="leading" secondItem="LmJ-rW-Awu" secondAttribute="leading" id="7U7-JT-y3c"/>
                                     <constraint firstAttribute="trailing" secondItem="vKf-WR-6Z5" secondAttribute="trailing" id="b3O-mt-Oer"/>
+                                    <constraint firstAttribute="height" constant="135" id="c0S-0r-Tco"/>
                                 </constraints>
-                            </stackView>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DfJ-sI-0nw">
-                                <rect key="frame" x="20" y="36.5" width="335" height="205"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icLockedGrey" translatesAutoresizingMaskIntoConstraints="NO" id="gSK-NV-wEy">
-                                        <rect key="frame" x="127.5" y="0.0" width="80" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="5Kd-gC-auI"/>
-                                            <constraint firstAttribute="height" constant="80" id="Ey9-rP-wfP"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="멤버십을 구독해야 볼 수 있는 포스트입니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPl-Sq-9E3">
-                                        <rect key="frame" x="80" y="96" width="175" height="52"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="52" id="6Js-iy-URZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6V-xg-EGQ" customClass="UIButtonExtension" customModule="PictionView" customModuleProvider="target">
-                                        <rect key="frame" x="133" y="164" width="69" height="41"/>
-                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="69" id="sGn-Qq-VsB"/>
-                                            <constraint firstAttribute="height" constant="41" id="sft-mU-P7D"/>
-                                        </constraints>
-                                        <state key="normal" title=" ">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,9 +94,6 @@
                             <constraint firstItem="LmJ-rW-Awu" firstAttribute="top" secondItem="Mfj-FW-by2" secondAttribute="top" constant="20" id="2fV-p0-gIt"/>
                             <constraint firstAttribute="trailing" secondItem="LmJ-rW-Awu" secondAttribute="trailing" constant="20" id="HMm-Nt-1GC"/>
                             <constraint firstItem="LmJ-rW-Awu" firstAttribute="leading" secondItem="Mfj-FW-by2" secondAttribute="leading" constant="20" id="OwR-tp-I7Q"/>
-                            <constraint firstAttribute="trailing" secondItem="DfJ-sI-0nw" secondAttribute="trailing" constant="20" id="fJL-aa-oOA"/>
-                            <constraint firstItem="DfJ-sI-0nw" firstAttribute="centerY" secondItem="Mfj-FW-by2" secondAttribute="centerY" id="fTb-L7-LWn"/>
-                            <constraint firstItem="DfJ-sI-0nw" firstAttribute="leading" secondItem="Mfj-FW-by2" secondAttribute="leading" constant="20" id="mhQ-N3-1xW"/>
                             <constraint firstAttribute="bottom" secondItem="LmJ-rW-Awu" secondAttribute="bottom" constant="123" id="yNg-fB-oeQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yl5-jf-9P9"/>
@@ -146,10 +104,7 @@
                         <outlet property="likeButton" destination="anr-tN-IZr" id="kBc-Qm-qUZ"/>
                         <outlet property="likeCountLabel" destination="G0L-pI-Fdk" id="75V-fb-Gaj"/>
                         <outlet property="likeImageView" destination="xgv-vt-3UM" id="2YJ-gV-xzh"/>
-                        <outlet property="likeStackView" destination="LmJ-rW-Awu" id="D4j-uH-zQg"/>
                         <outlet property="likeView" destination="VD3-jc-xzB" id="sWn-zZ-ZPn"/>
-                        <outlet property="subscriptionButton" destination="J6V-xg-EGQ" id="mzv-Hg-ctv"/>
-                        <outlet property="subscriptionStackView" destination="DfJ-sI-0nw" id="aIV-1E-Ppa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9A-vE-6Nx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -159,6 +114,5 @@
     </scenes>
     <resources>
         <image name="icFavoriteOff" width="24" height="24"/>
-        <image name="icLockedGrey" width="24" height="24"/>
     </resources>
 </document>

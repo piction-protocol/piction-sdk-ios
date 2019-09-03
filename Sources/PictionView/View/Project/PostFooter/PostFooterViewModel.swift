@@ -39,10 +39,12 @@ final class PostFooterViewModel: InjectableViewModel {
 
     func build(input: Input) -> Output {
 
+        let viewWillAppear = input.viewWillAppear.asObservable().take(1).asDriver(onErrorDriveWith: .empty())
+
         let refreshContent = updater.refreshContent.asDriver(onErrorDriveWith: .empty())
         let refreshSession = updater.refreshSession.asDriver(onErrorDriveWith: .empty())
 
-        let isLikeAction = Driver.merge(input.viewWillAppear, refreshContent, refreshSession)
+        let isLikeAction = Driver.merge(viewWillAppear, refreshContent, refreshSession)
             .flatMap { [weak self] _ -> Driver<Action<ResponseData>> in
                 let response = PictionSDK.rx.requestAPI(PostsAPI.isLike(uri: self?.uri ?? "", postId: self?.postId ?? 0))
                 return Action.makeDriver(response)
@@ -61,7 +63,7 @@ final class PostFooterViewModel: InjectableViewModel {
 
         let isLikeInfo = Driver.merge(isLikeSuccess, isLikeError)
 
-        let postItemAction = Driver.merge(input.viewWillAppear, refreshContent, refreshSession)
+        let postItemAction = Driver.merge(viewWillAppear, refreshContent, refreshSession)
             .flatMap { [weak self] _ -> Driver<Action<ResponseData>> in
                 let response = PictionSDK.rx.requestAPI(PostsAPI.get(uri: self?.uri ?? "", postId: self?.postId ?? 0))
                 return Action.makeDriver(response)

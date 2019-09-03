@@ -52,7 +52,7 @@ final class ProjectViewController: UIViewController {
 
     private var stretchyHeader: ProjectHeaderView?
 
-    private let changeMenu = PublishSubject<Int>()
+    private let changeMenu = BehaviorSubject<Int>(value: 0)
     private let subscription = PublishSubject<Void>()
     private let cancelSubscription = PublishSubject<Void>()
 

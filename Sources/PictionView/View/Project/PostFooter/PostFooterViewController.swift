@@ -28,9 +28,6 @@ final class PostFooterViewController: UIViewController {
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
 
-    @IBOutlet weak var likeStackView: UIStackView!
-    @IBOutlet weak var subscriptionStackView: UIStackView!
-    @IBOutlet weak var subscriptionButton: UIButton!
 
     private func controlLikeButton(isLike: Bool, likeCount: Int) {
         self.likeCountLabel.textColor = isLike ? UIColor(r: 26, g: 146, b: 255) : UIColor(r: 191, g: 191, b: 191)

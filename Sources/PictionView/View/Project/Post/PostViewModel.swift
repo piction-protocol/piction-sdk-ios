@@ -197,7 +197,7 @@ final class PostViewModel: InjectableViewModel {
         let headerInfo = Driver.combineLatest(postItemSuccess, writerInfo)
             .flatMap { Driver.just(($0, $1)) }
 
-        let userInfoAction = Driver.merge(refreshContent, input.viewWillAppear, refreshSession)
+        let userInfoAction = Driver.merge(viewWillAppear, refreshContent, refreshSession)
             .flatMap { _ -> Driver<Action<ResponseData>> in
                 let response = PictionSDK.rx.requestAPI(UsersAPI.me)
                 return Action.makeDriver(response)

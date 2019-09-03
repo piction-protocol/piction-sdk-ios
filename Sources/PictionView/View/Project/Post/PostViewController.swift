@@ -30,26 +30,28 @@ final class PostViewController: UIViewController {
     @IBOutlet weak var nextPostButton: UIBarButtonItem!
     @IBOutlet weak var shareBarButton: UIBarButtonItem!
 
+    var headerViewController: PostHeaderViewController?
+    var footerViewController: PostFooterViewController?
+
     private func embedPostHeaderViewController(postItem: PostModel, userInfo: UserModel) {
         for subview in postWebView.scrollView.subviews {
             if subview.tag == 1000 || subview.tag == 1001 {
                 subview.removeFromSuperview()
             }
         }
-        let vc = PostHeaderViewController.make(postItem: postItem, userInfo: userInfo)
+        headerViewController = PostHeaderViewController.make(postItem: postItem, userInfo: userInfo)
         let containerView = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_W, height: 220))
         containerView.tag = 1000
-        embed(vc, to: containerView)
+        embed(headerViewController!, to: containerView)
         self.postWebView.scrollView.addSubview(containerView)
     }
 
     private func embedPostFooterViewController(uri: String, postId: Int, height: CGFloat) {
-        //        postWebView.scrollView.subviews.map { $0.removeFromSuperview() }
-        let posY = height - 278 //self.postWebView.scrollView.contentSize.height - 300
-        let vc = PostFooterViewController.make(uri: uri, postId: postId)
+        let posY = height - 278
+        footerViewController = PostFooterViewController.make(uri: uri, postId: postId)
         let containerView = UIView(frame: CGRect(x: 0, y: posY, width: SCREEN_W, height: 278))
         containerView.tag = 1001
-        embed(vc, to: containerView)
+        embed(footerViewController!, to: containerView)
         self.postWebView.scrollView.addSubview(containerView)
     }
 
@@ -58,6 +60,21 @@ final class PostViewController: UIViewController {
         if let topViewController = UIApplication.topViewController() {
             topViewController.openViewController(vc, type: .present)
         }
+    }
+
+    func cacheWebview() {
+        if postWebView != nil {
+            postWebView.stopLoading()
+            postWebView.loadHTMLString("about:blank", baseURL: nil)
+        }
+
+        URLCache.shared.removeAllCachedResponses()
+        URLCache.shared.diskCapacity = 0
+        URLCache.shared.memoryCapacity = 0
+    }
+
+    deinit {
+        cacheWebview()
     }
 }
 

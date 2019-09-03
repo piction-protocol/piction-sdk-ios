@@ -330,7 +330,7 @@
         <!--Post View Controller-->
         <scene sceneID="n9M-kd-DyU">
             <objects>
-                <viewController storyboardIdentifier="PostViewController" id="WcH-KM-erN" customClass="PostViewController" customModule="PictionView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostViewController" hidesBottomBarWhenPushed="YES" id="WcH-KM-erN" customClass="PostViewController" customModule="PictionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WQi-79-bE1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -398,9 +398,70 @@
                                     <constraint firstItem="6bE-0R-bal" firstAttribute="centerY" secondItem="ZiD-ey-720" secondAttribute="centerY" id="RFE-Ip-bPh"/>
                                 </constraints>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0Z-xY-o70">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem width="100" id="xFd-Am-xYT">
+                                        <view key="customView" contentMode="scaleToFill" id="bQl-LA-AUu">
+                                            <rect key="frame" x="20" y="10.5" width="166" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbu-4I-4gs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33" id="1b8-zB-ecP"/>
+                                                        <constraint firstAttribute="width" constant="100" id="F1r-xT-aWh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="이전 포스트" image="icChevronLeftBlack">
+                                                        <color key="titleColor" red="0.59113854169845581" green="0.59160131216049194" blue="0.59121018648147583" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zbu-4I-4gs" firstAttribute="leading" secondItem="bQl-LA-AUu" secondAttribute="leading" id="Hc9-aR-QdY"/>
+                                                <constraint firstItem="zbu-4I-4gs" firstAttribute="top" secondItem="bQl-LA-AUu" secondAttribute="top" id="snA-nP-9Ty"/>
+                                                <constraint firstAttribute="bottom" secondItem="zbu-4I-4gs" secondAttribute="bottom" id="zZ5-ub-RNd"/>
+                                            </constraints>
+                                        </view>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="ebB-P9-1bv"/>
+                                    <barButtonItem width="100" id="woe-ZJ-c72">
+                                        <view key="customView" contentMode="scaleToFill" id="LBT-hY-17x">
+                                            <rect key="frame" x="194" y="10.5" width="200" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rz0-gr-T2C">
+                                                    <rect key="frame" x="100" y="0.0" width="100" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33" id="Grb-yM-ZKF"/>
+                                                        <constraint firstAttribute="width" constant="100" id="pRM-so-09X"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="다음 포스트" image="icChevronRightBlack">
+                                                        <color key="titleColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="rz0-gr-T2C" secondAttribute="bottom" id="Rpv-uI-DBz"/>
+                                                <constraint firstItem="rz0-gr-T2C" firstAttribute="top" secondItem="LBT-hY-17x" secondAttribute="top" id="aia-Bb-hPb"/>
+                                                <constraint firstAttribute="trailing" secondItem="rz0-gr-T2C" secondAttribute="trailing" id="ov6-Pl-c1K"/>
+                                            </constraints>
+                                        </view>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="a0Z-xY-o70" firstAttribute="bottom" secondItem="eIB-Ts-LbD" secondAttribute="bottom" id="2of-td-K6R"/>
+                            <constraint firstItem="a0Z-xY-o70" firstAttribute="leading" secondItem="eIB-Ts-LbD" secondAttribute="leading" id="757-iz-bGe"/>
                             <constraint firstItem="koI-sV-IVB" firstAttribute="leading" secondItem="eIB-Ts-LbD" secondAttribute="leading" id="7gi-Sh-Bd4"/>
                             <constraint firstItem="koI-sV-IVB" firstAttribute="trailing" secondItem="eIB-Ts-LbD" secondAttribute="trailing" id="Mie-xP-rwy"/>
                             <constraint firstItem="ZiD-ey-720" firstAttribute="leading" secondItem="eIB-Ts-LbD" secondAttribute="leading" id="SHJ-N8-gQt"/>
@@ -409,6 +470,7 @@
                             <constraint firstItem="eIB-Ts-LbD" firstAttribute="trailing" secondItem="ZiD-ey-720" secondAttribute="trailing" id="hOq-IW-OOC"/>
                             <constraint firstItem="koI-sV-IVB" firstAttribute="top" secondItem="eIB-Ts-LbD" secondAttribute="top" id="m1g-pq-eWk"/>
                             <constraint firstAttribute="bottom" secondItem="koI-sV-IVB" secondAttribute="bottom" id="rY6-Fp-xZn"/>
+                            <constraint firstItem="a0Z-xY-o70" firstAttribute="trailing" secondItem="eIB-Ts-LbD" secondAttribute="trailing" id="wRK-nx-Igf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eIB-Ts-LbD"/>
                     </view>
@@ -433,9 +495,9 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="nextPostButton" destination="IT3-vW-wgV" id="eOV-4Q-OoX"/>
+                        <outlet property="nextPostButton" destination="rz0-gr-T2C" id="yVn-wW-IC6"/>
                         <outlet property="postWebView" destination="koI-sV-IVB" id="ZjC-tj-NzD"/>
-                        <outlet property="prevPostButton" destination="D09-FE-Ygf" id="ZIY-05-sKY"/>
+                        <outlet property="prevPostButton" destination="zbu-4I-4gs" id="x47-1Z-KtK"/>
                         <outlet property="shareBarButton" destination="Fr8-1K-Ymg" id="GA4-4h-y8J"/>
                         <outlet property="subscriptionButton" destination="Lyf-Ue-cna" id="nw7-TC-AT6"/>
                         <outlet property="subscriptionView" destination="ZiD-ey-720" id="ijL-Vh-wHw"/>

@@ -26,8 +26,8 @@ final class PostViewController: UIViewController {
             postWebView.scrollView.delegate = self
         }
     }
-    @IBOutlet weak var prevPostButton: UIBarButtonItem!
-    @IBOutlet weak var nextPostButton: UIBarButtonItem!
+    @IBOutlet weak var prevPostButton: UIButton!
+    @IBOutlet weak var nextPostButton: UIButton!
     @IBOutlet weak var shareBarButton: UIBarButtonItem!
 
     var headerViewController: PostHeaderViewController?
@@ -73,6 +73,11 @@ final class PostViewController: UIViewController {
         URLCache.shared.memoryCapacity = 0
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = true
+    }
+
     deinit {
         cacheWebview()
     }
@@ -99,7 +104,6 @@ extension PostViewController: ViewModelBindable {
             .drive(onNext: { [weak self] in
                 self?.navigationController?.navigationBar.prefersLargeTitles = false
                 self?.tabBarController?.tabBar.isHidden = true
-//                self?.navigationController?.isToolbarHidden = false
             })
             .disposed(by: disposeBag)
 
@@ -107,7 +111,6 @@ extension PostViewController: ViewModelBindable {
             .viewWillDisappear
             .drive(onNext: { [weak self] in
                 self?.tabBarController?.tabBar.isHidden = false
-//                self?.navigationController?.isToolbarHidden = true
             })
             .disposed(by: disposeBag)
 
@@ -123,6 +126,8 @@ extension PostViewController: ViewModelBindable {
             .prevPostIsEnabled
             .drive(onNext: { [weak self] postItem in
                 self?.prevPostButton.isEnabled = (postItem.id ?? 0) != 0
+                let buttonColor = (postItem.id ?? 0) != 0 ? UIColor(r: 51, g: 51, b: 51) : UIColor(r: 151, g: 151, b: 151)
+                self?.prevPostButton.setTitleColor(buttonColor, for: .normal)
             })
             .disposed(by: disposeBag)
 
@@ -130,6 +135,8 @@ extension PostViewController: ViewModelBindable {
             .nextPostIsEnabled
             .drive(onNext: { [weak self] postItem in
                 self?.nextPostButton.isEnabled = (postItem.id ?? 0) != 0
+                let buttonColor = (postItem.id ?? 0) != 0 ? UIColor(r: 51, g: 51, b: 51) : UIColor(r: 151, g: 151, b: 151)
+                self?.nextPostButton.setTitleColor(buttonColor, for: .normal)
             })
             .disposed(by: disposeBag)
 

@@ -17,6 +17,7 @@ public struct SeriesModel: Response {
     public let name: String?
     public let postCount: Int?
     public let priority: Int?
+    public let thumbnails: [String]?
 
     public init(map: Mapper) throws {
         createdAt = map.optionalFrom("createdAt")
@@ -24,6 +25,7 @@ public struct SeriesModel: Response {
         name = map.optionalFrom("name")
         postCount = map.optionalFrom("postCount")
         priority = map.optionalFrom("priority")
+        thumbnails = map.optionalFrom("thumbnails")
     }
 
     public func toJSONString() throws -> String {
@@ -36,7 +38,8 @@ public struct SeriesModel: Response {
             "id": id,
             "name": name,
             "postCount": postCount,
-            "priority": priority
+            "priority": priority,
+            "thumbnails": thumbnails
         ]
     }
 }
@@ -49,6 +52,7 @@ extension SeriesModel {
             "name": "나의시리즈",
             "postCount": 0,
             "priority": 0,
+            "thumbnails": []
         ]
     }
 }

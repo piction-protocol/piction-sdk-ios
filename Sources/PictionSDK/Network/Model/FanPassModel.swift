@@ -74,5 +74,3 @@ extension FanPassModel {
         ]
     }
 }
-
-

@@ -170,7 +170,7 @@ final class PostViewModel: InjectableViewModel {
             .flatMap { [weak self] _ -> Driver<Action<ResponseData>> in
                 let response = PictionSDK.rx.requestAPI(ProjectsAPI.get(uri: self?.uri ?? ""))
                 return Action.makeDriver(response)
-        }
+            }
 
         let writerInfo = projectInfoAction.elements
             .flatMap { response -> Driver<UserModel> in

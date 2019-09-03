@@ -16,7 +16,6 @@ protocol UpdaterProtocol {
 }
 
 final class Updater: UpdaterProtocol {
-    let selectedProjectMenu = PublishSubject<Int>()
     let refreshContent = PublishSubject<Void>()
     let refreshSession = PublishSubject<Void>()
     let refreshAmount = PublishSubject<Void>()

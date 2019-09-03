@@ -20,14 +20,13 @@ final class ProjectViewModel: InjectableViewModel {
     )
 
     let updater: UpdaterProtocol
+    let uri: String
 
     var page = 0
     var isWriter: Bool = false
     var shouldInfiniteScroll = true
     var sections: [ContentsItemType] = []
     var loadTrigger = PublishSubject<Void>()
-
-    let uri: String
 
     init(dependency: Dependency) {
         (updater, uri) = dependency
@@ -47,7 +46,6 @@ final class ProjectViewModel: InjectableViewModel {
     struct Output {
         let viewWillAppear: Driver<Void>
         let viewWillDisappear: Driver<Void>
-        let wideThumbnail: Driver<String>
         let projectInfo: Driver<ProjectModel>
         let subscriptionInfo: Driver<(Bool, Bool)>
         let openCancelSubscriptionPopup: Driver<Void>
@@ -55,7 +53,6 @@ final class ProjectViewModel: InjectableViewModel {
         let openCreatePostViewController: Driver<String>
         let contentList: Driver<ContentsBySection>
         let embedEmptyViewController: Driver<CustomEmptyViewStyle>
-        let isWriter: Driver<Bool>
         let openPostViewController: Driver<(String, Int)>
         let openProjectInfoViewController: Driver<String>
         let contentOffset: Driver<CGPoint>
@@ -172,11 +169,6 @@ final class ProjectViewModel: InjectableViewModel {
             .flatMap { _ in Driver.just(ProjectModel.from([:])!) }
 
         let loadProjectInfo = Driver.merge(loadProjectInfoSuccess, loadProjectInfoError)
-
-        let wideThumbnail = loadProjectInfo
-            .flatMap { projectInfo -> Driver<String> in
-                return Driver.just(projectInfo.wideThumbnail ?? "")
-            }
 
         let loadSeriesListAction = selectSeriesMenu
             .flatMap { [weak self] _ -> Driver<Action<ResponseData>> in
@@ -336,8 +328,8 @@ final class ProjectViewModel: InjectableViewModel {
                 guard self.sections.count > indexPath.row else { return Driver.empty() }
 
                 switch self.sections[indexPath.row] {
-                case .postList(let post, let info, _):
-                    return Driver.just((info.uri ?? "", post.id ?? 0))
+                case .postList(let post, _):
+                    return Driver.just((self.uri, post.id ?? 0))
                 default:
                     return Driver.empty()
                 }
@@ -427,7 +419,6 @@ final class ProjectViewModel: InjectableViewModel {
         return Output(
             viewWillAppear: viewWillAppear,
             viewWillDisappear: viewWillDisappear,
-            wideThumbnail: wideThumbnail,
             projectInfo: loadProjectInfo,
             subscriptionInfo: subscriptionInfo,
             openCancelSubscriptionPopup: openCancelSubscriptionPopup,
@@ -435,7 +426,6 @@ final class ProjectViewModel: InjectableViewModel {
             openCreatePostViewController: openCreatePostViewController,
             contentList: contentList,
             embedEmptyViewController: embedEmptyViewController,
-            isWriter: isWriter,
             openPostViewController: selectPostItem,
             openProjectInfoViewController: openProjectInfoViewController,
             contentOffset: contentOffset,

@@ -38,7 +38,7 @@ extension ContentsBySection: SectionModelType {
 }
 
 enum ContentsItemType {
-    case postList(post: PostModel, info: ProjectModel, isSubscribing: Bool)
+    case postList(post: PostModel, isSubscribing: Bool)
     case seriesHeader(series: SeriesModel)
     case seriesList(series: SeriesModel)
 }
@@ -120,9 +120,9 @@ final class ProjectViewController: UIViewController {
         let dataSource = RxTableViewSectionedReloadDataSource<ContentsBySection>(
             configureCell: { dataSource, tableView, indexPath, model in
                 switch dataSource[indexPath] {
-                case .postList(let post, let info, let isSubscribing):
+                case .postList(let post, let isSubscribing):
                     let cell: ProjectPostListTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-                    cell.configure(with: post, projectInfo: info, isSubscribing: isSubscribing)
+                    cell.configure(with: post, isSubscribing: isSubscribing)
                     return cell
                 case .seriesHeader(let series):
                     let cell: ProjectSeriesHeaderTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
@@ -246,12 +246,6 @@ extension ProjectViewController: ViewModelBindable {
             .disposed(by: disposeBag)
 
         output
-            .isWriter
-            .drive(onNext: { _ in
-            })
-            .disposed(by: disposeBag)
-
-        output
             .projectInfo
             .drive(onNext: { [weak self] projectInfo in
                 self?.stretchyHeader?.configureProjectInfo(model: projectInfo)
@@ -350,8 +344,8 @@ extension ProjectViewController: UITableViewDelegate {
             }
 
             switch section {
-            case .postList(let post, let info, _):
-                self?.openCreatePostViewController(uri: info.uri ?? "", postId: post.id ?? 0)
+            case .postList(let post, _):
+                self?.openCreatePostViewController(uri: self?.viewModel?.uri ?? "", postId: post.id ?? 0)
                 completionHandler(true)
             case .seriesList:
                 completionHandler(false)

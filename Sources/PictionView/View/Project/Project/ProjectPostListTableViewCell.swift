@@ -29,7 +29,7 @@ final class ProjectPostListTableViewCell: ReuseTableViewCell {
         super.layoutSubviews()
     }
 
-    func configure(with model: Model, projectInfo: ProjectModel?, isSubscribing: Bool) {
+    func configure(with model: Model, isSubscribing: Bool) {
         let (thumbnail, seriesName, title, date, likeCount, fanPassId) = (model.cover, model.series?.name, model.title, model.createdAt, model.likeCount, model.fanPass?.id)
 
         let coverImageWithIC = "\(thumbnail ?? "")?w=656&h=246&quality=80&output=webp"

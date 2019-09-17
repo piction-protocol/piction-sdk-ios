@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import KeychainAccess
+import SDWebImage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let cacheSizeDisk: Int = 32 * 1024 * 1024
         let sharedCache: URLCache = URLCache(memoryCapacity: cacheSizeMemory, diskCapacity: cacheSizeDisk, diskPath: "nsurlcache")
         URLCache.shared = sharedCache
+
+        SDImageCache.shared().config.maxCacheSize = 100 * 1024 * 1024 // 100mb
+        SDImageCache.shared().clearDisk(onCompletion: nil)
 
         window = UIWindow(frame: UIScreen.main.bounds)
 

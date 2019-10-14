@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { "Piction Network" => "jh.seo@battleent.com" }
   s.platform     = :ios, "9.0"
   s.source       = { :git => 'https://github.com/piction-protocol/piction-sdk-ios.git', :tag => "#{s.version}" }
-  s.swift_version = "4.2"
+  s.swift_version = "5.0"
 
   s.subspec "Core" do |ss|
     ss.source_files = "Sources/PictionSDK/**/*.swift"

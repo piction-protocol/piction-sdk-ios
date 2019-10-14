@@ -1,5 +1,5 @@
 //
-//  StringArrayModel.swift
+//  PostIndexModel.swift
 //  PictionSDK
 //
 //  Created by jhseo on 16/09/2019.
@@ -9,13 +9,15 @@
 import Mapper
 import Foundation
 
-public typealias StringArrayViewResponse = StringArrayModel
+public typealias PostIndexViewResponse = PostIndexModel
 
-public struct StringArrayModel: Response {
-
+public struct PostIndexModel: Response {
+    public let index: Int?
+    public let post: PostModel?
 
     public init(map: Mapper) throws {
-
+        index = map.optionalFrom("index")
+        post = map.optionalFrom("post")
     }
 
     public func toJSONString() throws -> String {
@@ -24,16 +26,17 @@ public struct StringArrayModel: Response {
 
     public func toDict() -> [String: Any?] {
         return [
-            "list": self
+            "index": index,
+            "post": post
         ]
     }
 }
 
-extension StringArrayModel {
+extension PostIndexModel {
     static func sampleData() -> [String: Any] {
         return [
-            "list": ["", "", ""]
+            "index": "3",
+            "post": PostModel.sampleData()
         ]
     }
 }
-

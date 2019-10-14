@@ -82,13 +82,24 @@ public final class Series {
             })
     }
 
-//    public func getThumbnails(uri: String, seriesId: Int, success successCompletion: (([String]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-//        PictionProvider.request(SeriesAPI.getThumbnails(uri: uri, seriesId: seriesId),
-//            success: { (response: [String]) in
-//                successCompletion?(response)
-//            },
-//            failure: { error in
-//                failureCompletion?(error)
-//            })
-//    }
+    public func getThumbnails(uri: String, seriesId: Int, success successCompletion: ((StringArrayViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.getThumbnails(uri: uri, seriesId: seriesId),
+            success: { (response: StringArrayViewResponse) in
+                print(response)
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func getPreviousAndNextPosts(uri: String, seriesId: Int, postId: Int, count: Int, success successCompletion: (([PostIndexViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.getPreviousAndNextPosts(uri: uri, seriesId: seriesId, postId: postId, count: count),
+            success: { (response: [PostIndexViewResponse]) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
 }

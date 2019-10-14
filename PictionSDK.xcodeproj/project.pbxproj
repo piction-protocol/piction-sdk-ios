@@ -247,6 +247,8 @@
 		43DE4BA422F3CB10006EA673 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4333578D22F3C9780064CA1E /* Kanna.framework */; };
 		43DE4BC822F4253E006EA673 /* DZNEmptyDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DE4BC722F4253E006EA673 /* DZNEmptyDataSet.framework */; };
 		43DE4BC922F42548006EA673 /* DZNEmptyDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DE4BC722F4253E006EA673 /* DZNEmptyDataSet.framework */; };
+		43CD77D4232F341600AC5F07 /* PostIndexModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CD77D3232F341600AC5F07 /* PostIndexModel.swift */; };
+		43DCB72A232F918C009EB012 /* StringArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DCB729232F918C009EB012 /* StringArrayModel.swift */; };
 		43DE4BDC22F7C257006EA673 /* SponsorshipsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DE4BDB22F7C257006EA673 /* SponsorshipsAPI.swift */; };
 		43DE4BDE22F7C2E3006EA673 /* SponsorshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DE4BDD22F7C2E3006EA673 /* SponsorshipModel.swift */; };
 		43DE4BE022F7C425006EA673 /* Sponsorships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DE4BDF22F7C425006EA673 /* Sponsorships.swift */; };
@@ -659,6 +661,8 @@
 		43CCCAB322EFE2EF00D32ADE /* CropViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CropViewController.framework; path = Carthage/Build/iOS/CropViewController.framework; sourceTree = "<group>"; };
 		43CCCABC22F18C9100D32ADE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		43DE4BC722F4253E006EA673 /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DZNEmptyDataSet.framework; path = Carthage/Build/iOS/DZNEmptyDataSet.framework; sourceTree = "<group>"; };
+		43CD77D3232F341600AC5F07 /* PostIndexModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostIndexModel.swift; sourceTree = "<group>"; };
+		43DCB729232F918C009EB012 /* StringArrayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringArrayModel.swift; sourceTree = "<group>"; };
 		43DE4BDB22F7C257006EA673 /* SponsorshipsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorshipsAPI.swift; sourceTree = "<group>"; };
 		43DE4BDD22F7C2E3006EA673 /* SponsorshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorshipModel.swift; sourceTree = "<group>"; };
 		43DE4BDF22F7C425006EA673 /* Sponsorships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sponsorships.swift; sourceTree = "<group>"; };
@@ -908,6 +912,8 @@
 				4319191222D5DDB10005328E /* BannerModel.swift */,
 				43DE4BDD22F7C2E3006EA673 /* SponsorshipModel.swift */,
 				43FC6F8922F832A50086B65A /* FanPassModel.swift */,
+				43CD77D3232F341600AC5F07 /* PostIndexModel.swift */,
+				43DCB729232F918C009EB012 /* StringArrayModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2321,6 +2327,7 @@
 				432A67B822BC681B009E51FF /* PostModel.swift in Sources */,
 				432A67AF22BC681B009E51FF /* SubscriptionModel.swift in Sources */,
 				432A67C422BC681B009E51FF /* ErrorModel.swift in Sources */,
+				43CD77D4232F341600AC5F07 /* PostIndexModel.swift in Sources */,
 				432A67C722BC681B009E51FF /* SeriesModel.swift in Sources */,
 				43DE4BDE22F7C2E3006EA673 /* SponsorshipModel.swift in Sources */,
 				432A67B222BC681B009E51FF /* PageModel.swift in Sources */,
@@ -2345,6 +2352,7 @@
 				4319191322D5DDB10005328E /* BannerModel.swift in Sources */,
 				43FC6F8E22F922EB0086B65A /* FanPassAPI.swift in Sources */,
 				43FC6F8C22F922E00086B65A /* FanPass.swift in Sources */,
+				43DCB72A232F918C009EB012 /* StringArrayModel.swift in Sources */,
 				4319190B22D5DB5D0005328E /* BannersAPI.swift in Sources */,
 				432A67A922BC681B009E51FF /* WalletModel.swift in Sources */,
 				4319190322D585A60005328E /* Recommendation.swift in Sources */,
@@ -2612,8 +2620,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TVSPDRR58A;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -2649,7 +2657,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pictionnetwork.piction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "piction ios";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -2693,8 +2701,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = TVSPDRR58A;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -2726,7 +2734,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pictionnetwork.piction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "piction ios";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_OBJC_BRIDGING_HEADER = "";

@@ -81,7 +81,7 @@ extension UsersAPI: TargetType {
              .findPublicAddress:
             return .requestPlain
         case .signup(let loginId, let email, let username, let password, let passwordCheck):
-            let param = [
+            let param: [String : Any] = [
                 "loginId": loginId,
                 "email": email,
                 "username": username,

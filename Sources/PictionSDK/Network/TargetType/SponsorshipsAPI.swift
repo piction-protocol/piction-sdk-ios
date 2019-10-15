@@ -11,7 +11,7 @@ import Moya
 
 public enum SponsorshipsAPI {
     case get(page: Int, size: Int)
-    case sponsorship(creatorId: String, amount: Int)
+    case sponsorship(creatorId: String, amount: Double)
 }
 
 extension SponsorshipsAPI: TargetType {

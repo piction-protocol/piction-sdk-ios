@@ -13,7 +13,7 @@ public typealias SalesViewResponse = SalesModel
 
 public struct SalesModel: Response {
     public let date: Date?
-    public let amount: Int?
+    public let amount: Double?
 
     public init(map: Mapper) throws {
         date = map.optionalFrom("date")

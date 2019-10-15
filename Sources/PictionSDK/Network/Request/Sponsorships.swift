@@ -22,7 +22,7 @@ public final class Sponsorships {
             })
     }
 
-    public func sponsorship(creatorId: String, amount: Int, success successCompletion: ((SponsorshipModel) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func sponsorship(creatorId: String, amount: Double, success successCompletion: ((SponsorshipModel) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(SponsorshipsAPI.sponsorship(creatorId: creatorId, amount: amount),
             success: { (response: SponsorshipModel) in
                 successCompletion?(response)

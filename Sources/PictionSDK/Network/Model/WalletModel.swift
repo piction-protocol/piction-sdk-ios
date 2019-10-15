@@ -11,7 +11,7 @@ import Mapper
 public typealias WalletViewResponse = WalletModel
 
 public struct WalletModel: Response {
-    public let amount: Int?
+    public let amount: Double?
     public let publicKey: String?
 
     public init(map: Mapper) throws {

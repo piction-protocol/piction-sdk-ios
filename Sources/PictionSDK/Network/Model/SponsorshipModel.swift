@@ -12,7 +12,7 @@ import Foundation
 public typealias SponsorshipViewResponse = SponsorshipModel
 
 public struct SponsorshipModel: Response {
-    public let amount: Int?
+    public let amount: Double?
     public let createdAt: Date?
     public let creator: UserModel?
     public let id: Int?

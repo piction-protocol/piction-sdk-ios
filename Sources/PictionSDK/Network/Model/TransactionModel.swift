@@ -12,7 +12,7 @@ import Mapper
 public typealias TransactionViewResponse = TransactionModel
 
 public struct TransactionModel: Response {
-    public let amount: Int?
+    public let amount: Double?
     public let amountOriginal: String?
     public let blockNumber: Int?
     public let blockTime: Date?

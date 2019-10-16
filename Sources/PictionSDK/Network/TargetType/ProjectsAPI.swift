@@ -11,7 +11,7 @@ import Moya
 import UIKit
 
 public enum ProjectsAPI {
-    case all
+    case all(page: Int, size: Int)
     case create(uri: String, title: String, synopsis: String, thumbnail: String?, wideThumbnail: String?, tags: [String], status: String)
     case get(uri: String)
     case update(uri: String, title: String, synopsis: String, thumbnail: String?, wideThumbnail: String?, tags: [String], status: String)
@@ -84,8 +84,13 @@ extension ProjectsAPI: TargetType {
                 param["wideThumbnail"] = wideThumbnail
             }
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
-        case .all,
-             .get:
+        case .all(let page, let size):
+            let param = [
+                "page": page,
+                "size": size
+            ]
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
+        case .get:
             return .requestPlain
         case .update(_, let title, let synopsis, let thumbnail, let wideThumbnail, let tags, let status):
             var param: [String: Any] = [:]

@@ -13,8 +13,8 @@ public final class Projects {
     static let shared = Projects()
     private init() {}
 
-    public func all(success successCompletion: (([ProjectViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.all,
+    public func all(page: Int, size: Int, success successCompletion: (([ProjectViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.all(page: page, size: size),
             success: { (response: [ProjectViewResponse]) in
                 successCompletion?(response)
             },

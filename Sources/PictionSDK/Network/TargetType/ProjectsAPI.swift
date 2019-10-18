@@ -15,9 +15,9 @@ public enum ProjectsAPI {
     case create(uri: String, title: String, synopsis: String, thumbnail: String?, wideThumbnail: String?, tags: [String], status: String)
     case get(uri: String)
     case update(uri: String, title: String, synopsis: String, thumbnail: String?, wideThumbnail: String?, tags: [String], status: String)
-    case taggingProjects(tag: String, page: Int, size: Int)
     case uploadThumbnail(image: UIImage)
     case uploadWideThumbnail(image: UIImage)
+    case trending
 }
 
 extension ProjectsAPI: TargetType {
@@ -30,19 +30,19 @@ extension ProjectsAPI: TargetType {
         case .get(let uri),
              .update(let uri, _, _, _, _, _, _):
             return "/projects/\(uri)"
-        case .taggingProjects(let tag, _, _):
-            return "/projects/tags/\(tag)"
         case .uploadThumbnail:
             return "/projects/thumbnail"
         case .uploadWideThumbnail:
             return "/projects/wide-thumbnail"
+        case .trending:
+            return "/projects/trending"
         }
     }
     public var method: Moya.Method {
         switch self {
         case .all,
              .get,
-             .taggingProjects:
+             .trending:
             return .get
         case .create:
             return .post
@@ -55,14 +55,13 @@ extension ProjectsAPI: TargetType {
     }
     public var sampleData: Data {
         switch self {
-        case .all:
+        case .all,
+             .trending:
             return jsonSerializedUTF8(json: [ProjectViewResponse.sampleData()])
         case .create,
              .get,
              .update:
             return jsonSerializedUTF8(json: ProjectViewResponse.sampleData())
-        case .taggingProjects:
-            return jsonSerializedUTF8(json: PageViewResponse<ProjectModel>.sampleData())
         case .uploadThumbnail,
              .uploadWideThumbnail:
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
@@ -90,7 +89,8 @@ extension ProjectsAPI: TargetType {
                 "size": size
             ]
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
-        case .get:
+        case .get,
+             .trending:
             return .requestPlain
         case .update(_, let title, let synopsis, let thumbnail, let wideThumbnail, let tags, let status):
             var param: [String: Any] = [:]
@@ -105,12 +105,6 @@ extension ProjectsAPI: TargetType {
                 param["wideThumbnail"] = wideThumbnail
             }
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
-        case .taggingProjects(_, let page, let size):
-            let param = [
-                "page": page,
-                "size": size
-            ]
-            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .uploadThumbnail(let image),
              .uploadWideThumbnail(let image):
             guard let imageData = image.jpegData(compressionQuality: 1.0) else {

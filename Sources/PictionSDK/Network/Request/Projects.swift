@@ -53,16 +53,6 @@ public final class Projects {
             })
     }
 
-    public func taggingProjects(tag: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<ProjectModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(ProjectsAPI.taggingProjects(tag: tag, page: page, size: size),
-            success: { (response: PageViewResponse<ProjectModel>) in
-                successCompletion?(response)
-            },
-            failure: { error in
-                failureCompletion?(error)
-            })
-    }
-
     public func uploadThumbnail(image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.uploadThumbnail(image: image),
             success: { (response: StorageAttachmentViewResponse) in
@@ -76,6 +66,16 @@ public final class Projects {
     public func uploadWideThumbnail(image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.uploadWideThumbnail(image: image),
             success: { (response: StorageAttachmentViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func trending(success successCompletion: (([ProjectViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.trending,
+            success: { (response: [ProjectViewResponse]) in
                 successCompletion?(response)
             },
             failure: { error in

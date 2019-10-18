@@ -11,10 +11,10 @@ import Moya
 import UIKit
 
 public enum ProjectsAPI {
-    case all(page: Int, size: Int, tagName: String?)
-    case create(uri: String, title: String, synopsis: String, thumbnail: String?, wideThumbnail: String?, tags: [String], status: String)
+    case all(page: Int, size: Int, tagName: String? = nil)
+    case create(uri: String, title: String, synopsis: String, thumbnail: String? = nil, wideThumbnail: String? = nil, tags: [String], status: String)
     case get(uri: String)
-    case update(uri: String, title: String, synopsis: String, thumbnail: String?, wideThumbnail: String?, tags: [String], status: String)
+    case update(uri: String, title: String, synopsis: String, thumbnail: String? = nil, wideThumbnail: String? = nil, tags: [String], status: String)
     case uploadThumbnail(image: UIImage)
     case uploadWideThumbnail(image: UIImage)
     case trending
@@ -76,10 +76,10 @@ extension ProjectsAPI: TargetType {
             param["synopsis"] = synopsis
             param["status"] = status
             param["tags"] = tags
-            if thumbnail != nil {
+            if let thumbnail = thumbnail {
                 param["thumbnail"] = thumbnail
             }
-            if wideThumbnail != nil {
+            if let wideThumbnail = wideThumbnail {
                 param["wideThumbnail"] = wideThumbnail
             }
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
@@ -87,7 +87,7 @@ extension ProjectsAPI: TargetType {
             var param: [String: Any] = [:]
             param["page"] = page
             param["size"] = size
-            if tagName != nil {
+            if let tagName = tagName {
                 param["tagName"] = tagName
             }
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
@@ -100,10 +100,10 @@ extension ProjectsAPI: TargetType {
             param["synopsis"] = synopsis
             param["status"] = status
             param["tags"] = tags
-            if thumbnail != nil {
+            if let thumbnail = thumbnail {
                 param["thumbnail"] = thumbnail
             }
-            if wideThumbnail != nil {
+            if let wideThumbnail = wideThumbnail {
                 param["wideThumbnail"] = wideThumbnail
             }
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)

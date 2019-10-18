@@ -81,14 +81,13 @@ extension FanPassAPI: TargetType {
              .projectAll:
             return .requestPlain
         case .update(_, let name, let description, let thumbnail, let subscriptionLimit, let subscriptionPrice, let status):
-            let param: [String : Any] = [
-                "name": name,
-                "description": description,
-                "thumbnail": thumbnail,
-                "subscriptionLimit": subscriptionLimit,
-                "subscriptionPrice": subscriptionPrice,
-                "status": status
-            ]
+            var param: [String: Any] = [:]
+            param["name"] = name
+            param["description"] = description
+            param["thumbnail"] = thumbnail
+            param["subscriptionLimit"] = subscriptionLimit
+            param["subscriptionPrice"] = subscriptionPrice
+            param["status"] = status
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .subscription(_, let subscriptionPrice):
             let param: [String : Any] = [
@@ -96,15 +95,14 @@ extension FanPassAPI: TargetType {
             ]
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .create(_, let level, let name, let description, let thumbnail, let subscriptionLimit, let subscriptionPrice, let status):
-            let param: [String : Any] = [
-                "level": level,
-                "name": name,
-                "description": description,
-                "thumbnail": thumbnail,
-                "subscriptionLimit": subscriptionLimit,
-                "subscriptionPrice": subscriptionPrice,
-                "status": status
-            ]
+            var param: [String: Any] = [:]
+            param["level"] = level
+            param["name"] = name
+            param["description"] = description
+            param["thumbnail"] = thumbnail
+            param["subscriptionLimit"] = subscriptionLimit
+            param["subscriptionPrice"] = subscriptionPrice
+            param["status"] = status
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .uploadThumbnail(let image):
             guard let imageData = image.jpegData(compressionQuality: 1.0) else {

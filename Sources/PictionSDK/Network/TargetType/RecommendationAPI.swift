@@ -48,9 +48,8 @@ extension RecommendationAPI: TargetType {
     public var task: Task {
         switch self {
         case .all(let size):
-            let param: [String : Any] = [
-                "size": size
-            ]
+            var param: [String: Any] = [:]
+            param["size"] = size
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .add,
              .delete:

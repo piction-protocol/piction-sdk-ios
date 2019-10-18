@@ -86,21 +86,18 @@ extension SeriesAPI: TargetType {
             return .requestPlain
         case .create(_, let name),
              .update(_, _, let name):
-            let param = [
-                "name": name
-            ]
+            var param: [String: Any] = [:]
+            param["name"] = name
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .sort(_, let seriesIdList):
-            let param = [
-                "seriesIdList": seriesIdList
-            ]
+            var param: [String: Any] = [:]
+            param["seriesIdList"] = seriesIdList
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .allSeriesPosts(_, _, let page, let size, let isDescending):
-            let param: [String: Any] = [
-                "page": page,
-                "size": size,
-                "isDescending": isDescending
-            ]
+            var param: [String: Any] = [:]
+            param["page"] = page
+            param["size"] = size
+            param["isDescending"] = isDescending
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .getPreviousAndNextPosts(_, _, _, let count):
             let param: [String: Any] = [

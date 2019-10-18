@@ -48,23 +48,20 @@ extension SearchAPI: TargetType {
     public var task: Task {
         switch self {
         case .project(let name, let page, let size):
-            let param: [String : Any] = [
-                "name": name,
-                "page": page,
-                "size": size
-                ]
+            var param: [String: Any] = [:]
+            param["name"] = name
+            param["page"] = page
+            param["size"] = size
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .writer(let writer):
-            let param: [String : Any] = [
-                "writer": writer
-            ]
+            var param: [String: Any] = [:]
+            param["writer"] = writer
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .tag(let tag, let page, let size):
-            let param: [String : Any] = [
-                "tag": tag,
-                "page": page,
-                "size": size
-                ]
+            var param: [String: Any] = [:]
+            param["tag"] = tag
+            param["page"] = page
+            param["size"] = size
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }
     }

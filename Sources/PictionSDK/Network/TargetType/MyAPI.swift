@@ -78,16 +78,14 @@ extension MyAPI: TargetType {
             return .requestPlain
         case .transactions(let page, let size),
              .subscription(let page, let size):
-            let param = [
-                "page": page,
-                "size": size
-            ]
+            var param: [String: Any] = [:]
+            param["page"] = page
+            param["size"] = size
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .sales(let salesYear, let salesMonth):
-            let param = [
-                "salesYear": salesYear,
-                "salesMonth": salesMonth
-            ]
+            var param: [String: Any] = [:]
+            param["salesYear"] = salesYear
+            param["salesMonth"] = salesMonth
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }
     }

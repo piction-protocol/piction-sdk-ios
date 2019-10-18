@@ -41,11 +41,10 @@ extension SessionsAPI: TargetType {
     public var task: Task {
         switch self {
         case .create(let loginId, let password, let rememberme):
-            let param: [String : Any] = [
-                "loginId": loginId,
-                "password": password,
-                "rememberme": rememberme
-            ]
+            var param: [String: Any] = [:]
+            param["loginId"] = loginId
+            param["password"] = password
+            param["rememberme"] = rememberme
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .delete:
             return .requestPlain

@@ -15,7 +15,7 @@ public enum UsersAPI {
     case signup(loginId: String, email: String, username: String, password: String, passwordCheck: String)
     case findOne(id: String)
     case me
-    case update(username: String, password: String, picture: String?)
+    case update(username: String, password: String, picture: String? = nil)
     case updatePassword(password: String, newPassword: String, passwordCheck: String)
     case uploadPicture(image: UIImage)
     case findPublicAddress(address: String)
@@ -81,27 +81,26 @@ extension UsersAPI: TargetType {
              .findPublicAddress:
             return .requestPlain
         case .signup(let loginId, let email, let username, let password, let passwordCheck):
-            let param: [String : Any] = [
-                "loginId": loginId,
-                "email": email,
-                "username": username,
-                "password": password,
-                "passwordCheck": passwordCheck
-            ]
+            var param: [String: Any] = [:]
+            param["loginId"] = loginId
+            param["email"] = email
+            param["username"] = username
+            param["password"] = password
+            param["passwordCheck"] = passwordCheck
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .update(let username, let password, let picture):
-            let param: [String : Any] = [
-                "username": username,
-                "password": password,
-                "picture": picture
-            ]
+            var param: [String: Any] = [:]
+            param["username"] = username
+            param["password"] = password
+            if let picture = picture {
+                param["picture"] = picture
+            }
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .updatePassword(let password, let newPassword, let passwordCheck):
-            let param = [
-                "password": password,
-                "newPassword": newPassword,
-                "passwordCheck": passwordCheck
-            ]
+            var param: [String: Any] = [:]
+            param["password"] = password
+            param["newPassword"] = newPassword
+            param["passwordCheck"] = passwordCheck
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .uploadPicture(let image):
             guard let imageData = image.jpegData(compressionQuality: 1.0) else {

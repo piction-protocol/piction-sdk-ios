@@ -11,10 +11,10 @@ import Moya
 import UIKit
 
 public enum PostsAPI {
-    case all(uri: String, isRequiredFanPass: Bool?, page: Int, size: Int)
-    case create(uri: String, title: String, content: String, cover: String?, seriesId: Int?, fanPassId: Int?, status: String, publishedAt: Int64)
+    case all(uri: String, isRequiredFanPass: Bool? = nil, page: Int, size: Int)
+    case create(uri: String, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, fanPassId: Int? = nil, status: String, publishedAt: Int64)
     case get(uri: String, postId: Int)
-    case update(uri: String, postId: Int, title: String, content: String, cover: String?, seriesId: Int?, fanPassId: Int?, status: String, publishedAt: Int64)
+    case update(uri: String, postId: Int, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, fanPassId: Int? = nil, status: String, publishedAt: Int64)
     case delete(uri: String, postId: Int)
     case content(uri: String, postId: Int)
     case isLike(uri: String, postId: Int)
@@ -99,11 +99,11 @@ extension PostsAPI: TargetType {
         switch self {
         case .all(_, let isRequiredFanPass, let page, let size):
             var param: [String: Any] = [:]
-            if isRequiredFanPass != nil {
-                param["isRequiredFanPass"] = isRequiredFanPass
-            }
             param["page"] = page
             param["size"] = size
+            if let isRequiredFanPass = isRequiredFanPass {
+                param["isRequiredFanPass"] = isRequiredFanPass
+            }
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .create(_, let title, let content, let cover, let seriesId, let fanPassId, let status, let publishedAt),
              .update(_, _, let title, let content, let cover, let seriesId, let fanPassId, let status, let publishedAt):

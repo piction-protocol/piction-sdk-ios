@@ -41,16 +41,14 @@ extension SponsorshipsAPI: TargetType {
     public var task: Task {
         switch self {
         case .get(let page, let size):
-            let param: [String : Any] = [
-                "page": page,
-                "size": size
-            ]
+            var param: [String: Any] = [:]
+            param["page"] = page
+            param["size"] = size
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .sponsorship(let creatorId, let amount):
-            let param: [String : Any] = [
-                "creatorId": creatorId,
-                "amount": amount
-            ]
+            var param: [String: Any] = [:]
+            param["creatorId"] = creatorId
+            param["amount"] = amount
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         }
     }

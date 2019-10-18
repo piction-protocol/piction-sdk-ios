@@ -31,4 +31,14 @@ public final class Search {
                 failureCompletion?(error)
             })
     }
+
+    public func tag(tag: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<TagModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SearchAPI.tag(tag: tag, page: page, size: size),
+            success: { (response: PageViewResponse<TagModel>) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
 }

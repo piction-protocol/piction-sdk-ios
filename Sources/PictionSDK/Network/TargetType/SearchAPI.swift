@@ -12,6 +12,7 @@ import Moya
 public enum SearchAPI {
     case project(name: String, page: Int, size: Int)
     case writer(writer: String)
+    case tag(tag: String, page: Int, size: Int)
 }
 
 extension SearchAPI: TargetType {
@@ -22,12 +23,15 @@ extension SearchAPI: TargetType {
             return "/search/projects"
         case .writer:
             return "/search/writers"
+        case .tag:
+            return "/search/tags"
         }
     }
     public var method: Moya.Method {
         switch self {
         case .project,
-             .writer:
+             .writer,
+             .tag:
             return .get
         }
     }
@@ -37,6 +41,8 @@ extension SearchAPI: TargetType {
             return jsonSerializedUTF8(json: PageViewResponse<ProjectModel>.sampleData())
         case .writer:
             return jsonSerializedUTF8(json: [UserViewResponse.sampleData()])
+        case .tag:
+            return jsonSerializedUTF8(json: PageViewResponse<TagModel>.sampleData())
         }
     }
     public var task: Task {
@@ -52,6 +58,13 @@ extension SearchAPI: TargetType {
             let param: [String : Any] = [
                 "writer": writer
             ]
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
+        case .tag(let tag, let page, let size):
+            let param: [String : Any] = [
+                "tag": tag,
+                "page": page,
+                "size": size
+                ]
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }
     }

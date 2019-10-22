@@ -23,7 +23,7 @@ public final class Posts {
             })
     }
 
-    public func create(uri: String, title: String, content: String, cover: String?, seriesId: Int?, fanPassId: Int?, status: String, publishedAt: Int64,  success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func create(uri: String, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, fanPassId: Int? = nil, status: String, publishedAt: Int64,  success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(PostsAPI.create(uri: uri, title: title, content: content, cover: cover, seriesId: seriesId, fanPassId: fanPassId, status: status, publishedAt: publishedAt),
             success: { (response: PostViewResponse) in
                 successCompletion?(response)
@@ -43,7 +43,7 @@ public final class Posts {
             })
     }
 
-    public func update(uri: String, postId: Int, title: String, content: String, cover: String?, seriesId: Int?, fanPassId: Int?, status: String, publishedAt: Int64, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func update(uri: String, postId: Int, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, fanPassId: Int? = nil, status: String, publishedAt: Int64, success successCompletion: ((PostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(PostsAPI.update(uri: uri, postId: postId, title: title, content: content, cover: cover, seriesId: seriesId, fanPassId: fanPassId, status: status, publishedAt: publishedAt),
             success: { (response: PostViewResponse) in
                 successCompletion?(response)

@@ -32,11 +32,11 @@ public extension Reactive {
 
     private static func request<T: TargetType>(_ target: T, success successCompletion: @escaping (Moya.Response) -> Void, failure failureCompletion: @escaping (ErrorType) -> Void) {
         let provider = MoyaProvider<T>()
-
         provider.request(target) { result in
             switch result {
             case let .success(response):
                 do {
+                    print(target)
                     print(response)
                     try response.filterStatusCode()
 
@@ -46,6 +46,7 @@ public extension Reactive {
                     }
                     successCompletion(response)
                 } catch {
+                    print(target)
                     print(error)
                     if let error = error as? ErrorType {
                         failureCompletion(error)
@@ -62,6 +63,7 @@ public extension Reactive {
                     }
                 }
             case let .failure(error):
+                print(target)
                 print("Request Error: \(error)")
                 let errorItem: [String: Any] = [
                     "code": error.errorCode,

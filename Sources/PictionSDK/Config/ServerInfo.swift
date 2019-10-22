@@ -27,7 +27,7 @@ final class ServerInfo {
     }
 
     static var stage: stageType {
-        var infoDictionary: [AnyHashable: Any] = Bundle.main.infoDictionary!
+        let infoDictionary: [AnyHashable: Any] = Bundle.main.infoDictionary!
         let appID: String = infoDictionary["CFBundleIdentifier"] as! String
 
         if appID == stageType.dev.bundleId {

@@ -23,7 +23,7 @@ public final class Projects {
             })
     }
 
-    public func create(uri: String, title: String, synopsis: String, thumbnail: String?, wideThumbnail: String?, tags: [String], status: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func create(uri: String, title: String, synopsis: String, thumbnail: String? = nil, wideThumbnail: String? = nil, tags: [String], status: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.create(uri: uri, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail, tags: tags, status: status),
             success: { (response: ProjectViewResponse) in
                 successCompletion?(response)
@@ -43,7 +43,7 @@ public final class Projects {
             })
     }
 
-    public func update(uri: String, title: String, synopsis: String, thumbnail: String?, wideThumbnail: String?, tags: [String], status: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func update(uri: String, title: String, synopsis: String, thumbnail: String? = nil, wideThumbnail: String? = nil, tags: [String], status: String, success successCompletion: ((ProjectViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.update(uri: uri, title: title, synopsis: synopsis, thumbnail: thumbnail, wideThumbnail: wideThumbnail, tags: tags, status: status),
             success: { (response: ProjectViewResponse) in
                 successCompletion?(response)

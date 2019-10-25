@@ -36,7 +36,7 @@ public extension Reactive {
             switch result {
             case let .success(response):
                 do {
-                    print(target)
+                    print("\(target.self).\(target)")
                     print(response)
                     try response.filterStatusCode()
 
@@ -46,7 +46,6 @@ public extension Reactive {
                     }
                     successCompletion(response)
                 } catch {
-                    print(target)
                     print(error)
                     if let error = error as? ErrorType {
                         failureCompletion(error)
@@ -63,7 +62,6 @@ public extension Reactive {
                     }
                 }
             case let .failure(error):
-                print(target)
                 print("Request Error: \(error)")
                 let errorItem: [String: Any] = [
                     "code": error.errorCode,

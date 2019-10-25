@@ -19,7 +19,7 @@ public struct ProjectModel: Response {
     public let status: String?
     public let subscriptionUserCount: Int?
     public let synopsis: String?
-    public let tag: [String]?
+    public let tags: [String]?
     public let thumbnail: String?
     public let title: String?
     public let uri: String?
@@ -34,7 +34,7 @@ public struct ProjectModel: Response {
         status = map.optionalFrom("status")
         subscriptionUserCount = map.optionalFrom("subscriptionUserCount")
         synopsis = map.optionalFrom("synopsis")
-        tag = map.optionalFrom("tag")
+        tags = map.optionalFrom("tags")
         thumbnail = map.optionalFrom("thumbnail")
         title = map.optionalFrom("title")
         uri = map.optionalFrom("uri")
@@ -55,7 +55,7 @@ public struct ProjectModel: Response {
             "status": status,
             "subscriptionUserCount": subscriptionUserCount,
             "synopsis": synopsis,
-            "tag": [],
+            "tags": [],
             "thumbnail": thumbnail,
             "title": title,
             "uri": uri,
@@ -75,6 +75,7 @@ extension ProjectModel {
             "status": "PUBLIC",
             "subscriptionUserCount": 0,
             "synopsis": "synopsis",
+            "tags": ["테스트", "프로젝트"],
             "thumbnail": "thumbnail",
             "title": "title",
             "url": "url",

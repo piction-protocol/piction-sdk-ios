@@ -22,6 +22,36 @@ public final class My {
             })
     }
 
+    public func posts(uri: String, seriesId: Int, isRequiredFanPass: Bool?, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(MyAPI.posts(uri: uri, seriesId: seriesId, isRequiredFanPass: isRequiredFanPass, page: page, size: size),
+            success: { (response: PageViewResponse<PostModel>) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func projectSubscriptions(uri: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<SubscriptionUserModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(MyAPI.projectSubscriptions(uri: uri, page: page, size: size),
+            success: { (response: PageViewResponse<SubscriptionUserModel>) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func projectsCount(success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(MyAPI.projectsCount,
+            success: { (response: DefaultViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
     public func transactions(page: Int, size: Int, success successCompletion: ((PageViewResponse<TransactionModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(MyAPI.transactions(page: page, size: size),
             success: { (response: PageViewResponse<TransactionModel>) in

@@ -11,6 +11,9 @@ import Moya
 
 public enum MyAPI {
     case projects
+    case posts(uri: String, seriesId: Int, isRequiredFanPass: Bool?, page: Int, size: Int)
+    case projectSubscriptions(uri: String, page: Int, size: Int)
+    case projectsCount
     case transactions(page: Int, size: Int)
     case wallet
     case sales(salesYear: Int, salesMonth: Int)
@@ -25,6 +28,12 @@ extension MyAPI: TargetType {
         switch self {
         case .projects:
             return "/my/projects"
+        case .posts(let uri, _, _, _, _):
+            return "/my/projects/\(uri)/posts"
+        case .projectSubscriptions(let uri, _, _):
+            return "/my/projects/\(uri)/subscriptions"
+        case .projectsCount:
+            return "/my/projects/count"
         case .transactions:
             return "/my/transactions"
         case .wallet:
@@ -42,6 +51,9 @@ extension MyAPI: TargetType {
     public var method: Moya.Method {
         switch self {
         case .projects,
+             .posts,
+             .projectSubscriptions,
+             .projectsCount,
              .transactions,
              .wallet,
              .sales,
@@ -55,6 +67,12 @@ extension MyAPI: TargetType {
         switch self {
         case .projects:
             return jsonSerializedUTF8(json: [ProjectViewResponse.sampleData()])
+        case .posts:
+            return jsonSerializedUTF8(json: PageViewResponse<PostModel>.sampleData())
+        case .projectSubscriptions:
+            return jsonSerializedUTF8(json: PageViewResponse<PostModel>.sampleData())
+        case .projectsCount:
+            return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
         case .transactions:
             return jsonSerializedUTF8(json: PageViewResponse<TransactionModel>.sampleData())
         case .wallet:
@@ -74,9 +92,12 @@ extension MyAPI: TargetType {
         case .projects,
              .wallet,
              .sponsorshipTransaction,
-             .subscriptionTransaction:
+             .subscriptionTransaction,
+             .projectsCount:
             return .requestPlain
-        case .transactions(let page, let size),
+        case .posts(_, _, _, let page, let size),
+             .projectSubscriptions(_, let page, let size),
+             .transactions(let page, let size),
              .subscription(let page, let size):
             var param: [String: Any] = [:]
             param["page"] = page

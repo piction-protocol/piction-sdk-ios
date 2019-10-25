@@ -22,7 +22,7 @@ public final class My {
             })
     }
 
-    public func posts(uri: String, seriesId: Int, isRequiredFanPass: Bool?, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func posts(uri: String, seriesId: Int? = nil, isRequiredFanPass: Bool?, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(MyAPI.posts(uri: uri, seriesId: seriesId, isRequiredFanPass: isRequiredFanPass, page: page, size: size),
             success: { (response: PageViewResponse<PostModel>) in
                 successCompletion?(response)

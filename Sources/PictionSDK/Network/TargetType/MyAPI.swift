@@ -11,7 +11,7 @@ import Moya
 
 public enum MyAPI {
     case projects
-    case posts(uri: String, seriesId: Int, isRequiredFanPass: Bool?, page: Int, size: Int)
+    case posts(uri: String, seriesId: Int? = nil, isRequiredFanPass: Bool?, page: Int, size: Int)
     case projectSubscriptions(uri: String, page: Int, size: Int)
     case projectsCount
     case transactions(page: Int, size: Int)
@@ -95,8 +95,15 @@ extension MyAPI: TargetType {
              .subscriptionTransaction,
              .projectsCount:
             return .requestPlain
-        case .posts(_, _, _, let page, let size),
-             .projectSubscriptions(_, let page, let size),
+        case .posts(_, let seriesId, _, let page, let size):
+            var param: [String: Any] = [:]
+            param["page"] = page
+            param["size"] = size
+            if seriesId != nil {
+                param["seriesId"] = seriesId
+            }
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
+        case .projectSubscriptions(_, let page, let size),
              .transactions(let page, let size),
              .subscription(let page, let size):
             var param: [String: Any] = [:]

@@ -90,9 +90,10 @@ extension SeriesAPI: TargetType {
             param["name"] = name
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .sort(_, let ids):
-            var param: [String: Any] = [:]
-            param["ids"] = ids
-            return .requestParameters(parameters: param, encoding: JSONEncoding.default)
+            guard let data = try? JSONSerialization.data(withJSONObject: ids, options: []) else {
+                return .requestPlain
+            }
+            return .requestData(data)
         case .allSeriesPosts(_, _, let page, let size, let isDescending):
             var param: [String: Any] = [:]
             param["page"] = page

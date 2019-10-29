@@ -36,7 +36,7 @@ public extension Reactive {
             switch result {
             case let .success(response):
                 do {
-                    print("\(target.self).\(target)")
+                    print("\(type(of: target)).\(target)")
                     print(response)
                     try response.filterStatusCode()
 

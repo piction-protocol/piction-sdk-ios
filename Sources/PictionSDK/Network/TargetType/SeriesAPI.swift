@@ -12,7 +12,7 @@ import Moya
 public enum SeriesAPI {
     case all(uri: String)
     case create(uri: String, name: String)
-    case sort(uri: String, seriesIdList: [Int])
+    case sort(uri: String, ids: [Int])
     case get(uri: String, seriesId: Int)
     case update(uri: String, seriesId: Int, name: String)
     case delete(uri: String, seriesId: Int)
@@ -89,9 +89,9 @@ extension SeriesAPI: TargetType {
             var param: [String: Any] = [:]
             param["name"] = name
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
-        case .sort(_, let seriesIdList):
+        case .sort(_, let ids):
             var param: [String: Any] = [:]
-            param["seriesIdList"] = seriesIdList
+            param["ids"] = ids
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .allSeriesPosts(_, _, let page, let size, let isDescending):
             var param: [String: Any] = [:]

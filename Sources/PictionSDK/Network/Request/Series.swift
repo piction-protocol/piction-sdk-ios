@@ -32,8 +32,8 @@ public final class Series {
             })
     }
 
-    public func sort(uri: String, seriesIdList: [Int], success successCompletion: (([SeriesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SeriesAPI.sort(uri: uri, seriesIdList: seriesIdList),
+    public func sort(uri: String, ids: [Int], success successCompletion: (([SeriesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SeriesAPI.sort(uri: uri, ids: ids),
             success: { (response: [SeriesViewResponse]) in
                 successCompletion?(response)
             },

@@ -15,7 +15,7 @@ public final class Sessions {
     public func create(loginId: String, password: String, rememberme: Bool, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(SessionsAPI.create(loginId: loginId, password: password, rememberme: rememberme),
             success: { (response: AuthenticationViewResponse) in
-                PictionManager.setToken(response.accessToken ?? "")
+//                PictionManager.setToken(response.accessToken ?? "")
                 successCompletion?(response)
             },
             failure: { error in
@@ -26,7 +26,7 @@ public final class Sessions {
     public func delete(success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(SessionsAPI.delete,
             success: { (response: AuthenticationViewResponse) in
-                PictionManager.setToken(response.accessToken ?? "")
+//                PictionManager.setToken(response.accessToken ?? "")
                 successCompletion?(response)
             },
             failure: { error in

@@ -29,7 +29,7 @@ public final class PictionSDK {
             success: { (response: M) in
                 if T.self == SessionsAPI.self {
                     let token = response as? AuthenticationViewResponse
-                    PictionManager.setToken(token?.accessToken ?? "")
+//                    PictionManager.setToken(token?.accessToken ?? "")
                 }
                 successCompletion?(response)
             },

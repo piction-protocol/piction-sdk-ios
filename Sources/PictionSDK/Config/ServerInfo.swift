@@ -30,7 +30,7 @@ final class ServerInfo {
         let infoDictionary: [AnyHashable: Any] = Bundle.main.infoDictionary!
         let appID: String = infoDictionary["CFBundleIdentifier"] as! String
 
-        if appID == stageType.dev.bundleId || "\(appID).shareEx" == stageType.dev.bundleId {
+        if appID == stageType.dev.bundleId || appID == "\(stageType.dev.bundleId).shareEx" {
             return .dev
         } else {
             return .live

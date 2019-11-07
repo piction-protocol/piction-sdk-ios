@@ -15,7 +15,10 @@ public class PictionManager {
     }
 
     public static var getToken: String {
-        return UserDefaults.standard.string(forKey: "AccessToken") ?? ""
+        let keychain = Keychain(service: ServerInfo.baseApiUrl)
+        let token: String? = keychain["AccessToken"]
+
+        return token ?? ""
     }
 
     public static func logout() {
@@ -23,11 +26,15 @@ public class PictionManager {
     }
 
     public static func setToken(_ token: String) {
-        UserDefaults.standard.set(token, forKey: "AccessToken")
+        let keychain = Keychain(service: ServerInfo.baseApiUrl)
+        keychain["AccessToken"] = token
+//        UserDefaults.standard.set(token, forKey: "AccessToken")
     }
 
     static func removeToken() {
-        UserDefaults.standard.set("", forKey: "AccessToken")
+        let keychain = Keychain(service: ServerInfo.baseApiUrl)
+        keychain["AccessToken"] = ""
+//        UserDefaults.standard.set("", forKey: "AccessToken")
     }
 
     static var getDeviceUUID: String {

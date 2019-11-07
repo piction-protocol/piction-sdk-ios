@@ -21,7 +21,7 @@ final class ServerInfo {
             case .dev:
                 return "com.pictionnetwork.piction-test"
             default:
-                return "com.pictionnetwork.piction"
+                return ""
             }
         }
     }
@@ -30,7 +30,7 @@ final class ServerInfo {
         let infoDictionary: [AnyHashable: Any] = Bundle.main.infoDictionary!
         let appID: String = infoDictionary["CFBundleIdentifier"] as! String
 
-        if appID == stageType.dev.bundleId {
+        if appID == stageType.dev.bundleId || "\(appID).shareEx" == stageType.dev.bundleId {
             return .dev
         } else {
             return .live

@@ -18,6 +18,15 @@ public enum ProjectsAPI {
     case uploadThumbnail(image: UIImage)
     case uploadWideThumbnail(image: UIImage)
     case trending
+    case fanPassAll(uri: String)
+    case createFanPass(uri: String, name: String, description: String, thumbnail: String? = nil, subscriptionLimit: Int, subscriptionPrice: Int)
+    case fanPass(uri: String, fanPassId: Int)
+    case updateFanPass(uri: String, fanPassId: Int, name: String, description: String, thumbnail: String? = nil, subscriptionLimit: Int, subscriptionPrice: Int)
+    case deleteFanPass(uri: String, fanPassId: Int)
+    case subscription(uri: String, fanPassId: Int, subscriptionPrice: Int)
+    case cancelSubscription(uri: String, fanPassId: Int)
+    case getProjectSubscription(uri: String)
+    case uploadFanPassThumbnail(image: UIImage)
 }
 
 extension ProjectsAPI: TargetType {
@@ -36,21 +45,45 @@ extension ProjectsAPI: TargetType {
             return "/projects/wide-thumbnail"
         case .trending:
             return "/projects/trending"
+        case .fanPassAll(let uri),
+             .createFanPass(let uri, _, _, _, _, _):
+            return "/projects/\(uri)/fan-pass"
+        case .fanPass(let uri, let fanPassId),
+             .updateFanPass(let uri, let fanPassId, _, _, _, _, _),
+             .deleteFanPass(let uri, let fanPassId):
+            return "/projects/\(uri)/fan-pass/\(fanPassId)"
+        case .subscription(let uri, let fanPassId, _),
+             .cancelSubscription(let uri, let fanPassId):
+            return "/projects/\(uri)/fan-pass/\(fanPassId)/subscription"
+        case .getProjectSubscription(let uri):
+            return "/projects/\(uri)/fan-pass/subscription"
+        case .uploadFanPassThumbnail:
+            return "/projects/fan-pass/thumbnail"
         }
     }
     public var method: Moya.Method {
         switch self {
         case .all,
              .get,
-             .trending:
+             .trending,
+             .fanPassAll,
+             .fanPass,
+             .getProjectSubscription:
             return .get
-        case .create:
+        case .create,
+             .createFanPass,
+             .subscription:
             return .post
-        case .update:
+        case .update,
+             .updateFanPass:
             return .put
         case .uploadThumbnail,
-             .uploadWideThumbnail:
+             .uploadWideThumbnail,
+             .uploadFanPassThumbnail:
             return .patch
+        case .deleteFanPass,
+             .cancelSubscription:
+            return .delete
         }
     }
     public var sampleData: Data {
@@ -63,8 +96,21 @@ extension ProjectsAPI: TargetType {
              .update:
             return jsonSerializedUTF8(json: ProjectViewResponse.sampleData())
         case .uploadThumbnail,
-             .uploadWideThumbnail:
+             .uploadWideThumbnail,
+             .uploadFanPassThumbnail:
             return jsonSerializedUTF8(json: StorageAttachmentViewResponse.sampleData())
+        case .fanPassAll:
+            return jsonSerializedUTF8(json: [FanPassViewResponse.sampleData()])
+        case .createFanPass,
+             .fanPass,
+             .updateFanPass:
+            return jsonSerializedUTF8(json: FanPassViewResponse.sampleData())
+        case .deleteFanPass,
+             .cancelSubscription:
+            return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
+        case .subscription,
+             .getProjectSubscription:
+            return jsonSerializedUTF8(json: SubscriptionViewResponse.sampleData())
         }
     }
     public var task: Task {
@@ -92,7 +138,12 @@ extension ProjectsAPI: TargetType {
             }
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .get,
-             .trending:
+             .trending,
+             .fanPassAll,
+             .fanPass,
+             .deleteFanPass,
+             .cancelSubscription,
+             .getProjectSubscription:
             return .requestPlain
         case .update(_, let title, let synopsis, let thumbnail, let wideThumbnail, let tags, let status):
             var param: [String: Any] = [:]
@@ -108,18 +159,35 @@ extension ProjectsAPI: TargetType {
             }
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .uploadThumbnail(let image),
-             .uploadWideThumbnail(let image):
+             .uploadWideThumbnail(let image),
+             .uploadFanPassThumbnail(let image):
             guard let imageData = image.jpegData(compressionQuality: 1.0) else {
                 return .requestPlain
             }
             let formData: [Moya.MultipartFormData] = [Moya.MultipartFormData(provider: .data(imageData), name: "file", fileName: "user.jpeg", mimeType: "image/jpeg")]
             return .uploadMultipart(formData)
+        case .createFanPass(_, let name, let description, let thumbnail, let subscriptionLimit, let subscriptionPrice),
+             .updateFanPass(_, _, let name, let description, let thumbnail, let subscriptionLimit, let subscriptionPrice):
+            var param: [String: Any] = [:]
+            param["name"] = name
+            param["description"] = description
+            param["subscriptionLimit"] = subscriptionLimit
+            param["subscriptionPrice"] = subscriptionPrice
+            if let thumbnail = thumbnail {
+                param["thumbnail"] = thumbnail
+            }
+            return .requestParameters(parameters: param, encoding: JSONEncoding.default)
+        case .subscription(_, _, let subscriptionPrice):
+            var param: [String: Any] = [:]
+            param["subscriptionPrice"] = subscriptionPrice
+            return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         }
     }
     public var headers: [String: String]? {
         switch self {
         case .uploadThumbnail,
-             .uploadWideThumbnail:
+             .uploadWideThumbnail,
+             .uploadFanPassThumbnail:
             return ServerInfo.getMultipartFormDataHeader()
         default:
             return ServerInfo.getCustomHeader()

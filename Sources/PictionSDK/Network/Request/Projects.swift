@@ -82,4 +82,94 @@ public final class Projects {
                 failureCompletion?(error)
             })
     }
+
+    public func fanPassAll(uri: String, success successCompletion: (([FanPassViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.fanPassAll(uri: uri),
+            success: { (response: [FanPassViewResponse]) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func createFanPass(uri: String, name: String, description: String, thumbnail: String? = nil, subscriptionLimit: Int, subscriptionPrice: Int, success successCompletion: ((FanPassViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.createFanPass(uri: uri, name: name, description: description, thumbnail: thumbnail, subscriptionLimit: subscriptionLimit, subscriptionPrice: subscriptionPrice),
+            success: { (response: FanPassViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func fanPass(uri: String, fanPassId: Int, success successCompletion: ((FanPassViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.fanPass(uri: uri, fanPassId: fanPassId),
+            success: { (response: FanPassViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func updateFanPass(uri: String, fanPassId: Int, name: String, description: String, thumbnail: String? = nil, subscriptionLimit: Int, subscriptionPrice: Int, success successCompletion: ((FanPassViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.updateFanPass(uri: uri, fanPassId: fanPassId, name: name, description: description, thumbnail: thumbnail, subscriptionLimit: subscriptionLimit, subscriptionPrice: subscriptionPrice),
+            success: { (response: FanPassViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func deleteFanPass(uri: String, fanPassId: Int, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.deleteFanPass(uri: uri, fanPassId: fanPassId),
+            success: { (response: DefaultViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func subscription(uri: String, fanPassId: Int, subscriptionPrice: Int, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.subscription(uri: uri, fanPassId: fanPassId, subscriptionPrice: subscriptionPrice),
+            success: { (response: SubscriptionViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func cancelSubscription(uri: String, fanPassId: Int, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.cancelSubscription(uri: uri, fanPassId: fanPassId),
+            success: { (response: DefaultViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func getProjectSubscription(uri: String, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.getProjectSubscription(uri: uri),
+            success: { (response: SubscriptionViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func uploadFanPassThumbnail(image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.uploadFanPassThumbnail(image: image),
+            success: { (response: StorageAttachmentViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
 }

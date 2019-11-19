@@ -92,9 +92,9 @@ public final class My {
             })
     }
 
-    public func sponsorshipTransaction(txHash: String, success successCompletion: ((SponsorshipViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func sponsorshipTransaction(txHash: String, success successCompletion: ((TransactionSponsorshipViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(MyAPI.sponsorshipTransaction(txHash: txHash),
-            success: { (response: SponsorshipViewResponse) in
+            success: { (response: TransactionSponsorshipViewResponse) in
                 successCompletion?(response)
             },
             failure: { error in
@@ -102,9 +102,9 @@ public final class My {
             })
     }
 
-    public func subscriptionTransaction(txHash: String, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func subscriptionTransaction(txHash: String, success successCompletion: ((TransactionSubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(MyAPI.subscriptionTransaction(txHash: txHash),
-            success: { (response: SubscriptionViewResponse) in
+            success: { (response: TransactionSubscriptionViewResponse) in
                 successCompletion?(response)
             },
             failure: { error in

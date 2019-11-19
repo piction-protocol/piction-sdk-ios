@@ -82,9 +82,9 @@ extension MyAPI: TargetType {
         case .subscription:
             return jsonSerializedUTF8(json: PageViewResponse<ProjectModel>.sampleData())
         case .sponsorshipTransaction:
-            return jsonSerializedUTF8(json: SponsorshipViewResponse.sampleData())
+            return jsonSerializedUTF8(json: TransactionSponsorshipViewResponse.sampleData())
         case .subscriptionTransaction:
-            return jsonSerializedUTF8(json: SubscriptionViewResponse.sampleData())
+            return jsonSerializedUTF8(json: TransactionSubscriptionViewResponse.sampleData())
         }
     }
     public var task: Task {

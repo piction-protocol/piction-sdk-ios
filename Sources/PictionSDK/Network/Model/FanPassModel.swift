@@ -17,7 +17,7 @@ public struct FanPassModel: Response {
     public let id: Int?
     public let level: Int?
     public let name: String?
-    public let status: Bool?
+    public let postCount: Int?
     public let subscriptionCount: Int?
     public let subscriptionLimit: Int?
     public let subscriptionPrice: Int?
@@ -29,7 +29,7 @@ public struct FanPassModel: Response {
         id = map.optionalFrom("id")
         level = map.optionalFrom("level")
         name = map.optionalFrom("name")
-        status = map.optionalFrom("status")
+        postCount = map.optionalFrom("postCount")
         subscriptionCount = map.optionalFrom("subscriptionCount")
         subscriptionLimit = map.optionalFrom("subscriptionLimit")
         subscriptionPrice = map.optionalFrom("subscriptionPrice")
@@ -47,7 +47,7 @@ public struct FanPassModel: Response {
             "id": id,
             "level": level,
             "name": name,
-            "status": status,
+            "postCount": postCount,
             "subscriptionCount": subscriptionCount,
             "subscriptionLimit": subscriptionLimit,
             "subscriptionPrice": subscriptionPrice,
@@ -64,7 +64,7 @@ extension FanPassModel {
             "id": 0,
             "level": 0,
             "name": "작가이름",
-            "status": true,
+            "postCount": 0,
             "subscriptionCount": 0,
             "subscriptionLimit": 100,
             "subscriptionPrice": 0,

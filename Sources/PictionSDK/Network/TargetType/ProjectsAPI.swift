@@ -27,6 +27,7 @@ public enum ProjectsAPI {
     case cancelSubscription(uri: String, fanPassId: Int)
     case getProjectSubscription(uri: String)
     case uploadFanPassThumbnail(image: UIImage)
+    case fees(uri: String)
 }
 
 extension ProjectsAPI: TargetType {
@@ -59,6 +60,8 @@ extension ProjectsAPI: TargetType {
             return "/projects/\(uri)/fan-pass/subscription"
         case .uploadFanPassThumbnail:
             return "/projects/fan-pass/thumbnail"
+        case .fees(let uri):
+            return "/projects/\(uri)/fees"
         }
     }
     public var method: Moya.Method {
@@ -68,7 +71,8 @@ extension ProjectsAPI: TargetType {
              .trending,
              .fanPassAll,
              .fanPass,
-             .getProjectSubscription:
+             .getProjectSubscription,
+             .fees:
             return .get
         case .create,
              .createFanPass,
@@ -111,6 +115,8 @@ extension ProjectsAPI: TargetType {
         case .subscription,
              .getProjectSubscription:
             return jsonSerializedUTF8(json: SubscriptionViewResponse.sampleData())
+        case .fees:
+            return jsonSerializedUTF8(json: FeesViewResponse.sampleData())
         }
     }
     public var task: Task {
@@ -143,7 +149,8 @@ extension ProjectsAPI: TargetType {
              .fanPass,
              .deleteFanPass,
              .cancelSubscription,
-             .getProjectSubscription:
+             .getProjectSubscription,
+             .fees:
             return .requestPlain
         case .update(_, let title, let synopsis, let thumbnail, let wideThumbnail, let tags, let status):
             var param: [String: Any] = [:]

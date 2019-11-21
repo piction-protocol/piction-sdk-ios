@@ -56,6 +56,7 @@
 		436881F622E6F1C800DB42B6 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881A422E6E48700DB42B6 /* KeychainAccess.framework */; };
 		436881F722E6F1C800DB42B6 /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881A222E6E48700DB42B6 /* Mapper.framework */; };
 		436881FA22E6F1F500DB42B6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881AC22E6E48800DB42B6 /* Result.framework */; };
+		436C759E2386846C00902F08 /* FeesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436C759D2386846C00902F08 /* FeesModel.swift */; };
 		43C5C9472383DA53004BACFC /* TransactionSubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5C9462383DA53004BACFC /* TransactionSubscriptionModel.swift */; };
 		43C5C9492383DA83004BACFC /* TransactionSponsorshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5C9482383DA83004BACFC /* TransactionSponsorshipModel.swift */; };
 		43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */; };
@@ -144,6 +145,7 @@
 		436881A422E6E48700DB42B6 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		436881AC22E6E48800DB42B6 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		436881B022E6E48800DB42B6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		436C759D2386846C00902F08 /* FeesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeesModel.swift; sourceTree = "<group>"; };
 		43C5C9462383DA53004BACFC /* TransactionSubscriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSubscriptionModel.swift; sourceTree = "<group>"; };
 		43C5C9482383DA83004BACFC /* TransactionSponsorshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSponsorshipModel.swift; sourceTree = "<group>"; };
 		43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				430907CB23629536005EF5A2 /* SubscriptionUserModel.swift */,
 				43C5C9462383DA53004BACFC /* TransactionSubscriptionModel.swift */,
 				43C5C9482383DA83004BACFC /* TransactionSponsorshipModel.swift */,
+				436C759D2386846C00902F08 /* FeesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				432A67B822BC681B009E51FF /* PostModel.swift in Sources */,
 				432A67AF22BC681B009E51FF /* SubscriptionModel.swift in Sources */,
 				432A67C422BC681B009E51FF /* ErrorModel.swift in Sources */,
+				436C759E2386846C00902F08 /* FeesModel.swift in Sources */,
 				43CD77D4232F341600AC5F07 /* PostIndexModel.swift in Sources */,
 				432A67C722BC681B009E51FF /* SeriesModel.swift in Sources */,
 				43DE4BDE22F7C2E3006EA673 /* SponsorshipModel.swift in Sources */,

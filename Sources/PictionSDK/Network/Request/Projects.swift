@@ -172,4 +172,14 @@ public final class Projects {
                 failureCompletion?(error)
             })
     }
+
+    public func fees(uri: String, success successCompletion: ((FeesViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(ProjectsAPI.fees(uri: uri),
+            success: { (response: FeesViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
 }

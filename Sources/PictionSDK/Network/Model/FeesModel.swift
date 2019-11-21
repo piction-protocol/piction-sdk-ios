@@ -18,7 +18,7 @@ public struct FeesModel: Response {
     public let ecosystemFundRate: Int?
     public let supportPoolRate: Int?
     public let translatorRate: Int?
-    public let maketerRate: Int?
+    public let marketerRate: Int?
 
     public init(map: Mapper) throws {
         contentsDistributorRate = map.optionalFrom("contentsDistributorRate")
@@ -27,7 +27,7 @@ public struct FeesModel: Response {
         ecosystemFundRate = map.optionalFrom("ecosystemFundRate")
         supportPoolRate = map.optionalFrom("supportPoolRate")
         translatorRate = map.optionalFrom("translatorRate")
-        maketerRate = map.optionalFrom("maketerRate")
+        marketerRate = map.optionalFrom("marketerRate")
     }
 
     public func toJSONString() throws -> String {
@@ -42,7 +42,7 @@ public struct FeesModel: Response {
             "ecosystemFundRate": ecosystemFundRate,
             "supportPoolRate": supportPoolRate,
             "translatorRate": translatorRate,
-            "maketerRate": maketerRate
+            "marketerRate": marketerRate
         ]
     }
 }
@@ -56,7 +56,7 @@ extension FeesModel {
             "ecosystemFundRate": 0,
             "supportPoolRate": 0,
             "translatorRate": 0,
-            "maketerRate": 0
+            "marketerRate": 0
         ]
     }
 }

@@ -22,7 +22,7 @@ public final class My {
             })
     }
 
-    public func posts(uri: String, seriesId: Int? = nil, condition: String?, fanPassLevel: Int?, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func posts(uri: String, seriesId: Int? = nil, condition: String? = nil, fanPassLevel: Int? = nil, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(MyAPI.posts(uri: uri, seriesId: seriesId, condition: condition, fanPassLevel: fanPassLevel, page: page, size: size),
             success: { (response: PageViewResponse<PostModel>) in
                 successCompletion?(response)
@@ -32,7 +32,7 @@ public final class My {
             })
     }
 
-    public func projectSubscriptions(uri: String, fanPassId: Int?, page: Int, size: Int, success successCompletion: ((PageViewResponse<SubscriptionUserModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func projectSubscriptions(uri: String, fanPassId: Int? = nil, page: Int, size: Int, success successCompletion: ((PageViewResponse<SubscriptionUserModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(MyAPI.projectSubscriptions(uri: uri, fanPassId: fanPassId, page: page, size: size),
             success: { (response: PageViewResponse<SubscriptionUserModel>) in
                 successCompletion?(response)

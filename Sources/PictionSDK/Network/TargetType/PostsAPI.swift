@@ -11,7 +11,7 @@ import Moya
 import UIKit
 
 public enum PostsAPI {
-    case all(uri: String, isRequiredFanPass: Bool? = nil, page: Int, size: Int)
+    case all(uri: String, page: Int, size: Int)
     case create(uri: String, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, fanPassId: Int? = nil, status: String, publishedAt: Int64)
     case get(uri: String, postId: Int)
     case update(uri: String, postId: Int, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, fanPassId: Int? = nil, status: String, publishedAt: Int64)
@@ -29,7 +29,7 @@ extension PostsAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
-        case .all(let uri, _, _, _),
+        case .all(let uri, _, _),
              .create(let uri, _, _, _, _, _, _, _):
             return "/projects/\(uri)/posts"
         case .get(let uri, let postId),
@@ -97,13 +97,10 @@ extension PostsAPI: TargetType {
     }
     public var task: Task {
         switch self {
-        case .all(_, let isRequiredFanPass, let page, let size):
+        case .all(_, let page, let size):
             var param: [String: Any] = [:]
             param["page"] = page
             param["size"] = size
-            if let isRequiredFanPass = isRequiredFanPass {
-                param["isRequiredFanPass"] = isRequiredFanPass
-            }
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .create(_, let title, let content, let cover, let seriesId, let fanPassId, let status, let publishedAt),
              .update(_, _, let title, let content, let cover, let seriesId, let fanPassId, let status, let publishedAt):

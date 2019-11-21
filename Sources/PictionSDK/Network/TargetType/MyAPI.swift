@@ -11,8 +11,8 @@ import Moya
 
 public enum MyAPI {
     case projects
-    case posts(uri: String, seriesId: Int? = nil, isRequiredFanPass: Bool? = nil, page: Int, size: Int)
-    case projectSubscriptions(uri: String, page: Int, size: Int)
+    case posts(uri: String, seriesId: Int? = nil, condition: String? = nil, fanPassLevel: Int?, page: Int, size: Int)
+    case projectSubscriptions(uri: String, fanPassId: Int?, page: Int, size: Int)
     case projectsCount
     case transactions(page: Int, size: Int)
     case wallet
@@ -28,9 +28,9 @@ extension MyAPI: TargetType {
         switch self {
         case .projects:
             return "/my/projects"
-        case .posts(let uri, _, _, _, _):
+        case .posts(let uri, _, _, _, _, _):
             return "/my/projects/\(uri)/posts"
-        case .projectSubscriptions(let uri, _, _):
+        case .projectSubscriptions(let uri, _, _, _):
             return "/my/projects/\(uri)/subscriptions"
         case .projectsCount:
             return "/my/projects/count"
@@ -95,19 +95,29 @@ extension MyAPI: TargetType {
              .subscriptionTransaction,
              .projectsCount:
             return .requestPlain
-        case .posts(_, let seriesId, let isRequiredFanPass, let page, let size):
+        case .posts(_, let seriesId, let condition, let fanPassLevel, let page, let size):
             var param: [String: Any] = [:]
             param["page"] = page
             param["size"] = size
             if seriesId != nil {
                 param["seriesId"] = seriesId
             }
-            if isRequiredFanPass != nil {
-                param["isRequiredFanPass"] = isRequiredFanPass
+            if condition != nil {
+                param["condition"] = condition
+            }
+            if fanPassLevel != nil {
+                param["fanPassLevel"] = fanPassLevel
             }
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
-        case .projectSubscriptions(_, let page, let size),
-             .transactions(let page, let size),
+        case .projectSubscriptions(_, let fanPassId, let page, let size):
+            var param: [String: Any] = [:]
+            param["page"] = page
+            param["size"] = size
+            if fanPassId != nil {
+                param["fanPassId"] = fanPassId
+            }
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
+        case .transactions(let page, let size),
              .subscription(let page, let size):
             var param: [String: Any] = [:]
             param["page"] = page

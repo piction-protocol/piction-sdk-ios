@@ -11,7 +11,7 @@ import Moya
 
 public enum MyAPI {
     case projects
-    case posts(uri: String, seriesId: Int? = nil, condition: String? = nil, fanPassLevel: Int?, page: Int, size: Int)
+    case posts(uri: String, seriesId: Int? = nil, condition: String? = nil, fanPassLevel: Int? = nil, page: Int, size: Int)
     case projectSubscriptions(uri: String, fanPassId: Int? = nil, page: Int, size: Int)
     case projectsCount
     case transactions(page: Int, size: Int)

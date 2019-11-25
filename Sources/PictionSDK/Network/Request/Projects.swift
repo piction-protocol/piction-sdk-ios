@@ -93,7 +93,7 @@ public final class Projects {
             })
     }
 
-    public func createFanPass(uri: String, name: String, description: String? = nil, thumbnail: String? = nil, subscriptionLimit: Int? = nil, subscriptionPrice: Int, success successCompletion: ((FanPassViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func createFanPass(uri: String, name: String, description: String? = nil, thumbnail: String? = nil, subscriptionLimit: Int? = nil, subscriptionPrice: Int? = nil, success successCompletion: ((FanPassViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.createFanPass(uri: uri, name: name, description: description, thumbnail: thumbnail, subscriptionLimit: subscriptionLimit, subscriptionPrice: subscriptionPrice),
             success: { (response: FanPassViewResponse) in
                 successCompletion?(response)
@@ -113,7 +113,7 @@ public final class Projects {
             })
     }
 
-    public func updateFanPass(uri: String, fanPassId: Int, name: String, description: String? = nil, thumbnail: String? = nil, subscriptionLimit: Int? = nil, subscriptionPrice: Int, success successCompletion: ((FanPassViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func updateFanPass(uri: String, fanPassId: Int, name: String, description: String? = nil, thumbnail: String? = nil, subscriptionLimit: Int? = nil, subscriptionPrice: Int? = nil, success successCompletion: ((FanPassViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(ProjectsAPI.updateFanPass(uri: uri, fanPassId: fanPassId, name: name, description: description, thumbnail: thumbnail, subscriptionLimit: subscriptionLimit, subscriptionPrice: subscriptionPrice),
             success: { (response: FanPassViewResponse) in
                 successCompletion?(response)

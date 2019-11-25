@@ -19,9 +19,9 @@ public enum ProjectsAPI {
     case uploadWideThumbnail(image: UIImage)
     case trending
     case fanPassAll(uri: String)
-    case createFanPass(uri: String, name: String, description: String? = nil, thumbnail: String? = nil, subscriptionLimit: Int? = nil, subscriptionPrice: Int)
+    case createFanPass(uri: String, name: String, description: String? = nil, thumbnail: String? = nil, subscriptionLimit: Int? = nil, subscriptionPrice: Int? = nil)
     case fanPass(uri: String, fanPassId: Int)
-    case updateFanPass(uri: String, fanPassId: Int, name: String, description: String? = nil, thumbnail: String? = nil, subscriptionLimit: Int? = nil, subscriptionPrice: Int)
+    case updateFanPass(uri: String, fanPassId: Int, name: String, description: String? = nil, thumbnail: String? = nil, subscriptionLimit: Int? = nil, subscriptionPrice: Int? = nil)
     case deleteFanPass(uri: String, fanPassId: Int)
     case subscription(uri: String, fanPassId: Int, subscriptionPrice: Int)
     case cancelSubscription(uri: String, fanPassId: Int)

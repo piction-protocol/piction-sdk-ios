@@ -19,9 +19,9 @@ public enum ProjectsAPI {
     case uploadWideThumbnail(image: UIImage)
     case trending
     case fanPassAll(uri: String)
-    case createFanPass(uri: String, name: String, description: String, thumbnail: String? = nil, subscriptionLimit: Int, subscriptionPrice: Int)
+    case createFanPass(uri: String, name: String, description: String? = nil, thumbnail: String? = nil, subscriptionLimit: Int? = nil, subscriptionPrice: Int)
     case fanPass(uri: String, fanPassId: Int)
-    case updateFanPass(uri: String, fanPassId: Int, name: String, description: String, thumbnail: String? = nil, subscriptionLimit: Int, subscriptionPrice: Int)
+    case updateFanPass(uri: String, fanPassId: Int, name: String, description: String? = nil, thumbnail: String? = nil, subscriptionLimit: Int? = nil, subscriptionPrice: Int)
     case deleteFanPass(uri: String, fanPassId: Int)
     case subscription(uri: String, fanPassId: Int, subscriptionPrice: Int)
     case cancelSubscription(uri: String, fanPassId: Int)
@@ -177,9 +177,13 @@ extension ProjectsAPI: TargetType {
              .updateFanPass(_, _, let name, let description, let thumbnail, let subscriptionLimit, let subscriptionPrice):
             var param: [String: Any] = [:]
             param["name"] = name
-            param["description"] = description
-            param["subscriptionLimit"] = subscriptionLimit
             param["subscriptionPrice"] = subscriptionPrice
+            if let description = description {
+                param["description"] = description
+            }
+            if let subscriptionLimit = subscriptionLimit {
+                param["subscriptionLimit"] = subscriptionLimit
+            }
             if let thumbnail = thumbnail {
                 param["thumbnail"] = thumbnail
             }

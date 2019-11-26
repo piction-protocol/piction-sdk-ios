@@ -11,7 +11,7 @@ import Moya
 
 public enum SearchAPI {
     case project(name: String, page: Int, size: Int)
-    case writer(writer: String)
+    case writer(writer: String, page: Int, size: Int)
     case tag(tag: String, page: Int, size: Int)
 }
 
@@ -40,7 +40,7 @@ extension SearchAPI: TargetType {
         case .project:
             return jsonSerializedUTF8(json: PageViewResponse<ProjectModel>.sampleData())
         case .writer:
-            return jsonSerializedUTF8(json: [UserViewResponse.sampleData()])
+            return jsonSerializedUTF8(json: PageViewResponse<UserModel>.sampleData())
         case .tag:
             return jsonSerializedUTF8(json: PageViewResponse<TagModel>.sampleData())
         }
@@ -53,9 +53,11 @@ extension SearchAPI: TargetType {
             param["page"] = page
             param["size"] = size
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
-        case .writer(let writer):
+        case .writer(let writer, let page, let size):
             var param: [String: Any] = [:]
             param["writer"] = writer
+            param["page"] = page
+            param["size"] = size
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .tag(let tag, let page, let size):
             var param: [String: Any] = [:]

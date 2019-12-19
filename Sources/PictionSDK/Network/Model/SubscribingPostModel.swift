@@ -46,12 +46,12 @@ public struct SubscribingPostModel: Response {
             "title": title,
             "cover": cover,
             "likeCount": likeCount,
-            "series": series,
+            "series": series?.toDict(),
             "publishedAt": publishedAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
-            "fanPass": fanPass,
+            "fanPass": fanPass?.toDict(),
             "status": status,
-            "project": project
+            "project": project?.toDict()
         ]
     }
 }

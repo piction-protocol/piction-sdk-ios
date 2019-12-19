@@ -25,6 +25,8 @@ public struct ProjectModel: Response {
     public let uri: String?
     public let user: UserModel?
     public let wideThumbnail: String?
+    public let activeFanPass: Bool?
+    public let categories: CategoryModel?
 
     public init(map: Mapper) throws {
         adult = map.optionalFrom("adult")
@@ -40,6 +42,8 @@ public struct ProjectModel: Response {
         uri = map.optionalFrom("uri")
         user = map.optionalFrom("user")
         wideThumbnail = map.optionalFrom("wideThumbnail")
+        activeFanPass = map.optionalFrom("activeFanPass")
+        categories = map.optionalFrom("categories")
     }
 
     public func toJSONString() throws -> String {
@@ -60,7 +64,9 @@ public struct ProjectModel: Response {
             "title": title,
             "uri": uri,
             "user": user?.toDict(),
-            "wideThumbnail": wideThumbnail
+            "wideThumbnail": wideThumbnail,
+            "activeFanPass": activeFanPass,
+            "categories": categories?.toDict()
         ]
     }
 }
@@ -80,7 +86,9 @@ extension ProjectModel {
             "title": "title",
             "url": "url",
             "user": UserModel.sampleData(),
-            "wideThumbnail": "wideThumbnail"
+            "wideThumbnail": "wideThumbnail",
+            "activeFanPass": false,
+            "categories": CategoryModel.sampleData()
         ]
     }
 }

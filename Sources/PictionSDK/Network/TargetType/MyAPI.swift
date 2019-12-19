@@ -20,6 +20,7 @@ public enum MyAPI {
     case subscription(page: Int, size: Int)
     case sponsorshipTransaction(txHash: String)
     case subscriptionTransaction(txHash: String)
+    case subscribingPosts(page: Int, size: Int)
 }
 
 extension MyAPI: TargetType {
@@ -46,6 +47,8 @@ extension MyAPI: TargetType {
             return "/my/transactions/sponsorship/\(txHash)"
         case .subscriptionTransaction(let txHash):
             return "/my/transactions/subscription/\(txHash)"
+        case .subscribingPosts:
+            return "/my/subscriptions/posts"
         }
     }
     public var method: Moya.Method {
@@ -59,7 +62,8 @@ extension MyAPI: TargetType {
              .sales,
              .subscription,
              .sponsorshipTransaction,
-             .subscriptionTransaction:
+             .subscriptionTransaction,
+             .subscribingPosts:
             return .get
         }
     }
@@ -85,6 +89,8 @@ extension MyAPI: TargetType {
             return jsonSerializedUTF8(json: TransactionSponsorshipViewResponse.sampleData())
         case .subscriptionTransaction:
             return jsonSerializedUTF8(json: TransactionSubscriptionViewResponse.sampleData())
+        case .subscribingPosts:
+            return jsonSerializedUTF8(json: PageViewResponse<SubscribingPostModel>.sampleData())
         }
     }
     public var task: Task {
@@ -118,7 +124,8 @@ extension MyAPI: TargetType {
             }
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .transactions(let page, let size),
-             .subscription(let page, let size):
+             .subscription(let page, let size),
+             .subscribingPosts(let page, let size):
             var param: [String: Any] = [:]
             param["page"] = page
             param["size"] = size

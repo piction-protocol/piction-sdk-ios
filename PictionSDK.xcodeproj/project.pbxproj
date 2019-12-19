@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		430907CC23629537005EF5A2 /* SubscriptionUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430907CB23629536005EF5A2 /* SubscriptionUserModel.swift */; };
+		43125A3923AB68D80060928F /* SubscribingPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43125A3823AB68D80060928F /* SubscribingPostModel.swift */; };
 		4319189C22D45D0A0005328E /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319189B22D45D0A0005328E /* SearchAPI.swift */; };
 		431918A022D460CF0005328E /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319189F22D460CF0005328E /* Search.swift */; };
 		431918FF22D585980005328E /* RecommendationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918FE22D585980005328E /* RecommendationAPI.swift */; };
@@ -107,6 +108,7 @@
 
 /* Begin PBXFileReference section */
 		430907CB23629536005EF5A2 /* SubscriptionUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionUserModel.swift; sourceTree = "<group>"; };
+		43125A3823AB68D80060928F /* SubscribingPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribingPostModel.swift; sourceTree = "<group>"; };
 		4319189B22D45D0A0005328E /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
 		4319189F22D460CF0005328E /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		431918FE22D585980005328E /* RecommendationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationAPI.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				43C5C9462383DA53004BACFC /* TransactionSubscriptionModel.swift */,
 				43C5C9482383DA83004BACFC /* TransactionSponsorshipModel.swift */,
 				436C759D2386846C00902F08 /* FeesModel.swift */,
+				43125A3823AB68D80060928F /* SubscribingPostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				4319190322D585A60005328E /* Recommendation.swift in Sources */,
 				432A67BB22BC681B009E51FF /* UserModel.swift in Sources */,
 				432A67A322BC681B009E51FF /* ProjectModel.swift in Sources */,
+				43125A3923AB68D80060928F /* SubscribingPostModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

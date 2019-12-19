@@ -111,4 +111,14 @@ public final class My {
                 failureCompletion?(error)
             })
     }
+
+    public func subscribingPosts(page: Int, size: Int, success successCompletion: ((SubscribingPostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(MyAPI.subscribingPosts(page: page, size: size),
+            success: { (response: SubscribingPostViewResponse) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
 }

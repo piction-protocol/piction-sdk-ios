@@ -26,7 +26,7 @@ public struct ProjectModel: Response {
     public let user: UserModel?
     public let wideThumbnail: String?
     public let activeFanPass: Bool?
-    public let categories: CategoryModel?
+    public let categories: [CategoryModel]?
 
     public init(map: Mapper) throws {
         adult = map.optionalFrom("adult")
@@ -66,7 +66,7 @@ public struct ProjectModel: Response {
             "user": user?.toDict(),
             "wideThumbnail": wideThumbnail,
             "activeFanPass": activeFanPass,
-            "categories": categories?.toDict()
+            "categories": []
         ]
     }
 }
@@ -88,7 +88,7 @@ extension ProjectModel {
             "user": UserModel.sampleData(),
             "wideThumbnail": "wideThumbnail",
             "activeFanPass": false,
-            "categories": CategoryModel.sampleData()
+            "categories": [CategoryModel.sampleData()]
         ]
     }
 }

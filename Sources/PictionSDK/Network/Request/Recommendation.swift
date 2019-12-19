@@ -21,24 +21,4 @@ public final class Recommendation {
                 failureCompletion?(error)
             })
     }
-
-    public func add(uri: String, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(RecommendationAPI.add(uri: uri),
-            success: { (response: DefaultViewResponse) in
-                successCompletion?(response)
-            },
-            failure: { error in
-                failureCompletion?(error)
-            })
-    }
-
-    public func delete(uri: String, success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(RecommendationAPI.delete(uri: uri),
-            success: { (response: DefaultViewResponse) in
-                successCompletion?(response)
-            },
-            failure: { error in
-                failureCompletion?(error)
-            })
-    }
 }

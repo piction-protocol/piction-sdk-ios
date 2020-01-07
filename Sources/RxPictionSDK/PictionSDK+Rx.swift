@@ -17,14 +17,14 @@ import RxSwift
 extension PictionSDK: ReactiveCompatible {}
 
 public extension Reactive {
-    static func requestAPI<T: TargetType>(_ target: T) -> Observable<Moya.Response> {
+    static func requestAPI<T: TargetType>(_ target: T) -> Observable<Result<Moya.Response>> {
         return Observable.create({ observer -> Disposable in
             request(target,
                 success: { response in
-                    observer.onNext(response)
+                    observer.onNext(.success(response))
                     observer.onCompleted()
                 }, failure: { error in
-                    observer.onError(error)
+                    observer.onError(.failure(error))
                 })
             return Disposables.create()
         })

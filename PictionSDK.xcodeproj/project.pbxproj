@@ -59,6 +59,8 @@
 		436881F722E6F1C800DB42B6 /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881A222E6E48700DB42B6 /* Mapper.framework */; };
 		436881FA22E6F1F500DB42B6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881AC22E6E48800DB42B6 /* Result.framework */; };
 		436C759E2386846C00902F08 /* FeesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436C759D2386846C00902F08 /* FeesModel.swift */; };
+		43C1539923C5C19700565FC4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1539823C5C19600565FC4 /* Categories.swift */; };
+		43C1539B23C5C1C300565FC4 /* CategoriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1539A23C5C1C300565FC4 /* CategoriesAPI.swift */; };
 		43C5C9472383DA53004BACFC /* TransactionSubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5C9462383DA53004BACFC /* TransactionSubscriptionModel.swift */; };
 		43C5C9492383DA83004BACFC /* TransactionSponsorshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5C9482383DA83004BACFC /* TransactionSponsorshipModel.swift */; };
 		43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */; };
@@ -148,6 +150,8 @@
 		436881AC22E6E48800DB42B6 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		436881B022E6E48800DB42B6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		436C759D2386846C00902F08 /* FeesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeesModel.swift; sourceTree = "<group>"; };
+		43C1539823C5C19600565FC4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		43C1539A23C5C1C300565FC4 /* CategoriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesAPI.swift; sourceTree = "<group>"; };
 		43C5C9462383DA53004BACFC /* TransactionSubscriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSubscriptionModel.swift; sourceTree = "<group>"; };
 		43C5C9482383DA83004BACFC /* TransactionSponsorshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSponsorshipModel.swift; sourceTree = "<group>"; };
 		43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
@@ -309,6 +313,7 @@
 				4319190222D585A60005328E /* Recommendation.swift */,
 				4319190E22D5DD540005328E /* Banners.swift */,
 				43DB228D23596E8300E69C0F /* Tags.swift */,
+				43C1539823C5C19600565FC4 /* Categories.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				431918FE22D585980005328E /* RecommendationAPI.swift */,
 				4319190A22D5DB5D0005328E /* BannersAPI.swift */,
 				43DB228F23596F3300E69C0F /* TagsAPI.swift */,
+				43C1539A23C5C1C300565FC4 /* CategoriesAPI.swift */,
 			);
 			path = TargetType;
 			sourceTree = "<group>";
@@ -572,6 +578,7 @@
 				43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */,
 				4329EBB522B1E3A900D01916 /* Posts.swift in Sources */,
 				43DB229023596F3300E69C0F /* TagsAPI.swift in Sources */,
+				43C1539923C5C19700565FC4 /* Categories.swift in Sources */,
 				430907CC23629537005EF5A2 /* SubscriptionUserModel.swift in Sources */,
 				432A67A622BC681B009E51FF /* TransactionModel.swift in Sources */,
 				43CA1C0F22A4EF2300CEF20A /* Sessions.swift in Sources */,
@@ -614,6 +621,7 @@
 				4319190B22D5DB5D0005328E /* BannersAPI.swift in Sources */,
 				432A67A922BC681B009E51FF /* WalletModel.swift in Sources */,
 				43DB228E23596E8300E69C0F /* Tags.swift in Sources */,
+				43C1539B23C5C1C300565FC4 /* CategoriesAPI.swift in Sources */,
 				4319190322D585A60005328E /* Recommendation.swift in Sources */,
 				432A67BB22BC681B009E51FF /* UserModel.swift in Sources */,
 				432A67A322BC681B009E51FF /* ProjectModel.swift in Sources */,

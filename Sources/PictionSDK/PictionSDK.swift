@@ -11,11 +11,11 @@ import Moya
 import Mapper
 
 public final class PictionSDK {
-    public static let projects = Projects.shared
-    public static let posts = Posts.shared
     public static let my = My.shared
     public static let users = User.shared
     public static let session = Session.shared
+    public static let project = Project.shared
+    public static let post = Post.shared
     public static let series = Series.shared
     public static let search = Search.shared
     public static let recommendation = Recommendation.shared

@@ -32,8 +32,8 @@
 		4319190B22D5DB5D0005328E /* BannerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319190A22D5DB5D0005328E /* BannerAPI.swift */; };
 		4319190F22D5DD540005328E /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319190E22D5DD540005328E /* Banner.swift */; };
 		4319191322D5DDB10005328E /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319191222D5DDB10005328E /* BannerModel.swift */; };
-		4329EB9022B1D76B00D01916 /* PostsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB8F22B1D76B00D01916 /* PostsAPI.swift */; };
-		4329EBB522B1E3A900D01916 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EBB422B1E3A900D01916 /* Posts.swift */; };
+		4329EB9022B1D76B00D01916 /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB8F22B1D76B00D01916 /* PostAPI.swift */; };
+		4329EBB522B1E3A900D01916 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EBB422B1E3A900D01916 /* Post.swift */; };
 		432A67A022BC681B009E51FF /* StorageAttachmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679222BC681B009E51FF /* StorageAttachmentModel.swift */; };
 		432A67A322BC681B009E51FF /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679322BC681B009E51FF /* ProjectModel.swift */; };
 		432A67A622BC681B009E51FF /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679422BC681B009E51FF /* TransactionModel.swift */; };
@@ -58,6 +58,7 @@
 		436881F622E6F1C800DB42B6 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881A422E6E48700DB42B6 /* KeychainAccess.framework */; };
 		436881F722E6F1C800DB42B6 /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881A222E6E48700DB42B6 /* Mapper.framework */; };
 		436881FA22E6F1F500DB42B6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881AC22E6E48800DB42B6 /* Result.framework */; };
+		4369F8B623CDB6A2008D5825 /* PostLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8B523CDB6A2008D5825 /* PostLinkModel.swift */; };
 		436C759E2386846C00902F08 /* FeesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436C759D2386846C00902F08 /* FeesModel.swift */; };
 		43C1539923C5C19700565FC4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1539823C5C19600565FC4 /* Category.swift */; };
 		43C1539B23C5C1C300565FC4 /* CategoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1539A23C5C1C300565FC4 /* CategoryAPI.swift */; };
@@ -121,8 +122,8 @@
 		4319190A22D5DB5D0005328E /* BannerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAPI.swift; sourceTree = "<group>"; };
 		4319190E22D5DD540005328E /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		4319191222D5DDB10005328E /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
-		4329EB8F22B1D76B00D01916 /* PostsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPI.swift; sourceTree = "<group>"; };
-		4329EBB422B1E3A900D01916 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		4329EB8F22B1D76B00D01916 /* PostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPI.swift; sourceTree = "<group>"; };
+		4329EBB422B1E3A900D01916 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		432A679222BC681B009E51FF /* StorageAttachmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageAttachmentModel.swift; sourceTree = "<group>"; };
 		432A679322BC681B009E51FF /* ProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		432A679422BC681B009E51FF /* TransactionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
@@ -247,6 +248,7 @@
 				436C759D2386846C00902F08 /* FeesModel.swift */,
 				43125A3823AB68D80060928F /* SubscribingPostModel.swift */,
 				43125A3A23AB73B90060928F /* CategoryModel.swift */,
+				4369F8B523CDB6A2008D5825 /* PostLinkModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,10 +306,10 @@
 			isa = PBXGroup;
 			children = (
 				43CA1BF822A4EF2200CEF20A /* Projects.swift */,
-				4329EBB422B1E3A900D01916 /* Posts.swift */,
 				432CAC0D22B32A2F0007EE03 /* My.swift */,
 				43CA1BF622A4EF2200CEF20A /* User.swift */,
 				43CA1BF722A4EF2200CEF20A /* Session.swift */,
+				4329EBB422B1E3A900D01916 /* Post.swift */,
 				432CAC2322B33F2D0007EE03 /* Series.swift */,
 				4319189F22D460CF0005328E /* Search.swift */,
 				4319190222D585A60005328E /* Recommendation.swift */,
@@ -322,10 +324,10 @@
 			isa = PBXGroup;
 			children = (
 				43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */,
-				4329EB8F22B1D76B00D01916 /* PostsAPI.swift */,
 				432CAC0A22B328630007EE03 /* MyAPI.swift */,
 				43CA1BFA22A4EF2200CEF20A /* UserAPI.swift */,
 				43CA1BFC22A4EF2200CEF20A /* SessionAPI.swift */,
+				4329EB8F22B1D76B00D01916 /* PostAPI.swift */,
 				432CAC2622B33F380007EE03 /* SeriesAPI.swift */,
 				4319189B22D45D0A0005328E /* SearchAPI.swift */,
 				431918FE22D585980005328E /* RecommendationAPI.swift */,
@@ -576,8 +578,8 @@
 				432A67AC22BC681B009E51FF /* AuthenticationModel.swift in Sources */,
 				43CA1C1722A4EF2300CEF20A /* Request.swift in Sources */,
 				43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */,
-				4329EBB522B1E3A900D01916 /* Posts.swift in Sources */,
 				43DB229023596F3300E69C0F /* TagsAPI.swift in Sources */,
+				4329EBB522B1E3A900D01916 /* Post.swift in Sources */,
 				43C1539923C5C19700565FC4 /* Category.swift in Sources */,
 				430907CC23629537005EF5A2 /* SubscriptionUserModel.swift in Sources */,
 				432A67A622BC681B009E51FF /* TransactionModel.swift in Sources */,
@@ -600,7 +602,7 @@
 				43E4C43A22CDED26004C4F8A /* LikeModel.swift in Sources */,
 				432CAC0E22B32A2F0007EE03 /* My.swift in Sources */,
 				432A67BE22BC681B009E51FF /* DefaultModel.swift in Sources */,
-				4329EB9022B1D76B00D01916 /* PostsAPI.swift in Sources */,
+				4329EB9022B1D76B00D01916 /* PostAPI.swift in Sources */,
 				4319189C22D45D0A0005328E /* SearchAPI.swift in Sources */,
 				4319190722D585EF0005328E /* RecommendProjectModel.swift in Sources */,
 				432CAC0B22B328630007EE03 /* MyAPI.swift in Sources */,

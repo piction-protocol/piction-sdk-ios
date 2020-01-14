@@ -1,5 +1,5 @@
 //
-//  PostsAPI.swift
+//  PostAPI.swift
 //  PictionSDK
 //
 //  Created by jhseo on 13/06/2019.
@@ -10,22 +10,22 @@ import Foundation
 import Moya
 import UIKit
 
-public enum PostsAPI {
+public enum PostAPI {
     case all(uri: String, page: Int, size: Int)
     case create(uri: String, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, fanPassId: Int? = nil, status: String, publishedAt: Int64)
     case get(uri: String, postId: Int)
     case update(uri: String, postId: Int, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, fanPassId: Int? = nil, status: String, publishedAt: Int64)
     case delete(uri: String, postId: Int)
-    case content(uri: String, postId: Int)
-    case isLike(uri: String, postId: Int)
+    case getContent(uri: String, postId: Int)
+    case getLike(uri: String, postId: Int)
     case like(uri: String, postId: Int)
-    case prevPost(uri: String, postId: Int)
-    case nextPost(uri: String, postId: Int)
+    case getLinks(uri: String, postId: Int)
+    case getSeriesLink(uri: String, postId: Int, count: Int)
     case uploadContentImage(uri: String, image: UIImage)
     case uploadCoverImage(uri: String, image: UIImage)
 }
 
-extension PostsAPI: TargetType {
+extension PostAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
@@ -36,14 +36,14 @@ extension PostsAPI: TargetType {
              .update(let uri, let postId, _, _, _, _, _, _, _),
              .delete(let uri, let postId):
             return "/projects/\(uri)/posts/\(postId)"
-        case .content(let uri, let postId):
+        case .getContent(let uri, let postId):
             return "/projects/\(uri)/posts/\(postId)/content"
-        case .isLike(let uri, let postId):
-            return "/projects/\(uri)/posts/\(postId)/isLike"
-        case .prevPost(let uri, let postId):
-            return "/projects/\(uri)/posts/\(postId)/previous"
-        case .nextPost(let uri, let postId):
-            return "/projects/\(uri)/posts/\(postId)/next"
+        case .getLike(let uri, let postId):
+            return "/projects/\(uri)/posts/\(postId)/like"
+        case .getLinks(let uri, let postId):
+            return "/projects/\(uri)/posts/\(postId)/links"
+        case .getSeriesLink(let uri, let postId, _):
+            return "/projects/\(uri)/posts/\(postId)/series/links"
         case .uploadContentImage(let uri, _):
             return "/projects/\(uri)/posts/content"
         case .uploadCoverImage(let uri, _):
@@ -56,10 +56,10 @@ extension PostsAPI: TargetType {
         switch self {
         case .all,
              .get,
-             .content,
-             .isLike,
-             .prevPost,
-             .nextPost:
+             .getContent,
+             .getLike,
+             .getLinks,
+             .getSeriesLink:
             return .get
         case .create,
              .like:
@@ -80,15 +80,17 @@ extension PostsAPI: TargetType {
         case .create,
              .get,
              .update,
-             .like,
-             .prevPost,
-             .nextPost:
+             .like:
             return jsonSerializedUTF8(json: PostViewResponse.sampleData())
+        case .getLinks:
+            return jsonSerializedUTF8(json: PostLinkViewResponse.sampleData())
+        case .getSeriesLink:
+            return jsonSerializedUTF8(json: [PostIndexViewResponse.sampleData()])
         case .delete:
             return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
-        case .content:
+        case .getContent:
             return jsonSerializedUTF8(json: ContentViewResponse.sampleData())
-        case .isLike:
+        case .getLike:
             return jsonSerializedUTF8(json: LikeViewResponse.sampleData())
         case .uploadContentImage,
              .uploadCoverImage:
@@ -120,11 +122,14 @@ extension PostsAPI: TargetType {
         case .get,
              .like,
              .delete,
-             .content,
-             .isLike,
-             .prevPost,
-             .nextPost:
+             .getContent,
+             .getLike,
+             .getLinks:
             return .requestPlain
+        case .getSeriesLink(_, _, let count):
+            var param: [String: Any] = [:]
+            param["count"] = count
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .uploadContentImage(_, let image),
              .uploadCoverImage(_, let image):
             guard let imageData = image.jpegData(compressionQuality: 1.0) else {

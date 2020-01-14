@@ -1,5 +1,5 @@
 //
-//  Categories.swift
+//  Category.swift
 //  PictionSDK
 //
 //  Created by jhseo on 2020/01/08.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public final class Categories {
-    static let shared = Categories()
+public final class Category {
+    static let shared = Category()
     private init() {}
 
     public func all(success successCompletion: (([CategoryModel]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(CategoriesAPI.all,
+        PictionProvider.request(CategoryAPI.all,
             success: { (response: [CategoryModel]) in
                 successCompletion?(response)
             },
@@ -23,7 +23,7 @@ public final class Categories {
     }
 
     public func get(id: Int, success successCompletion: ((CategoryModel) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(CategoriesAPI.get(id: id),
+        PictionProvider.request(CategoryAPI.get(id: id),
             success: { (response: CategoryModel) in
                 successCompletion?(response)
             },
@@ -33,7 +33,7 @@ public final class Categories {
     }
 
     public func get(id: Int, page: Int, size: Int, success successCompletion: (([ProjectModel]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(CategoriesAPI.categorizedProjects(id: id, page: page, size: size),
+        PictionProvider.request(CategoryAPI.categorizedProjects(id: id, page: page, size: size),
             success: { (response: [ProjectModel]) in
                 successCompletion?(response)
             },

@@ -1,5 +1,5 @@
 //
-//  CategoriesAPI.swift
+//  CategoryAPI.swift
 //  PictionSDK
 //
 //  Created by jhseo on 2020/01/08.
@@ -9,13 +9,13 @@
 import Foundation
 import Moya
 
-public enum CategoriesAPI {
+public enum CategoryAPI {
     case all
     case get(id: Int)
     case categorizedProjects(id: Int, page: Int, size: Int)
 }
 
-extension CategoriesAPI: TargetType {
+extension CategoryAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {

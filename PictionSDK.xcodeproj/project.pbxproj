@@ -49,8 +49,8 @@
 		432A67C722BC681B009E51FF /* SeriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679F22BC681B009E51FF /* SeriesModel.swift */; };
 		432A67CB22BC7B7C009E51FF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A67CA22BC7B7C009E51FF /* DateExtension.swift */; };
 		432BB2E922E95DAF006E9D5C /* PictionSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PictionSDK::PictionSDK::Product" /* PictionSDK.framework */; };
-		432CAC0B22B328630007EE03 /* MyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC0A22B328630007EE03 /* MyAPI.swift */; };
-		432CAC0E22B32A2F0007EE03 /* My.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC0D22B32A2F0007EE03 /* My.swift */; };
+		432CAC0B22B328630007EE03 /* CreatorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC0A22B328630007EE03 /* CreatorAPI.swift */; };
+		432CAC0E22B32A2F0007EE03 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC0D22B32A2F0007EE03 /* Creator.swift */; };
 		432CAC2422B33F2D0007EE03 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2322B33F2D0007EE03 /* Series.swift */; };
 		432CAC2722B33F380007EE03 /* SeriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC2622B33F380007EE03 /* SeriesAPI.swift */; };
 		432CAC7222B725410007EE03 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC7122B725410007EE03 /* Response.swift */; };
@@ -139,8 +139,8 @@
 		432A679F22BC681B009E51FF /* SeriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesModel.swift; sourceTree = "<group>"; };
 		432A67CA22BC7B7C009E51FF /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		432BB2ED22E95E79006E9D5C /* Debug */ = {isa = PBXFileReference; lastKnownFileType = text; name = Debug; path = "../../../../Library/Developer/Xcode/DerivedData/PictionSDK-esqmbsxoomweeagjgkadtqfydrwb/Build/Products/Debug"; sourceTree = "<group>"; };
-		432CAC0A22B328630007EE03 /* MyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPI.swift; sourceTree = "<group>"; };
-		432CAC0D22B32A2F0007EE03 /* My.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My.swift; sourceTree = "<group>"; };
+		432CAC0A22B328630007EE03 /* CreatorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorAPI.swift; sourceTree = "<group>"; };
+		432CAC0D22B32A2F0007EE03 /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
 		432CAC2322B33F2D0007EE03 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		432CAC2622B33F380007EE03 /* SeriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesAPI.swift; sourceTree = "<group>"; };
 		432CAC7122B725410007EE03 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -305,11 +305,11 @@
 		43CA1BF522A4EF2200CEF20A /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				432CAC0D22B32A2F0007EE03 /* My.swift */,
 				43CA1BF622A4EF2200CEF20A /* User.swift */,
 				43CA1BF722A4EF2200CEF20A /* Session.swift */,
 				43CA1BF822A4EF2200CEF20A /* Project.swift */,
 				4329EBB422B1E3A900D01916 /* Post.swift */,
+				432CAC0D22B32A2F0007EE03 /* Creator.swift */,
 				432CAC2322B33F2D0007EE03 /* Series.swift */,
 				4319189F22D460CF0005328E /* Search.swift */,
 				4319190222D585A60005328E /* Recommendation.swift */,
@@ -323,11 +323,11 @@
 		43CA1BF922A4EF2200CEF20A /* TargetType */ = {
 			isa = PBXGroup;
 			children = (
-				432CAC0A22B328630007EE03 /* MyAPI.swift */,
 				43CA1BFA22A4EF2200CEF20A /* UserAPI.swift */,
 				43CA1BFC22A4EF2200CEF20A /* SessionAPI.swift */,
 				43CA1BFB22A4EF2200CEF20A /* ProjectAPI.swift */,
 				4329EB8F22B1D76B00D01916 /* PostAPI.swift */,
+				432CAC0A22B328630007EE03 /* CreatorAPI.swift */,
 				432CAC2622B33F380007EE03 /* SeriesAPI.swift */,
 				4319189B22D45D0A0005328E /* SearchAPI.swift */,
 				431918FE22D585980005328E /* RecommendationAPI.swift */,
@@ -600,13 +600,13 @@
 				432A67B222BC681B009E51FF /* PageModel.swift in Sources */,
 				4319190F22D5DD540005328E /* Banner.swift in Sources */,
 				43E4C43A22CDED26004C4F8A /* LikeModel.swift in Sources */,
-				432CAC0E22B32A2F0007EE03 /* My.swift in Sources */,
+				432CAC0E22B32A2F0007EE03 /* Creator.swift in Sources */,
 				432A67BE22BC681B009E51FF /* DefaultModel.swift in Sources */,
 				4329EB9022B1D76B00D01916 /* PostAPI.swift in Sources */,
 				4319189C22D45D0A0005328E /* SearchAPI.swift in Sources */,
 				4319190722D585EF0005328E /* RecommendProjectModel.swift in Sources */,
-				432CAC0B22B328630007EE03 /* MyAPI.swift in Sources */,
 				43CA1C0E22A4EF2300CEF20A /* User.swift in Sources */,
+				432CAC0B22B328630007EE03 /* CreatorAPI.swift in Sources */,
 				432CAC2422B33F2D0007EE03 /* Series.swift in Sources */,
 				432CAC7222B725410007EE03 /* Response.swift in Sources */,
 				432A67B522BC681B009E51FF /* SalesModel.swift in Sources */,

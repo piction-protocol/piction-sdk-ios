@@ -16,6 +16,7 @@ public final class PictionSDK {
     public static let project = Project.shared
     public static let post = Post.shared
     public static let creator = Creator.shared
+    public static let wallet = Wallet.shared
     public static let series = Series.shared
     public static let search = Search.shared
     public static let recommendation = Recommendation.shared

@@ -13,8 +13,28 @@ public final class Search {
     private init() {}
 
     public func project(name: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<ProjectModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SearchAPI.project(name: name, page: page, size: size),
+        PictionProvider.request(SearchAPI.projects(name: name, page: page, size: size),
             success: { (response: PageViewResponse<ProjectModel>) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func taggingProjects(tag: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<ProjectModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SearchAPI.taggingProjects(tag: tag, page: page, size: size),
+            success: { (response: PageViewResponse<ProjectModel>) in
+                successCompletion?(response)
+            },
+            failure: { error in
+                failureCompletion?(error)
+            })
+    }
+
+    public func tag(tag: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<TagModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(SearchAPI.tag(tag: tag, page: page, size: size),
+            success: { (response: PageViewResponse<TagModel>) in
                 successCompletion?(response)
             },
             failure: { error in
@@ -32,13 +52,5 @@ public final class Search {
             })
     }
 
-    public func tag(tag: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<TagModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SearchAPI.tag(tag: tag, page: page, size: size),
-            success: { (response: PageViewResponse<TagModel>) in
-                successCompletion?(response)
-            },
-            failure: { error in
-                failureCompletion?(error)
-            })
-    }
+
 }

@@ -159,6 +159,7 @@
 		436881B022E6E48800DB42B6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		4369F8B123CD8D43008D5825 /* FanPassAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanPassAPI.swift; sourceTree = "<group>"; };
 		4369F8B323CD8FB2008D5825 /* FanPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanPass.swift; sourceTree = "<group>"; };
+		4369F8B523CDB6A2008D5825 /* PostLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLinkModel.swift; sourceTree = "<group>"; };
 		4369F8B723CDB98E008D5825 /* WalletAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletAPI.swift; sourceTree = "<group>"; };
 		4369F8B923CDBB3E008D5825 /* WithdrawalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalModel.swift; sourceTree = "<group>"; };
 		4369F8BB23CDBC82008D5825 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
@@ -646,6 +647,7 @@
 				43DCB72A232F918C009EB012 /* StringArrayModel.swift in Sources */,
 				43DB228C23596D3A00E69C0F /* TagModel.swift in Sources */,
 				43C5C9472383DA53004BACFC /* TransactionSubscriptionModel.swift in Sources */,
+				4369F8B623CDB6A2008D5825 /* PostLinkModel.swift in Sources */,
 				4369F8C023CDBE3D008D5825 /* SubscriberAPI.swift in Sources */,
 				4319190B22D5DB5D0005328E /* BannerAPI.swift in Sources */,
 				4369F8BA23CDBB3E008D5825 /* WithdrawalModel.swift in Sources */,

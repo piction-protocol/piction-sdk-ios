@@ -1,5 +1,5 @@
 //
-//  BannersAPI.swift
+//  BannerAPI.swift
 //  PictionSDK
 //
 //  Created by jhseo on 10/07/2019.
@@ -9,13 +9,13 @@
 import Foundation
 import Moya
 
-public enum BannersAPI {
+public enum BannerAPI {
     case all
     case events
     case notices
 }
 
-extension BannersAPI: TargetType {
+extension BannerAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {

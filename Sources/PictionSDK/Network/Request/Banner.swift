@@ -1,5 +1,5 @@
 //
-//  Banners.swift
+//  Banner.swift
 //  PictionSDK
 //
 //  Created by jhseo on 10/07/2019.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public final class Banners {
-    static let shared = Banners()
+public final class Banner {
+    static let shared = Banner()
     private init() {}
 
     public func all(success successCompletion: (([BannerViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(BannersAPI.all,
+        PictionProvider.request(BannerAPI.all,
             success: { (response: [BannerViewResponse]) in
                 successCompletion?(response)
             },
@@ -23,7 +23,7 @@ public final class Banners {
     }
 
     public func events(success successCompletion: (([BannerViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(BannersAPI.events,
+        PictionProvider.request(BannerAPI.events,
             success: { (response: [BannerViewResponse]) in
                 successCompletion?(response)
             },
@@ -33,7 +33,7 @@ public final class Banners {
     }
 
     public func notices(success successCompletion: (([BannerViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(BannersAPI.notices,
+        PictionProvider.request(BannerAPI.notices,
             success: { (response: [BannerViewResponse]) in
                 successCompletion?(response)
             },

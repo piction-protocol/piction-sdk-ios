@@ -29,8 +29,8 @@
 		431918FF22D585980005328E /* RecommendationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918FE22D585980005328E /* RecommendationAPI.swift */; };
 		4319190322D585A60005328E /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319190222D585A60005328E /* Recommendation.swift */; };
 		4319190722D585EF0005328E /* RecommendProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319190622D585EF0005328E /* RecommendProjectModel.swift */; };
-		4319190B22D5DB5D0005328E /* BannersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319190A22D5DB5D0005328E /* BannersAPI.swift */; };
-		4319190F22D5DD540005328E /* Banners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319190E22D5DD540005328E /* Banners.swift */; };
+		4319190B22D5DB5D0005328E /* BannerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319190A22D5DB5D0005328E /* BannerAPI.swift */; };
+		4319190F22D5DD540005328E /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319190E22D5DD540005328E /* Banner.swift */; };
 		4319191322D5DDB10005328E /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319191222D5DDB10005328E /* BannerModel.swift */; };
 		4329EB9022B1D76B00D01916 /* PostsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB8F22B1D76B00D01916 /* PostsAPI.swift */; };
 		4329EBB522B1E3A900D01916 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EBB422B1E3A900D01916 /* Posts.swift */; };
@@ -118,8 +118,8 @@
 		431918FE22D585980005328E /* RecommendationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationAPI.swift; sourceTree = "<group>"; };
 		4319190222D585A60005328E /* Recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
 		4319190622D585EF0005328E /* RecommendProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProjectModel.swift; sourceTree = "<group>"; };
-		4319190A22D5DB5D0005328E /* BannersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersAPI.swift; sourceTree = "<group>"; };
-		4319190E22D5DD540005328E /* Banners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banners.swift; sourceTree = "<group>"; };
+		4319190A22D5DB5D0005328E /* BannerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAPI.swift; sourceTree = "<group>"; };
+		4319190E22D5DD540005328E /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		4319191222D5DDB10005328E /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		4329EB8F22B1D76B00D01916 /* PostsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPI.swift; sourceTree = "<group>"; };
 		4329EBB422B1E3A900D01916 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
@@ -311,9 +311,9 @@
 				432CAC2322B33F2D0007EE03 /* Series.swift */,
 				4319189F22D460CF0005328E /* Search.swift */,
 				4319190222D585A60005328E /* Recommendation.swift */,
-				4319190E22D5DD540005328E /* Banners.swift */,
 				43DB228D23596E8300E69C0F /* Tags.swift */,
 				43C1539823C5C19600565FC4 /* Categories.swift */,
+				4319190E22D5DD540005328E /* Banner.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -329,9 +329,9 @@
 				432CAC2622B33F380007EE03 /* SeriesAPI.swift */,
 				4319189B22D45D0A0005328E /* SearchAPI.swift */,
 				431918FE22D585980005328E /* RecommendationAPI.swift */,
-				4319190A22D5DB5D0005328E /* BannersAPI.swift */,
 				43DB228F23596F3300E69C0F /* TagsAPI.swift */,
 				43C1539A23C5C1C300565FC4 /* CategoriesAPI.swift */,
+				4319190A22D5DB5D0005328E /* BannerAPI.swift */,
 			);
 			path = TargetType;
 			sourceTree = "<group>";
@@ -596,7 +596,7 @@
 				432A67C722BC681B009E51FF /* SeriesModel.swift in Sources */,
 				43DE4BDE22F7C2E3006EA673 /* SponsorshipModel.swift in Sources */,
 				432A67B222BC681B009E51FF /* PageModel.swift in Sources */,
-				4319190F22D5DD540005328E /* Banners.swift in Sources */,
+				4319190F22D5DD540005328E /* Banner.swift in Sources */,
 				43E4C43A22CDED26004C4F8A /* LikeModel.swift in Sources */,
 				432CAC0E22B32A2F0007EE03 /* My.swift in Sources */,
 				432A67BE22BC681B009E51FF /* DefaultModel.swift in Sources */,
@@ -618,7 +618,7 @@
 				43DCB72A232F918C009EB012 /* StringArrayModel.swift in Sources */,
 				43DB228C23596D3A00E69C0F /* TagModel.swift in Sources */,
 				43C5C9472383DA53004BACFC /* TransactionSubscriptionModel.swift in Sources */,
-				4319190B22D5DB5D0005328E /* BannersAPI.swift in Sources */,
+				4319190B22D5DB5D0005328E /* BannerAPI.swift in Sources */,
 				432A67A922BC681B009E51FF /* WalletModel.swift in Sources */,
 				43DB228E23596E8300E69C0F /* Tags.swift in Sources */,
 				43C1539B23C5C1C300565FC4 /* CategoriesAPI.swift in Sources */,

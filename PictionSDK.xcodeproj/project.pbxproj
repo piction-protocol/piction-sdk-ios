@@ -66,12 +66,12 @@
 		43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */; };
 		43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */; };
 		43CA1C0622A4EF2300CEF20A /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */; };
-		43CA1C0F22A4EF2300CEF20A /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF722A4EF2200CEF20A /* Sessions.swift */; };
 		43CA1C1022A4EF2300CEF20A /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF822A4EF2200CEF20A /* Projects.swift */; };
 		43CA1C1222A4EF2300CEF20A /* ProjectsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */; };
-		43CA1C1322A4EF2300CEF20A /* SessionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFC22A4EF2200CEF20A /* SessionsAPI.swift */; };
 		43CA1C0E22A4EF2300CEF20A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF622A4EF2200CEF20A /* User.swift */; };
+		43CA1C0F22A4EF2300CEF20A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BF722A4EF2200CEF20A /* Session.swift */; };
 		43CA1C1122A4EF2300CEF20A /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFA22A4EF2200CEF20A /* UserAPI.swift */; };
+		43CA1C1322A4EF2300CEF20A /* SessionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFC22A4EF2200CEF20A /* SessionAPI.swift */; };
 		43CA1C1422A4EF2300CEF20A /* PictionSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFD22A4EF2200CEF20A /* PictionSDK.swift */; };
 		43CA1C1522A4EF2300CEF20A /* PictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BFF22A4EF2200CEF20A /* PictionManager.swift */; };
 		43CA1C1722A4EF2300CEF20A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1C0122A4EF2200CEF20A /* Request.swift */; };
@@ -157,12 +157,12 @@
 		43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
 		43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTypeExtension.swift; sourceTree = "<group>"; };
 		43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfo.swift; sourceTree = "<group>"; };
-		43CA1BF722A4EF2200CEF20A /* Sessions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sessions.swift; sourceTree = "<group>"; };
 		43CA1BF822A4EF2200CEF20A /* Projects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsAPI.swift; sourceTree = "<group>"; };
-		43CA1BFC22A4EF2200CEF20A /* SessionsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsAPI.swift; sourceTree = "<group>"; };
 		43CA1BF622A4EF2200CEF20A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		43CA1BF722A4EF2200CEF20A /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		43CA1BFA22A4EF2200CEF20A /* UserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		43CA1BFC22A4EF2200CEF20A /* SessionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAPI.swift; sourceTree = "<group>"; };
 		43CA1BFD22A4EF2200CEF20A /* PictionSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictionSDK.swift; sourceTree = "<group>"; };
 		43CA1BFF22A4EF2200CEF20A /* PictionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictionManager.swift; sourceTree = "<group>"; };
 		43CA1C0122A4EF2200CEF20A /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -303,11 +303,11 @@
 		43CA1BF522A4EF2200CEF20A /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				43CA1BF722A4EF2200CEF20A /* Sessions.swift */,
 				43CA1BF822A4EF2200CEF20A /* Projects.swift */,
 				4329EBB422B1E3A900D01916 /* Posts.swift */,
 				432CAC0D22B32A2F0007EE03 /* My.swift */,
 				43CA1BF622A4EF2200CEF20A /* User.swift */,
+				43CA1BF722A4EF2200CEF20A /* Session.swift */,
 				432CAC2322B33F2D0007EE03 /* Series.swift */,
 				4319189F22D460CF0005328E /* Search.swift */,
 				4319190222D585A60005328E /* Recommendation.swift */,
@@ -321,11 +321,11 @@
 		43CA1BF922A4EF2200CEF20A /* TargetType */ = {
 			isa = PBXGroup;
 			children = (
-				43CA1BFC22A4EF2200CEF20A /* SessionsAPI.swift */,
 				43CA1BFB22A4EF2200CEF20A /* ProjectsAPI.swift */,
 				4329EB8F22B1D76B00D01916 /* PostsAPI.swift */,
 				432CAC0A22B328630007EE03 /* MyAPI.swift */,
 				43CA1BFA22A4EF2200CEF20A /* UserAPI.swift */,
+				43CA1BFC22A4EF2200CEF20A /* SessionAPI.swift */,
 				432CAC2622B33F380007EE03 /* SeriesAPI.swift */,
 				4319189B22D45D0A0005328E /* SearchAPI.swift */,
 				431918FE22D585980005328E /* RecommendationAPI.swift */,
@@ -581,9 +581,9 @@
 				43C1539923C5C19700565FC4 /* Categories.swift in Sources */,
 				430907CC23629537005EF5A2 /* SubscriptionUserModel.swift in Sources */,
 				432A67A622BC681B009E51FF /* TransactionModel.swift in Sources */,
-				43CA1C0F22A4EF2300CEF20A /* Sessions.swift in Sources */,
+				43CA1C0F22A4EF2300CEF20A /* Session.swift in Sources */,
 				432CAC2722B33F380007EE03 /* SeriesAPI.swift in Sources */,
-				43CA1C1322A4EF2300CEF20A /* SessionsAPI.swift in Sources */,
+				43CA1C1322A4EF2300CEF20A /* SessionAPI.swift in Sources */,
 				43125A3B23AB73B90060928F /* CategoryModel.swift in Sources */,
 				43CA1C1422A4EF2300CEF20A /* PictionSDK.swift in Sources */,
 				43CA1C1822A4EF2300CEF20A /* ErrorType.swift in Sources */,

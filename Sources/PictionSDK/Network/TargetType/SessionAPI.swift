@@ -1,5 +1,5 @@
 //
-//  SessionsAPI.swift
+//  SessionAPI.swift
 //  PictionSDK
 //
 //  Created by jhseo on 20/05/2019.
@@ -9,12 +9,12 @@
 import Foundation
 import Moya
 
-public enum SessionsAPI {
+public enum SessionAPI {
     case create(loginId: String, password: String, rememberme: Bool)
     case delete
 }
 
-extension SessionsAPI: TargetType {
+extension SessionAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {

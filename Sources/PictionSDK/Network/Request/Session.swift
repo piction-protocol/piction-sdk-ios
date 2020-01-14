@@ -1,5 +1,5 @@
 //
-//  Sessions.swift
+//  Session.swift
 //  PictionSDK
 //
 //  Created by jhseo on 21/05/2019.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public final class Sessions {
-    static let shared = Sessions()
+public final class Session {
+    static let shared = Session()
     private init() {}
 
     public func create(loginId: String, password: String, rememberme: Bool, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SessionsAPI.create(loginId: loginId, password: password, rememberme: rememberme),
+        PictionProvider.request(SessionAPI.create(loginId: loginId, password: password, rememberme: rememberme),
             success: { (response: AuthenticationViewResponse) in
 //                PictionManager.setToken(response.accessToken ?? "")
                 successCompletion?(response)
@@ -24,7 +24,7 @@ public final class Sessions {
     }
 
     public func delete(success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SessionsAPI.delete,
+        PictionProvider.request(SessionAPI.delete,
             success: { (response: AuthenticationViewResponse) in
 //                PictionManager.setToken(response.accessToken ?? "")
                 successCompletion?(response)

@@ -18,7 +18,6 @@ public enum SeriesAPI {
     case delete(uri: String, seriesId: Int)
     case allSeriesPosts(uri: String, seriesId: Int, page: Int, size: Int, isDescending: Bool)
     case getThumbnails(uri: String, seriesId: Int)
-    case getPreviousAndNextPosts(uri: String, seriesId: Int, postId: Int, count: Int)
 }
 
 extension SeriesAPI: TargetType {
@@ -37,8 +36,6 @@ extension SeriesAPI: TargetType {
             return "/projects/\(uri)/series/\(seriesId)/posts"
         case .getThumbnails(let uri, let seriesId):
             return "/projects/\(uri)/series/\(seriesId)/thumbnails"
-        case .getPreviousAndNextPosts(let uri, let seriesId, let postId, _):
-            return "/projects/\(uri)/series/\(seriesId)/posts/\(postId)"
         }
     }
     public var method: Moya.Method {
@@ -46,8 +43,7 @@ extension SeriesAPI: TargetType {
         case .all,
              .get,
              .allSeriesPosts,
-             .getThumbnails,
-             .getPreviousAndNextPosts:
+             .getThumbnails:
             return .get
         case .create:
             return .post
@@ -73,8 +69,6 @@ extension SeriesAPI: TargetType {
             return jsonSerializedUTF8(json: PageViewResponse<PostModel>.sampleData())
         case .getThumbnails:
             return jsonSerializedUTF8(json: StringArrayViewResponse.sampleData())
-        case .getPreviousAndNextPosts:
-            return jsonSerializedUTF8(json: [PostIndexViewResponse.sampleData()])
         }
     }
     public var task: Task {
@@ -99,11 +93,6 @@ extension SeriesAPI: TargetType {
             param["page"] = page
             param["size"] = size
             param["isDescending"] = isDescending
-            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
-        case .getPreviousAndNextPosts(_, _, _, let count):
-            let param: [String: Any] = [
-                "count": count
-            ]
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }
     }

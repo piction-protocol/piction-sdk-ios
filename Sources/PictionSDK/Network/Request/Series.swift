@@ -92,14 +92,4 @@ public final class Series {
                 failureCompletion?(error)
             })
     }
-
-    public func getPreviousAndNextPosts(uri: String, seriesId: Int, postId: Int, count: Int, success successCompletion: (([PostIndexViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(SeriesAPI.getPreviousAndNextPosts(uri: uri, seriesId: seriesId, postId: postId, count: count),
-            success: { (response: [PostIndexViewResponse]) in
-                successCompletion?(response)
-            },
-            failure: { error in
-                failureCompletion?(error)
-            })
-    }
 }

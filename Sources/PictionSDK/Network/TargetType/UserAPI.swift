@@ -1,5 +1,5 @@
 //
-//  UsersAPI.swift
+//  UserAPI.swift
 //  PictionSDK
 //
 //  Created by jhseo on 17/05/2019.
@@ -10,8 +10,7 @@ import Foundation
 import Moya
 import UIKit
 
-public enum UsersAPI {
-    case findAll
+public enum UserAPI {
     case signup(loginId: String, email: String, username: String, password: String, passwordCheck: String)
     case findOne(id: String)
     case me
@@ -21,12 +20,11 @@ public enum UsersAPI {
     case findPublicAddress(address: String)
 }
 
-extension UsersAPI: TargetType {
+extension UserAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
-        case .findAll,
-             .signup:
+        case .signup:
             return "/users"
         case .findOne(let id):
             return "/users/\(id)"
@@ -45,8 +43,7 @@ extension UsersAPI: TargetType {
         switch self {
         case .signup:
             return .post
-        case .findAll,
-             .findOne,
+        case .findOne,
              .me,
              .findPublicAddress:
             return .get
@@ -59,8 +56,6 @@ extension UsersAPI: TargetType {
     }
     public var sampleData: Data {
         switch self {
-        case .findAll:
-            return jsonSerializedUTF8(json: [UserViewResponse.sampleData()])
         case .signup,
              .updatePassword:
             return jsonSerializedUTF8(json: AuthenticationViewResponse.sampleData())
@@ -75,8 +70,7 @@ extension UsersAPI: TargetType {
     }
     public var task: Task {
         switch self {
-        case .findAll,
-             .findOne,
+        case .findOne,
              .me,
              .findPublicAddress:
             return .requestPlain

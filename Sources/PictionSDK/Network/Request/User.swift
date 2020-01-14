@@ -1,5 +1,5 @@
 //
-//  Users.swift
+//  User.swift
 //  PictionSDK
 //
 //  Created by jhseo on 08/05/2019.
@@ -9,22 +9,12 @@
 import Foundation
 import UIKit
 
-public final class Users {
-    static let shared = Users()
+public final class User {
+    static let shared = User()
     private init() {}
 
-    public func findAll(success successCompletion: (([UserViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(UsersAPI.findAll,
-            success: { (response: [UserViewResponse]) in
-                successCompletion?(response)
-            },
-            failure: { error in
-                failureCompletion?(error)
-            })
-    }
-
     public func signup(loginId: String, email: String, username: String, password: String, passwordCheck: String, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(UsersAPI.signup(loginId: loginId, email: email, username: username, password: password, passwordCheck: passwordCheck),
+        PictionProvider.request(UserAPI.signup(loginId: loginId, email: email, username: username, password: password, passwordCheck: passwordCheck),
             success: { (response: AuthenticationViewResponse) in
                 successCompletion?(response)
             },
@@ -34,7 +24,7 @@ public final class Users {
     }
 
     public func findOne(id: String, success successCompletion: ((UserViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(UsersAPI.findOne(id: id),
+        PictionProvider.request(UserAPI.findOne(id: id),
             success: { (response: UserViewResponse) in
                 successCompletion?(response)
             },
@@ -44,7 +34,7 @@ public final class Users {
     }
 
     public func me(success successCompletion: ((UserViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(UsersAPI.me,
+        PictionProvider.request(UserAPI.me,
             success: { (response: UserViewResponse) in
                 successCompletion?(response)
             },
@@ -54,7 +44,7 @@ public final class Users {
     }
 
     public func update(username: String, password: String, picture: String? = nil, success successCompletion: ((UserViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(UsersAPI.update(username: username, password: password, picture: picture),
+        PictionProvider.request(UserAPI.update(username: username, password: password, picture: picture),
             success: { (response: UserViewResponse) in
                 successCompletion?(response)
             },
@@ -64,7 +54,7 @@ public final class Users {
     }
 
     public func updatePassword(password: String, newPassword: String, passwordCheck: String, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(UsersAPI.updatePassword(password: password, newPassword: newPassword, passwordCheck: passwordCheck),
+        PictionProvider.request(UserAPI.updatePassword(password: password, newPassword: newPassword, passwordCheck: passwordCheck),
             success: { (response: AuthenticationViewResponse) in
                 successCompletion?(response)
             },
@@ -74,7 +64,7 @@ public final class Users {
     }
 
     public func uploadPicture(image: UIImage, success successCompletion: ((StorageAttachmentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(UsersAPI.uploadPicture(image: image),
+        PictionProvider.request(UserAPI.uploadPicture(image: image),
             success: { (response: StorageAttachmentViewResponse) in
                 successCompletion?(response)
             },
@@ -84,7 +74,7 @@ public final class Users {
     }
 
     public func findPublicAddress(address: String, success successCompletion: ((UserViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(UsersAPI.findPublicAddress(address: address),
+        PictionProvider.request(UserAPI.findPublicAddress(address: address),
             success: { (response: UserViewResponse) in
                 successCompletion?(response)
             },

@@ -1,5 +1,5 @@
 //
-//  Tags.swift
+//  Tag.swift
 //  PictionSDK
 //
 //  Created by jhseo on 18/10/2019.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public final class Tags {
-    static let shared = Tags()
+public final class Tag {
+    static let shared = Tag()
     private init() {}
 
     public func popular(success successCompletion: (([TagModel]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(TagsAPI.popular,
+        PictionProvider.request(TagAPI.popular,
             success: { (response: [TagModel]) in
                 successCompletion?(response)
             },
@@ -23,7 +23,7 @@ public final class Tags {
     }
 
     public func popularAll(success successCompletion: (([TagModel]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(TagsAPI.popularAll,
+        PictionProvider.request(TagAPI.popularAll,
             success: { (response: [TagModel]) in
                 successCompletion?(response)
             },

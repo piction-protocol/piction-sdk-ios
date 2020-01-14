@@ -1,5 +1,5 @@
 //
-//  TagsAPI.swift
+//  TagAPI.swift
 //  PictionSDK
 //
 //  Created by jhseo on 18/10/2019.
@@ -9,12 +9,12 @@
 import Foundation
 import Moya
 
-public enum TagsAPI {
+public enum TagAPI {
     case popular
     case popularAll
 }
 
-extension TagsAPI: TargetType {
+extension TagAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {

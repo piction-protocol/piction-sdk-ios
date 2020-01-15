@@ -29,9 +29,6 @@
 		431918FF22D585980005328E /* RecommendationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431918FE22D585980005328E /* RecommendationAPI.swift */; };
 		4319190322D585A60005328E /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319190222D585A60005328E /* Recommendation.swift */; };
 		4319190722D585EF0005328E /* RecommendProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319190622D585EF0005328E /* RecommendProjectModel.swift */; };
-		4319190B22D5DB5D0005328E /* BannerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319190A22D5DB5D0005328E /* BannerAPI.swift */; };
-		4319190F22D5DD540005328E /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319190E22D5DD540005328E /* Banner.swift */; };
-		4319191322D5DDB10005328E /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319191222D5DDB10005328E /* BannerModel.swift */; };
 		4329EB9022B1D76B00D01916 /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EB8F22B1D76B00D01916 /* PostAPI.swift */; };
 		4329EBB522B1E3A900D01916 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329EBB422B1E3A900D01916 /* Post.swift */; };
 		432A67A022BC681B009E51FF /* StorageAttachmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679222BC681B009E51FF /* StorageAttachmentModel.swift */; };
@@ -126,9 +123,6 @@
 		431918FE22D585980005328E /* RecommendationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationAPI.swift; sourceTree = "<group>"; };
 		4319190222D585A60005328E /* Recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
 		4319190622D585EF0005328E /* RecommendProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProjectModel.swift; sourceTree = "<group>"; };
-		4319190A22D5DB5D0005328E /* BannerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAPI.swift; sourceTree = "<group>"; };
-		4319190E22D5DD540005328E /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
-		4319191222D5DDB10005328E /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		4329EB8F22B1D76B00D01916 /* PostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPI.swift; sourceTree = "<group>"; };
 		4329EBB422B1E3A900D01916 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		432A679222BC681B009E51FF /* StorageAttachmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageAttachmentModel.swift; sourceTree = "<group>"; };
@@ -251,7 +245,6 @@
 				43E4C43922CDED26004C4F8A /* LikeModel.swift */,
 				43E4C43D22CDED74004C4F8A /* ContentModel.swift */,
 				4319190622D585EF0005328E /* RecommendProjectModel.swift */,
-				4319191222D5DDB10005328E /* BannerModel.swift */,
 				43DE4BDD22F7C2E3006EA673 /* SponsorshipModel.swift */,
 				43FC6F8922F832A50086B65A /* FanPassModel.swift */,
 				43CD77D3232F341600AC5F07 /* PostIndexModel.swift */,
@@ -329,7 +322,6 @@
 				432CAC2322B33F2D0007EE03 /* Series.swift */,
 				4319189F22D460CF0005328E /* Search.swift */,
 				4319190222D585A60005328E /* Recommendation.swift */,
-				4319190E22D5DD540005328E /* Banner.swift */,
 				43DB228D23596E8300E69C0F /* Tag.swift */,
 				43C1539823C5C19600565FC4 /* Category.swift */,
 				4369F8B323CD8FB2008D5825 /* FanPass.swift */,
@@ -350,7 +342,6 @@
 				432CAC2622B33F380007EE03 /* SeriesAPI.swift */,
 				4319189B22D45D0A0005328E /* SearchAPI.swift */,
 				431918FE22D585980005328E /* RecommendationAPI.swift */,
-				4319190A22D5DB5D0005328E /* BannerAPI.swift */,
 				43DB228F23596F3300E69C0F /* TagAPI.swift */,
 				43C1539A23C5C1C300565FC4 /* CategoryAPI.swift */,
 				4369F8B123CD8D43008D5825 /* FanPassAPI.swift */,
@@ -624,7 +615,6 @@
 				4369F8B823CDB98E008D5825 /* WalletAPI.swift in Sources */,
 				43DE4BDE22F7C2E3006EA673 /* SponsorshipModel.swift in Sources */,
 				432A67B222BC681B009E51FF /* PageModel.swift in Sources */,
-				4319190F22D5DD540005328E /* Banner.swift in Sources */,
 				43E4C43A22CDED26004C4F8A /* LikeModel.swift in Sources */,
 				432CAC0E22B32A2F0007EE03 /* Creator.swift in Sources */,
 				432A67BE22BC681B009E51FF /* DefaultModel.swift in Sources */,
@@ -643,13 +633,11 @@
 				43CA1C1222A4EF2300CEF20A /* ProjectAPI.swift in Sources */,
 				432A67A022BC681B009E51FF /* StorageAttachmentModel.swift in Sources */,
 				43CA1C1022A4EF2300CEF20A /* Project.swift in Sources */,
-				4319191322D5DDB10005328E /* BannerModel.swift in Sources */,
 				43DCB72A232F918C009EB012 /* StringArrayModel.swift in Sources */,
 				43DB228C23596D3A00E69C0F /* TagModel.swift in Sources */,
 				43C5C9472383DA53004BACFC /* TransactionSubscriptionModel.swift in Sources */,
 				4369F8B623CDB6A2008D5825 /* PostLinkModel.swift in Sources */,
 				4369F8C023CDBE3D008D5825 /* SubscriberAPI.swift in Sources */,
-				4319190B22D5DB5D0005328E /* BannerAPI.swift in Sources */,
 				4369F8BA23CDBB3E008D5825 /* WithdrawalModel.swift in Sources */,
 				432A67A922BC681B009E51FF /* WalletModel.swift in Sources */,
 				43DB228E23596E8300E69C0F /* Tag.swift in Sources */,

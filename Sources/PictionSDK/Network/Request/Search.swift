@@ -12,7 +12,7 @@ public final class Search {
     static let shared = Search()
     private init() {}
 
-    public func project(name: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<ProjectModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func projects(name: String, page: Int, size: Int, success successCompletion: ((PageViewResponse<ProjectModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(SearchAPI.projects(name: name, page: page, size: size),
             success: { (response: PageViewResponse<ProjectModel>) in
                 successCompletion?(response)

@@ -32,7 +32,7 @@ public final class Category {
             })
     }
 
-    public func get(id: Int, page: Int, size: Int, success successCompletion: (([ProjectModel]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func categorizedProjects(id: Int, page: Int, size: Int, success successCompletion: (([ProjectModel]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(CategoryAPI.categorizedProjects(id: id, page: page, size: size),
             success: { (response: [ProjectModel]) in
                 successCompletion?(response)

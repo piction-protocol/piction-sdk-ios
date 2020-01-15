@@ -20,7 +20,7 @@ public enum PostAPI {
     case getLike(uri: String, postId: Int)
     case like(uri: String, postId: Int)
     case getLinks(uri: String, postId: Int)
-    case getSeriesLink(uri: String, postId: Int, count: Int)
+    case getSeriesLinks(uri: String, postId: Int, count: Int)
     case uploadContentImage(uri: String, image: UIImage)
     case uploadCoverImage(uri: String, image: UIImage)
 }
@@ -42,7 +42,7 @@ extension PostAPI: TargetType {
             return "/projects/\(uri)/posts/\(postId)/like"
         case .getLinks(let uri, let postId):
             return "/projects/\(uri)/posts/\(postId)/links"
-        case .getSeriesLink(let uri, let postId, _):
+        case .getSeriesLinks(let uri, let postId, _):
             return "/projects/\(uri)/posts/\(postId)/series/links"
         case .uploadContentImage(let uri, _):
             return "/projects/\(uri)/posts/content"
@@ -59,7 +59,7 @@ extension PostAPI: TargetType {
              .getContent,
              .getLike,
              .getLinks,
-             .getSeriesLink:
+             .getSeriesLinks:
             return .get
         case .create,
              .like:
@@ -84,7 +84,7 @@ extension PostAPI: TargetType {
             return jsonSerializedUTF8(json: PostViewResponse.sampleData())
         case .getLinks:
             return jsonSerializedUTF8(json: PostLinkViewResponse.sampleData())
-        case .getSeriesLink:
+        case .getSeriesLinks:
             return jsonSerializedUTF8(json: [PostIndexViewResponse.sampleData()])
         case .delete:
             return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
@@ -126,7 +126,7 @@ extension PostAPI: TargetType {
              .getLike,
              .getLinks:
             return .requestPlain
-        case .getSeriesLink(_, _, let count):
+        case .getSeriesLinks(_, _, let count):
             var param: [String: Any] = [:]
             param["count"] = count
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)

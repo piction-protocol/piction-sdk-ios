@@ -83,7 +83,7 @@ public final class FanPass {
             })
     }
 
-    public func getSubscribedProject(uri: String, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func getSubscribedFanPass(uri: String, success successCompletion: ((SubscriptionViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(FanPassAPI.getSubscribedFanPass(uri: uri),
             success: { (response: SubscriptionViewResponse) in
                 successCompletion?(response)

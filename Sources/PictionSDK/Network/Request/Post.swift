@@ -63,7 +63,7 @@ public final class Post {
             })
     }
 
-    public func content(uri: String, postId: Int, success successCompletion: ((ContentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func getContent(uri: String, postId: Int, success successCompletion: ((ContentViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(PostAPI.getContent(uri: uri, postId: postId),
             success: { (response: ContentViewResponse) in
                 successCompletion?(response)
@@ -73,7 +73,7 @@ public final class Post {
             })
     }
 
-    public func isLike(uri: String, postId: Int, success successCompletion: ((LikeViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func getLike(uri: String, postId: Int, success successCompletion: ((LikeViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(PostAPI.getLike(uri: uri, postId: postId),
             success: { (response: LikeViewResponse) in
                 successCompletion?(response)
@@ -103,8 +103,8 @@ public final class Post {
             })
     }
 
-    public func getSeriesLink(uri: String, postId: Int, count: Int, success successCompletion: (([PostIndexViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
-        PictionProvider.request(PostAPI.getSeriesLink(uri: uri, postId: postId, count: count),
+    public func getSeriesLinks(uri: String, postId: Int, count: Int, success successCompletion: (([PostIndexViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+        PictionProvider.request(PostAPI.getSeriesLinks(uri: uri, postId: postId, count: count),
             success: { (response: [PostIndexViewResponse]) in
                 successCompletion?(response)
             },

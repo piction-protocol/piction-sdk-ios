@@ -22,7 +22,7 @@ public final class Subscriber {
             })
     }
 
-    public func subscribingPosts(page: Int, size: Int, success successCompletion: ((SubscribingPostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func latestPosts(page: Int, size: Int, success successCompletion: ((SubscribingPostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(SubscriberAPI.latestPosts(page: page, size: size),
             success: { (response: SubscribingPostViewResponse) in
                 successCompletion?(response)

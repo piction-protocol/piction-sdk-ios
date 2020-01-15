@@ -83,9 +83,6 @@
 		43CA1C1822A4EF2300CEF20A /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1C0222A4EF2200CEF20A /* ErrorType.swift */; };
 		43CA1CC522A4F6F900CEF20A /* PictionSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1CC322A4F6F900CEF20A /* PictionSDK+Rx.swift */; };
 		43CD77D4232F341600AC5F07 /* PostIndexModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CD77D3232F341600AC5F07 /* PostIndexModel.swift */; };
-		43DB228C23596D3A00E69C0F /* TagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB228B23596D3A00E69C0F /* TagModel.swift */; };
-		43DB228E23596E8300E69C0F /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB228D23596E8300E69C0F /* Tag.swift */; };
-		43DB229023596F3300E69C0F /* TagAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB228F23596F3300E69C0F /* TagAPI.swift */; };
 		43DCB72A232F918C009EB012 /* StringArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DCB729232F918C009EB012 /* StringArrayModel.swift */; };
 		43DE4BDE22F7C2E3006EA673 /* SponsorshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DE4BDD22F7C2E3006EA673 /* SponsorshipModel.swift */; };
 		43E4C43A22CDED26004C4F8A /* LikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4C43922CDED26004C4F8A /* LikeModel.swift */; };
@@ -180,9 +177,6 @@
 		43CA1CC022A4F6BF00CEF20A /* RxPictionSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxPictionSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CA1CC322A4F6F900CEF20A /* PictionSDK+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PictionSDK+Rx.swift"; sourceTree = "<group>"; };
 		43CD77D3232F341600AC5F07 /* PostIndexModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostIndexModel.swift; sourceTree = "<group>"; };
-		43DB228B23596D3A00E69C0F /* TagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModel.swift; sourceTree = "<group>"; };
-		43DB228D23596E8300E69C0F /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
-		43DB228F23596F3300E69C0F /* TagAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagAPI.swift; sourceTree = "<group>"; };
 		43DCB729232F918C009EB012 /* StringArrayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringArrayModel.swift; sourceTree = "<group>"; };
 		43DE4BDD22F7C2E3006EA673 /* SponsorshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorshipModel.swift; sourceTree = "<group>"; };
 		43E4C43922CDED26004C4F8A /* LikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeModel.swift; sourceTree = "<group>"; };
@@ -249,7 +243,6 @@
 				43FC6F8922F832A50086B65A /* FanPassModel.swift */,
 				43CD77D3232F341600AC5F07 /* PostIndexModel.swift */,
 				43DCB729232F918C009EB012 /* StringArrayModel.swift */,
-				43DB228B23596D3A00E69C0F /* TagModel.swift */,
 				430907CB23629536005EF5A2 /* SubscriptionUserModel.swift */,
 				43C5C9462383DA53004BACFC /* TransactionSubscriptionModel.swift */,
 				43C5C9482383DA83004BACFC /* TransactionSponsorshipModel.swift */,
@@ -322,7 +315,6 @@
 				432CAC2322B33F2D0007EE03 /* Series.swift */,
 				4319189F22D460CF0005328E /* Search.swift */,
 				4319190222D585A60005328E /* Recommendation.swift */,
-				43DB228D23596E8300E69C0F /* Tag.swift */,
 				43C1539823C5C19600565FC4 /* Category.swift */,
 				4369F8B323CD8FB2008D5825 /* FanPass.swift */,
 				4369F8BB23CDBC82008D5825 /* Wallet.swift */,
@@ -342,7 +334,6 @@
 				432CAC2622B33F380007EE03 /* SeriesAPI.swift */,
 				4319189B22D45D0A0005328E /* SearchAPI.swift */,
 				431918FE22D585980005328E /* RecommendationAPI.swift */,
-				43DB228F23596F3300E69C0F /* TagAPI.swift */,
 				43C1539A23C5C1C300565FC4 /* CategoryAPI.swift */,
 				4369F8B123CD8D43008D5825 /* FanPassAPI.swift */,
 				4369F8B723CDB98E008D5825 /* WalletAPI.swift */,
@@ -594,7 +585,6 @@
 				43CA1C1722A4EF2300CEF20A /* Request.swift in Sources */,
 				43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */,
 				4329EBB522B1E3A900D01916 /* Post.swift in Sources */,
-				43DB229023596F3300E69C0F /* TagAPI.swift in Sources */,
 				4369F8B423CD8FB2008D5825 /* FanPass.swift in Sources */,
 				43C1539923C5C19700565FC4 /* Category.swift in Sources */,
 				430907CC23629537005EF5A2 /* SubscriptionUserModel.swift in Sources */,
@@ -634,13 +624,11 @@
 				432A67A022BC681B009E51FF /* StorageAttachmentModel.swift in Sources */,
 				43CA1C1022A4EF2300CEF20A /* Project.swift in Sources */,
 				43DCB72A232F918C009EB012 /* StringArrayModel.swift in Sources */,
-				43DB228C23596D3A00E69C0F /* TagModel.swift in Sources */,
 				43C5C9472383DA53004BACFC /* TransactionSubscriptionModel.swift in Sources */,
 				4369F8B623CDB6A2008D5825 /* PostLinkModel.swift in Sources */,
 				4369F8C023CDBE3D008D5825 /* SubscriberAPI.swift in Sources */,
 				4369F8BA23CDBB3E008D5825 /* WithdrawalModel.swift in Sources */,
 				432A67A922BC681B009E51FF /* WalletModel.swift in Sources */,
-				43DB228E23596E8300E69C0F /* Tag.swift in Sources */,
 				43C1539B23C5C1C300565FC4 /* CategoryAPI.swift in Sources */,
 				4319190322D585A60005328E /* Recommendation.swift in Sources */,
 				432A67BB22BC681B009E51FF /* UserModel.swift in Sources */,

@@ -22,7 +22,6 @@ public final class PictionSDK {
     public static let series = Series.shared
     public static let search = Search.shared
     public static let recommendation = Recommendation.shared
-    public static let tag = Tag.shared
     public static let category = Category.shared
 
     public static func requestAPI<M: Mappable, T: TargetType>(_ target: T, success successCompletion: ((M) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {

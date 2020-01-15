@@ -32,9 +32,9 @@ public final class Creator {
             })
     }
 
-    public func projectSubscriptions(uri: String, fanPassId: Int? = nil, page: Int, size: Int, success successCompletion: ((PageViewResponse<SubscriptionUserModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func projectSubscriptions(uri: String, fanPassId: Int? = nil, page: Int, size: Int, success successCompletion: ((PageViewResponse<SubscriberModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
         PictionProvider.request(CreatorAPI.projectSubscriptions(uri: uri, fanPassId: fanPassId, page: page, size: size),
-            success: { (response: PageViewResponse<SubscriptionUserModel>) in
+            success: { (response: PageViewResponse<SubscriberModel>) in
                 successCompletion?(response)
             },
             failure: { error in

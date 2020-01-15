@@ -50,7 +50,7 @@ extension CreatorAPI: TargetType {
         case .posts:
             return jsonSerializedUTF8(json: PageViewResponse<PostModel>.sampleData())
         case .projectSubscriptions:
-            return jsonSerializedUTF8(json: PageViewResponse<PostModel>.sampleData())
+            return jsonSerializedUTF8(json: PageViewResponse<SubscriberModel>.sampleData())
         case .projectsCount:
             return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
         case .sales:

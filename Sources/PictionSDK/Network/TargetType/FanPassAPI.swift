@@ -73,9 +73,10 @@ extension FanPassAPI: TargetType {
         case .delete,
              .cancelSubscription:
             return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
-        case .subscription,
-             .getSubscribedFanPass:
+        case .subscription:
             return jsonSerializedUTF8(json: SubscriptionViewResponse.sampleData())
+        case .getSubscribedFanPass:
+            return jsonSerializedUTF8(json: SubscriptionFanPassViewResponse.sampleData())
         }
     }
     public var task: Task {

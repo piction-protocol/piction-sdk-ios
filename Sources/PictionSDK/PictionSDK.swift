@@ -11,7 +11,7 @@ import Moya
 import Mapper
 
 public final class PictionSDK {
-    public static let users = User.shared
+    public static let user = User.shared
     public static let session = Session.shared
     public static let project = Project.shared
     public static let fanPass = FanPass.shared

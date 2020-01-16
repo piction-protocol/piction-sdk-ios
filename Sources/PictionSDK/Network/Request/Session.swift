@@ -12,25 +12,25 @@ public final class Session {
     static let shared = Session()
     private init() {}
 
-    public func create(loginId: String, password: String, rememberme: Bool, success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func create(loginId: String, password: String, rememberme: Bool, success successCompletion: @escaping SuccessClosure<AuthenticationViewResponse>, failure failureCompletion: @escaping FailureClosure) {
         PictionProvider.request(SessionAPI.create(loginId: loginId, password: password, rememberme: rememberme),
             success: { (response: AuthenticationViewResponse) in
 //                PictionManager.setToken(response.accessToken ?? "")
-                successCompletion?(response)
+                successCompletion(response)
             },
             failure: { error in
-                failureCompletion?(error)
+                failureCompletion(error)
             })
     }
 
-    public func delete(success successCompletion: ((AuthenticationViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func delete(success successCompletion: @escaping SuccessClosure<AuthenticationViewResponse>, failure failureCompletion: @escaping FailureClosure) {
         PictionProvider.request(SessionAPI.delete,
             success: { (response: AuthenticationViewResponse) in
 //                PictionManager.setToken(response.accessToken ?? "")
-                successCompletion?(response)
+                successCompletion(response)
             },
             failure: { error in
-                failureCompletion?(error)
+                failureCompletion(error)
             })
     }
 }

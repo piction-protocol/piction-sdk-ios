@@ -12,53 +12,53 @@ public final class Creator {
     static let shared = Creator()
     private init() {}
 
-    public func projects(success successCompletion: (([ProjectViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func projects(success successCompletion: @escaping SuccessClosure<[ProjectViewResponse]>, failure failureCompletion: @escaping FailureClosure) {
         PictionProvider.request(CreatorAPI.projects,
             success: { (response: [ProjectViewResponse]) in
-                successCompletion?(response)
+                successCompletion(response)
             },
             failure: { error in
-                failureCompletion?(error)
+                failureCompletion(error)
             })
     }
 
-    public func posts(uri: String, seriesId: Int? = nil, condition: String? = nil, fanPassLevel: Int? = nil, page: Int, size: Int, success successCompletion: ((PageViewResponse<PostModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func posts(uri: String, seriesId: Int? = nil, condition: String? = nil, fanPassLevel: Int? = nil, page: Int, size: Int, success successCompletion: @escaping SuccessClosure<PageViewResponse<PostModel>>, failure failureCompletion: @escaping FailureClosure) {
         PictionProvider.request(CreatorAPI.posts(uri: uri, seriesId: seriesId, condition: condition, fanPassLevel: fanPassLevel, page: page, size: size),
             success: { (response: PageViewResponse<PostModel>) in
-                successCompletion?(response)
+                successCompletion(response)
             },
             failure: { error in
-                failureCompletion?(error)
+                failureCompletion(error)
             })
     }
 
-    public func projectSubscriptions(uri: String, fanPassId: Int? = nil, page: Int, size: Int, success successCompletion: ((PageViewResponse<SubscriberModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func projectSubscriptions(uri: String, fanPassId: Int? = nil, page: Int, size: Int, success successCompletion: @escaping SuccessClosure<PageViewResponse<SubscriberModel>>, failure failureCompletion: @escaping FailureClosure) {
         PictionProvider.request(CreatorAPI.projectSubscriptions(uri: uri, fanPassId: fanPassId, page: page, size: size),
             success: { (response: PageViewResponse<SubscriberModel>) in
-                successCompletion?(response)
+                successCompletion(response)
             },
             failure: { error in
-                failureCompletion?(error)
+                failureCompletion(error)
             })
     }
 
-    public func projectsCount(success successCompletion: ((DefaultViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func projectsCount(success successCompletion: @escaping SuccessClosure<DefaultViewResponse>, failure failureCompletion: @escaping FailureClosure) {
         PictionProvider.request(CreatorAPI.projectsCount,
             success: { (response: DefaultViewResponse) in
-                successCompletion?(response)
+                successCompletion(response)
             },
             failure: { error in
-                failureCompletion?(error)
+                failureCompletion(error)
             })
     }
 
-    public func sales(salesYear: Int, salesMonth: Int, success successCompletion: (([SalesViewResponse]) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func sales(salesYear: Int, salesMonth: Int, success successCompletion: @escaping SuccessClosure<[SalesViewResponse]>, failure failureCompletion: @escaping FailureClosure) {
         PictionProvider.request(CreatorAPI.sales(salesYear: salesYear, salesMonth: salesMonth),
             success: { (response: [SalesViewResponse]) in
-                successCompletion?(response)
+                successCompletion(response)
             },
             failure: { error in
-                failureCompletion?(error)
+                failureCompletion(error)
             })
     }
 }

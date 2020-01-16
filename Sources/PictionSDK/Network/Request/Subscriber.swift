@@ -12,23 +12,23 @@ public final class Subscriber {
     static let shared = Subscriber()
     private init() {}
 
-    public func projects(page: Int, size: Int, success successCompletion: ((PageViewResponse<ProjectModel>) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func projects(page: Int, size: Int, success successCompletion: @escaping SuccessClosure<PageViewResponse<ProjectModel>>, failure failureCompletion: @escaping FailureClosure) {
         PictionProvider.request(SubscriberAPI.projects(page: page, size: size),
             success: { (response: PageViewResponse<ProjectModel>) in
-                successCompletion?(response)
+                successCompletion(response)
             },
             failure: { error in
-                failureCompletion?(error)
+                failureCompletion(error)
             })
     }
 
-    public func latestPosts(page: Int, size: Int, success successCompletion: ((SubscribingPostViewResponse) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public func latestPosts(page: Int, size: Int, success successCompletion: @escaping SuccessClosure<SubscribingPostViewResponse>, failure failureCompletion: @escaping FailureClosure) {
         PictionProvider.request(SubscriberAPI.latestPosts(page: page, size: size),
             success: { (response: SubscribingPostViewResponse) in
-                successCompletion?(response)
+                successCompletion(response)
             },
             failure: { error in
-                failureCompletion?(error)
+                failureCompletion(error)
             })
     }
 }

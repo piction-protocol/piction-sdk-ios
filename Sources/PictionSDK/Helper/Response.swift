@@ -9,6 +9,9 @@
 import Foundation
 import Mapper
 
+public typealias SuccessClosure<T> = (T) -> Void
+public typealias FailureClosure = (ErrorType) -> Void
+
 public protocol Response: Mappable {
     func toDict() -> [String: Any?]
 }

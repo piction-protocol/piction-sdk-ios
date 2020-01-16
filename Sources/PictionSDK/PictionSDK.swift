@@ -24,17 +24,17 @@ public final class PictionSDK {
     public static let recommendation = Recommendation.shared
     public static let category = Category.shared
 
-    public static func requestAPI<M: Mappable, T: TargetType>(_ target: T, success successCompletion: ((M) -> Void)? = nil, failure failureCompletion: ((ErrorType) -> Void)? = nil) {
+    public static func requestAPI<M: Mappable, T: TargetType>(_ target: T, success successCompletion: @escaping SuccessClosure<M>, failure failureCompletion: @escaping FailureClosure) {
         PictionProvider.request(target,
             success: { (response: M) in
                 if T.self == SessionAPI.self {
                     let token = response as? AuthenticationViewResponse
 //                    PictionManager.setToken(token?.accessToken ?? "")
                 }
-                successCompletion?(response)
+                successCompletion(response)
             },
             failure: { error in
-                failureCompletion?(error)
+                failureCompletion(error)
             })
     }
 }

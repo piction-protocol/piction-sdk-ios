@@ -482,6 +482,7 @@
 			buildPhases = (
 				OBJ_309 /* Sources */,
 				OBJ_312 /* Frameworks */,
+				436E0B8A23D00FBE005AB75D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -574,6 +575,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "cp -R ${BUILT_PRODUCTS_DIR}/${TARGET_NAME}.framework ${SRCROOT}/Product/\n";
+		};
+		436E0B8A23D00FBE005AB75D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				Moya.framework,
+				Moya_ModelMapper.framework,
+				Alamofire.framework,
+				KeychainAccess.framework,
+				Result.framework,
+				Mapper.framework,
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "exec \"${SRCROOT}/Scripts/copy-carthage-frameworks.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -897,6 +921,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PictionSDK.xcodeproj/PictionSDKTests_Info.plist;
@@ -922,6 +947,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PictionSDK.xcodeproj/PictionSDKTests_Info.plist;

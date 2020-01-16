@@ -27,10 +27,6 @@ public final class PictionSDK {
     public static func requestAPI<M: Mappable, T: TargetType>(_ target: T, success successCompletion: @escaping SuccessClosure<M>, failure failureCompletion: @escaping FailureClosure) {
         PictionProvider.request(target,
             success: { (response: M) in
-                if T.self == SessionAPI.self {
-                    let token = response as? AuthenticationViewResponse
-//                    PictionManager.setToken(token?.accessToken ?? "")
-                }
                 successCompletion(response)
             },
             failure: { error in

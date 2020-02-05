@@ -12,13 +12,13 @@ import Foundation
 public typealias FeesViewResponse = FeesModel
 
 public struct FeesModel: Response {
-    public let contentsDistributorRate: Int?
-    public let userAdoptionPoolRate: Int?
-    public let depositPoolRate: Int?
-    public let ecosystemFundRate: Int?
-    public let supportPoolRate: Int?
-    public let translatorRate: Int?
-    public let marketerRate: Int?
+    public let contentsDistributorRate: Double?
+    public let userAdoptionPoolRate: Double?
+    public let depositPoolRate: Double?
+    public let ecosystemFundRate: Double?
+    public let supportPoolRate: Double?
+    public let translatorRate: Double?
+    public let marketerRate: Double?
 
     public init(map: Mapper) throws {
         contentsDistributorRate = map.optionalFrom("contentsDistributorRate")

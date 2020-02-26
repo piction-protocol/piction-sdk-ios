@@ -92,7 +92,7 @@
 		43DE4BDE22F7C2E3006EA673 /* SponsorshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DE4BDD22F7C2E3006EA673 /* SponsorshipModel.swift */; };
 		43E4C43A22CDED26004C4F8A /* LikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4C43922CDED26004C4F8A /* LikeModel.swift */; };
 		43E4C43E22CDED74004C4F8A /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4C43D22CDED74004C4F8A /* ContentModel.swift */; };
-		43FC6F8A22F832A50086B65A /* FanPassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC6F8922F832A50086B65A /* FanPassModel.swift */; };
+		43FC6F8A22F832A50086B65A /* MembershipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC6F8922F832A50086B65A /* MembershipModel.swift */; };
 		OBJ_299 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_310 /* PictionSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* PictionSDKTests.swift */; };
 		OBJ_311 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* XCTestManifests.swift */; };
@@ -191,7 +191,7 @@
 		43DE4BDD22F7C2E3006EA673 /* SponsorshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorshipModel.swift; sourceTree = "<group>"; };
 		43E4C43922CDED26004C4F8A /* LikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeModel.swift; sourceTree = "<group>"; };
 		43E4C43D22CDED74004C4F8A /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
-		43FC6F8922F832A50086B65A /* FanPassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanPassModel.swift; sourceTree = "<group>"; };
+		43FC6F8922F832A50086B65A /* MembershipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipModel.swift; sourceTree = "<group>"; };
 		OBJ_35 /* PictionSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionSDKTests.swift; sourceTree = "<group>"; };
 		OBJ_36 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 				43E4C43D22CDED74004C4F8A /* ContentModel.swift */,
 				4319190622D585EF0005328E /* RecommendProjectModel.swift */,
 				43DE4BDD22F7C2E3006EA673 /* SponsorshipModel.swift */,
-				43FC6F8922F832A50086B65A /* FanPassModel.swift */,
+				43FC6F8922F832A50086B65A /* MembershipModel.swift */,
 				43CD77D3232F341600AC5F07 /* PostIndexModel.swift */,
 				43DCB729232F918C009EB012 /* StringArrayModel.swift */,
 				430907CB23629536005EF5A2 /* SubscriptionUserModel.swift */,
@@ -618,7 +618,7 @@
 				4369F8BC23CDBC82008D5825 /* Wallet.swift in Sources */,
 				431918A022D460CF0005328E /* Search.swift in Sources */,
 				43C5C9492383DA83004BACFC /* TransactionSponsorshipModel.swift in Sources */,
-				43FC6F8A22F832A50086B65A /* FanPassModel.swift in Sources */,
+				43FC6F8A22F832A50086B65A /* MembershipModel.swift in Sources */,
 				43CA1C1522A4EF2300CEF20A /* PictionManager.swift in Sources */,
 				432A67CB22BC7B7C009E51FF /* DateExtension.swift in Sources */,
 				4369F8C223CDBF38008D5825 /* Subscriber.swift in Sources */,

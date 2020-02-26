@@ -1,5 +1,5 @@
 //
-//  FanPassModel.swift
+//  MembershipModel.swift
 //  PictionSDK
 //
 //  Created by jhseo on 05/08/2019.
@@ -9,18 +9,18 @@
 import Mapper
 import Foundation
 
-public typealias FanPassViewResponse = FanPassModel
+public typealias MembershipViewResponse = MembershipModel
 
-public struct FanPassModel: Response {
+public struct MembershipModel: Response {
     public let createdAt: Date?
     public let description: String?
     public let id: Int?
     public let level: Int?
     public let name: String?
     public let postCount: Int?
-    public let subscriptionCount: Int?
-    public let subscriptionLimit: Int?
-    public let subscriptionPrice: Int?
+    public let sponsorCount: Int?
+    public let sponsorLimit: Int?
+    public let price: Int?
     public let thumbnail: String?
 
     public init(map: Mapper) throws {
@@ -30,9 +30,9 @@ public struct FanPassModel: Response {
         level = map.optionalFrom("level")
         name = map.optionalFrom("name")
         postCount = map.optionalFrom("postCount")
-        subscriptionCount = map.optionalFrom("subscriptionCount")
-        subscriptionLimit = map.optionalFrom("subscriptionLimit")
-        subscriptionPrice = map.optionalFrom("subscriptionPrice")
+        sponsorCount = map.optionalFrom("sponsorCount")
+        sponsorLimit = map.optionalFrom("sponsorLimit")
+        price = map.optionalFrom("price")
         thumbnail = map.optionalFrom("thumbnail")
     }
 
@@ -48,15 +48,15 @@ public struct FanPassModel: Response {
             "level": level,
             "name": name,
             "postCount": postCount,
-            "subscriptionCount": subscriptionCount,
-            "subscriptionLimit": subscriptionLimit,
-            "subscriptionPrice": subscriptionPrice,
+            "sponsorCount": sponsorCount,
+            "sponsorLimit": sponsorLimit,
+            "price": price,
             "thumbnail": thumbnail
         ]
     }
 }
 
-extension FanPassModel {
+extension MembershipModel {
     static func sampleData() -> [String: Any] {
         return [
             "createdAt": "2019-07-10T08:51:40.935Z",
@@ -65,9 +65,9 @@ extension FanPassModel {
             "level": 0,
             "name": "작가이름",
             "postCount": 0,
-            "subscriptionCount": 0,
-            "subscriptionLimit": 100,
-            "subscriptionPrice": 0,
+            "sponsorCount": 0,
+            "sponsorLimit": 100,
+            "price": 0,
             "thumbnail": ""
         ]
     }

@@ -17,7 +17,7 @@ public struct ProjectModel: Response {
     public let id: Int?
     public let lastPublishedAt: Date?
     public let status: String?
-    public let subscriptionUserCount: Int?
+    public let sponsorCount: Int?
     public let synopsis: String?
     public let tags: [String]?
     public let thumbnail: String?
@@ -25,7 +25,7 @@ public struct ProjectModel: Response {
     public let uri: String?
     public let user: UserModel?
     public let wideThumbnail: String?
-    public let activeFanPass: Bool?
+    public let activeMembership: Bool?
     public let categories: [CategoryModel]?
 
     public init(map: Mapper) throws {
@@ -34,7 +34,7 @@ public struct ProjectModel: Response {
         id = map.optionalFrom("id")
         lastPublishedAt = map.optionalFrom("lastPublishedAt")
         status = map.optionalFrom("status")
-        subscriptionUserCount = map.optionalFrom("subscriptionUserCount")
+        sponsorCount = map.optionalFrom("sponsorCount")
         synopsis = map.optionalFrom("synopsis")
         tags = map.optionalFrom("tags")
         thumbnail = map.optionalFrom("thumbnail")
@@ -42,7 +42,7 @@ public struct ProjectModel: Response {
         uri = map.optionalFrom("uri")
         user = map.optionalFrom("user")
         wideThumbnail = map.optionalFrom("wideThumbnail")
-        activeFanPass = map.optionalFrom("activeFanPass")
+        activeMembership = map.optionalFrom("activeMembership")
         categories = map.optionalFrom("categories")
     }
 
@@ -57,7 +57,7 @@ public struct ProjectModel: Response {
             "id": id,
             "lastPublishedAt": lastPublishedAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "status": status,
-            "subscriptionUserCount": subscriptionUserCount,
+            "sponsorCount": sponsorCount,
             "synopsis": synopsis,
             "tags": [],
             "thumbnail": thumbnail,
@@ -65,8 +65,8 @@ public struct ProjectModel: Response {
             "uri": uri,
             "user": user?.toDict(),
             "wideThumbnail": wideThumbnail,
-            "activeFanPass": activeFanPass,
-            "categories": []
+            "activeMembership": activeMembership,
+            "categories": [],
         ]
     }
 }
@@ -79,7 +79,7 @@ extension ProjectModel {
             "id": 1,
             "lastPublishedAt": "2019-06-20T09:27:53.127+0000",
             "status": "PUBLIC",
-            "subscriptionUserCount": 0,
+            "sponsorCount": 0,
             "synopsis": "synopsis",
             "tags": ["테스트", "프로젝트"],
             "thumbnail": "thumbnail",
@@ -87,8 +87,8 @@ extension ProjectModel {
             "url": "url",
             "user": UserModel.sampleData(),
             "wideThumbnail": "wideThumbnail",
-            "activeFanPass": false,
-            "categories": [CategoryModel.sampleData()]
+            "activeMembership": false,
+            "categories": [CategoryModel.sampleData()],
         ]
     }
 }

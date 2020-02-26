@@ -71,8 +71,7 @@
 		436E0B8723D00A70005AB75D /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436E0B8623D00A70005AB75D /* Moya.framework */; };
 		43C1539923C5C19700565FC4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1539823C5C19600565FC4 /* Category.swift */; };
 		43C1539B23C5C1C300565FC4 /* CategoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1539A23C5C1C300565FC4 /* CategoryAPI.swift */; };
-		43C5C9472383DA53004BACFC /* TransactionSubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5C9462383DA53004BACFC /* TransactionSubscriptionModel.swift */; };
-		43C5C9492383DA83004BACFC /* TransactionSponsorshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5C9482383DA83004BACFC /* TransactionSponsorshipModel.swift */; };
+		43C5C9472383DA53004BACFC /* TransactionSponsorshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5C9462383DA53004BACFC /* TransactionSponsorshipModel.swift */; };
 		43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */; };
 		43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */; };
 		43CA1C0622A4EF2300CEF20A /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */; };
@@ -168,8 +167,7 @@
 		436E0B8623D00A70005AB75D /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		43C1539823C5C19600565FC4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		43C1539A23C5C1C300565FC4 /* CategoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAPI.swift; sourceTree = "<group>"; };
-		43C5C9462383DA53004BACFC /* TransactionSubscriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSubscriptionModel.swift; sourceTree = "<group>"; };
-		43C5C9482383DA83004BACFC /* TransactionSponsorshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSponsorshipModel.swift; sourceTree = "<group>"; };
+		43C5C9462383DA53004BACFC /* TransactionSponsorshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSponsorshipModel.swift; sourceTree = "<group>"; };
 		43CA1BE722A4EF2200CEF20A /* MoyaResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaResponseExtension.swift; sourceTree = "<group>"; };
 		43CA1BE822A4EF2200CEF20A /* TargetTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTypeExtension.swift; sourceTree = "<group>"; };
 		43CA1BEA22A4EF2200CEF20A /* ServerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfo.swift; sourceTree = "<group>"; };
@@ -253,8 +251,7 @@
 				43CD77D3232F341600AC5F07 /* PostIndexModel.swift */,
 				43DCB729232F918C009EB012 /* StringArrayModel.swift */,
 				430907CB23629536005EF5A2 /* SubscriptionUserModel.swift */,
-				43C5C9462383DA53004BACFC /* TransactionSubscriptionModel.swift */,
-				43C5C9482383DA83004BACFC /* TransactionSponsorshipModel.swift */,
+				43C5C9462383DA53004BACFC /* TransactionSponsorshipModel.swift */,
 				436C759D2386846C00902F08 /* FeesModel.swift */,
 				43125A3823AB68D80060928F /* SponsoringPostModel.swift */,
 				43125A3A23AB73B90060928F /* CategoryModel.swift */,
@@ -614,7 +611,6 @@
 			files = (
 				4369F8BC23CDBC82008D5825 /* Wallet.swift in Sources */,
 				431918A022D460CF0005328E /* Search.swift in Sources */,
-				43C5C9492383DA83004BACFC /* TransactionSponsorshipModel.swift in Sources */,
 				43FC6F8A22F832A50086B65A /* MembershipModel.swift in Sources */,
 				43CA1C1522A4EF2300CEF20A /* PictionManager.swift in Sources */,
 				432A67CB22BC7B7C009E51FF /* DateExtension.swift in Sources */,
@@ -665,7 +661,7 @@
 				43CA1C1022A4EF2300CEF20A /* Project.swift in Sources */,
 				43DCB72A232F918C009EB012 /* StringArrayModel.swift in Sources */,
 				4369F8C823CEBF7E008D5825 /* SubscriberModel.swift in Sources */,
-				43C5C9472383DA53004BACFC /* TransactionSubscriptionModel.swift in Sources */,
+				43C5C9472383DA53004BACFC /* TransactionSponsorshipModel.swift in Sources */,
 				4369F8B623CDB6A2008D5825 /* PostLinkModel.swift in Sources */,
 				4369F8C023CDBE3D008D5825 /* SubscriberAPI.swift in Sources */,
 				4369F8BA23CDBB3E008D5825 /* WithdrawalModel.swift in Sources */,

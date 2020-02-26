@@ -12,9 +12,9 @@ import UIKit
 
 public enum PostAPI {
     case all(uri: String, page: Int, size: Int)
-    case create(uri: String, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, fanPassId: Int? = nil, status: String, publishedAt: Int64)
+    case create(uri: String, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, membershipId: Int? = nil, status: String, publishedAt: Int64)
     case get(uri: String, postId: Int)
-    case update(uri: String, postId: Int, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, fanPassId: Int? = nil, status: String, publishedAt: Int64)
+    case update(uri: String, postId: Int, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, membershipId: Int? = nil, status: String, publishedAt: Int64)
     case delete(uri: String, postId: Int)
     case getContent(uri: String, postId: Int)
     case getLike(uri: String, postId: Int)
@@ -104,8 +104,8 @@ extension PostAPI: TargetType {
             param["page"] = page
             param["size"] = size
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
-        case .create(_, let title, let content, let cover, let seriesId, let fanPassId, let status, let publishedAt),
-             .update(_, _, let title, let content, let cover, let seriesId, let fanPassId, let status, let publishedAt):
+        case .create(_, let title, let content, let cover, let seriesId, let membershipId, let status, let publishedAt),
+             .update(_, _, let title, let content, let cover, let seriesId, let membershipId, let status, let publishedAt):
             var param: [String: Any] = [:]
             param["title"] = title
             param["content"] = content
@@ -115,8 +115,8 @@ extension PostAPI: TargetType {
             if seriesId != nil {
                 param["seriesId"] = seriesId
             }
-            if fanPassId != nil {
-                param["fanPassId"] = fanPassId
+            if membershipId != nil {
+                param["membershipId"] = membershipId
             }
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         case .get,

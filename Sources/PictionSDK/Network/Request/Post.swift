@@ -23,8 +23,8 @@ public final class Post {
             })
     }
 
-    public func create(uri: String, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, fanPassId: Int? = nil, status: String, publishedAt: Int64,  success successCompletion: @escaping SuccessClosure<PostViewResponse>, failure failureCompletion: @escaping FailureClosure) {
-        PictionProvider.request(PostAPI.create(uri: uri, title: title, content: content, cover: cover, seriesId: seriesId, fanPassId: fanPassId, status: status, publishedAt: publishedAt),
+    public func create(uri: String, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, membershipId: Int? = nil, status: String, publishedAt: Int64,  success successCompletion: @escaping SuccessClosure<PostViewResponse>, failure failureCompletion: @escaping FailureClosure) {
+        PictionProvider.request(PostAPI.create(uri: uri, title: title, content: content, cover: cover, seriesId: seriesId, membershipId: membershipId, status: status, publishedAt: publishedAt),
             success: { (response: PostViewResponse) in
                 successCompletion(response)
             },
@@ -43,8 +43,8 @@ public final class Post {
             })
     }
 
-    public func update(uri: String, postId: Int, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, fanPassId: Int? = nil, status: String, publishedAt: Int64, success successCompletion: @escaping SuccessClosure<PostViewResponse>, failure failureCompletion: @escaping FailureClosure) {
-        PictionProvider.request(PostAPI.update(uri: uri, postId: postId, title: title, content: content, cover: cover, seriesId: seriesId, fanPassId: fanPassId, status: status, publishedAt: publishedAt),
+    public func update(uri: String, postId: Int, title: String, content: String, cover: String? = nil, seriesId: Int? = nil, membershipId: Int? = nil, status: String, publishedAt: Int64, success successCompletion: @escaping SuccessClosure<PostViewResponse>, failure failureCompletion: @escaping FailureClosure) {
+        PictionProvider.request(PostAPI.update(uri: uri, postId: postId, title: title, content: content, cover: cover, seriesId: seriesId, membershipId: membershipId, status: status, publishedAt: publishedAt),
             success: { (response: PostViewResponse) in
                 successCompletion(response)
             },

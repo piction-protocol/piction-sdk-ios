@@ -53,6 +53,8 @@
 		432CAC7222B725410007EE03 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CAC7122B725410007EE03 /* Response.swift */; };
 		43682B2123FCD216006CE717 /* CreatorProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B2023FCD216006CE717 /* CreatorProfileModel.swift */; };
 		43682B2323FCD225006CE717 /* CreatorLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B2223FCD225006CE717 /* CreatorLinkModel.swift */; };
+		43682B3123FE781D006CE717 /* CreatorProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3023FE781D006CE717 /* CreatorProfile.swift */; };
+		43682B3323FE7828006CE717 /* CreatorProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3223FE7828006CE717 /* CreatorProfileAPI.swift */; };
 		436881F422E6F1C800DB42B6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881B022E6E48800DB42B6 /* Alamofire.framework */; };
 		436881F622E6F1C800DB42B6 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881A422E6E48700DB42B6 /* KeychainAccess.framework */; };
 		436881F722E6F1C800DB42B6 /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881A222E6E48700DB42B6 /* Mapper.framework */; };
@@ -151,6 +153,8 @@
 		4331CE48231905CF00CF635B /* output.xcfilelist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcfilelist; path = output.xcfilelist; sourceTree = "<group>"; };
 		43682B2023FCD216006CE717 /* CreatorProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorProfileModel.swift; sourceTree = "<group>"; };
 		43682B2223FCD225006CE717 /* CreatorLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorLinkModel.swift; sourceTree = "<group>"; };
+		43682B3023FE781D006CE717 /* CreatorProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorProfile.swift; sourceTree = "<group>"; };
+		43682B3223FE7828006CE717 /* CreatorProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorProfileAPI.swift; sourceTree = "<group>"; };
 		436881A222E6E48700DB42B6 /* Mapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapper.framework; path = Carthage/Build/iOS/Mapper.framework; sourceTree = "<group>"; };
 		436881A422E6E48700DB42B6 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		436881AC22E6E48800DB42B6 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -334,6 +338,7 @@
 				4369F8B323CD8FB2008D5825 /* Membership.swift */,
 				4369F8BB23CDBC82008D5825 /* Wallet.swift */,
 				4369F8C123CDBF38008D5825 /* Sponsor.swift */,
+				43682B3023FE781D006CE717 /* CreatorProfile.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				4369F8B123CD8D43008D5825 /* MembershipAPI.swift */,
 				4369F8B723CDB98E008D5825 /* WalletAPI.swift */,
 				4369F8BF23CDBE3D008D5825 /* SponsorAPI.swift */,
+				43682B3223FE7828006CE717 /* CreatorProfileAPI.swift */,
 			);
 			path = TargetType;
 			sourceTree = "<group>";
@@ -626,6 +632,7 @@
 				432A67AC22BC681B009E51FF /* AuthenticationModel.swift in Sources */,
 				43CA1C1722A4EF2300CEF20A /* Request.swift in Sources */,
 				43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */,
+				43682B3123FE781D006CE717 /* CreatorProfile.swift in Sources */,
 				4329EBB522B1E3A900D01916 /* Post.swift in Sources */,
 				4369F8B423CD8FB2008D5825 /* Membership.swift in Sources */,
 				43C1539923C5C19700565FC4 /* Category.swift in Sources */,
@@ -661,6 +668,7 @@
 				432CAC7222B725410007EE03 /* Response.swift in Sources */,
 				432A67B522BC681B009E51FF /* SalesModel.swift in Sources */,
 				4369F8B223CD8D43008D5825 /* MembershipAPI.swift in Sources */,
+				43682B3323FE7828006CE717 /* CreatorProfileAPI.swift in Sources */,
 				43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */,
 				43CA1C1122A4EF2300CEF20A /* UserAPI.swift in Sources */,
 				431918FF22D585980005328E /* RecommendationAPI.swift in Sources */,

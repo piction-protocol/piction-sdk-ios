@@ -5,12 +5,12 @@
 # Installation
 ## CocoaPods
 ```
-pod 'PictionSDK', '~> 1.0.0'
+pod 'PictionSDK', '~> 1.0.1'
 ```
 
 ## Carthage
 ```
-github "piction-protocol/piction-sdk-ios", ~> 1.0.0
+github "piction-protocol/piction-sdk-ios", ~> 1.0.1
 ```
 
 ## Swift Package Manager

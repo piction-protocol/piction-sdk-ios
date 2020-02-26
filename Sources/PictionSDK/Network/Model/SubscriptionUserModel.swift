@@ -15,7 +15,7 @@ public struct SubscriptionUserModel: Response {
     public let orderNo: Int?
     public let subscriber: UserModel?
     public let creator: UserModel?
-    public let fanPass: FanPassModel?
+    public let membership: MembershipModel?
     public let startedAt: Date?
     public let expireDate: Date?
     public let paidPrice: Int?
@@ -28,7 +28,7 @@ public struct SubscriptionUserModel: Response {
         orderNo = map.optionalFrom("orderNo")
         subscriber = map.optionalFrom("subscriber")
         creator = map.optionalFrom("creator")
-        fanPass = map.optionalFrom("fanPass")
+        membership = map.optionalFrom("membership")
         startedAt = map.optionalFrom("startedAt")
         expireDate = map.optionalFrom("expireDate")
         paidPrice = map.optionalFrom("paidPrice")
@@ -47,7 +47,7 @@ public struct SubscriptionUserModel: Response {
             "orderNo": orderNo,
             "subscriber": subscriber,
             "creator": creator,
-            "fanPass": fanPass,
+            "membership": membership,
             "startedAt": startedAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "expireDate": expireDate?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "paidPrice": paidPrice,
@@ -65,7 +65,7 @@ extension SubscriptionUserModel {
             "orderNo": 0,
             "subscriber": UserModel.sampleData(),
             "creator": UserModel.sampleData(),
-            "fanPass": FanPassModel.sampleData(),
+            "membership": MembershipModel.sampleData(),
             "startedAt": "2019-06-20T09:27:53.127+0000",
             "expireDate": "2019-06-20T09:27:53.127+0000",
             "paidPrice": 0,

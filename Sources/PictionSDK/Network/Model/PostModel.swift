@@ -15,7 +15,7 @@ public struct PostModel: Response {
     public let cover: String?
     public let publishedAt: Date?
     public let createdAt: Date?
-    public let fanPass: FanPassModel?
+    public let membership: MembershipModel?
     public let id: Int?
     public let likeCount: Int?
     public let series: SeriesModel?
@@ -26,7 +26,7 @@ public struct PostModel: Response {
         cover = map.optionalFrom("cover")
         publishedAt = map.optionalFrom("publishedAt")
         createdAt = map.optionalFrom("createdAt")
-        fanPass = map.optionalFrom("fanPass")
+        membership = map.optionalFrom("membership")
         id = map.optionalFrom("id")
         likeCount = map.optionalFrom("likeCount")
         series = map.optionalFrom("series")
@@ -43,7 +43,7 @@ public struct PostModel: Response {
             "cover": cover,
             "publishedAt": publishedAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
-            "fanPass": fanPass?.toDict(),
+            "membership": membership?.toDict(),
             "id": id,
             "likeCount": likeCount,
             "series": series?.toDict(),
@@ -59,7 +59,7 @@ extension PostModel {
             "cover": "string",
             "publishedAt": "2019-06-20T09:27:53.127+0000",
             "createdAt": "2019-06-20T09:27:53.127+0000",
-            "fanPass": FanPassModel.sampleData(),
+            "membership": MembershipModel.sampleData(),
             "id": 0,
             "likeCount": 0,
             "series": SeriesModel.sampleData(),

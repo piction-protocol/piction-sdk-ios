@@ -15,6 +15,7 @@ public struct PostModel: Response {
     public let cover: String?
     public let publishedAt: Date?
     public let createdAt: Date?
+    public let previewText: String?
     public let membership: MembershipModel?
     public let id: Int?
     public let likeCount: Int?
@@ -26,6 +27,7 @@ public struct PostModel: Response {
         cover = map.optionalFrom("cover")
         publishedAt = map.optionalFrom("publishedAt")
         createdAt = map.optionalFrom("createdAt")
+        previewText = map.optionalFrom("previewText")
         membership = map.optionalFrom("membership")
         id = map.optionalFrom("id")
         likeCount = map.optionalFrom("likeCount")
@@ -43,6 +45,7 @@ public struct PostModel: Response {
             "cover": cover,
             "publishedAt": publishedAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
+            "previewText" : previewText,
             "membership": membership?.toDict(),
             "id": id,
             "likeCount": likeCount,
@@ -59,6 +62,7 @@ extension PostModel {
             "cover": "string",
             "publishedAt": "2019-06-20T09:27:53.127+0000",
             "createdAt": "2019-06-20T09:27:53.127+0000",
+            "previewText" : "preview",
             "membership": MembershipModel.sampleData(),
             "id": 0,
             "likeCount": 0,

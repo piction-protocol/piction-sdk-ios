@@ -1,5 +1,5 @@
 //
-//  SubscribingPostModel.swift
+//  SponsoringPostModel.swift
 //  PictionSDK
 //
 //  Created by jhseo on 2019/12/19.
@@ -9,9 +9,9 @@
 import Mapper
 import Foundation
 
-public typealias SubscribingPostViewResponse = SubscribingPostModel
+public typealias SponsoringPostViewResponse = SponsoringPostModel
 
-public struct SubscribingPostModel: Response {
+public struct SponsoringPostModel: Response {
     public let id: Int?
     public let title: String?
     public let cover: String?
@@ -19,9 +19,10 @@ public struct SubscribingPostModel: Response {
     public let series: SeriesModel?
     public let publishedAt: Date?
     public let createdAt: Date?
-    public let fanPass: FanPassModel?
+    public let membership: MembershipModel?
     public let status: String?
     public let project: ProjectModel?
+    public let previewText: String?
 
     public init(map: Mapper) throws {
         id = map.optionalFrom("id")
@@ -31,9 +32,10 @@ public struct SubscribingPostModel: Response {
         series = map.optionalFrom("series")
         publishedAt = map.optionalFrom("publishedAt")
         createdAt = map.optionalFrom("createdAt")
-        fanPass = map.optionalFrom("fanPass")
+        membership = map.optionalFrom("membership")
         status = map.optionalFrom("status")
         project = map.optionalFrom("project")
+        previewText = map.optionalFrom("previewText")
     }
 
     public func toJSONString() throws -> String {
@@ -49,14 +51,15 @@ public struct SubscribingPostModel: Response {
             "series": series?.toDict(),
             "publishedAt": publishedAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
             "createdAt": createdAt?.toString(format: "YYYY-MM-dd'T'HH:mm:ssZ"),
-            "fanPass": fanPass?.toDict(),
+            "membership": membership?.toDict(),
             "status": status,
-            "project": project?.toDict()
+            "project": project?.toDict(),
+            "previewText": previewText
         ]
     }
 }
 
-extension SubscribingPostModel {
+extension SponsoringPostModel {
     static func sampleData() -> [String: Any] {
         return [
             "id": 0,
@@ -66,9 +69,10 @@ extension SubscribingPostModel {
             "series": SeriesModel.sampleData(),
             "publishedAt": "2019-06-20T09:27:53.127+0000",
             "createdAt": "2019-06-20T09:27:53.127+0000",
-            "fanPass": FanPassModel.sampleData(),
+            "membership": MembershipModel.sampleData(),
             "status": "PUBLIC",
-            "project": ProjectModel.sampleData()
+            "project": ProjectModel.sampleData(),
+            "previewText": "previewText"
         ]
     }
 }

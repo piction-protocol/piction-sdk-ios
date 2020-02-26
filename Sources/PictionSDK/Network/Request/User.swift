@@ -43,8 +43,8 @@ public final class User {
             })
     }
 
-    public func update(username: String, password: String, picture: String? = nil, success successCompletion: @escaping SuccessClosure<UserViewResponse>, failure failureCompletion: @escaping FailureClosure) {
-        PictionProvider.request(UserAPI.update(username: username, password: password, picture: picture),
+    public func update(email: String, username: String, password: String, picture: String? = nil, success successCompletion: @escaping SuccessClosure<UserViewResponse>, failure failureCompletion: @escaping FailureClosure) {
+        PictionProvider.request(UserAPI.update(email: email, username: username, password: password, picture: picture),
             success: { (response: UserViewResponse) in
                 successCompletion(response)
             },

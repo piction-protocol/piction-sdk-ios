@@ -1,5 +1,5 @@
 //
-//  SubscriberAPI.swift
+//  SponsorAPI.swift
 //  PictionSDK
 //
 //  Created by jhseo on 2020/01/14.
@@ -9,19 +9,19 @@
 import Foundation
 import Moya
 
-public enum SubscriberAPI {
+public enum SponsorAPI {
     case projects(page: Int, size: Int)
     case latestPosts(page: Int, size: Int)
 }
 
-extension SubscriberAPI: TargetType {
+extension SponsorAPI: TargetType {
     public var baseURL: URL { return URL(string: ServerInfo.baseApiUrl)! }
     public var path: String {
         switch self {
         case .projects:
-            return "/my/subscriptions/projects"
+            return "/my/sponsorships/projects"
         case .latestPosts:
-            return "/my/subscriptions/projects/posts"
+            return "/my/sponsorships/projects/posts"
         }
     }
     public var method: Moya.Method {
@@ -36,7 +36,7 @@ extension SubscriberAPI: TargetType {
         case .projects:
             return jsonSerializedUTF8(json: PageViewResponse<ProjectModel>.sampleData())
         case .latestPosts:
-            return jsonSerializedUTF8(json: PageViewResponse<SubscribingPostModel>.sampleData())
+            return jsonSerializedUTF8(json: PageViewResponse<SponsoringPostModel>.sampleData())
         }
     }
     public var task: Task {

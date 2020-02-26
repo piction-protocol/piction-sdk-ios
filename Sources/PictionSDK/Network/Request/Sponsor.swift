@@ -1,5 +1,5 @@
 //
-//  Subscriber.swift
+//  Sponsor.swift
 //  PictionSDK
 //
 //  Created by jhseo on 14/01/2020.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public final class Subscriber {
-    static let shared = Subscriber()
+public final class Sponsor {
+    static let shared = Sponsor()
     private init() {}
 
     public func projects(page: Int, size: Int, success successCompletion: @escaping SuccessClosure<PageViewResponse<ProjectModel>>, failure failureCompletion: @escaping FailureClosure) {
-        PictionProvider.request(SubscriberAPI.projects(page: page, size: size),
+        PictionProvider.request(SponsorAPI.projects(page: page, size: size),
             success: { (response: PageViewResponse<ProjectModel>) in
                 successCompletion(response)
             },
@@ -22,9 +22,9 @@ public final class Subscriber {
             })
     }
 
-    public func latestPosts(page: Int, size: Int, success successCompletion: @escaping SuccessClosure<SubscribingPostViewResponse>, failure failureCompletion: @escaping FailureClosure) {
-        PictionProvider.request(SubscriberAPI.latestPosts(page: page, size: size),
-            success: { (response: SubscribingPostViewResponse) in
+    public func latestPosts(page: Int, size: Int, success successCompletion: @escaping SuccessClosure<SponsoringPostViewResponse>, failure failureCompletion: @escaping FailureClosure) {
+        PictionProvider.request(SponsorAPI.latestPosts(page: page, size: size),
+            success: { (response: SponsoringPostViewResponse) in
                 successCompletion(response)
             },
             failure: { error in

@@ -22,8 +22,8 @@ public final class Creator {
             })
     }
 
-    public func posts(uri: String, seriesId: Int? = nil, condition: String? = nil, fanPassLevel: Int? = nil, page: Int, size: Int, success successCompletion: @escaping SuccessClosure<PageViewResponse<PostModel>>, failure failureCompletion: @escaping FailureClosure) {
-        PictionProvider.request(CreatorAPI.posts(uri: uri, seriesId: seriesId, condition: condition, fanPassLevel: fanPassLevel, page: page, size: size),
+    public func posts(uri: String, seriesId: Int? = nil, condition: String? = nil, membershipLevel: Int? = nil, page: Int, size: Int, success successCompletion: @escaping SuccessClosure<PageViewResponse<PostModel>>, failure failureCompletion: @escaping FailureClosure) {
+        PictionProvider.request(CreatorAPI.posts(uri: uri, seriesId: seriesId, condition: condition, membershipLevel: membershipLevel, page: page, size: size),
             success: { (response: PageViewResponse<PostModel>) in
                 successCompletion(response)
             },
@@ -32,9 +32,9 @@ public final class Creator {
             })
     }
 
-    public func projectSubscriptions(uri: String, fanPassId: Int? = nil, page: Int, size: Int, success successCompletion: @escaping SuccessClosure<PageViewResponse<SubscriberModel>>, failure failureCompletion: @escaping FailureClosure) {
-        PictionProvider.request(CreatorAPI.projectSubscriptions(uri: uri, fanPassId: fanPassId, page: page, size: size),
-            success: { (response: PageViewResponse<SubscriberModel>) in
+    public func projectSponsors(uri: String, membershipId: Int? = nil, page: Int, size: Int, success successCompletion: @escaping SuccessClosure<PageViewResponse<SponsorModel>>, failure failureCompletion: @escaping FailureClosure) {
+        PictionProvider.request(CreatorAPI.projectSponsors(uri: uri, membershipId: membershipId, page: page, size: size),
+            success: { (response: PageViewResponse<SponsorModel>) in
                 successCompletion(response)
             },
             failure: { error in

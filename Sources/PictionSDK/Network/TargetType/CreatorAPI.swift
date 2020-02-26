@@ -11,8 +11,8 @@ import Moya
 
 public enum CreatorAPI {
     case projects
-    case posts(uri: String, seriesId: Int? = nil, condition: String? = nil, fanPassLevel: Int? = nil, page: Int, size: Int)
-    case projectSubscriptions(uri: String, fanPassId: Int? = nil, page: Int, size: Int)
+    case posts(uri: String, seriesId: Int? = nil, condition: String? = nil, membershipLevel: Int? = nil, page: Int, size: Int)
+    case projectSponsors(uri: String, membershipId: Int? = nil, page: Int, size: Int)
     case projectsCount
     case sales(salesYear: Int, salesMonth: Int)
 }
@@ -25,8 +25,8 @@ extension CreatorAPI: TargetType {
             return "/my/projects"
         case .posts(let uri, _, _, _, _, _):
             return "/my/projects/\(uri)/posts"
-        case .projectSubscriptions(let uri, _, _, _):
-            return "/my/projects/\(uri)/subscriptions"
+        case .projectSponsors(let uri, _, _, _):
+            return "/my/projects/\(uri)/sponsors"
         case .projectsCount:
             return "/my/projects/count"
         case .sales:
@@ -37,7 +37,7 @@ extension CreatorAPI: TargetType {
         switch self {
         case .projects,
              .posts,
-             .projectSubscriptions,
+             .projectSponsors,
              .projectsCount,
              .sales:
             return .get
@@ -49,8 +49,8 @@ extension CreatorAPI: TargetType {
             return jsonSerializedUTF8(json: [ProjectViewResponse.sampleData()])
         case .posts:
             return jsonSerializedUTF8(json: PageViewResponse<PostModel>.sampleData())
-        case .projectSubscriptions:
-            return jsonSerializedUTF8(json: PageViewResponse<SubscriberModel>.sampleData())
+        case .projectSponsors:
+            return jsonSerializedUTF8(json: PageViewResponse<SponsorModel>.sampleData())
         case .projectsCount:
             return jsonSerializedUTF8(json: DefaultViewResponse.sampleData())
         case .sales:
@@ -62,7 +62,7 @@ extension CreatorAPI: TargetType {
         case .projects,
              .projectsCount:
             return .requestPlain
-        case .posts(_, let seriesId, let condition, let fanPassLevel, let page, let size):
+        case .posts(_, let seriesId, let condition, let membershipLevel, let page, let size):
             var param: [String: Any] = [:]
             param["page"] = page
             param["size"] = size
@@ -72,16 +72,16 @@ extension CreatorAPI: TargetType {
             if condition != nil {
                 param["condition"] = condition
             }
-            if fanPassLevel != nil {
-                param["fanPassLevel"] = fanPassLevel
+            if membershipLevel != nil {
+                param["membershipLevel"] = membershipLevel
             }
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
-        case .projectSubscriptions(_, let fanPassId, let page, let size):
+        case .projectSponsors(_, let membershipId, let page, let size):
             var param: [String: Any] = [:]
             param["page"] = page
             param["size"] = size
-            if fanPassId != nil {
-                param["fanPassId"] = fanPassId
+            if membershipId != nil {
+                param["membershipId"] = membershipId
             }
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         case .sales(let salesYear, let salesMonth):

@@ -36,7 +36,7 @@
 		432A67A622BC681B009E51FF /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679422BC681B009E51FF /* TransactionModel.swift */; };
 		432A67A922BC681B009E51FF /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679522BC681B009E51FF /* WalletModel.swift */; };
 		432A67AC22BC681B009E51FF /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679622BC681B009E51FF /* AuthenticationModel.swift */; };
-		432A67AF22BC681B009E51FF /* SubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679722BC681B009E51FF /* SubscriptionModel.swift */; };
+		432A67AF22BC681B009E51FF /* SponsorshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679722BC681B009E51FF /* SponsorshipModel.swift */; };
 		432A67B222BC681B009E51FF /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679822BC681B009E51FF /* PageModel.swift */; };
 		432A67B522BC681B009E51FF /* SalesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679922BC681B009E51FF /* SalesModel.swift */; };
 		432A67B822BC681B009E51FF /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A679A22BC681B009E51FF /* PostModel.swift */; };
@@ -89,7 +89,6 @@
 		43CA1CC522A4F6F900CEF20A /* PictionSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA1CC322A4F6F900CEF20A /* PictionSDK+Rx.swift */; };
 		43CD77D4232F341600AC5F07 /* PostIndexModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CD77D3232F341600AC5F07 /* PostIndexModel.swift */; };
 		43DCB72A232F918C009EB012 /* StringArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DCB729232F918C009EB012 /* StringArrayModel.swift */; };
-		43DE4BDE22F7C2E3006EA673 /* SponsorshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DE4BDD22F7C2E3006EA673 /* SponsorshipModel.swift */; };
 		43E4C43A22CDED26004C4F8A /* LikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4C43922CDED26004C4F8A /* LikeModel.swift */; };
 		43E4C43E22CDED74004C4F8A /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4C43D22CDED74004C4F8A /* ContentModel.swift */; };
 		43FC6F8A22F832A50086B65A /* MembershipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC6F8922F832A50086B65A /* MembershipModel.swift */; };
@@ -132,7 +131,7 @@
 		432A679422BC681B009E51FF /* TransactionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		432A679522BC681B009E51FF /* WalletModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
 		432A679622BC681B009E51FF /* AuthenticationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
-		432A679722BC681B009E51FF /* SubscriptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionModel.swift; sourceTree = "<group>"; };
+		432A679722BC681B009E51FF /* SponsorshipModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorshipModel.swift; sourceTree = "<group>"; };
 		432A679822BC681B009E51FF /* PageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
 		432A679922BC681B009E51FF /* SalesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesModel.swift; sourceTree = "<group>"; };
 		432A679A22BC681B009E51FF /* PostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
@@ -188,7 +187,6 @@
 		43CA1CC322A4F6F900CEF20A /* PictionSDK+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PictionSDK+Rx.swift"; sourceTree = "<group>"; };
 		43CD77D3232F341600AC5F07 /* PostIndexModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostIndexModel.swift; sourceTree = "<group>"; };
 		43DCB729232F918C009EB012 /* StringArrayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringArrayModel.swift; sourceTree = "<group>"; };
-		43DE4BDD22F7C2E3006EA673 /* SponsorshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorshipModel.swift; sourceTree = "<group>"; };
 		43E4C43922CDED26004C4F8A /* LikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeModel.swift; sourceTree = "<group>"; };
 		43E4C43D22CDED74004C4F8A /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		43FC6F8922F832A50086B65A /* MembershipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipModel.swift; sourceTree = "<group>"; };
@@ -240,7 +238,7 @@
 				432A679422BC681B009E51FF /* TransactionModel.swift */,
 				432A679522BC681B009E51FF /* WalletModel.swift */,
 				432A679622BC681B009E51FF /* AuthenticationModel.swift */,
-				432A679722BC681B009E51FF /* SubscriptionModel.swift */,
+				432A679722BC681B009E51FF /* SponsorshipModel.swift */,
 				432A679822BC681B009E51FF /* PageModel.swift */,
 				432A679922BC681B009E51FF /* SalesModel.swift */,
 				432A679A22BC681B009E51FF /* PostModel.swift */,
@@ -251,7 +249,6 @@
 				43E4C43922CDED26004C4F8A /* LikeModel.swift */,
 				43E4C43D22CDED74004C4F8A /* ContentModel.swift */,
 				4319190622D585EF0005328E /* RecommendProjectModel.swift */,
-				43DE4BDD22F7C2E3006EA673 /* SponsorshipModel.swift */,
 				43FC6F8922F832A50086B65A /* MembershipModel.swift */,
 				43CD77D3232F341600AC5F07 /* PostIndexModel.swift */,
 				43DCB729232F918C009EB012 /* StringArrayModel.swift */,
@@ -640,13 +637,12 @@
 				43CA1C1822A4EF2300CEF20A /* ErrorType.swift in Sources */,
 				43CA1C0622A4EF2300CEF20A /* ServerInfo.swift in Sources */,
 				432A67B822BC681B009E51FF /* PostModel.swift in Sources */,
-				432A67AF22BC681B009E51FF /* SubscriptionModel.swift in Sources */,
+				432A67AF22BC681B009E51FF /* SponsorshipModel.swift in Sources */,
 				432A67C422BC681B009E51FF /* ErrorModel.swift in Sources */,
 				436C759E2386846C00902F08 /* FeesModel.swift in Sources */,
 				43CD77D4232F341600AC5F07 /* PostIndexModel.swift in Sources */,
 				432A67C722BC681B009E51FF /* SeriesModel.swift in Sources */,
 				4369F8B823CDB98E008D5825 /* WalletAPI.swift in Sources */,
-				43DE4BDE22F7C2E3006EA673 /* SponsorshipModel.swift in Sources */,
 				432A67B222BC681B009E51FF /* PageModel.swift in Sources */,
 				43E4C43A22CDED26004C4F8A /* LikeModel.swift in Sources */,
 				432CAC0E22B32A2F0007EE03 /* Creator.swift in Sources */,

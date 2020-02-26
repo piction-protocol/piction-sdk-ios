@@ -43,16 +43,6 @@ public final class Wallet {
             })
     }
 
-    public func subscriptionTransaction(txHash: String, success successCompletion: @escaping SuccessClosure<TransactionSubscriptionViewResponse>, failure failureCompletion: @escaping FailureClosure) {
-        PictionProvider.request(WalletAPI.subscriptionTransaction(txHash: txHash),
-            success: { (response: TransactionSubscriptionViewResponse) in
-                successCompletion(response)
-            },
-            failure: { error in
-                failureCompletion(error)
-            })
-    }
-
     public func withdrawTransaction(txHash: String, success successCompletion: @escaping SuccessClosure<WithdrawalViewResponse>, failure failureCompletion: @escaping FailureClosure) {
         PictionProvider.request(WalletAPI.withdrawTransaction(txHash: txHash),
             success: { (response: WithdrawalViewResponse) in

@@ -13,7 +13,6 @@ public enum WalletAPI {
     case get
     case transactions(page: Int, size: Int)
     case sponsorshipTransaction(txHash: String)
-    case subscriptionTransaction(txHash: String)
     case withdrawTransaction(txHash: String)
     case withdrawals(page: Int, size: Int)
 }
@@ -28,8 +27,6 @@ extension WalletAPI: TargetType {
             return "/my/wallet/transactions"
         case .sponsorshipTransaction(let txHash):
             return "/my/wallet/transactions/sponsorships/\(txHash)"
-        case .subscriptionTransaction(let txHash):
-            return "/my/wallet/transactions/subscriptions/\(txHash)"
         case .withdrawTransaction(let txHash):
             return "/my/wallet/withdrawals/\(txHash)"
         case .withdrawals:
@@ -47,8 +44,6 @@ extension WalletAPI: TargetType {
             return jsonSerializedUTF8(json: PageViewResponse<TransactionModel>.sampleData())
         case .sponsorshipTransaction:
             return jsonSerializedUTF8(json: TransactionSponsorshipViewResponse.sampleData())
-        case .subscriptionTransaction:
-            return jsonSerializedUTF8(json: TransactionSubscriptionViewResponse.sampleData())
         case .withdrawTransaction:
             return jsonSerializedUTF8(json: WithdrawalViewResponse.sampleData())
         case .withdrawals:
@@ -59,7 +54,6 @@ extension WalletAPI: TargetType {
         switch self {
         case .get,
              .sponsorshipTransaction,
-             .subscriptionTransaction,
              .withdrawTransaction:
             return .requestPlain
         case .transactions(let page, let size),

@@ -17,7 +17,7 @@ public final class PictionSDK {
     public static let fanPass = FanPass.shared
     public static let post = Post.shared
     public static let creator = Creator.shared
-    public static let subscriber = Subscriber.shared
+    public static let sponsor = Sponsor.shared
     public static let wallet = Wallet.shared
     public static let series = Series.shared
     public static let search = Search.shared

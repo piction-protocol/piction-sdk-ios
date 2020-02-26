@@ -27,6 +27,7 @@ public struct ProjectModel: Response {
     public let wideThumbnail: String?
     public let activeMembership: Bool?
     public let categories: [CategoryModel]?
+    public let viewType: String?
 
     public init(map: Mapper) throws {
         adult = map.optionalFrom("adult")
@@ -44,6 +45,7 @@ public struct ProjectModel: Response {
         wideThumbnail = map.optionalFrom("wideThumbnail")
         activeMembership = map.optionalFrom("activeMembership")
         categories = map.optionalFrom("categories")
+        viewType = map.optionalFrom("viewType")
     }
 
     public func toJSONString() throws -> String {
@@ -67,6 +69,7 @@ public struct ProjectModel: Response {
             "wideThumbnail": wideThumbnail,
             "activeMembership": activeMembership,
             "categories": [],
+            "viewType": viewType
         ]
     }
 }
@@ -89,6 +92,7 @@ extension ProjectModel {
             "wideThumbnail": "wideThumbnail",
             "activeMembership": false,
             "categories": [CategoryModel.sampleData()],
+            "viewType": "TEXT"
         ]
     }
 }

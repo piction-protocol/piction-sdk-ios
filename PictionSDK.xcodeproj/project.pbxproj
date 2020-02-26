@@ -55,8 +55,8 @@
 		436881F622E6F1C800DB42B6 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881A422E6E48700DB42B6 /* KeychainAccess.framework */; };
 		436881F722E6F1C800DB42B6 /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881A222E6E48700DB42B6 /* Mapper.framework */; };
 		436881FA22E6F1F500DB42B6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881AC22E6E48800DB42B6 /* Result.framework */; };
-		4369F8B223CD8D43008D5825 /* FanPassAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8B123CD8D43008D5825 /* FanPassAPI.swift */; };
-		4369F8B423CD8FB2008D5825 /* FanPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8B323CD8FB2008D5825 /* FanPass.swift */; };
+		4369F8B223CD8D43008D5825 /* MembershipAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8B123CD8D43008D5825 /* MembershipAPI.swift */; };
+		4369F8B423CD8FB2008D5825 /* Membership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8B323CD8FB2008D5825 /* Membership.swift */; };
 		4369F8B623CDB6A2008D5825 /* PostLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8B523CDB6A2008D5825 /* PostLinkModel.swift */; };
 		4369F8B823CDB98E008D5825 /* WalletAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8B723CDB98E008D5825 /* WalletAPI.swift */; };
 		4369F8BA23CDBB3E008D5825 /* WithdrawalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8B923CDBB3E008D5825 /* WithdrawalModel.swift */; };
@@ -151,8 +151,8 @@
 		436881A422E6E48700DB42B6 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		436881AC22E6E48800DB42B6 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		436881B022E6E48800DB42B6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		4369F8B123CD8D43008D5825 /* FanPassAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanPassAPI.swift; sourceTree = "<group>"; };
-		4369F8B323CD8FB2008D5825 /* FanPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanPass.swift; sourceTree = "<group>"; };
+		4369F8B123CD8D43008D5825 /* MembershipAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipAPI.swift; sourceTree = "<group>"; };
+		4369F8B323CD8FB2008D5825 /* Membership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Membership.swift; sourceTree = "<group>"; };
 		4369F8B523CDB6A2008D5825 /* PostLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLinkModel.swift; sourceTree = "<group>"; };
 		4369F8B723CDB98E008D5825 /* WalletAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletAPI.swift; sourceTree = "<group>"; };
 		4369F8B923CDBB3E008D5825 /* WithdrawalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalModel.swift; sourceTree = "<group>"; };
@@ -325,7 +325,7 @@
 				4319189F22D460CF0005328E /* Search.swift */,
 				4319190222D585A60005328E /* Recommendation.swift */,
 				43C1539823C5C19600565FC4 /* Category.swift */,
-				4369F8B323CD8FB2008D5825 /* FanPass.swift */,
+				4369F8B323CD8FB2008D5825 /* Membership.swift */,
 				4369F8BB23CDBC82008D5825 /* Wallet.swift */,
 				4369F8C123CDBF38008D5825 /* Subscriber.swift */,
 			);
@@ -344,7 +344,7 @@
 				4319189B22D45D0A0005328E /* SearchAPI.swift */,
 				431918FE22D585980005328E /* RecommendationAPI.swift */,
 				43C1539A23C5C1C300565FC4 /* CategoryAPI.swift */,
-				4369F8B123CD8D43008D5825 /* FanPassAPI.swift */,
+				4369F8B123CD8D43008D5825 /* MembershipAPI.swift */,
 				4369F8B723CDB98E008D5825 /* WalletAPI.swift */,
 				4369F8BF23CDBE3D008D5825 /* SubscriberAPI.swift */,
 			);
@@ -620,7 +620,7 @@
 				43CA1C1722A4EF2300CEF20A /* Request.swift in Sources */,
 				43CA1C0422A4EF2300CEF20A /* MoyaResponseExtension.swift in Sources */,
 				4329EBB522B1E3A900D01916 /* Post.swift in Sources */,
-				4369F8B423CD8FB2008D5825 /* FanPass.swift in Sources */,
+				4369F8B423CD8FB2008D5825 /* Membership.swift in Sources */,
 				43C1539923C5C19700565FC4 /* Category.swift in Sources */,
 				430907CC23629537005EF5A2 /* SubscriptionUserModel.swift in Sources */,
 				4369F8C423CEB21F008D5825 /* SponsoredPlanModel.swift in Sources */,
@@ -652,7 +652,7 @@
 				432CAC2422B33F2D0007EE03 /* Series.swift in Sources */,
 				432CAC7222B725410007EE03 /* Response.swift in Sources */,
 				432A67B522BC681B009E51FF /* SalesModel.swift in Sources */,
-				4369F8B223CD8D43008D5825 /* FanPassAPI.swift in Sources */,
+				4369F8B223CD8D43008D5825 /* MembershipAPI.swift in Sources */,
 				43CA1C0522A4EF2300CEF20A /* TargetTypeExtension.swift in Sources */,
 				43CA1C1122A4EF2300CEF20A /* UserAPI.swift in Sources */,
 				431918FF22D585980005328E /* RecommendationAPI.swift in Sources */,

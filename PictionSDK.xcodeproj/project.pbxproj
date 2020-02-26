@@ -63,7 +63,7 @@
 		4369F8BC23CDBC82008D5825 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8BB23CDBC82008D5825 /* Wallet.swift */; };
 		4369F8C023CDBE3D008D5825 /* SubscriberAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8BF23CDBE3D008D5825 /* SubscriberAPI.swift */; };
 		4369F8C223CDBF38008D5825 /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8C123CDBF38008D5825 /* Subscriber.swift */; };
-		4369F8C423CEB21F008D5825 /* SubscriptionFanPassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8C323CEB21F008D5825 /* SubscriptionFanPassModel.swift */; };
+		4369F8C423CEB21F008D5825 /* SponsoredPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8C323CEB21F008D5825 /* SponsoredPlanModel.swift */; };
 		4369F8C623CEB2F4008D5825 /* TagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8C523CEB2F4008D5825 /* TagModel.swift */; };
 		4369F8C823CEBF7E008D5825 /* SubscriberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8C723CEBF7E008D5825 /* SubscriberModel.swift */; };
 		436C759E2386846C00902F08 /* FeesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436C759D2386846C00902F08 /* FeesModel.swift */; };
@@ -161,7 +161,7 @@
 		4369F8BB23CDBC82008D5825 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		4369F8BF23CDBE3D008D5825 /* SubscriberAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberAPI.swift; sourceTree = "<group>"; };
 		4369F8C123CDBF38008D5825 /* Subscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscriber.swift; sourceTree = "<group>"; };
-		4369F8C323CEB21F008D5825 /* SubscriptionFanPassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionFanPassModel.swift; sourceTree = "<group>"; };
+		4369F8C323CEB21F008D5825 /* SponsoredPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsoredPlanModel.swift; sourceTree = "<group>"; };
 		4369F8C523CEB2F4008D5825 /* TagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModel.swift; sourceTree = "<group>"; };
 		4369F8C723CEBF7E008D5825 /* SubscriberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberModel.swift; sourceTree = "<group>"; };
 		436C759D2386846C00902F08 /* FeesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeesModel.swift; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 				43125A3A23AB73B90060928F /* CategoryModel.swift */,
 				4369F8B523CDB6A2008D5825 /* PostLinkModel.swift */,
 				4369F8B923CDBB3E008D5825 /* WithdrawalModel.swift */,
-				4369F8C323CEB21F008D5825 /* SubscriptionFanPassModel.swift */,
+				4369F8C323CEB21F008D5825 /* SponsoredPlanModel.swift */,
 				4369F8C523CEB2F4008D5825 /* TagModel.swift */,
 				4369F8C723CEBF7E008D5825 /* SubscriberModel.swift */,
 			);
@@ -630,7 +630,7 @@
 				4369F8B423CD8FB2008D5825 /* FanPass.swift in Sources */,
 				43C1539923C5C19700565FC4 /* Category.swift in Sources */,
 				430907CC23629537005EF5A2 /* SubscriptionUserModel.swift in Sources */,
-				4369F8C423CEB21F008D5825 /* SubscriptionFanPassModel.swift in Sources */,
+				4369F8C423CEB21F008D5825 /* SponsoredPlanModel.swift in Sources */,
 				432A67A622BC681B009E51FF /* TransactionModel.swift in Sources */,
 				43CA1C0F22A4EF2300CEF20A /* Session.swift in Sources */,
 				432CAC2722B33F380007EE03 /* SeriesAPI.swift in Sources */,

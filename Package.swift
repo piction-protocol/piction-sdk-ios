@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "PictionSDK",
-    platforms: [.iOS(.v8)],
+    platforms: [.iOS(.v10)],
     products: [
         .library(name: "PictionSDK", targets: ["PictionSDK"]),
         .library(name: "RxPictionSDK", targets: ["RxPictionSDK"]),

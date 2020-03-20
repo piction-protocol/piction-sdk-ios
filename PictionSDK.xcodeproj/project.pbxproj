@@ -58,7 +58,6 @@
 		436881F422E6F1C800DB42B6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881B022E6E48800DB42B6 /* Alamofire.framework */; };
 		436881F622E6F1C800DB42B6 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881A422E6E48700DB42B6 /* KeychainAccess.framework */; };
 		436881F722E6F1C800DB42B6 /* Mapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881A222E6E48700DB42B6 /* Mapper.framework */; };
-		436881FA22E6F1F500DB42B6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436881AC22E6E48800DB42B6 /* Result.framework */; };
 		4369F8B223CD8D43008D5825 /* MembershipAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8B123CD8D43008D5825 /* MembershipAPI.swift */; };
 		4369F8B423CD8FB2008D5825 /* Membership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8B323CD8FB2008D5825 /* Membership.swift */; };
 		4369F8B623CDB6A2008D5825 /* PostLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369F8B523CDB6A2008D5825 /* PostLinkModel.swift */; };
@@ -157,7 +156,6 @@
 		43682B3223FE7828006CE717 /* CreatorProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorProfileAPI.swift; sourceTree = "<group>"; };
 		436881A222E6E48700DB42B6 /* Mapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapper.framework; path = Carthage/Build/iOS/Mapper.framework; sourceTree = "<group>"; };
 		436881A422E6E48700DB42B6 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
-		436881AC22E6E48800DB42B6 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		436881B022E6E48800DB42B6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		4369F8B123CD8D43008D5825 /* MembershipAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipAPI.swift; sourceTree = "<group>"; };
 		4369F8B323CD8FB2008D5825 /* Membership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Membership.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 			files = (
 				436881F422E6F1C800DB42B6 /* Alamofire.framework in Frameworks */,
 				436881F622E6F1C800DB42B6 /* KeychainAccess.framework in Frameworks */,
-				436881FA22E6F1F500DB42B6 /* Result.framework in Frameworks */,
 				436881F722E6F1C800DB42B6 /* Mapper.framework in Frameworks */,
 				436E0B8523D00A68005AB75D /* Moya_ModelMapper.framework in Frameworks */,
 				436E0B8723D00A70005AB75D /* Moya.framework in Frameworks */,
@@ -390,7 +387,6 @@
 				436881B022E6E48800DB42B6 /* Alamofire.framework */,
 				436881A422E6E48700DB42B6 /* KeychainAccess.framework */,
 				436881A222E6E48700DB42B6 /* Mapper.framework */,
-				436881AC22E6E48800DB42B6 /* Result.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

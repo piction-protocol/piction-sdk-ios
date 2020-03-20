@@ -11,9 +11,9 @@ let package = Package(
         .library(name: "RxPictionSDK", targets: ["RxPictionSDK"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/sunshinejr/Moya-ModelMapper.git", .upToNextMajor(from: "9.0.0")),
-        .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", .upToNextMajor(from: "3.2.0")),
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "4.0.0"))
+        .package(url: "https://github.com/sunshinejr/Moya-ModelMapper.git", .upToNextMajor(from: "10.0.0")),
+        .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", .upToNextMajor(from: "3.2.1")),
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.1.0"))
     ],
     targets: [
         .target(name: "PictionSDK", dependencies: ["Moya-ModelMapper", "KeychainAccess"], exclude: ["Demo"]),
